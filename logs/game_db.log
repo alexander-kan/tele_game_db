@@ -1,0 +1,1157 @@
+2025-12-16 23:08:12,623 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-16 23:08:12,624 [INFO] TeleBot: Started polling.
+2025-12-16 23:08:44,692 [INFO] game_db.bot: Command handler initialized with all commands
+2025-12-16 23:11:04,655 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-16 23:11:04,657 [INFO] TeleBot: Stopped polling.
+2025-12-17 10:03:38,326 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-17 10:03:38,326 [INFO] TeleBot: Started polling.
+2025-12-17 10:10:45,627 [INFO] game_db.bot: Command handler initialized with all commands
+2025-12-17 10:24:24,143 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-17 10:24:24,148 [INFO] TeleBot: Stopped polling.
+2025-12-17 10:26:09,836 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-17 10:26:09,837 [INFO] TeleBot: Started polling.
+2025-12-17 10:26:24,300 [INFO] game_db.bot: Command handler initialized with all commands
+2025-12-17 10:42:37,448 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-17 10:42:37,452 [INFO] TeleBot: Stopped polling.
+2025-12-25 13:59:54,580 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 13:59:54,581 [INFO] TeleBot: Started polling.
+2025-12-25 14:00:06,996 [INFO] game_db.bot: [USER_ACCESS] Authorized user 241534328 accessed /start command
+2025-12-25 17:11:02,146 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 17:11:02,149 [INFO] TeleBot: Stopped polling.
+2025-12-25 17:21:29,890 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 17:21:29,890 [INFO] TeleBot: Started polling.
+2025-12-25 17:21:44,323 [INFO] game_db.bot: [USER_ACCESS] Authorized user 241534328 accessed /start command
+2025-12-25 17:32:54,810 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 17:32:54,813 [INFO] TeleBot: Stopped polling.
+2025-12-25 17:34:35,248 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 17:34:35,249 [INFO] TeleBot: Started polling.
+2025-12-25 17:34:52,088 [INFO] game_db.bot: [USER_ACCESS] Authorized user 241534328 accessed /start command
+2025-12-25 18:31:13,485 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 18:31:13,490 [INFO] TeleBot: Stopped polling.
+2025-12-25 18:33:30,276 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 18:33:30,276 [INFO] TeleBot: Started polling.
+2025-12-25 18:33:39,375 [INFO] game_db.bot: [USER_ACCESS] Authorized user 241534328 accessed /start command
+2025-12-25 18:41:05,922 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 18:41:06,005 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 18:41:06,487 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 18:41:06,655 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, The Walking Dead, Outlast, Grand Theft Auto V Legacy, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Ni no Kuni™ II: Revenant Kingdom, Atomic Heart, Yakuza Kiwami (Legacy), The Walking Dead: The Final Season, Yakuza Kiwami 2 (Legacy), Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Ghostbusters: The Video Game Remastered, High On Life, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Grand Theft Auto V Enhanced, Warhammer 40,000: Dawn of War - Definitive Edition
+2025-12-25 18:41:06,655 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 18:41:06,656 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 18:41:06,660 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 18:41:06,660 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 18:41:06,662 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 18:41:06,662 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 18:41:06,663 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 18:41:06,663 [ERROR] game_db.bot: Error handling callback query 'sync_steam_execute': 'ExcelImporter' object has no attribute 'add_games'
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 144, in handle_callback_query
+    _handle_sync_steam_execute(callback_query, bot, security, user_id, settings)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 747, in _handle_sync_steam_execute
+    if create.synchronize_steam_games(str(update_excel)):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/db.py", line 392, in synchronize_steam_games
+    return self._service.synchronize_steam_games(xlsx_path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/services/database_service.py", line 173, in synchronize_steam_games
+    return self.steam_synchronizer.synchronize_steam_games(str(xlsx))
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/db.py", line 315, in synchronize_steam_games
+    return self._recreate_database(xlsx_path)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/db.py", line 269, in _recreate_database
+    return self.excel_importer.add_games(str(xlsx_path), "full")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ExcelImporter' object has no attribute 'add_games'
+2025-12-25 18:41:24,835 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 18:41:24,838 [INFO] TeleBot: Stopped polling.
+2025-12-25 18:44:39,497 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 18:44:39,650 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 18:44:39,650 [INFO] TeleBot: Started polling.
+2025-12-25 18:47:25,637 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 18:47:25,718 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 18:47:26,418 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 18:47:26,574 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, The Walking Dead, Outlast, Grand Theft Auto V Legacy, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Ni no Kuni™ II: Revenant Kingdom, Atomic Heart, Yakuza Kiwami (Legacy), The Walking Dead: The Final Season, Yakuza Kiwami 2 (Legacy), Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Ghostbusters: The Video Game Remastered, High On Life, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Grand Theft Auto V Enhanced, Warhammer 40,000: Dawn of War - Definitive Edition
+2025-12-25 18:47:26,574 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 18:47:26,575 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 18:47:26,576 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 18:47:26,577 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 18:47:26,578 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 18:47:26,579 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 18:47:26,579 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 18:47:26,579 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 18:47:26,579 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 18:47:26,580 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 18:47:26,583 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 18:47:26,583 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 18:47:26,584 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 18:47:26,584 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 18:53:30,786 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 18:53:30,791 [INFO] TeleBot: Stopped polling.
+2025-12-25 19:36:10,556 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 19:36:10,696 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 19:36:10,696 [INFO] TeleBot: Started polling.
+2025-12-25 19:36:24,379 [INFO] game_db.bot: [USER_ACCESS] Authorized user 241534328 accessed /start command
+2025-12-25 19:36:40,144 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True)
+2025-12-25 19:36:40,230 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 20 games
+2025-12-25 19:36:40,230 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 1/20: https://www.metacritic.com/game/switch/35mm
+2025-12-25 19:36:40,871 [WARNING] game_db.MetaCriticScraper: Failed to scrape Metacritic page https://www.metacritic.com/game/switch/35mm: HTTP Error 403: Forbidden
+2025-12-25 19:36:50,877 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 2/20: https://www.metacritic.com/game/pc/a-bird-story
+2025-12-25 19:36:51,382 [WARNING] game_db.MetaCriticScraper: Failed to scrape Metacritic page https://www.metacritic.com/game/pc/a-bird-story: HTTP Error 403: Forbidden
+2025-12-25 19:36:56,503 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 19:36:56,504 [INFO] TeleBot: Stopped polling.
+2025-12-25 19:38:59,948 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 19:39:00,083 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 19:39:00,084 [INFO] TeleBot: Started polling.
+2025-12-25 19:39:00,123 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True)
+2025-12-25 19:39:00,179 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 20 games
+2025-12-25 19:39:00,179 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 1/20: https://www.metacritic.com/game/switch/35mm
+2025-12-25 19:39:00,473 [WARNING] game_db.MetaCriticScraper: Failed to scrape Metacritic page https://www.metacritic.com/game/switch/35mm: HTTP Error 403: Forbidden
+2025-12-25 19:39:10,478 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 2/20: https://www.metacritic.com/game/pc/a-bird-story
+2025-12-25 19:39:10,757 [WARNING] game_db.MetaCriticScraper: Failed to scrape Metacritic page https://www.metacritic.com/game/pc/a-bird-story: HTTP Error 403: Forbidden
+2025-12-25 19:39:13,323 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 19:39:13,323 [INFO] TeleBot: Stopped polling.
+2025-12-25 19:39:55,212 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 19:39:55,327 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 19:39:55,327 [INFO] TeleBot: Started polling.
+2025-12-25 19:40:22,371 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True)
+2025-12-25 19:40:22,455 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 20 games
+2025-12-25 19:40:22,455 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 1/20: https://www.metacritic.com/game/switch/35mm
+2025-12-25 19:40:34,166 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 2/20: https://www.metacritic.com/game/pc/a-bird-story
+2025-12-25 19:40:45,445 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 3/20: https://www.metacritic.com/game/switch/a-jugglers-tale
+2025-12-25 19:40:57,753 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 4/20: https://www.metacritic.com/game/pc/a-plague-tale-innocence
+2025-12-25 19:41:08,931 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 5/20: https://www.metacritic.com/game/pc/a-plague-tale-requiem
+2025-12-25 19:41:20,080 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 6/20: https://www.metacritic.com/game/playstation-4/a-way-out
+2025-12-25 19:41:32,245 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 7/20: https://www.metacritic.com/game/switch/agatha-christie---hercule-poirot-the-first-cases
+2025-12-25 19:41:45,282 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 8/20: https://www.metacritic.com/game/switch/agatha-christie-the-abc-murders
+2025-12-25 19:41:57,079 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 9/20: https://www.metacritic.com/game/switch/agony
+2025-12-25 19:42:09,524 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 10/20: https://www.metacritic.com/game/pc/alan-wake
+2025-12-25 19:42:21,254 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 11/20: https://www.metacritic.com/game/alan-wake-ii/
+2025-12-25 19:42:31,852 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 12/20: https://www.metacritic.com/game/pc/alice-madness-returns
+2025-12-25 19:42:43,666 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 13/20: https://www.metacritic.com/game/playstation-4/alien-isolation
+2025-12-25 19:42:55,932 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 14/20: https://www.metacritic.com/game/aliisha-the-oblivion-of-twin-goddesses/
+2025-12-25 19:43:07,619 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 15/20: https://www.metacritic.com/game/switch/american-fugitive
+2025-12-25 19:43:19,455 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 16/20: https://www.metacritic.com/game/amnesia-the-bunker/
+2025-12-25 19:43:31,879 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 17/20: https://www.metacritic.com/game/switch/among-the-sleep-enhanced-edition
+2025-12-25 19:43:43,433 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 18/20: https://www.metacritic.com/game/angry-birds-star-wars/
+2025-12-25 19:43:55,307 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 19/20: https://www.metacritic.com/game/angry-birds-trilogy/
+2025-12-25 19:44:06,710 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 20/20: https://www.metacritic.com/game/animal-crossing/
+2025-12-25 19:44:08,315 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 19:44:08,316 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 19:44:08,318 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 19:44:08,319 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 19:44:08,320 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 19:44:08,321 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 19:44:08,321 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 19:44:08,321 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 19:44:08,321 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 19:44:08,322 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 19:44:08,329 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 19:44:08,329 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 19:44:08,330 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 19:44:08,330 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 19:44:08,519 [ERROR] game_db.bot: Error handling callback query 'sync_metacritic_execute': A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 158, in handle_callback_query
+    bot.answer_callback_query(callback_query.id)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 6456, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, callback_query_id, text=text, show_alert=show_alert, url=url, cache_time=cache_time)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1996, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-12-25 19:44:08,569 [ERROR] TeleBot: Polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-12-25 19:44:08,572 [ERROR] TeleBot: Exception traceback:
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 158, in handle_callback_query
+    bot.answer_callback_query(callback_query.id)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 6456, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, callback_query_id, text=text, show_alert=show_alert, url=url, cache_time=cache_time)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1996, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1299, in __non_threaded_polling
+    self.__retrieve_updates(timeout, long_polling_timeout, allowed_updates=allowed_updates)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 691, in __retrieve_updates
+    self.process_new_updates(updates)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 827, in process_new_updates
+    self.process_new_callback_query(new_callback_queries)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 916, in process_new_callback_query
+    self._notify_command_handlers(self.callback_query_handlers, new_callback_queries, 'callback_query')
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 10227, in _notify_command_handlers
+    self._exec_task(
+    ~~~~~~~~~~~~~~~^
+        self._run_middlewares_and_handler,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        middlewares=middlewares,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+        update_type=update_type)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1343, in _exec_task
+    raise e
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1339, in _exec_task
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/Users/alexanderkan/GitHub/game_db/game_db/bot.py", line 85, in handle_callback
+    handle_callback_query(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        call, self.bot, self.security, self.settings
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 167, in handle_callback_query
+    bot.answer_callback_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        callback_query.id, text="Ошибка при выполнении", show_alert=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 6456, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, callback_query_id, text=text, show_alert=show_alert, url=url, cache_time=cache_time)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1996, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+
+2025-12-25 19:44:08,572 [INFO] TeleBot: Exception occurred. Stopping.
+2025-12-25 19:44:08,572 [INFO] TeleBot: Stopped polling.
+2025-12-25 19:53:38,145 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 19:53:38,290 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 19:53:38,290 [INFO] TeleBot: Started polling.
+2025-12-25 19:53:53,187 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True)
+2025-12-25 19:53:53,281 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 20 games
+2025-12-25 19:53:53,282 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 1/20: https://www.metacritic.com/game/35mm/
+2025-12-25 19:54:04,898 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 2/20: https://www.metacritic.com/game/a-bird-story/
+2025-12-25 19:54:16,773 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 3/20: https://www.metacritic.com/game/a-jugglers-tale/
+2025-12-25 19:54:27,405 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 4/20: https://www.metacritic.com/game/a-plague-tale-innocence/
+2025-12-25 19:54:38,768 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 5/20: https://www.metacritic.com/game/a-plague-tale-requiem/
+2025-12-25 19:54:49,385 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 6/20: https://www.metacritic.com/game/a-way-out/
+2025-12-25 19:55:01,268 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 7/20: https://www.metacritic.com/game/agatha-christie-hercule-poirot-the-first-cases/
+2025-12-25 19:55:13,239 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 8/20: https://www.metacritic.com/game/agatha-christie-the-abc-murders/
+2025-12-25 19:55:24,881 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 9/20: https://www.metacritic.com/game/agony/
+2025-12-25 19:55:36,453 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 10/20: https://www.metacritic.com/game/alan-wake/
+2025-12-25 19:55:47,780 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 11/20: https://www.metacritic.com/game/alan-wake-ii/
+2025-12-25 19:55:59,140 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 12/20: https://www.metacritic.com/game/alice-madness-returns/
+2025-12-25 19:56:10,634 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 13/20: https://www.metacritic.com/game/alien-isolation/
+2025-12-25 19:56:22,343 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 14/20: https://www.metacritic.com/game/aliisha-the-oblivion-of-twin-goddesses/
+2025-12-25 19:56:33,635 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 15/20: https://www.metacritic.com/game/american-fugitive/
+2025-12-25 19:56:45,664 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 16/20: https://www.metacritic.com/game/amnesia-the-bunker/
+2025-12-25 19:56:57,070 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 17/20: https://www.metacritic.com/game/among-the-sleep-enhanced-edition/
+2025-12-25 19:57:08,941 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 18/20: https://www.metacritic.com/game/angry-birds-star-wars/
+2025-12-25 19:57:20,658 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 19/20: https://www.metacritic.com/game/angry-birds-trilogy/
+2025-12-25 19:57:32,360 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 20/20: https://www.metacritic.com/game/animal-crossing/
+2025-12-25 19:57:33,781 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 19:57:33,782 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 19:57:33,784 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 19:57:33,785 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 19:57:33,787 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 19:57:33,787 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 19:57:33,788 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 19:57:33,788 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 19:57:33,788 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 19:57:33,789 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 19:57:33,798 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 19:57:33,798 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 19:57:33,799 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 19:57:33,799 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 19:57:34,238 [ERROR] game_db.bot: Error handling callback query 'sync_metacritic_execute': A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 158, in handle_callback_query
+    bot.answer_callback_query(callback_query.id)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 6456, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, callback_query_id, text=text, show_alert=show_alert, url=url, cache_time=cache_time)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1996, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-12-25 19:57:34,353 [ERROR] TeleBot: Polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-12-25 19:57:34,359 [ERROR] TeleBot: Exception traceback:
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 158, in handle_callback_query
+    bot.answer_callback_query(callback_query.id)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 6456, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, callback_query_id, text=text, show_alert=show_alert, url=url, cache_time=cache_time)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1996, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1299, in __non_threaded_polling
+    self.__retrieve_updates(timeout, long_polling_timeout, allowed_updates=allowed_updates)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 691, in __retrieve_updates
+    self.process_new_updates(updates)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 827, in process_new_updates
+    self.process_new_callback_query(new_callback_queries)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 916, in process_new_callback_query
+    self._notify_command_handlers(self.callback_query_handlers, new_callback_queries, 'callback_query')
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 10227, in _notify_command_handlers
+    self._exec_task(
+    ~~~~~~~~~~~~~~~^
+        self._run_middlewares_and_handler,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        middlewares=middlewares,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+        update_type=update_type)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1343, in _exec_task
+    raise e
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1339, in _exec_task
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/Users/alexanderkan/GitHub/game_db/game_db/bot.py", line 85, in handle_callback
+    handle_callback_query(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        call, self.bot, self.security, self.settings
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 167, in handle_callback_query
+    bot.answer_callback_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        callback_query.id, text="Ошибка при выполнении", show_alert=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 6456, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, callback_query_id, text=text, show_alert=show_alert, url=url, cache_time=cache_time)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1996, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+
+2025-12-25 19:57:34,360 [INFO] TeleBot: Exception occurred. Stopping.
+2025-12-25 19:57:34,360 [INFO] TeleBot: Stopped polling.
+2025-12-25 20:08:31,809 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:08:31,973 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 20:08:31,974 [INFO] TeleBot: Started polling.
+2025-12-25 20:09:51,476 [INFO] game_db.bot: [FILE_UPLOAD] User 241534328 uploading file: games.xlsx
+2025-12-25 20:09:51,806 [INFO] game_db.bot: [FILE_UPLOAD] Successfully saved uploaded file (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 20:09:51,812 [INFO] game_db.bot: [DB_RECREATION] User 241534328 initiated database recreation from file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:09:51,812 [INFO] game_db.services.database: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:09:51,813 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 20:09:51,823 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 20:09:51,824 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 20:09:51,827 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 20:09:51,828 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 20:09:51,829 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 20:09:51,829 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 20:09:51,829 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 20:09:51,830 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 20:09:51,836 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 20:09:51,837 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 20:09:51,838 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 20:09:51,839 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 20:09:51,839 [INFO] game_db.services.database: [DB_RECREATION] Successfully recreated database from /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:09:51,839 [INFO] game_db.bot: [DB_RECREATION] Database recreation completed successfully (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 20:11:25,303 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 20:11:25,306 [INFO] TeleBot: Stopped polling.
+2025-12-25 20:11:29,271 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 20:11:29,271 [INFO] TeleBot: Started polling.
+2025-12-25 20:11:40,884 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True)
+2025-12-25 20:11:40,958 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 20 games
+2025-12-25 20:11:40,958 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 1/20 (with URL): https://www.metacritic.com/game/35mm/
+2025-12-25 20:11:53,057 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 2/20 (with URL): https://www.metacritic.com/game/a-bird-story/
+2025-12-25 20:12:04,313 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 3/20 (with URL): https://www.metacritic.com/game/a-jugglers-tale/
+2025-12-25 20:12:17,466 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 4/20 (with URL): https://www.metacritic.com/game/a-plague-tale-innocence/
+2025-12-25 20:12:29,198 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 5/20 (with URL): https://www.metacritic.com/game/a-plague-tale-requiem/
+2025-12-25 20:12:39,820 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 6/20 (with URL): https://www.metacritic.com/game/a-way-out/
+2025-12-25 20:12:51,186 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 7/20 (with URL): https://www.metacritic.com/game/agatha-christie-hercule-poirot-the-first-cases/
+2025-12-25 20:13:03,856 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 8/20 (with URL): https://www.metacritic.com/game/agatha-christie-the-abc-murders/
+2025-12-25 20:13:19,323 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 9/20 (with URL): https://www.metacritic.com/game/agony/
+2025-12-25 20:13:34,684 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 10/20 (with URL): https://www.metacritic.com/game/alan-wake/
+2025-12-25 20:13:45,373 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 11/20 (searching): Alan Wake 2
+2025-12-25 20:13:49,274 [WARNING] game_db.metacritic_search: Error searching Metacritic for game 'Alan Wake 2': 404 Client Error: Not Found for url: https://www.metacritic.com/search/game/Alan%20Wake%202/results/
+2025-12-25 20:13:49,276 [WARNING] game_db.sql: [METACRITIC_SYNC] Could not find Metacritic URL for game: Alan Wake 2
+2025-12-25 20:13:59,282 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 12/20 (with URL): https://www.metacritic.com/game/alice-madness-returns/
+2025-12-25 20:14:13,069 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 13/20 (with URL): https://www.metacritic.com/game/alien-isolation/
+2025-12-25 20:14:23,684 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 14/20 (with URL): https://www.metacritic.com/game/aliisha-the-oblivion-of-twin-goddesses/
+2025-12-25 20:14:35,541 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 15/20 (with URL): https://www.metacritic.com/game/american-fugitive/
+2025-12-25 20:14:50,095 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 16/20 (with URL): https://www.metacritic.com/game/amnesia-the-bunker/
+2025-12-25 20:15:00,144 [WARNING] game_db.MetaCriticScraper: Failed to scrape Metacritic page https://www.metacritic.com/game/amnesia-the-bunker/: HTTPSConnectionPool(host='www.metacritic.com', port=443): Read timed out. (read timeout=10)
+2025-12-25 20:15:10,149 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 17/20 (with URL): https://www.metacritic.com/game/among-the-sleep-enhanced-edition/
+2025-12-25 20:15:22,018 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 18/20 (with URL): https://www.metacritic.com/game/angry-birds-star-wars/
+2025-12-25 20:15:35,183 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 19/20 (with URL): https://www.metacritic.com/game/angry-birds-trilogy/
+2025-12-25 20:15:46,873 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 20/20 (with URL): https://www.metacritic.com/game/animal-crossing/
+2025-12-25 20:15:47,572 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:15:47,575 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 20:15:47,577 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 20:15:47,577 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 20:15:47,579 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 20:15:47,579 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 20:15:47,580 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 20:15:47,580 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 20:15:47,580 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 20:15:47,580 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 20:15:47,588 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 20:15:47,589 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 20:15:47,591 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 20:15:47,591 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 20:15:48,149 [ERROR] game_db.bot: Error handling callback query 'sync_metacritic_execute': A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 158, in handle_callback_query
+    bot.answer_callback_query(callback_query.id)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 6456, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, callback_query_id, text=text, show_alert=show_alert, url=url, cache_time=cache_time)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1996, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-12-25 20:15:48,267 [ERROR] TeleBot: Polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-12-25 20:15:48,270 [ERROR] TeleBot: Exception traceback:
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 158, in handle_callback_query
+    bot.answer_callback_query(callback_query.id)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 6456, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, callback_query_id, text=text, show_alert=show_alert, url=url, cache_time=cache_time)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1996, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1299, in __non_threaded_polling
+    self.__retrieve_updates(timeout, long_polling_timeout, allowed_updates=allowed_updates)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 691, in __retrieve_updates
+    self.process_new_updates(updates)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 827, in process_new_updates
+    self.process_new_callback_query(new_callback_queries)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 916, in process_new_callback_query
+    self._notify_command_handlers(self.callback_query_handlers, new_callback_queries, 'callback_query')
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 10227, in _notify_command_handlers
+    self._exec_task(
+    ~~~~~~~~~~~~~~~^
+        self._run_middlewares_and_handler,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        middlewares=middlewares,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+        update_type=update_type)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1343, in _exec_task
+    raise e
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 1339, in _exec_task
+    task(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/Users/alexanderkan/GitHub/game_db/game_db/bot.py", line 85, in handle_callback
+    handle_callback_query(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        call, self.bot, self.security, self.settings
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 167, in handle_callback_query
+    bot.answer_callback_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        callback_query.id, text="Ошибка при выполнении", show_alert=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 6456, in answer_callback_query
+    return apihelper.answer_callback_query(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.token, callback_query_id, text=text, show_alert=show_alert, url=url, cache_time=cache_time)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1996, in answer_callback_query
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: query is too old and response timeout expired or query ID is invalid
+
+2025-12-25 20:15:48,270 [INFO] TeleBot: Exception occurred. Stopping.
+2025-12-25 20:15:48,270 [INFO] TeleBot: Stopped polling.
+2025-12-25 20:20:13,267 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:20:13,407 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 20:20:13,407 [INFO] TeleBot: Started polling.
+2025-12-25 20:20:28,032 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True)
+2025-12-25 20:20:28,127 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 20 games
+2025-12-25 20:20:28,127 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 1/20 (with URL): https://www.metacritic.com/game/35mm/
+2025-12-25 20:20:38,236 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 2/20 (with URL): https://www.metacritic.com/game/a-bird-story/
+2025-12-25 20:20:48,365 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 3/20 (with URL): https://www.metacritic.com/game/a-jugglers-tale/
+2025-12-25 20:20:58,519 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 4/20 (with URL): https://www.metacritic.com/game/a-plague-tale-innocence/
+2025-12-25 20:21:08,663 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 5/20 (with URL): https://www.metacritic.com/game/a-plague-tale-requiem/
+2025-12-25 20:21:19,512 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 6/20 (with URL): https://www.metacritic.com/game/a-way-out/
+2025-12-25 20:21:29,642 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 7/20 (with URL): https://www.metacritic.com/game/agatha-christie-hercule-poirot-the-first-cases/
+2025-12-25 20:21:39,777 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 8/20 (with URL): https://www.metacritic.com/game/agatha-christie-the-abc-murders/
+2025-12-25 20:21:49,906 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 9/20 (with URL): https://www.metacritic.com/game/agony/
+2025-12-25 20:22:00,026 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 10/20 (with URL): https://www.metacritic.com/game/alan-wake/
+2025-12-25 20:22:10,752 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 11/20 (searching): Alan Wake 2
+2025-12-25 20:22:11,407 [WARNING] game_db.metacritic_search: Error searching Metacritic for game 'Alan Wake 2': 404 Client Error: Not Found for url: https://www.metacritic.com/search/game/Alan%20Wake%202/results/
+2025-12-25 20:22:11,410 [WARNING] game_db.sql: [METACRITIC_SYNC] Could not find Metacritic URL for game: Alan Wake 2
+2025-12-25 20:22:21,415 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 12/20 (with URL): https://www.metacritic.com/game/alice-madness-returns/
+2025-12-25 20:22:31,565 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 13/20 (with URL): https://www.metacritic.com/game/alien-isolation/
+2025-12-25 20:22:42,686 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 14/20 (with URL): https://www.metacritic.com/game/aliisha-the-oblivion-of-twin-goddesses/
+2025-12-25 20:22:52,799 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 15/20 (with URL): https://www.metacritic.com/game/american-fugitive/
+2025-12-25 20:23:02,929 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 16/20 (with URL): https://www.metacritic.com/game/amnesia-the-bunker/
+2025-12-25 20:23:13,074 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 17/20 (with URL): https://www.metacritic.com/game/among-the-sleep-enhanced-edition/
+2025-12-25 20:23:23,196 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 18/20 (with URL): https://www.metacritic.com/game/angry-birds-star-wars/
+2025-12-25 20:23:33,333 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 19/20 (with URL): https://www.metacritic.com/game/angry-birds-trilogy/
+2025-12-25 20:23:43,490 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 20/20 (with URL): https://www.metacritic.com/game/animal-crossing/
+2025-12-25 20:23:43,663 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:23:43,664 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 20:23:43,666 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 20:23:43,666 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 20:23:43,668 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 20:23:43,669 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 20:23:43,669 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 20:23:43,670 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 20:23:43,670 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 20:23:43,670 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 20:23:43,674 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 20:23:43,674 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 20:23:43,675 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 20:23:43,675 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 20:24:10,973 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 20:24:10,975 [INFO] TeleBot: Stopped polling.
+2025-12-25 20:25:49,022 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:25:49,162 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 20:25:49,162 [INFO] TeleBot: Started polling.
+2025-12-25 20:25:53,946 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True)
+2025-12-25 20:25:54,065 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 20 games
+2025-12-25 20:25:54,066 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 1/20 (with URL): https://www.metacritic.com/game/35mm/
+2025-12-25 20:26:05,094 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 2/20 (with URL): https://www.metacritic.com/game/a-bird-story/
+2025-12-25 20:26:16,169 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 3/20 (with URL): https://www.metacritic.com/game/a-jugglers-tale/
+2025-12-25 20:26:28,248 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 4/20 (with URL): https://www.metacritic.com/game/a-plague-tale-innocence/
+2025-12-25 20:26:44,606 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 5/20 (with URL): https://www.metacritic.com/game/a-plague-tale-requiem/
+2025-12-25 20:26:54,740 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 6/20 (with URL): https://www.metacritic.com/game/a-way-out/
+2025-12-25 20:27:05,088 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 7/20 (with URL): https://www.metacritic.com/game/agatha-christie-hercule-poirot-the-first-cases/
+2025-12-25 20:27:16,480 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 8/20 (with URL): https://www.metacritic.com/game/agatha-christie-the-abc-murders/
+2025-12-25 20:27:28,603 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 9/20 (with URL): https://www.metacritic.com/game/agony/
+2025-12-25 20:27:39,217 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 10/20 (with URL): https://www.metacritic.com/game/alan-wake/
+2025-12-25 20:27:49,403 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 11/20 (searching): Alan Wake 2
+2025-12-25 20:27:50,871 [WARNING] game_db.metacritic_search: No Metacritic URL found for game: Alan Wake 2 (searched: https://www.metacritic.com/search/game/alan-wake-2/results)
+2025-12-25 20:27:50,872 [WARNING] game_db.sql: [METACRITIC_SYNC] Could not find Metacritic URL for game: Alan Wake 2
+2025-12-25 20:28:00,877 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 12/20 (with URL): https://www.metacritic.com/game/alice-madness-returns/
+2025-12-25 20:28:11,952 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 13/20 (with URL): https://www.metacritic.com/game/alien-isolation/
+2025-12-25 20:28:22,083 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 14/20 (with URL): https://www.metacritic.com/game/aliisha-the-oblivion-of-twin-goddesses/
+2025-12-25 20:28:34,049 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 15/20 (with URL): https://www.metacritic.com/game/american-fugitive/
+2025-12-25 20:28:45,183 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 16/20 (with URL): https://www.metacritic.com/game/amnesia-the-bunker/
+2025-12-25 20:28:56,447 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 17/20 (with URL): https://www.metacritic.com/game/among-the-sleep-enhanced-edition/
+2025-12-25 20:29:08,305 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 18/20 (with URL): https://www.metacritic.com/game/angry-birds-star-wars/
+2025-12-25 20:29:19,635 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 19/20 (with URL): https://www.metacritic.com/game/angry-birds-trilogy/
+2025-12-25 20:29:30,766 [INFO] game_db.sql: [METACRITIC_SYNC] Processing game 20/20 (with URL): https://www.metacritic.com/game/animal-crossing/
+2025-12-25 20:29:32,700 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:29:32,701 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 20:29:32,702 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 20:29:32,702 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 20:29:32,704 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 20:29:32,704 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 20:29:32,705 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 20:29:32,705 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 20:29:32,705 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 20:29:32,705 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 20:29:32,709 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 20:29:32,710 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 20:29:32,715 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 20:29:32,715 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 20:59:45,605 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 20:59:45,607 [INFO] TeleBot: Stopped polling.
+2025-12-25 20:59:53,450 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 20:59:53,595 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 20:59:53,595 [INFO] TeleBot: Started polling.
+2025-12-25 21:00:22,218 [INFO] game_db.bot: [FILE_UPLOAD] User 241534328 uploading file: games.xlsx
+2025-12-25 21:00:22,489 [INFO] game_db.bot: [FILE_UPLOAD] Successfully saved uploaded file (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 21:00:22,494 [INFO] game_db.bot: [DB_RECREATION] User 241534328 initiated database recreation from file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:00:22,495 [INFO] game_db.services.database: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:00:22,500 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:00:22,508 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 21:00:22,510 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:00:22,514 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 21:00:22,515 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 21:00:22,520 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 21:00:22,520 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 21:00:22,521 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 21:00:22,523 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:00:22,535 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 21:00:22,536 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:00:22,541 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 21:00:22,541 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 21:00:22,541 [INFO] game_db.services.database: [DB_RECREATION] Successfully recreated database from /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:00:22,542 [INFO] game_db.bot: [DB_RECREATION] Database recreation completed successfully (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 21:00:55,080 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:00:55,161 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 21:00:55,479 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 21:00:55,647 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, The Walking Dead, Outlast, Grand Theft Auto V Legacy, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Ni no Kuni™ II: Revenant Kingdom, Atomic Heart, Yakuza Kiwami (Legacy), The Walking Dead: The Final Season, Yakuza Kiwami 2 (Legacy), Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Ghostbusters: The Video Game Remastered, High On Life, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Grand Theft Auto V Enhanced, Warhammer 40,000: Dawn of War - Definitive Edition
+2025-12-25 21:00:55,648 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Crysis® 3, Fire Emblem Engage, Grand Theft Auto V, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, Max Payne, Max Payne 2, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS Jedi: Fallen Order™, STAR WARS: Battlefront, The Mirror Lied, The Walking Dead: The Complete First Season, Warhammer 40,000: Dawn of War - Anniversary Edition, Warhammer 40,000: Dawn of War - Game of the Year Edition, Warhammer 40,000: Dawn of War II, Warhammer 40000 Boltgun, Wartales, Wolfenstein: The Old Blood, Yakuza Kiwami
+2025-12-25 21:00:55,648 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:00:55,648 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:00:55,651 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 21:00:55,651 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:00:55,653 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 21:00:55,653 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 21:00:55,654 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 21:00:55,654 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 21:00:55,654 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 21:00:55,655 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:00:55,658 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 21:00:55,658 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:00:55,659 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 21:00:55,659 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 21:10:57,010 [INFO] game_db.bot: [FILE_UPLOAD] User 241534328 uploading file: games.xlsx
+2025-12-25 21:10:57,304 [INFO] game_db.bot: [FILE_UPLOAD] Successfully saved uploaded file (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 21:10:57,310 [INFO] game_db.bot: [DB_RECREATION] User 241534328 initiated database recreation from file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:10:57,310 [INFO] game_db.services.database: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:10:57,315 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:10:57,329 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 21:10:57,330 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:10:57,333 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 21:10:57,334 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 21:10:57,335 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 21:10:57,335 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 21:10:57,335 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 21:10:57,336 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:10:57,341 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 21:10:57,342 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:10:57,344 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 21:10:57,344 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 21:10:57,344 [INFO] game_db.services.database: [DB_RECREATION] Successfully recreated database from /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:10:57,344 [INFO] game_db.bot: [DB_RECREATION] Database recreation completed successfully (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 21:11:08,233 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 21:11:08,236 [INFO] TeleBot: Stopped polling.
+2025-12-25 21:14:42,921 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 21:14:42,921 [INFO] TeleBot: Started polling.
+2025-12-25 21:14:49,421 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:14:49,492 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 21:14:49,854 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 21:14:50,024 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, The Walking Dead, Outlast, Grand Theft Auto V Legacy, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Ni no Kuni™ II: Revenant Kingdom, Atomic Heart, Yakuza Kiwami (Legacy), The Walking Dead: The Final Season, Yakuza Kiwami 2 (Legacy), Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Ghostbusters: The Video Game Remastered, High On Life, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Grand Theft Auto V Enhanced, Warhammer 40,000: Dawn of War - Definitive Edition
+2025-12-25 21:14:50,026 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Crysis® 3, Fire Emblem Engage, Grand Theft Auto V, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS Jedi: Fallen Order™, STAR WARS: Battlefront, The Mirror Lied, The Walking Dead: The Complete First Season, Warhammer 40,000: Dawn of War - Anniversary Edition, Warhammer 40,000: Dawn of War - Game of the Year Edition, Warhammer 40,000: Dawn of War II, Warhammer 40000 Boltgun, Wolfenstein: The Old Blood, Yakuza Kiwami
+2025-12-25 21:14:50,026 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:14:50,027 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:14:50,031 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 21:14:50,031 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:14:50,033 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 21:14:50,034 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 21:14:50,034 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 21:14:50,034 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 21:14:50,034 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 21:14:50,035 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:14:50,040 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 21:14:50,040 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:14:50,041 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 21:14:50,041 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 21:20:09,510 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 21:20:09,513 [INFO] TeleBot: Stopped polling.
+2025-12-25 21:20:55,483 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:20:55,631 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 21:20:55,631 [INFO] TeleBot: Started polling.
+2025-12-25 21:21:01,981 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:21:02,085 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 21:21:02,535 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 21:21:02,701 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, The Walking Dead, Outlast, Grand Theft Auto V Legacy, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Ni no Kuni™ II: Revenant Kingdom, Atomic Heart, Yakuza Kiwami (Legacy), The Walking Dead: The Final Season, Yakuza Kiwami 2 (Legacy), Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Ghostbusters: The Video Game Remastered, High On Life, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Grand Theft Auto V Enhanced, Warhammer 40,000: Dawn of War - Definitive Edition
+2025-12-25 21:21:02,702 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Game 'Project CARS - Pagani Edition' (row 479) not found in Steam API. DB name repr: 'Project CARS - Pagani Edition', DB name len: 29
+2025-12-25 21:21:02,702 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Found similar names in Steam API: Project CARS 2, Project CARS
+2025-12-25 21:21:02,702 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS 2' (len=14, repr='Project CARS 2'), exact_match=False
+2025-12-25 21:21:02,702 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS' (len=12, repr='Project CARS'), exact_match=False
+2025-12-25 21:21:02,703 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Crysis® 3, Fire Emblem Engage, Grand Theft Auto V, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS Jedi: Fallen Order™, STAR WARS: Battlefront, The Mirror Lied, The Walking Dead: The Complete First Season, Warhammer 40,000: Dawn of War - Anniversary Edition, Warhammer 40,000: Dawn of War - Game of the Year Edition, Warhammer 40,000: Dawn of War II, Warhammer 40000 Boltgun, Wolfenstein: The Old Blood, Yakuza Kiwami
+2025-12-25 21:21:02,703 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:21:02,704 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:21:02,709 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 21:21:02,709 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:21:02,711 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 21:21:02,711 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 21:21:02,711 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 21:21:02,711 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 21:21:02,712 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 21:21:02,712 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:21:02,715 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 21:21:02,716 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:21:02,717 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 21:21:02,717 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 21:23:26,247 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 21:23:26,249 [INFO] TeleBot: Stopped polling.
+2025-12-25 21:24:12,324 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:24:12,452 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 21:24:12,452 [INFO] TeleBot: Started polling.
+2025-12-25 21:24:16,277 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:24:16,359 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 21:24:16,852 [INFO] game_db.http: Saved raw Steam API response to: /Users/alexanderkan/GitHub/game_db/steam_api_response.json
+2025-12-25 21:24:16,858 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 21:24:17,019 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, The Walking Dead, Outlast, Grand Theft Auto V Legacy, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Ni no Kuni™ II: Revenant Kingdom, Atomic Heart, Yakuza Kiwami (Legacy), The Walking Dead: The Final Season, Yakuza Kiwami 2 (Legacy), Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Ghostbusters: The Video Game Remastered, High On Life, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Grand Theft Auto V Enhanced, Warhammer 40,000: Dawn of War - Definitive Edition
+2025-12-25 21:24:17,020 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Game 'Project CARS - Pagani Edition' (row 479) not found in Steam API. DB name repr: 'Project CARS - Pagani Edition', DB name len: 29
+2025-12-25 21:24:17,020 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Found similar names in Steam API: Project CARS, Project CARS 2
+2025-12-25 21:24:17,020 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS' (len=12, repr='Project CARS'), exact_match=False
+2025-12-25 21:24:17,020 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS 2' (len=14, repr='Project CARS 2'), exact_match=False
+2025-12-25 21:24:17,021 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Crysis® 3, Fire Emblem Engage, Grand Theft Auto V, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS Jedi: Fallen Order™, STAR WARS: Battlefront, The Mirror Lied, The Walking Dead: The Complete First Season, Warhammer 40,000: Dawn of War - Anniversary Edition, Warhammer 40,000: Dawn of War - Game of the Year Edition, Warhammer 40,000: Dawn of War II, Warhammer 40000 Boltgun, Wolfenstein: The Old Blood, Yakuza Kiwami
+2025-12-25 21:24:17,021 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:24:17,021 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:24:17,025 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 21:24:17,025 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:24:17,027 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 21:24:17,028 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 21:24:17,028 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 21:24:17,028 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 21:24:17,028 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 21:24:17,029 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:24:17,032 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 21:24:17,032 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:24:17,033 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 21:24:17,033 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 21:29:42,993 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 21:29:42,995 [INFO] TeleBot: Stopped polling.
+2025-12-25 21:29:51,363 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:29:51,513 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 21:29:51,513 [INFO] TeleBot: Started polling.
+2025-12-25 21:29:54,356 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:29:54,439 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 21:29:55,196 [INFO] game_db.http: Saved raw Steam API response to: /Users/alexanderkan/GitHub/game_db/steam_api_response.json
+2025-12-25 21:29:55,202 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 21:29:55,361 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, The Walking Dead, Outlast, Grand Theft Auto V Legacy, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Ni no Kuni™ II: Revenant Kingdom, Atomic Heart, Yakuza Kiwami (Legacy), The Walking Dead: The Final Season, Yakuza Kiwami 2 (Legacy), Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Ghostbusters: The Video Game Remastered, High On Life, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Grand Theft Auto V Enhanced, Warhammer 40,000: Dawn of War - Definitive Edition
+2025-12-25 21:29:55,362 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Game 'Project CARS - Pagani Edition' (row 479) not found in Steam API. DB name repr: 'Project CARS - Pagani Edition', DB name len: 29
+2025-12-25 21:29:55,362 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Found similar names in Steam API: Project CARS, Project CARS 2
+2025-12-25 21:29:55,362 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS' (len=12, repr='Project CARS'), exact_match=False, normalized_match=False
+2025-12-25 21:29:55,362 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS 2' (len=14, repr='Project CARS 2'), exact_match=False, normalized_match=False
+2025-12-25 21:29:55,363 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Fire Emblem Engage, Grand Theft Auto V, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS: Battlefront, The Mirror Lied, The Walking Dead: The Complete First Season, Warhammer 40,000: Dawn of War - Game of the Year Edition, Warhammer 40,000: Dawn of War II, Warhammer 40000 Boltgun, Yakuza Kiwami
+2025-12-25 21:29:55,363 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 21:29:55,364 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:29:55,369 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 21:29:55,369 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 21:29:55,370 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 21:29:55,371 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 21:29:55,371 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 21:29:55,371 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 21:29:55,371 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 21:29:55,372 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:29:55,375 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 21:29:55,376 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 21:29:55,376 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 21:29:55,377 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 21:59:59,702 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 21:59:59,705 [INFO] TeleBot: Stopped polling.
+2025-12-25 22:03:35,953 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:03:36,089 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 22:03:36,089 [INFO] TeleBot: Started polling.
+2025-12-25 22:03:42,785 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:03:42,852 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 22:03:43,311 [INFO] game_db.http: Saved raw Steam API response to: /Users/alexanderkan/GitHub/game_db/steam_api_response.json
+2025-12-25 22:03:43,315 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 22:03:43,687 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, Outlast, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Ni no Kuni™ II: Revenant Kingdom, Atomic Heart, The Walking Dead: The Final Season, Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Ghostbusters: The Video Game Remastered, High On Life, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Warhammer 40,000: Dawn of War - Definitive Edition, Yakuza Kiwami 2
+2025-12-25 22:03:43,689 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Game 'Project CARS - Pagani Edition' (row 480) not found in Steam API. DB name repr: 'Project CARS - Pagani Edition', DB name len: 29
+2025-12-25 22:03:43,689 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Found similar names in Steam API: Project CARS, Project CARS 2
+2025-12-25 22:03:43,689 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS' (len=12, repr='Project CARS'), exact_match=False, normalized_match=False
+2025-12-25 22:03:43,689 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS 2' (len=14, repr='Project CARS 2'), exact_match=False, normalized_match=False
+2025-12-25 22:03:43,689 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS: Battlefront, The Mirror Lied
+2025-12-25 22:03:43,689 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:03:43,690 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:03:43,694 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 22:03:43,694 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:03:43,696 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 22:03:43,697 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 22:03:43,697 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 22:03:43,697 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 22:03:43,697 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 22:03:43,698 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:03:43,704 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 22:03:43,704 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:03:43,706 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 22:03:43,706 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 22:07:55,814 [INFO] game_db.bot: [FILE_UPLOAD] User 241534328 uploading file: games.xlsx
+2025-12-25 22:07:56,188 [INFO] game_db.bot: [FILE_UPLOAD] Successfully saved uploaded file (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 22:07:56,194 [INFO] game_db.bot: [DB_RECREATION] User 241534328 initiated database recreation from file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:07:56,194 [INFO] game_db.services.database: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:07:56,196 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:07:56,211 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 22:07:56,213 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:07:56,216 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 22:07:56,217 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 22:07:56,218 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 22:07:56,218 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 22:07:56,219 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 22:07:56,219 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:07:56,226 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 22:07:56,228 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:07:56,229 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 22:07:56,229 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 22:07:56,229 [INFO] game_db.services.database: [DB_RECREATION] Successfully recreated database from /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:07:56,229 [INFO] game_db.bot: [DB_RECREATION] Database recreation completed successfully (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 22:08:12,847 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:08:12,917 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 22:08:13,245 [INFO] game_db.http: Saved raw Steam API response to: /Users/alexanderkan/GitHub/game_db/steam_api_response.json
+2025-12-25 22:08:13,250 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 22:08:13,592 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Atomic Heart, The Walking Dead: The Final Season, Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, High On Life, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Warhammer 40,000: Dawn of War - Definitive Edition, Yakuza Kiwami 2
+2025-12-25 22:08:13,594 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Game 'Project CARS - Pagani Edition' (row 480) not found in Steam API. DB name repr: 'Project CARS - Pagani Edition', DB name len: 29
+2025-12-25 22:08:13,594 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Found similar names in Steam API: Project CARS, Project CARS 2
+2025-12-25 22:08:13,594 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS' (len=12, repr='Project CARS'), exact_match=False, normalized_match=False
+2025-12-25 22:08:13,594 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS 2' (len=14, repr='Project CARS 2'), exact_match=False, normalized_match=False
+2025-12-25 22:08:13,595 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, High on Life, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS: Battlefront, The Mirror Lied
+2025-12-25 22:08:13,595 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:08:13,596 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:08:13,599 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 22:08:13,600 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:08:13,605 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 22:08:13,606 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 22:08:13,606 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 22:08:13,606 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 22:08:13,606 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 22:08:13,607 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:08:13,610 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 22:08:13,611 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:08:13,611 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 22:08:13,612 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 22:09:48,234 [INFO] game_db.bot: [FILE_UPLOAD] User 241534328 uploading file: games.xlsx
+2025-12-25 22:09:48,490 [INFO] game_db.bot: [FILE_UPLOAD] Successfully saved uploaded file (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 22:09:48,492 [INFO] game_db.bot: [DB_RECREATION] User 241534328 initiated database recreation from file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:09:48,493 [INFO] game_db.services.database: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:09:48,493 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:09:48,497 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 22:09:48,497 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:09:48,499 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 22:09:48,500 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 22:09:48,500 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 22:09:48,500 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 22:09:48,501 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 22:09:48,505 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:09:48,509 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 22:09:48,509 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:09:48,510 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 22:09:48,510 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 22:09:48,511 [INFO] game_db.services.database: [DB_RECREATION] Successfully recreated database from /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:09:48,511 [INFO] game_db.bot: [DB_RECREATION] Database recreation completed successfully (user: 241534328, file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx)
+2025-12-25 22:09:53,732 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:09:53,802 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 22:09:54,170 [INFO] game_db.http: Saved raw Steam API response to: /Users/alexanderkan/GitHub/game_db/steam_api_response.json
+2025-12-25 22:09:54,175 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 22:09:54,523 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Atomic Heart, The Walking Dead: The Final Season, Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Warhammer 40,000: Dawn of War - Definitive Edition, Yakuza Kiwami 2
+2025-12-25 22:09:54,524 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Game 'Project CARS - Pagani Edition' (row 480) not found in Steam API. DB name repr: 'Project CARS - Pagani Edition', DB name len: 29
+2025-12-25 22:09:54,524 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Found similar names in Steam API: Project CARS, Project CARS 2
+2025-12-25 22:09:54,524 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS' (len=12, repr='Project CARS'), exact_match=False, normalized_match=False
+2025-12-25 22:09:54,524 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS 2' (len=14, repr='Project CARS 2'), exact_match=False, normalized_match=False
+2025-12-25 22:09:54,525 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS: Battlefront, The Mirror Lied
+2025-12-25 22:09:54,525 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:09:54,526 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:09:54,527 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 22:09:54,528 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:09:54,529 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 22:09:54,530 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 22:09:54,530 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 22:09:54,530 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 22:09:54,530 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 22:09:54,531 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:09:54,537 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 22:09:54,538 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:09:54,539 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 22:09:54,539 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 22:19:12,587 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 22:19:12,590 [INFO] TeleBot: Stopped polling.
+2025-12-25 22:20:41,318 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:20:41,470 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 22:20:41,471 [INFO] TeleBot: Started polling.
+2025-12-25 22:20:56,553 [INFO] game_db.services.database: [HLTB_SYNC] Starting HowLongToBeat synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True)
+2025-12-25 22:20:56,553 [ERROR] game_db.bot: Error handling callback query 'sync_hltb_execute': howlongtobeatpy library is not installed. Install it with: poetry add howlongtobeatpy
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 154, in handle_callback_query
+    _handle_sync_hltb_execute(callback_query, bot, security, user_id, settings)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 996, in _handle_sync_hltb_execute
+    if create.synchronize_hltb_games(str(update_excel), test_mode=True):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/db.py", line 1100, in synchronize_hltb_games
+    return self._service.synchronize_hltb_games(xlsx_path, test_mode)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/services/database_service.py", line 253, in synchronize_hltb_games
+    self._hltb_synchronizer = HowLongToBeatSynchronizer(
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.excel_importer,
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        test_mode=test_mode,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/db.py", line 802, in __init__
+    self.hltb_client = HowLongToBeatClient()
+                       ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/hltb_client.py", line 25, in __init__
+    raise ImportError(
+    ...<2 lines>...
+    )
+ImportError: howlongtobeatpy library is not installed. Install it with: poetry add howlongtobeatpy
+2025-12-25 22:21:10,081 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 22:21:10,084 [INFO] TeleBot: Stopped polling.
+2025-12-25 22:22:17,850 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:22:17,982 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 22:22:17,982 [INFO] TeleBot: Started polling.
+2025-12-25 22:22:21,318 [INFO] game_db.services.database: [HLTB_SYNC] Starting HowLongToBeat synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True)
+2025-12-25 22:22:21,399 [INFO] game_db.sql: [HLTB_SYNC] Test mode: limiting to 20 games
+2025-12-25 22:22:21,399 [INFO] game_db.sql: [HLTB_SYNC] Processing game 1/20: 35MM
+2025-12-25 22:22:34,553 [INFO] game_db.sql: [HLTB_SYNC] Processing game 2/20: A Bird Story
+2025-12-25 22:22:47,719 [INFO] game_db.sql: [HLTB_SYNC] Processing game 3/20: A Jugglers Tale
+2025-12-25 22:23:00,263 [INFO] game_db.sql: [HLTB_SYNC] Processing game 4/20: A Plague Tale: Innocence
+2025-12-25 22:23:12,945 [INFO] game_db.sql: [HLTB_SYNC] Processing game 5/20: A Plague Tale: Requiem
+2025-12-25 22:23:26,179 [INFO] game_db.sql: [HLTB_SYNC] Processing game 6/20: A way out
+2025-12-25 22:23:38,918 [INFO] game_db.sql: [HLTB_SYNC] Processing game 7/20: Agatha Christie - Hercule Poirot The First Cases
+2025-12-25 22:23:52,026 [INFO] game_db.sql: [HLTB_SYNC] Processing game 8/20: Agatha Christie - The ABC Murders
+2025-12-25 22:23:55,093 [WARNING] game_db.hltb: No HowLongToBeat results found for game: Agatha Christie - The ABC Murders
+2025-12-25 22:23:55,094 [WARNING] game_db.sql: [HLTB_SYNC] No data fetched for game: Agatha Christie - The ABC Murders
+2025-12-25 22:24:05,099 [INFO] game_db.sql: [HLTB_SYNC] Processing game 9/20: Agony
+2025-12-25 22:24:18,371 [INFO] game_db.sql: [HLTB_SYNC] Processing game 10/20: Alan Wake
+2025-12-25 22:24:31,575 [INFO] game_db.sql: [HLTB_SYNC] Processing game 11/20: Alan Wake 2
+2025-12-25 22:24:44,679 [INFO] game_db.sql: [HLTB_SYNC] Processing game 12/20: Alice: Madness Returns
+2025-12-25 22:24:56,988 [INFO] game_db.sql: [HLTB_SYNC] Processing game 13/20: Alien: Isolation
+2025-12-25 22:25:09,501 [INFO] game_db.sql: [HLTB_SYNC] Processing game 14/20: Aliisha the Oblivion of Twin Goddesses
+2025-12-25 22:25:22,653 [INFO] game_db.sql: [HLTB_SYNC] Processing game 15/20: American Fugitive
+2025-12-25 22:25:34,882 [INFO] game_db.sql: [HLTB_SYNC] Processing game 16/20: Amnesia: The Bunker
+2025-12-25 22:25:47,499 [INFO] game_db.sql: [HLTB_SYNC] Processing game 17/20: Among The Sleep Enhanced Edition
+2025-12-25 22:26:00,881 [INFO] game_db.sql: [HLTB_SYNC] Processing game 18/20: Angry Birds Star Wars
+2025-12-25 22:26:13,384 [INFO] game_db.sql: [HLTB_SYNC] Processing game 19/20: Angry Birds Trilogy
+2025-12-25 22:26:28,599 [INFO] game_db.sql: [HLTB_SYNC] Processing game 20/20: Animal Crossing
+2025-12-25 22:26:32,385 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:26:32,386 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:26:32,389 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 22:26:32,389 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:26:32,390 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 22:26:32,391 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 22:26:32,391 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 22:26:32,391 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 22:26:32,391 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 22:26:32,392 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:26:32,395 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 22:26:32,397 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:26:32,402 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 22:26:32,402 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 22:38:51,415 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 22:38:51,417 [INFO] TeleBot: Stopped polling.
+2025-12-25 22:39:52,504 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:39:52,651 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 22:39:52,651 [INFO] TeleBot: Started polling.
+2025-12-25 22:40:08,399 [INFO] game_db.services.database: [HLTB_SYNC] Starting HowLongToBeat synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True, partial_mode: True)
+2025-12-25 22:40:08,484 [INFO] game_db.sql: [HLTB_SYNC] Test mode: limiting to 0 games
+2025-12-25 22:40:08,484 [WARNING] game_db.sql: [HLTB_SYNC] No games found for synchronization
+2025-12-25 22:40:28,311 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True, partial_mode: True)
+2025-12-25 22:40:28,399 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 0 games
+2025-12-25 22:40:28,400 [WARNING] game_db.sql: [METACRITIC_SYNC] No games found for synchronization
+2025-12-25 22:40:34,758 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 22:40:34,760 [INFO] TeleBot: Stopped polling.
+2025-12-25 22:44:47,579 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:44:47,723 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 22:44:47,723 [INFO] TeleBot: Started polling.
+2025-12-25 22:44:56,860 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True, partial_mode: True)
+2025-12-25 22:44:56,942 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 0 games
+2025-12-25 22:44:56,943 [INFO] game_db.sql: [METACRITIC_SYNC] No games found for synchronization (partial_mode: True)
+2025-12-25 22:45:04,596 [INFO] game_db.services.database: [HLTB_SYNC] Starting HowLongToBeat synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True, partial_mode: True)
+2025-12-25 22:45:04,679 [INFO] game_db.sql: [HLTB_SYNC] Test mode: limiting to 0 games
+2025-12-25 22:45:04,679 [INFO] game_db.sql: [HLTB_SYNC] No games found for synchronization (partial_mode: True)
+2025-12-25 22:45:38,350 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 22:45:38,353 [INFO] TeleBot: Stopped polling.
+2025-12-25 22:49:25,624 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:49:25,791 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 22:49:25,791 [INFO] TeleBot: Started polling.
+2025-12-25 22:49:32,960 [INFO] game_db.bot: [USER_ACCESS] Authorized user 241534328 accessed /start command
+2025-12-25 22:49:48,110 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True, partial_mode: True)
+2025-12-25 22:49:48,194 [INFO] game_db.sql: [METACRITIC_SYNC] Test mode: limiting to 0 games
+2025-12-25 22:49:48,194 [INFO] game_db.sql: [METACRITIC_SYNC] No games found for synchronization (partial_mode: True)
+2025-12-25 22:49:53,622 [INFO] game_db.services.database: [HLTB_SYNC] Starting HowLongToBeat synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True, partial_mode: True)
+2025-12-25 22:49:53,703 [INFO] game_db.sql: [HLTB_SYNC] Test mode: limiting to 0 games
+2025-12-25 22:49:53,703 [INFO] game_db.sql: [HLTB_SYNC] No games found for synchronization (partial_mode: True)
+2025-12-25 22:53:21,475 [INFO] game_db.bot: [USER_ACCESS] Authorized user 241534328 accessed /start command
+2025-12-25 22:53:51,219 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 22:53:51,222 [INFO] TeleBot: Stopped polling.
+2025-12-25 22:54:58,109 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:54:58,239 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 22:54:58,239 [INFO] TeleBot: Started polling.
+2025-12-25 22:54:58,432 [ERROR] game_db.bot: Error handling callback query 'back_main': A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 130, in handle_callback_query
+    _handle_main_menu(callback_query, bot, security, user_id)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 217, in _handle_main_menu
+    bot.edit_message_text(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        texts.MAIN_MENU,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_markup=InlineMenu.main_menu(security, user_id),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 5349, in edit_message_text
+    result = apihelper.edit_message_text(
+        self.token, text, chat_id=chat_id, message_id=message_id, inline_message_id=inline_message_id,
+        parse_mode=parse_mode, entities=entities, reply_markup=reply_markup, link_preview_options=link_preview_options,
+        business_connection_id=business_connection_id, timeout=timeout)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1627, in edit_message_text
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-12-25 22:54:58,584 [ERROR] game_db.bot: Error handling callback query 'back_main': A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 130, in handle_callback_query
+    _handle_main_menu(callback_query, bot, security, user_id)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexanderkan/GitHub/game_db/game_db/callback_handlers.py", line 217, in _handle_main_menu
+    bot.edit_message_text(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        texts.MAIN_MENU,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        reply_markup=InlineMenu.main_menu(security, user_id),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/__init__.py", line 5349, in edit_message_text
+    result = apihelper.edit_message_text(
+        self.token, text, chat_id=chat_id, message_id=message_id, inline_message_id=inline_message_id,
+        parse_mode=parse_mode, entities=entities, reply_markup=reply_markup, link_preview_options=link_preview_options,
+        business_connection_id=business_connection_id, timeout=timeout)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 1627, in edit_message_text
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/alexanderkan/GitHub/game_db/.venv/lib/python3.13/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-12-25 22:55:32,063 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 22:55:32,065 [INFO] TeleBot: Stopped polling.
+2025-12-25 22:56:23,567 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 22:56:23,568 [INFO] TeleBot: Started polling.
+2025-12-25 22:57:10,867 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 22:57:10,870 [INFO] TeleBot: Stopped polling.
+2025-12-25 22:57:35,336 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 22:57:35,337 [INFO] TeleBot: Started polling.
+2025-12-25 22:57:46,213 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:57:46,296 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 22:57:46,582 [INFO] game_db.http: Saved raw Steam API response to: /Users/alexanderkan/GitHub/game_db/steam_api_response.json
+2025-12-25 22:57:46,587 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 22:57:46,831 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Atomic Heart, The Walking Dead: The Final Season, Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Warhammer 40,000: Dawn of War - Definitive Edition, Yakuza Kiwami 2
+2025-12-25 22:57:46,833 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Game 'Project CARS - Pagani Edition' (row 480) not found in Steam API. DB name repr: 'Project CARS - Pagani Edition', DB name len: 29
+2025-12-25 22:57:46,833 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Found similar names in Steam API: Project CARS 2, Project CARS
+2025-12-25 22:57:46,833 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS 2' (len=14, repr='Project CARS 2'), exact_match=False, normalized_match=False
+2025-12-25 22:57:46,833 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS' (len=12, repr='Project CARS'), exact_match=False, normalized_match=False
+2025-12-25 22:57:46,834 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS: Battlefront, The Mirror Lied
+2025-12-25 22:57:46,835 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 22:57:46,836 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:57:46,840 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 22:57:46,840 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 22:57:46,842 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 22:57:46,842 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 22:57:46,843 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 22:57:46,843 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (mode: full)
+2025-12-25 22:57:46,843 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 22:57:46,843 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:57:46,849 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 22:57:46,850 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 22:57:46,851 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 22:57:46,851 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file
+2025-12-25 23:15:21,490 [INFO] game_db.services.database: [HLTB_SYNC] Starting HowLongToBeat synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx (test_mode: True, partial_mode: True)
+2025-12-25 23:15:21,580 [INFO] game_db.sql: [HLTB_SYNC] Test mode: limiting to 0 games
+2025-12-25 23:15:21,582 [INFO] game_db.sql: [HLTB_SYNC] No games found for synchronization (partial_mode: True)
+2025-12-25 23:16:10,980 [INFO] TeleBot: KeyboardInterrupt received.
+2025-12-25 23:16:10,983 [INFO] TeleBot: Stopped polling.
+2025-12-25 23:21:35,491 [INFO] game_db.utils: Successfully deleted file: /Users/alexanderkan/GitHub/game_db/update_db/games.xlsx
+2025-12-25 23:21:35,640 [INFO] TeleBot: Starting your bot with username: [@KaKnyaMiBot]
+2025-12-25 23:21:35,640 [INFO] TeleBot: Started polling.
+2025-12-25 23:21:53,353 [INFO] game_db.services.database: [METACRITIC_SYNC] Starting Metacritic synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/backup_db/games.xlsx (test_mode: False, partial_mode: True)
+2025-12-25 23:21:53,438 [INFO] game_db.sql: [METACRITIC_SYNC] No games found for synchronization (partial_mode: True)
+2025-12-25 23:22:00,357 [INFO] game_db.services.database: [HLTB_SYNC] Starting HowLongToBeat synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/backup_db/games.xlsx (test_mode: False, partial_mode: True)
+2025-12-25 23:22:00,443 [INFO] game_db.sql: [HLTB_SYNC] No games found for synchronization (partial_mode: True)
+2025-12-25 23:22:50,458 [INFO] game_db.services.database: [STEAM_SYNC] Starting Steam synchronization with Excel file: /Users/alexanderkan/GitHub/game_db/backup_db/games.xlsx
+2025-12-25 23:22:50,551 [INFO] game_db.http: Requesting owned games for SteamID 76561198109856065
+2025-12-25 23:22:51,285 [INFO] game_db.http: Saved raw Steam API response to: /Users/alexanderkan/GitHub/game_db/steam_api_response.json
+2025-12-25 23:22:51,289 [INFO] game_db.sql: [STEAM_SYNC] Fetched 347 games from Steam API (SteamID: 76561198109856065)
+2025-12-25 23:22:51,538 [INFO] game_db.sql: Games from Steam not found in DB: Sherlock Holmes: Nemesis, Sherlock Holmes: The Awakened (2008), Sherlock Holmes: The Secret of the Silver Earring, Sherlock Holmes: The Mystery of The Persian Carpet, Sherlock Holmes versus Jack the Ripper, The Testament of Sherlock Holmes, Fahrenheit: Indigo Prophecy Remastered, The Walking Dead: Michonne, ACE COMBAT™7: SKIES UNKNOWN, Atomic Heart, The Walking Dead: The Final Season, Spiritfarer®: Farewell Edition, Halo: The Master Chief Collection, Baldur's Gate 3, Scars Above, Battlefield™ 1, The Outlast Trials, INDIKA, Dead Space, Resident Evil 4, Senua’s Saga: Hellblade II, Assassin's Creed Mirage, Warhammer 40,000: Dawn of War - Definitive Edition, Yakuza Kiwami 2
+2025-12-25 23:22:51,539 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Game 'Project CARS - Pagani Edition' (row 480) not found in Steam API. DB name repr: 'Project CARS - Pagani Edition', DB name len: 29
+2025-12-25 23:22:51,539 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Found similar names in Steam API: Project CARS 2, Project CARS
+2025-12-25 23:22:51,539 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS 2' (len=14, repr='Project CARS 2'), exact_match=False, normalized_match=False
+2025-12-25 23:22:51,539 [INFO] game_db.sql: [STEAM_SYNC_DEBUG] Comparison: DB='Project CARS - Pagani Edition' (len=29, repr='Project CARS - Pagani Edition') vs Steam='Project CARS' (len=12, repr='Project CARS'), exact_match=False, normalized_match=False
+2025-12-25 23:22:51,540 [INFO] game_db.sql: Games in DB with Steam platform not found in Steam API: Counter-Strike: Global Offensive, Half-Life 2: Episode One, Half-Life 2: Episode Two, Half-Life 2: Lost Coast, Halo 2: Anniversary, Halo 3, Halo 3: ODST, Halo: Combat Evolved Anniversary, Halo: Reach, Project CARS - Pagani Edition, STAR WARS Jedi Knight: Dark Forces II, STAR WARS: Battlefront, The Mirror Lied
+2025-12-25 23:22:51,540 [INFO] game_db.sql: [DB_RECREATION] Starting database recreation from Excel file: /Users/alexanderkan/GitHub/game_db/backup_db/games.xlsx
+2025-12-25 23:22:51,541 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 23:22:51,545 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/drop_tables.sql' (approximately 5 statements)
+2025-12-25 23:22:51,545 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 5 statements)
+2025-12-25 23:22:51,547 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/create_tables.sql' (approximately 5 statements)
+2025-12-25 23:22:51,547 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 2 statements)
+2025-12-25 23:22:51,548 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_dictionaries.sql' (approximately 2 statements)
+2025-12-25 23:22:51,548 [INFO] game_db.sql: [EXCEL_IMPORT] Starting import from Excel file: /Users/alexanderkan/GitHub/game_db/backup_db/games.xlsx (mode: full)
+2025-12-25 23:22:51,548 [INFO] game_db.sql: [EXCEL_IMPORT] Using pre-generated SQL file: /Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql
+2025-12-25 23:22:51,549 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 23:22:51,553 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games.sql' (approximately 1 statements)
+2025-12-25 23:22:51,553 [INFO] game_db.sql: [SQL_EXECUTION] Executing SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' on database '/Users/alexanderkan/GitHub/game_db/games.db' (approximately 1 statements)
+2025-12-25 23:22:51,555 [INFO] game_db.sql: [SQL_EXECUTION] Successfully executed SQL file '/Users/alexanderkan/GitHub/game_db/sql_querry/create_db/dml/dml_games_on_platforms.sql' (approximately 1 statements)
+2025-12-25 23:22:51,558 [INFO] game_db.sql: [EXCEL_IMPORT] Successfully imported games from SQL file

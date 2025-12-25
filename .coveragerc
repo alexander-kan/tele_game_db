@@ -1,0 +1,18 @@
+[run]
+source = game_db
+omit =
+    */tests/*
+    */test_*.py
+    */__pycache__/*
+    */scripts/*
+    */logging_config.py
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise AssertionError
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    if TYPE_CHECKING:
+    @abstractmethod

@@ -1,0 +1,5150 @@
+{
+  "response": {
+    "game_count": 347,
+    "games": [
+      {
+        "appid": 10,
+        "name": "Counter-Strike",
+        "playtime_forever": 0,
+        "img_icon_url": "6b0312cda02f5f777efa2f3318c307ff9acafbb5",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 20,
+        "name": "Team Fortress Classic",
+        "playtime_forever": 0,
+        "img_icon_url": "38ea7ebe3c1abbbbf4eabdbef174c41a972102b9",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 30,
+        "name": "Day of Defeat",
+        "playtime_forever": 0,
+        "img_icon_url": "aadc0ce51ff6ba2042d633f8ec033b0de62091d0",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 40,
+        "name": "Deathmatch Classic",
+        "playtime_forever": 0,
+        "img_icon_url": "c525f76c8bc7353db4fd74b128c4ae2028426c2a",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 50,
+        "name": "Half-Life: Opposing Force",
+        "playtime_forever": 0,
+        "img_icon_url": "04e81206c10e12416908c72c5f22aad411b3aeef",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 60,
+        "name": "Ricochet",
+        "playtime_forever": 0,
+        "img_icon_url": "98c69e04cd59b838e05cb6980c12c05874c6419e",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 70,
+        "name": "Half-Life",
+        "playtime_forever": 0,
+        "img_icon_url": "95be6d131fc61f145797317ca437c9765f24b41c",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 80,
+        "name": "Counter-Strike: Condition Zero",
+        "playtime_forever": 0,
+        "img_icon_url": "077b050ef3e89cd84e2c5a575d78d53b54058236",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 100,
+        "name": "Counter-Strike: Condition Zero Deleted Scenes",
+        "playtime_forever": 0,
+        "img_icon_url": "077b050ef3e89cd84e2c5a575d78d53b54058236",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 130,
+        "name": "Half-Life: Blue Shift",
+        "playtime_forever": 0,
+        "img_icon_url": "b06fdee488b3220362c11704be4edad82abeed08",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 220,
+        "name": "Half-Life 2",
+        "playtime_forever": 91,
+        "img_icon_url": "fcfb366051782b8ebf2aa297f3b746395858cb62",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 26,
+        "playtime_deck_forever": 26,
+        "rtime_last_played": 1716240126,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 240,
+        "name": "Counter-Strike: Source",
+        "playtime_forever": 0,
+        "img_icon_url": "9052fa60c496a1c03383b27687ec50f4bf0f0e10",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 280,
+        "name": "Half-Life: Source",
+        "playtime_forever": 0,
+        "img_icon_url": "b4f572a6cc5a6a84ae84634c31414b9123d2f26b",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 300,
+        "name": "Day of Defeat: Source",
+        "playtime_forever": 0,
+        "img_icon_url": "062754bb5853b0534283ae27dc5d58200692b22d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 320,
+        "name": "Half-Life 2: Deathmatch",
+        "playtime_forever": 0,
+        "img_icon_url": "795e85364189511f4990861b578084deef086cb1",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 360,
+        "name": "Half-Life Deathmatch: Source",
+        "playtime_forever": 0,
+        "img_icon_url": "40b8a62efff5a9ab356e5c56f5c8b0532c8e1aa3",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 400,
+        "name": "Portal",
+        "playtime_forever": 215,
+        "img_icon_url": "cfa928ab4119dd137e50d728e8fe703e4e970aff",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1468692020,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 440,
+        "name": "Team Fortress 2",
+        "playtime_forever": 0,
+        "img_icon_url": "f568912870a4684f9ec76277a1a404dda6bab213",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 500,
+        "name": "Left 4 Dead",
+        "playtime_forever": 0,
+        "img_icon_url": "428df26bc35b09319e31b1ffb712487b20b3245c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 550,
+        "name": "Left 4 Dead 2",
+        "playtime_forever": 1277,
+        "img_icon_url": "7d5a243f9500d2f8467312822f8af2a2928777ed",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 1185,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1592145102,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 620,
+        "name": "Portal 2",
+        "playtime_forever": 552,
+        "img_icon_url": "25a5a16b2423bf7487ac5340b5b0948cef48c5f8",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1468790121,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 730,
+        "name": "Counter-Strike 2",
+        "playtime_forever": 0,
+        "img_icon_url": "8dbc71957312bbd3baea65848b545be9eae2a355",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2810,
+        "name": "X3: Reunion",
+        "playtime_forever": 50,
+        "img_icon_url": "f715f27302974e0f84d0b85f019174a0e7071b9e",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1462720308,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2820,
+        "name": "X3: Terran Conflict",
+        "playtime_forever": 0,
+        "img_icon_url": "df0df7b67ebae96d5e580d43f4a784e265ba9c38",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 3830,
+        "name": "Psychonauts",
+        "playtime_forever": 0,
+        "img_icon_url": "460b6471db7d83ee6943c1a87f7a9f2898634952",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 4570,
+        "name": "Warhammer 40,000: Dawn of War - Anniversary Edition ",
+        "playtime_forever": 114,
+        "img_icon_url": "a4c7a8cce43d797c275aaf601d6855b90ba87769",
+        "playtime_windows_forever": 65,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 48,
+        "playtime_deck_forever": 48,
+        "rtime_last_played": 1698616268,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 4580,
+        "name": "Warhammer 40,000: Dawn of War - Dark Crusade",
+        "playtime_forever": 0,
+        "img_icon_url": "584fcb6284ffd2fcf378fb3c199a9275a0a01b2d",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 6000,
+        "name": "STAR WARS™ Republic Commando",
+        "playtime_forever": 0,
+        "img_icon_url": "73d4fd5437a5491479c7235eef64cf7d5e2c2e8e",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 6020,
+        "name": "STAR WARS™ Jedi Knight: Jedi Academy™",
+        "playtime_forever": 0,
+        "img_icon_url": "2e359a8df71ea18ddd77fda3f6b307e6e86ef910",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 6030,
+        "name": "STAR WARS™ Jedi Knight II: Jedi Outcast™",
+        "playtime_forever": 0,
+        "img_icon_url": "7f6bf88e9eca8e206b3659fd52d1a07324ee27cb",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 6060,
+        "name": "Star Wars: Battlefront 2 (Classic, 2005)",
+        "playtime_forever": 0,
+        "img_icon_url": "f6302406e215af8cff3533a747d30387f68bef2a",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 6860,
+        "name": "Hitman: Blood Money",
+        "playtime_forever": 8,
+        "img_icon_url": "c8f46248ca288cf332f170a954ffafff2c122131",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 8,
+        "playtime_deck_forever": 8,
+        "rtime_last_played": 1675331180,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 7670,
+        "name": "BioShock",
+        "playtime_forever": 640,
+        "img_icon_url": "9a7c9f640a76e6a32592277dbbc36a0f6da05372",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1494259854,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 8850,
+        "name": "BioShock 2",
+        "playtime_forever": 974,
+        "img_icon_url": "f5eda925c0e57373aaea4cae17b6f175115a8d54",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1495303089,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 8870,
+        "name": "BioShock Infinite",
+        "playtime_forever": 974,
+        "img_icon_url": "4ebaf5f9ee74f50152f7ff361debef7553fa0e4e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1447012325,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 9310,
+        "name": "Warhammer 40,000: Dawn of War - Winter Assault",
+        "playtime_forever": 0,
+        "img_icon_url": "60d48bf5f8a11fc4aeacb546a20cb40f537290bf",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 9350,
+        "name": "Supreme Commander",
+        "playtime_forever": 0,
+        "img_icon_url": "ebc51d0f50f1d964dd87e7000e517865436a24b9",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 9450,
+        "name": "Warhammer 40,000: Dawn of War - Soulstorm",
+        "playtime_forever": 0,
+        "img_icon_url": "d13abadb0f456659a634d2cd8286665a0c76a2c6",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 11040,
+        "name": "Sherlock Holmes: Nemesis",
+        "playtime_forever": 0,
+        "img_icon_url": "4e4680ca461d37c0518113eb49d7077971adaa10",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 11140,
+        "name": "Sherlock Holmes: The Awakened (2008)",
+        "playtime_forever": 0,
+        "img_icon_url": "64458eaa1b616fd7548744af49e489f43cd429e3",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 11150,
+        "name": "Sherlock Holmes: The Secret of the Silver Earring",
+        "playtime_2weeks": 5,
+        "playtime_forever": 5,
+        "img_icon_url": "17b19a9602dd2563546faac49c0c1b61f8fc09bd",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 5,
+        "playtime_deck_forever": 5,
+        "rtime_last_played": 1766584976,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 11180,
+        "name": "Sherlock Holmes: The Mystery of The Persian Carpet",
+        "playtime_forever": 0,
+        "img_icon_url": "b7a7691e4fccd7c748ce150e2750b62c8fd9cb2f",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 11190,
+        "name": "Sherlock Holmes versus Jack the Ripper",
+        "playtime_forever": 0,
+        "img_icon_url": "a5234d01152ea92953f2a5dbf1bbcf9648f00cab",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 12210,
+        "name": "Grand Theft Auto IV: The Complete Edition",
+        "playtime_forever": 395,
+        "img_icon_url": "a3cf6a64c73f991898a9e34681d0db8226eaa191",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 377,
+        "playtime_deck_forever": 377,
+        "rtime_last_played": 1764879599,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 15100,
+        "name": "Assassin's Creed",
+        "playtime_forever": 0,
+        "img_icon_url": "cd8f7a795e34e16449f7ad8d8190dce521967917",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 15620,
+        "name": "Warhammer 40,000: Dawn of War II - Anniversary Edition",
+        "playtime_forever": 30,
+        "img_icon_url": "63d290e28741128c7f979d329401a6c83676ec66",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 30,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1755204294,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 16450,
+        "name": "F.E.A.R. 2: Project Origin",
+        "playtime_forever": 0,
+        "img_icon_url": "6611d8b01c7a2cc3538c478c044d1e09f3140eaa",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 17300,
+        "name": "Crysis",
+        "playtime_forever": 463,
+        "img_icon_url": "94bdcfce65cc63a92dcc76977f2b59750f67e3b2",
+        "playtime_windows_forever": 463,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1642970431,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 17330,
+        "name": "Crysis Warhead",
+        "playtime_forever": 282,
+        "img_icon_url": "c29cf6caf9be493569091f8a95acb9139e92a485",
+        "playtime_windows_forever": 282,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1643475920,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 17340,
+        "name": "Crysis Wars",
+        "playtime_forever": 0,
+        "img_icon_url": "8085d7a383827dcbf48a2383cf148bde090d9109",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 17410,
+        "name": "Mirror's Edge",
+        "playtime_forever": 86,
+        "img_icon_url": "cfea4731163004b2e5117c3b42a798c48c483d8f",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1468864380,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 17470,
+        "name": "Dead Space (2008)",
+        "playtime_forever": 958,
+        "img_icon_url": "45e682594687a6c92037631225340d26c783362f",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1434142984,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 19680,
+        "name": "Alice: Madness Returns",
+        "playtime_forever": 370,
+        "img_icon_url": "a9dc16a5a8293cea1c1d934bdbc08721708b1399",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1469821281,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 20500,
+        "name": "Red Faction: Guerrilla Steam Edition",
+        "playtime_forever": 0,
+        "img_icon_url": "e7f356bc74c871f6955c9caec5d38a8d56f49490",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 20530,
+        "name": "Red Faction",
+        "playtime_forever": 0,
+        "img_icon_url": "bcf2c44a533f16f814662bdeae25e4f0d25bcd9e",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 20550,
+        "name": "Red Faction II",
+        "playtime_forever": 0,
+        "img_icon_url": "e062d37ca0ff9134ec5de34f2a4e1ec10d7203c0",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 20570,
+        "name": "Warhammer 40,000: Dawn of War II - Chaos Rising",
+        "playtime_forever": 0,
+        "img_icon_url": "c336ad99c1fbd88afbcb9c1604fa78d0e6f470b4",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 20900,
+        "name": "The Witcher: Enhanced Edition",
+        "playtime_forever": 0,
+        "img_icon_url": "746d1cd48fb2e57d579b05b6e9eccba95859e549",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 20920,
+        "name": "The Witcher 2: Assassins of Kings Enhanced Edition",
+        "playtime_forever": 1640,
+        "img_icon_url": "62dd5c627664df1bcabc47727c7dcd7ccab353e9",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1431295590,
+        "has_leaderboards": true,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 21090,
+        "name": "F.E.A.R.",
+        "playtime_forever": 234,
+        "img_icon_url": "71f118282be5aaa34eb82506593130ecfcc6a90b",
+        "playtime_windows_forever": 3,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 230,
+        "playtime_deck_forever": 230,
+        "rtime_last_played": 1758095183,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 21100,
+        "name": "F.E.A.R. 3",
+        "playtime_forever": 0,
+        "img_icon_url": "01b73115a3ff7315d14f0bcf7beff01ef76162b4",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 21110,
+        "name": "F.E.A.R.: Extraction Point",
+        "playtime_forever": 0,
+        "img_icon_url": "153d4f89ef0bd59a0039c396ff963a31d4d5e71b",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 21120,
+        "name": "F.E.A.R.: Perseus Mandate",
+        "playtime_forever": 0,
+        "img_icon_url": "7b1d0271f2735ca66e1cb681eb4da1a7c985d53f",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 21690,
+        "name": "Resident Evil 5",
+        "playtime_forever": 26,
+        "img_icon_url": "26108f5caff3638c9f522dd79ee84a12761f373a",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1425589107,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 22300,
+        "name": "Fallout 3",
+        "playtime_forever": 3,
+        "img_icon_url": "21d7090bdea8f6685ca730850b7b55acfdb92732",
+        "playtime_windows_forever": 3,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1757270982,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 22380,
+        "name": "Fallout: New Vegas",
+        "playtime_forever": 0,
+        "img_icon_url": "1711fd8c46d739feec76bd4a64eaeeca5b87e3a7",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 22490,
+        "name": "Fallout: New Vegas PCR",
+        "playtime_forever": 0,
+        "img_icon_url": "1711fd8c46d739feec76bd4a64eaeeca5b87e3a7",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 24960,
+        "name": "Battlefield: Bad Company™ 2",
+        "playtime_forever": 38,
+        "img_icon_url": "3a8b5c53efd00554eb3315681754974c3edf1c41",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1425914912,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32350,
+        "name": "STAR WARS™ Starfighter™",
+        "playtime_forever": 0,
+        "img_icon_url": "9fcafa15e223942015c7171c31d45df7eed75047",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32370,
+        "name": "STAR WARS™ Knights of the Old Republic™",
+        "playtime_forever": 166,
+        "img_icon_url": "018b6650c8de8c9c36d957cf6f8bc11d0c21d083",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 10,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1733058362,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32380,
+        "name": "STAR WARS™ Jedi Knight: Dark Forces II",
+        "playtime_forever": 0,
+        "img_icon_url": "be8c3aab8f42f91a84aef316027fd545638f9e13",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32390,
+        "name": "STAR WARS™ Jedi Knight: Mysteries of the Sith™",
+        "playtime_forever": 0,
+        "img_icon_url": "e5af0881e086756eb98a963c8baed05830594f91",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32400,
+        "name": "STAR WARS™: Dark Forces",
+        "playtime_forever": 0,
+        "img_icon_url": "be8c3aab8f42f91a84aef316027fd545638f9e13",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32420,
+        "name": "STAR WARS™: The Clone Wars - Republic Heroes™",
+        "playtime_forever": 0,
+        "img_icon_url": "3cc8751e9bc216efdba398de3abb0f9a1c6ffade",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32430,
+        "name": "STAR WARS™: The Force Unleashed™ Ultimate Sith Edition",
+        "playtime_forever": 93,
+        "img_icon_url": "5a4a943e2b397aaffc6ec5f17e00c9f59e0ba88c",
+        "playtime_windows_forever": 6,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1757260886,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32440,
+        "name": "LEGO® Star Wars™: The Complete Saga",
+        "playtime_forever": 0,
+        "img_icon_url": "096307d4ae0decd6a331e381f8dd464d75e3d9d6",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32470,
+        "name": "STAR WARS™ Empire at War: Gold Pack",
+        "playtime_forever": 0,
+        "img_icon_url": "3f65d9be3af3083c07f1053dbf0b0653af7323b8",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 32500,
+        "name": "STAR WARS™: The Force Unleashed™ II",
+        "playtime_forever": 0,
+        "img_icon_url": "88a3ef4f5cd4bbad37df743818bf379aaff014e8",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 33230,
+        "name": "Assassin's Creed II",
+        "playtime_forever": 0,
+        "img_icon_url": "0492d8ee860ac99168e46efeb003029c3224cb38",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 35140,
+        "name": "Batman: Arkham Asylum GOTY Edition",
+        "playtime_forever": 717,
+        "img_icon_url": "e52f91ecb0d3f20263e96fe188de1bcc8c91643e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1436292346,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 40100,
+        "name": "Supreme Commander 2",
+        "playtime_forever": 0,
+        "img_icon_url": "96e22cb9c9b063c9f0398f248fef850a679ced5a",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 40990,
+        "name": "Mafia",
+        "playtime_forever": 527,
+        "img_icon_url": "3c86a0fd4f94a97b6f4ce31b5c31532e2098fe7b",
+        "playtime_windows_forever": 527,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1577479278,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 44320,
+        "name": "DiRT 3",
+        "playtime_forever": 2,
+        "img_icon_url": "c75648fec8ff9f218e3b1b5dcb7ac38b8b2e7bda",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1460278239,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 47780,
+        "name": "Dead Space 2",
+        "playtime_forever": 531,
+        "img_icon_url": "6393351676edc4fdc65937a599780818fd2f18b7",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1435503195,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 47870,
+        "name": "Need for Speed: Hot Pursuit",
+        "playtime_forever": 318,
+        "img_icon_url": "4066e98d482110d2ee745d3a415d80d36336eb33",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 29,
+        "playtime_deck_forever": 29,
+        "rtime_last_played": 1715197579,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 48190,
+        "name": "Assassin's Creed Brotherhood",
+        "playtime_forever": 0,
+        "img_icon_url": "6a87d0b61e45e8075decd1f8ace549300b036a52",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 49520,
+        "name": "Borderlands 2",
+        "playtime_forever": 0,
+        "img_icon_url": "a3f4945226e69b6196074df4c776e342d3e5a3be",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 50130,
+        "name": "Mafia II (Classic)",
+        "playtime_forever": 730,
+        "img_icon_url": "62f1f7324e520be067aec1ab06d1ec6fa56f25bd",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1422390671,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 50300,
+        "name": "Spec Ops: The Line",
+        "playtime_forever": 609,
+        "img_icon_url": "55ae859a90d61c08f18ed3aa0ee2579169d2c2bf",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1428252352,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 50620,
+        "name": "Darksiders",
+        "playtime_forever": 0,
+        "img_icon_url": "e429cee10d864faf2aae2ea9cd75e8e1942fbe08",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 55110,
+        "name": "Red Faction: Armageddon",
+        "playtime_forever": 0,
+        "img_icon_url": "e59c7e741c05c9071176b270bdbb733afe55c751",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 55150,
+        "name": "Warhammer 40,000: Space Marine - Anniversary Edition",
+        "playtime_forever": 12,
+        "img_icon_url": "46b0ce6e587472d1d56cc88dd32c8b57392f8b10",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 12,
+        "playtime_deck_forever": 12,
+        "rtime_last_played": 1725744937,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 55230,
+        "name": "Saints Row: The Third",
+        "playtime_forever": 0,
+        "img_icon_url": "ec83645f13643999e7c91da75d418053d6b56529",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 56400,
+        "name": "Warhammer 40,000: Dawn of War II - Retribution",
+        "playtime_forever": 0,
+        "img_icon_url": "56241ad73fdc9a4d208d5417a0d9109e9a6e29cd",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 67370,
+        "name": "The Darkness II",
+        "playtime_2weeks": 490,
+        "playtime_forever": 490,
+        "img_icon_url": "6ca6291fe216a8cc5c56f01b1e7f83e396a8fa81",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 490,
+        "playtime_deck_forever": 490,
+        "rtime_last_played": 1766582903,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 70000,
+        "name": "Dino D-Day",
+        "playtime_forever": 0,
+        "img_icon_url": "958cda55e4c95d79c651b567f3083204d9842911",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 99810,
+        "name": "Bulletstorm",
+        "playtime_forever": 446,
+        "img_icon_url": "6f7d51f89ea4998bd4f2aa3e96d418d3868766cd",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1469293750,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 108710,
+        "name": "Alan Wake",
+        "playtime_forever": 590,
+        "img_icon_url": "ec7953511aaaf5a2c2093b872b5b43c6cab56462",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1469917214,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 108800,
+        "name": "Crysis 2 Maximum Edition",
+        "playtime_forever": 929,
+        "img_icon_url": "5f401ab4b7d16ca8f778ff6b85dd25e0d3d49460",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 929,
+        "playtime_deck_forever": 929,
+        "rtime_last_played": 1715958726,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 110800,
+        "name": "L.A. Noire",
+        "playtime_2weeks": 45,
+        "playtime_forever": 170,
+        "img_icon_url": "ee09d4d2552e52c78d139a3b6dbe60173079d9f8",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 45,
+        "playtime_deck_forever": 45,
+        "rtime_last_played": 1766614829,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 115100,
+        "name": "Costume Quest",
+        "playtime_forever": 0,
+        "img_icon_url": "ba04f2c7aa5a5c8762d088d9a9fe10d67c92e59b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 115110,
+        "name": "Stacking",
+        "playtime_forever": 0,
+        "img_icon_url": "c6f9f3ea7afced3ac93e08b43c8e64aa45488648",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 115120,
+        "name": "Iron Brigade",
+        "playtime_forever": 0,
+        "img_icon_url": "34c5b4afd0a64fe238d57396598714c4e184872d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 200260,
+        "name": "Batman: Arkham City GOTY",
+        "playtime_forever": 744,
+        "img_icon_url": "746ecf3ce44b2525eb7ad643e76a3b60913d2662",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1471194940,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 200510,
+        "name": "XCOM: Enemy Unknown",
+        "playtime_forever": 953,
+        "img_icon_url": "48be2fee1d0d511b5c7313e1359beafd36ea92ed",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1451826577,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 201310,
+        "name": "X3: Albion Prelude",
+        "playtime_forever": 0,
+        "img_icon_url": "0a56b4bf737c11beabe52496ed018800f37ec310",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 201810,
+        "name": "Wolfenstein: The New Order",
+        "playtime_forever": 979,
+        "img_icon_url": "965b8943ad172d8cf0c74e86068b4aa670aba92c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1496595499,
+        "has_leaderboards": true,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 201870,
+        "name": "Assassin's Creed Revelations",
+        "playtime_forever": 0,
+        "img_icon_url": "08f7266496718dbd5d2f93e4776d3f5dc368ad54",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 203140,
+        "name": "Hitman: Absolution",
+        "playtime_forever": 169,
+        "img_icon_url": "fe5e36ac1548793eb48b6b25b701b37d86fb94a3",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 7,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1663169436,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 203160,
+        "name": "Tomb Raider",
+        "playtime_forever": 611,
+        "img_icon_url": "3ee640a8aba6992678e36f4e40cba9c71c02348b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1464519838,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 204100,
+        "name": "Max Payne 3",
+        "playtime_forever": 570,
+        "img_icon_url": "96af86331719b56cefc55298b4fcb99c99f1cfee",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1457872958,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 205650,
+        "name": "The Testament of Sherlock Holmes",
+        "playtime_forever": 0,
+        "img_icon_url": "18da9f7ed5c56720803ad486924d9c8c958aab11",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 205930,
+        "name": "Hitman: Sniper Challenge",
+        "playtime_forever": 0,
+        "img_icon_url": "756d0ca797b4c8a1340dd73bf49b0bb0656a1802",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 206440,
+        "name": "To the Moon",
+        "playtime_forever": 344,
+        "img_icon_url": "6e29eb4076a6253fdbccb987a2a21746d2df54d7",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1536407780,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 207610,
+        "name": "The Walking Dead",
+        "playtime_forever": 1369,
+        "img_icon_url": "87a13ae0a2a76488792924aa8bb0dd8a7760f931",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 1185,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1642871215,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 208580,
+        "name": "STAR WARS™ Knights of the Old Republic™ II: The Sith Lords™",
+        "playtime_forever": 0,
+        "img_icon_url": "1c9e1a68198c15eb47b35c692fbfa5adeb7a6566",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 208650,
+        "name": "Batman™: Arkham Knight",
+        "playtime_forever": 113,
+        "img_icon_url": "f6c2ce13796844750dfbd01685fb009eeac4bf70",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1565551133,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 213670,
+        "name": "South Park™: The Stick of Truth™",
+        "playtime_forever": 842,
+        "img_icon_url": "afad8295902080fb2aedd9aaabb3e21c10eecc85",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1498993913,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 214490,
+        "name": "Alien: Isolation",
+        "playtime_forever": 2,
+        "img_icon_url": "7bf964858835da75630a43ac0ddbf0f66a40902f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 2,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1699371304,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 217200,
+        "name": "Worms Armageddon",
+        "playtime_forever": 0,
+        "img_icon_url": "68c6d17bde9c578d91dd1e207b58eb4d8308ce40",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 217490,
+        "name": "Borderlands 2 RU",
+        "playtime_forever": 256,
+        "img_icon_url": "ed09ad42baa474c2ce425df24bc3dff587a9e4c0",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1434909127,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 218620,
+        "name": "PAYDAY 2",
+        "playtime_forever": 0,
+        "img_icon_url": "a6abc0d0c1e79c0b5b0f5c8ab81ce9076a542414",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 220240,
+        "name": "Far Cry® 3",
+        "playtime_forever": 0,
+        "img_icon_url": "8231f43d3dd47fb4b4111fd6bd4a849e73eb0520",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 221040,
+        "name": "Resident Evil 6",
+        "playtime_forever": 0,
+        "img_icon_url": "0a0832a59b6c0a4ffa995b0343892729fe61ec1b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 221680,
+        "name": "Rocksmith® 2014 Edition - Remastered",
+        "playtime_forever": 102,
+        "img_icon_url": "26c3d3ad45c9386e909613e5d115e73955501844",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1424804662,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 222480,
+        "name": "Resident Evil Revelations",
+        "playtime_forever": 0,
+        "img_icon_url": "5725845fe83f846a04135034c5be55aef008c725",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 225080,
+        "name": "Brothers - A Tale of Two Sons",
+        "playtime_forever": 230,
+        "img_icon_url": "9d6e8bcae597582734b382d8da93e5fa7b1c640b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1468850556,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 225260,
+        "name": "Brütal Legend",
+        "playtime_forever": 439,
+        "img_icon_url": "e3f25fba8538e5fb1ead751e767c2774df4fb0b4",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1471106220,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 228300,
+        "name": "Remember Me",
+        "playtime_forever": 822,
+        "img_icon_url": "3a8acb47f7aa7381f08588be7f2a5267c52baa7f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1470508561,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 230230,
+        "name": "Divinity: Original Sin (Classic)",
+        "playtime_forever": 0,
+        "img_icon_url": "ca9cdafd4257253dba68babeed300874190fbbff",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 231160,
+        "name": "The Swapper",
+        "playtime_forever": 18,
+        "img_icon_url": "4d3e99b7d885baba60ea29ee1634cc58bf22e41d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 5,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 12,
+        "playtime_deck_forever": 12,
+        "rtime_last_played": 1764538807,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 233290,
+        "name": "MURDERED: SOUL SUSPECT™",
+        "playtime_forever": 0,
+        "img_icon_url": "b0507554c8d39f2c4ebd45a446660e6b0d93ff52",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 234140,
+        "name": "Mad Max",
+        "playtime_forever": 19,
+        "img_icon_url": "71a4dd52273b749f96913a48dd6f439fb5ddc23e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 19,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1755810342,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 234630,
+        "name": "Project CARS",
+        "playtime_forever": 2613,
+        "img_icon_url": "3817b4b626ac700dfa4266a3888f8e4d1ca03c7a",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1564939618,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 234670,
+        "name": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 3 Full Burst",
+        "playtime_forever": 44,
+        "img_icon_url": "ddd956cc6ec3370449f96298653d4119c5666fff",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1494169561,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 235600,
+        "name": "Tom Clancy's Splinter Cell Blacklist",
+        "playtime_forever": 105,
+        "img_icon_url": "79624b568725b40abafdbbbabbcbc425fca3e6f9",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1471696771,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 237990,
+        "name": "The Banner Saga",
+        "playtime_forever": 0,
+        "img_icon_url": "e64d55d8d84214d216a51ee25de58299c5d16f59",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 238010,
+        "name": "Deus Ex: Human Revolution - Director's Cut",
+        "playtime_forever": 1467,
+        "img_icon_url": "6c7ccd62c124ae63820e06ed9b24d4559c5b0b1f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1421439901,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 238320,
+        "name": "Outlast",
+        "playtime_forever": 0,
+        "img_icon_url": "46bd3df92d4693d3b2af113bf8f31c2cbdadb20a",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 239140,
+        "name": "Dying Light",
+        "playtime_forever": 288,
+        "img_icon_url": "d575b4ba3480fe20aaeda8e8f498c3e47033069d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 126,
+        "playtime_mac_forever": 26,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1755812786,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 240760,
+        "name": "Wasteland 2",
+        "playtime_forever": 0,
+        "img_icon_url": "b86ee8dadc97895c777934d27cdc4e06b2105a34",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 241930,
+        "name": "Middle-earth™: Shadow of Mordor™",
+        "playtime_forever": 8,
+        "img_icon_url": "161afab3c9f725f593635723cc64a7fbeb324ead",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 8,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1578683897,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 242050,
+        "name": "Assassin's Creed IV Black Flag",
+        "playtime_forever": 2058,
+        "img_icon_url": "a03c06290af00eed66814815663b68f5fd063882",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1458336485,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 243470,
+        "name": "Watch_Dogs",
+        "playtime_forever": 68,
+        "img_icon_url": "53368e59a196dfa9af66ecd32135939da97fa72e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 68,
+        "playtime_deck_forever": 68,
+        "rtime_last_played": 1698621817,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 244210,
+        "name": "Assetto Corsa",
+        "playtime_forever": 170,
+        "img_icon_url": "c35922c480816b55f18b2843c6d838ccbc8ff825",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 36,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1758452180,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 245280,
+        "name": "ENSLAVED™: Odyssey to the West™ Premium Edition",
+        "playtime_forever": 748,
+        "img_icon_url": "a453e521f28f768edd91855a5c37c99731f85cee",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1469093086,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 250320,
+        "name": "The Wolf Among Us",
+        "playtime_forever": 9,
+        "img_icon_url": "dee5f1476ddd237ed9faab86b59cb9ca9b275faa",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 3,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 6,
+        "playtime_deck_forever": 6,
+        "rtime_last_played": 1741546336,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 253110,
+        "name": "The Cat Lady",
+        "playtime_forever": 0,
+        "img_icon_url": "daf00535c97cc44a2d40286e45393b24097e0b12",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 254700,
+        "name": "Resident Evil 4 (2005)",
+        "playtime_forever": 0,
+        "img_icon_url": "535bfea3332662271f1e3a972832bc0b4aba5a38",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 259130,
+        "name": "Wasteland 1 - The Original Classic",
+        "playtime_forever": 0,
+        "img_icon_url": "9129c128b196754cf9f4c4723edf5f55d956f5ec",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 261030,
+        "name": "The Walking Dead: Season Two",
+        "playtime_forever": 37,
+        "img_icon_url": "8dd081faf73fb7ff57151a1498b7025e8fc85dc4",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 37,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1642886066,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 261530,
+        "name": "Lifeless Planet",
+        "playtime_forever": 374,
+        "img_icon_url": "9b05c9e45dea948b5a8de8c2c77e025f594939cc",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 374,
+        "playtime_deck_forever": 374,
+        "rtime_last_played": 1715123325,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 261570,
+        "name": "Ori and the Blind Forest",
+        "playtime_forever": 1215,
+        "img_icon_url": "a8b0c1ca89fa421e5061d4ac5c17e2fbf4f08845",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1488981731,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 261640,
+        "name": "Borderlands: The Pre-Sequel",
+        "playtime_forever": 0,
+        "img_icon_url": "af5ef05eac8b1eb618e4f57354ac7b3e918ab1bd",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 268050,
+        "name": "The Evil Within",
+        "playtime_forever": 307,
+        "img_icon_url": "3ec11bf61b679fe85a529fc139ed90f39964a7c1",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 128,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 25,
+        "playtime_deck_forever": 25,
+        "rtime_last_played": 1748703547,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 271590,
+        "name": "Grand Theft Auto V Legacy",
+        "playtime_forever": 8628,
+        "img_icon_url": "1e72f87eb927fa1485e68aefaff23c7fd7178251",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1483130154,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 272510,
+        "name": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution",
+        "playtime_forever": 0,
+        "img_icon_url": "c295cd57a29436f157fd59c557ae903d9ceab58b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 274520,
+        "name": "Darkwood",
+        "playtime_forever": 0,
+        "img_icon_url": "c8d29a171cab2435eb5d540ed2f03c448ad6de5a",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 277590,
+        "name": "Assassin's Creed Freedom Cry",
+        "playtime_forever": 269,
+        "img_icon_url": "9d70c9400e1654c3b438df7af76df00d1f441ab2",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 269,
+        "playtime_deck_forever": 269,
+        "rtime_last_played": 1713975478,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 281990,
+        "name": "Stellaris",
+        "playtime_forever": 73,
+        "img_icon_url": "cb4a03deab1e34ed2a5cbbdf419c66bb6459625f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 33,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1755814284,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 282070,
+        "name": "This War of Mine",
+        "playtime_forever": 12,
+        "img_icon_url": "38ad6fd10e2b89ab24e8013584ece7961bebe086",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1468871137,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 282140,
+        "name": "SOMA",
+        "playtime_forever": 478,
+        "img_icon_url": "018a23ae2cd618b302731b91fcef5954c22d615c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1469119857,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 284240,
+        "name": "Maize",
+        "playtime_forever": 1,
+        "img_icon_url": "f11d4b62defb0566109e299ca937a184d95e1107",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1,
+        "playtime_deck_forever": 1,
+        "rtime_last_played": 1716238400,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 285190,
+        "name": "Warhammer 40,000: Dawn of War III",
+        "playtime_forever": 82,
+        "img_icon_url": "d18b0047aa96c2dc03bfb9749ce10186aa2298f5",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1559763881,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 286690,
+        "name": "Metro 2033 Redux",
+        "playtime_forever": 566,
+        "img_icon_url": "353ea01a045c084215bca95519808eaa7319ce0c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1451665151,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 287290,
+        "name": "Resident Evil Revelations 2",
+        "playtime_forever": 15,
+        "img_icon_url": "0ec692bbc91bbff0b455faef6cb2b8a37bbbca93",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1486325312,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 287390,
+        "name": "Metro: Last Light Redux",
+        "playtime_forever": 0,
+        "img_icon_url": "7139b7af2ad9d248d21e98302b964cd61474318c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 289650,
+        "name": "Assassin's Creed Unity",
+        "playtime_forever": 0,
+        "img_icon_url": "0629ffe7fc7d88011c5b9705625bfe3791fe0afe",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 291650,
+        "name": "Pillars of Eternity",
+        "playtime_forever": 902,
+        "img_icon_url": "95f72e4cf0fe3e882ca2bd0fef7e804709650943",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1446301602,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 292030,
+        "name": "The Witcher 3: Wild Hunt",
+        "playtime_forever": 11480,
+        "img_icon_url": "78d0ff98b67851f24539cdf2402cf147679134f4",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 172,
+        "playtime_deck_forever": 172,
+        "rtime_last_played": 1696775356,
+        "content_descriptorids": [
+          1,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 292120,
+        "name": "FINAL FANTASY XIII",
+        "playtime_forever": 21,
+        "img_icon_url": "83c929d4965963f6e0bc17969a2599e7829ac23d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1487437931,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 298110,
+        "name": "Far Cry 4",
+        "playtime_forever": 577,
+        "img_icon_url": "be1366a047a515ed2275aa500a36a50de587b7a7",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1558733442,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 298900,
+        "name": "Space Hulk: Deathwing",
+        "playtime_forever": 0,
+        "img_icon_url": "84be391906bc3cc90d3287e4a0c34b29d96eb7e7",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 304240,
+        "name": "Resident Evil",
+        "playtime_forever": 0,
+        "img_icon_url": "a60a960c76f26ab81773d4f2d372836db37a0012",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 307690,
+        "name": "Sleeping Dogs: Definitive Edition",
+        "playtime_forever": 2688,
+        "img_icon_url": "8ef5e84ffbd9a4b3fb28d308073bccb415fc25ab",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1357,
+        "playtime_deck_forever": 1357,
+        "rtime_last_played": 1728155907,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 307780,
+        "name": "Mortal Kombat X",
+        "playtime_forever": 22,
+        "img_icon_url": "f3137c23413b98a9091a217e16ccc5e477a2a88e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 22,
+        "playtime_deck_forever": 22,
+        "rtime_last_played": 1709243800,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 310560,
+        "name": "DiRT Rally",
+        "playtime_forever": 1966,
+        "img_icon_url": "6af1249ba4f9c521ce981ee040ffa3b9ca603911",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 4,
+        "playtime_linux_forever": 81,
+        "playtime_deck_forever": 81,
+        "rtime_last_played": 1750437812,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 311340,
+        "name": "METAL GEAR SOLID V: GROUND ZEROES",
+        "playtime_forever": 36,
+        "img_icon_url": "60ea6c7b08077263bac018bcd32435ec858e867c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1464437457,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 311560,
+        "name": "Assassin's Creed Rogue",
+        "playtime_forever": 2130,
+        "img_icon_url": "422e9d527f4a509a179cfbd2832b47db793d8000",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 2130,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1581023590,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 312840,
+        "name": "Fahrenheit: Indigo Prophecy Remastered",
+        "playtime_forever": 0,
+        "img_icon_url": "d232a53093cd49a04df465bdc72c36332da7d18f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 314660,
+        "name": "Oddworld: New 'n' Tasty",
+        "playtime_forever": 991,
+        "img_icon_url": "d97ac24c073bf569ae2e892c93345c2ff2d4b2df",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1444567858,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 316790,
+        "name": "Grim Fandango Remastered",
+        "playtime_forever": 0,
+        "img_icon_url": "4e9da606cb52dfebf296dc8d3b0bc6ba81065a52",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 319630,
+        "name": "Life is Strange™",
+        "playtime_forever": 4,
+        "img_icon_url": "e54b13da0710a35e7088664a77632e79157d8332",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 4,
+        "playtime_deck_forever": 4,
+        "rtime_last_played": 1682283577,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 321040,
+        "name": "DiRT 3 Complete Edition",
+        "playtime_forever": 1,
+        "img_icon_url": "fdfb3aa153b57d6ae6cd8099cb4456b3d5b182b6",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1460236463,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 323190,
+        "name": "Frostpunk",
+        "playtime_forever": 0,
+        "img_icon_url": "0561084dfe24c469c905fe0681da82aa31102836",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 327410,
+        "name": "A Bird Story",
+        "playtime_forever": 106,
+        "img_icon_url": "cef549201cdfcf82ae56d9975cdcf96ea5515760",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1559850783,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 329430,
+        "name": "State of Decay: Year-One",
+        "playtime_forever": 1,
+        "img_icon_url": "735efd15df84e4a9ef9f64a980cd313f5ef325bf",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1454862109,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 330830,
+        "name": "Tales from the Borderlands",
+        "playtime_forever": 10,
+        "img_icon_url": "620dbf286a2ef353c9c93e5b7c047027b18f1475",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 10,
+        "playtime_deck_forever": 10,
+        "rtime_last_played": 1765139936,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 335300,
+        "name": "DARK SOULS™ II: Scholar of the First Sin",
+        "playtime_forever": 1175,
+        "img_icon_url": "6e665503e93d1383b774a68dfea23ac7afc0e3aa",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1477767918,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 337000,
+        "name": "Deus Ex: Mankind Divided™",
+        "playtime_forever": 1463,
+        "img_icon_url": "90a596fcc9934c7fe20d1202bca2c6fc80375d54",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1486246107,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 337340,
+        "name": "Finding Paradise",
+        "playtime_forever": 153,
+        "img_icon_url": "a73f4efe629814dee218036dfc08e293dea41137",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 153,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1651269807,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 339340,
+        "name": "Resident Evil 0",
+        "playtime_forever": 174,
+        "img_icon_url": "db120ea03830d200f5ba41567b2dd4556aa33705",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 174,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1592422381,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 346010,
+        "name": "Besiege",
+        "playtime_forever": 0,
+        "img_icon_url": "16667f445723c720782314269e41f9daa8a7fb56",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 349040,
+        "name": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+        "playtime_forever": 0,
+        "img_icon_url": "bb5c2a74c919d172b4a40c85591aaffd101d26ef",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 350080,
+        "name": "Wolfenstein: The Old Blood ",
+        "playtime_forever": 37,
+        "img_icon_url": "e45bc4d7a8233546c74f1cbba4e7d7a02bfc53a0",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1496601997,
+        "has_leaderboards": true,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 354380,
+        "name": "Assassin’s Creed® Chronicles: China",
+        "playtime_forever": 50,
+        "img_icon_url": "391ce6df23183d238d62a4c3d32a8f036f7178aa",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 50,
+        "playtime_deck_forever": 50,
+        "rtime_last_played": 1698435669,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 356190,
+        "name": "Middle-earth™: Shadow of War™",
+        "playtime_forever": 0,
+        "img_icon_url": "316c479e5d51d21e15eb8f82338fce82c42c4115",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 359320,
+        "name": "Elite Dangerous",
+        "playtime_forever": 3868,
+        "img_icon_url": "670f2f289a180f7ac291585df847009640ebf1c5",
+        "playtime_windows_forever": 2,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1762880398,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 359600,
+        "name": "Assassin’s Creed® Chronicles: Russia",
+        "playtime_forever": 0,
+        "img_icon_url": "2fe8f64ca4c0579e05e95b208b807529cffb1f6d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 359610,
+        "name": "Assassin’s Creed® Chronicles: India",
+        "playtime_forever": 0,
+        "img_icon_url": "ee2b5296792ed0977db661911d98eb9783662064",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 360430,
+        "name": "Mafia III: Definitive Edition",
+        "playtime_forever": 3495,
+        "img_icon_url": "3df3ee0dfcb254bedbf15822c93a6983f67b0822",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 6,
+        "playtime_linux_forever": 41,
+        "playtime_deck_forever": 41,
+        "rtime_last_played": 1699370000,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 362890,
+        "name": "Black Mesa",
+        "playtime_forever": 22,
+        "img_icon_url": "51182b6a74035eb913b353d5d60e596c3804daf6",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 7,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 15,
+        "playtime_deck_forever": 15,
+        "rtime_last_played": 1694376906,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 368500,
+        "name": "Assassin's Creed Syndicate",
+        "playtime_forever": 0,
+        "img_icon_url": "4f67f650e621319029fa884755dbd89a2d7076f6",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 371660,
+        "name": "Far Cry Primal",
+        "playtime_forever": 0,
+        "img_icon_url": "5b8109f8e71bc8b5c295d6972b841ffb92702ef0",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 373420,
+        "name": "Divinity: Original Sin Enhanced Edition",
+        "playtime_forever": 6246,
+        "img_icon_url": "822ff912b2e464fbebbedf7a75ae1eb24921f16b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1492870907,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 374320,
+        "name": "DARK SOULS™ III",
+        "playtime_forever": 119,
+        "img_icon_url": "7abe1a33129c20cf10d2c74128bbd657a2a2c806",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 47,
+        "playtime_deck_forever": 47,
+        "rtime_last_played": 1748703382,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 377160,
+        "name": "Fallout 4",
+        "playtime_forever": 241,
+        "img_icon_url": "779c4356ebe32af2af7c9f0bbba595dfe872cd7f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 22,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 219,
+        "playtime_deck_forever": 219,
+        "rtime_last_played": 1675024288,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 378860,
+        "name": "Project CARS 2",
+        "playtime_forever": 0,
+        "img_icon_url": "cd55d51de2df3a45757aca93b84112576f5b0db3",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 379430,
+        "name": "Kingdom Come: Deliverance",
+        "playtime_forever": 10,
+        "img_icon_url": "915ec515c36645855abed0476b5b0891d8a4e47a",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 10,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1757163431,
+        "content_descriptorids": [
+          1,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 379720,
+        "name": "DOOM",
+        "playtime_forever": 3,
+        "img_icon_url": "b6e72ff47d1990cb644700751eeeff14e0aba6dc",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 3,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1662134063,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 383870,
+        "name": "Firewatch",
+        "playtime_forever": 281,
+        "img_icon_url": "d13e70a08cab192c52104f315a7d68591c085e81",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 281,
+        "playtime_deck_forever": 281,
+        "rtime_last_played": 1713892003,
+        "content_descriptorids": [
+          1,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 386070,
+        "name": "Planetary Annihilation: TITANS",
+        "playtime_forever": 0,
+        "img_icon_url": "4143808d0aa8e33399ed54ff5fe6d26055cb2dbc",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 388410,
+        "name": "Darksiders II Deathinitive Edition",
+        "playtime_forever": 0,
+        "img_icon_url": "a2d5549090144f1bfd9e00f1b460c1ad0aa9c366",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 391220,
+        "name": "Rise of the Tomb Raider",
+        "playtime_forever": 1521,
+        "img_icon_url": "0b8a37f32ed2b7c934be8aa94d53f71e274c6497",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 65,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1733057727,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 399810,
+        "name": "Call of Cthulhu",
+        "playtime_forever": 705,
+        "img_icon_url": "ce6a031d27fc877bf0bab72f23eb57c4444ae3ae",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 705,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1577294726,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 404730,
+        "name": "Wasteland 2: Director's Cut",
+        "playtime_forever": 3013,
+        "img_icon_url": "b86ee8dadc97895c777934d27cdc4e06b2105a34",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1526721104,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 409710,
+        "name": "BioShock Remastered",
+        "playtime_forever": 5,
+        "img_icon_url": "eb72262cd3ccc3219dd76392be3b60a4b6cbfd38",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1494173810,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 409720,
+        "name": "BioShock 2 Remastered",
+        "playtime_forever": 0,
+        "img_icon_url": "97527a02b36f8ac4aba21005c2d953cc908a08e1",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 412020,
+        "name": "Metro Exodus",
+        "playtime_forever": 10,
+        "img_icon_url": "f9863ed0ffc717b130744488f088ae95fe6e9bd8",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 10,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1706217053,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 414340,
+        "name": "Hellblade: Senua's Sacrifice",
+        "playtime_forever": 724,
+        "img_icon_url": "8a5d8f2d1cb52b21eaf4f6609592c6634731c962",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 27,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 697,
+        "playtime_deck_forever": 697,
+        "rtime_last_played": 1709064511,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 414700,
+        "name": "Outlast 2",
+        "playtime_forever": 0,
+        "img_icon_url": "f336155a1714d0d413dea897f63ef19ee1f7cf21",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 418370,
+        "name": "Resident Evil 7 Biohazard",
+        "playtime_forever": 0,
+        "img_icon_url": "675cd2fbaae3c2a74a0c7e9eea71e969ff90d6bb",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 427520,
+        "name": "Factorio",
+        "playtime_forever": 0,
+        "img_icon_url": "267f5a89f36ab287e600a4e7d4e73d3d11f0fd7d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 429570,
+        "name": "The Walking Dead: Michonne",
+        "playtime_forever": 0,
+        "img_icon_url": "f75fb34d85b69cf28c5e8283a52d40aa09a33b01",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 435150,
+        "name": "Divinity: Original Sin 2",
+        "playtime_forever": 7828,
+        "img_icon_url": "519a99caef7c5e2b4625c8c2fa0620fb66a752f3",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 3976,
+        "playtime_mac_forever": 1853,
+        "playtime_linux_forever": 1005,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1697228403,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 443360,
+        "name": "Red Comrades 2: For the Great Justice. Reloaded",
+        "playtime_forever": 0,
+        "img_icon_url": "7639fb9628159588636b0fef0aca1ad19a7c8fc3",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 443810,
+        "name": "This Is the Police",
+        "playtime_forever": 621,
+        "img_icon_url": "9ccd5b3344a87e909fafee377a599c2dc3721af0",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1477852518,
+        "has_leaderboards": true,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 447040,
+        "name": "Watch_Dogs 2",
+        "playtime_forever": 0,
+        "img_icon_url": "49dc5c3e4053e40159ffa73d2121daadbc467fe2",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 460930,
+        "name": "Tom Clancy's Ghost Recon® Wildlands",
+        "playtime_forever": 0,
+        "img_icon_url": "ddd459159befc6a8cd6c4cb0e2a13c2fd2f8b065",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 462780,
+        "name": "Darksiders Warmastered Edition",
+        "playtime_forever": 1,
+        "img_icon_url": "4616a0d94eb5864f2933fd0157bb60a27b14d5fe",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1,
+        "playtime_deck_forever": 1,
+        "rtime_last_played": 1721937080,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 474960,
+        "name": "Quantum Break",
+        "playtime_forever": 908,
+        "img_icon_url": "68c50addc599af219e4e135a81733a867c2986c2",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1561301484,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 475150,
+        "name": "Titan Quest Anniversary Edition",
+        "playtime_forever": 0,
+        "img_icon_url": "be3384e7936f548303c77ee2abc4c9026285f554",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 475550,
+        "name": "Beholder",
+        "playtime_forever": 89,
+        "img_icon_url": "1025e7d1606b1e7a7f17048532039d78241e9f5d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 89,
+        "playtime_deck_forever": 89,
+        "rtime_last_played": 1716237928,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 476600,
+        "name": "Call of Duty: WWII",
+        "playtime_forever": 1,
+        "img_icon_url": "9cc56555b04419785037d36362b71e2854daa69c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1652304575,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 476620,
+        "name": "Call of Duty: WWII - Multiplayer",
+        "playtime_forever": 0,
+        "img_icon_url": "61353c6b23a7c04b11c875044a243210563e74ba",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 480490,
+        "name": "Prey",
+        "playtime_forever": 216,
+        "img_icon_url": "5ef565e374f039469e4a5c332cd51584af7ec5db",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 119,
+        "playtime_deck_forever": 119,
+        "rtime_last_played": 1748704618,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 488790,
+        "name": "South Park The Fractured But Whole",
+        "playtime_forever": 1263,
+        "img_icon_url": "4012782cf19ec70c18e31508f1a9abcd50d44239",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1263,
+        "playtime_deck_forever": 1263,
+        "rtime_last_played": 1716232299,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 489630,
+        "name": "Warhammer 40,000: Gladius - Relics of War",
+        "playtime_forever": 0,
+        "img_icon_url": "ba6ea4fbeec62073763e103450e8aa7c5373d010",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 502500,
+        "name": "ACE COMBAT™7: SKIES UNKNOWN",
+        "playtime_forever": 0,
+        "img_icon_url": "f7e1587f3521cacbdebd07b25c05103a963160a8",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 513230,
+        "name": "The Underground Man",
+        "playtime_forever": 0,
+        "img_icon_url": "67d15beae7b881530d5fd7c33c5eb76f38140484",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 514900,
+        "name": "Observer",
+        "playtime_forever": 699,
+        "img_icon_url": "9bc60be48d6df66694f8774598a4a54631dc3d8c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 164,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 534,
+        "playtime_deck_forever": 534,
+        "rtime_last_played": 1712527400,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 527430,
+        "name": "Warhammer 40,000: Inquisitor - Martyr",
+        "playtime_forever": 2550,
+        "img_icon_url": "0679e210754d3036b52f46297e5514473ef101e4",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 2073,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 476,
+        "playtime_deck_forever": 476,
+        "rtime_last_played": 1687708723,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 536220,
+        "name": "The Walking Dead: A New Frontier",
+        "playtime_forever": 0,
+        "img_icon_url": "9d1a710175bdc5ecf10885100728e44cd4ad0942",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 543870,
+        "name": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 2",
+        "playtime_forever": 0,
+        "img_icon_url": "d53e85e2fd3a6ffab715b0ddc1f6f75dc3ec2fef",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 552520,
+        "name": "Far Cry 5",
+        "playtime_forever": 2975,
+        "img_icon_url": "928df2d32021f480499a97458068f62c45298e7a",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 2244,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1569091218,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 560130,
+        "name": "Pillars of Eternity II: Deadfire",
+        "playtime_forever": 162,
+        "img_icon_url": "d119a92a651444cee7d085bd581eb2d3028f51e2",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 4,
+        "playtime_linux_forever": 158,
+        "playtime_deck_forever": 158,
+        "rtime_last_played": 1750197738,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 582010,
+        "name": "Monster Hunter: World",
+        "playtime_forever": 0,
+        "img_icon_url": "6ec147f2d423f435e15eb79b3d82f771913de634",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 582160,
+        "name": "Assassin's Creed Origins",
+        "playtime_forever": 3,
+        "img_icon_url": "dff3a53f93d39f1e0432ec4f22d31c12aeefa36f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 3,
+        "playtime_deck_forever": 3,
+        "rtime_last_played": 1717945607,
+        "playtime_disconnected": 1
+      },
+      {
+        "appid": 589360,
+        "name": "Ni no Kuni™ II: Revenant Kingdom",
+        "playtime_forever": 0,
+        "img_icon_url": "d8469c3ccf71774d558cd51a1b40ba5f521f74d9",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 601430,
+        "name": "The Evil Within 2",
+        "playtime_forever": 0,
+        "img_icon_url": "823f7bef429bc85a7a68dba32d6f47938fc3b689",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 606280,
+        "name": "Darksiders III",
+        "playtime_forever": 0,
+        "img_icon_url": "1f2b21f809d9a409460f23d12061c1b18f6d5a74",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 632470,
+        "name": "Disco Elysium",
+        "playtime_forever": 142,
+        "img_icon_url": "b681544caa931c7c1a6788e6e3e33cb42892d17c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 137,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 4,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1652100022,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 638970,
+        "name": "Yakuza 0",
+        "playtime_forever": 768,
+        "img_icon_url": "3c19e2140eb09113fddd33b796a3f12185163cb7",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 768,
+        "playtime_deck_forever": 768,
+        "rtime_last_played": 1729455974,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 640820,
+        "name": "Pathfinder: Kingmaker",
+        "playtime_forever": 0,
+        "img_icon_url": "119b8c4e09d4b8f38c3b9c1a8370ac1993b6b40a",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 646910,
+        "name": "The Crew 2",
+        "playtime_forever": 0,
+        "img_icon_url": "c627b2fa24d61b4042afbd2b183f49b9ca59bc45",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 667720,
+        "name": "Red Faction Guerrilla Re-Mars-tered",
+        "playtime_forever": 0,
+        "img_icon_url": "a98e571b7225e3acc06042ed97444e37e99cc4ad",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "has_leaderboards": true,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 668580,
+        "name": "Atomic Heart",
+        "playtime_forever": 0,
+        "img_icon_url": "2a9828aaf232ea5c4b2575212786c62166306390",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 673880,
+        "name": "Warhammer 40,000: Mechanicus",
+        "playtime_forever": 33,
+        "img_icon_url": "47dfa2f06c3c27db8cb3a42813ebe4d12f291df5",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 33,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1592170830,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 698670,
+        "name": "Scorn",
+        "playtime_forever": 0,
+        "img_icon_url": "e3c072bef9897ae18b807b119bbadb5681dc0055",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 731040,
+        "name": "The Invincible",
+        "playtime_2weeks": 535,
+        "playtime_forever": 535,
+        "img_icon_url": "b27694fcee732620a7bd863ea47a5979c349ff6b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 535,
+        "playtime_deck_forever": 535,
+        "rtime_last_played": 1766247022,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 747350,
+        "name": "Hellblade: Senua's Sacrifice VR Edition",
+        "playtime_forever": 0,
+        "img_icon_url": "8a5d8f2d1cb52b21eaf4f6609592c6634731c962",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 750920,
+        "name": "Shadow of the Tomb Raider",
+        "playtime_forever": 0,
+        "img_icon_url": "7db38cff16091c9c058892fcfeee102a6ed589d9",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 752590,
+        "name": "A Plague Tale: Innocence",
+        "playtime_forever": 1347,
+        "img_icon_url": "25e8278800f59f82e0fc2d8a61fb17ec1468a500",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 1347,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1572879462,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 792300,
+        "name": "The Beast Inside",
+        "playtime_forever": 608,
+        "img_icon_url": "72ab502b6244ac74823fa53112dc5856c6ef31dd",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 608,
+        "playtime_deck_forever": 608,
+        "rtime_last_played": 1713565405,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 798460,
+        "name": "Ni no Kuni Wrath of the White Witch™ Remastered",
+        "playtime_forever": 6,
+        "img_icon_url": "c2ab51aa5079f5e64e6128b247057c165555ca8e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 6,
+        "playtime_deck_forever": 6,
+        "rtime_last_played": 1700121518,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 812140,
+        "name": "Assassin's Creed Odyssey",
+        "playtime_forever": 12421,
+        "img_icon_url": "4b6cf0715b30669411bf204bce7ed99a9c84671b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 5103,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 7317,
+        "playtime_deck_forever": 7317,
+        "rtime_last_played": 1685893428,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 814380,
+        "name": "Sekiro™: Shadows Die Twice",
+        "playtime_forever": 966,
+        "img_icon_url": "2704fb9c5465045d00a5b19a0cb1e9bdabbd15cc",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 966,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1644773369,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 816090,
+        "name": "Space Hulk: Deathwing - Enhanced Edition",
+        "playtime_forever": 0,
+        "img_icon_url": "86232cd08fab0432c4d20ce16ea2dadd0e619fff",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 834530,
+        "name": "Yakuza Kiwami (Legacy)",
+        "playtime_forever": 0,
+        "img_icon_url": "220ff034e362250b2d19637c3dd1af0899a49089",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 863550,
+        "name": "HITMAN™ 2",
+        "playtime_forever": 134,
+        "img_icon_url": "3f7c071da7a338e03f6243b73c02c072f1bacee9",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1566073512,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 866800,
+        "name": "The Walking Dead: The Final Season",
+        "playtime_forever": 0,
+        "img_icon_url": "1b3b4649490d5112ef907c6dd660036d55a866b6",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 883710,
+        "name": "Resident Evil 2",
+        "playtime_forever": 62,
+        "img_icon_url": "86ef2fdebeced746313994ccf2d7afb1f2887bf0",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 16,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 45,
+        "playtime_deck_forever": 45,
+        "rtime_last_played": 1748710993,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 906100,
+        "name": "Observation",
+        "playtime_forever": 0,
+        "img_icon_url": "753b96916e222c0e85055084ea86276511b6d9d1",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 927380,
+        "name": "Yakuza Kiwami 2 (Legacy)",
+        "playtime_forever": 0,
+        "img_icon_url": "c3b2e69aa75de5afae7c0a52176ec2ba8ee16fa5",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 928600,
+        "name": "F1 2019",
+        "playtime_forever": 10,
+        "img_icon_url": "bd9027dc12d42ffa937e58c6b5a04e8890c00353",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 7,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 3,
+        "playtime_deck_forever": 3,
+        "rtime_last_played": 1763499018,
+        "playtime_disconnected": 1
+      },
+      {
+        "appid": 939850,
+        "name": "The Dark Pictures Anthology: Man of Medan",
+        "playtime_forever": 571,
+        "img_icon_url": "b0f46c98eece58ccb79ba9337ca6190c060786a4",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 571,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1573940524,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 952060,
+        "name": "Resident Evil 3",
+        "playtime_forever": 0,
+        "img_icon_url": "136b7a39787b0d8df93cf3b757c36ae1eb392784",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 952070,
+        "name": "RESIDENT EVIL RESISTANCE",
+        "playtime_forever": 0,
+        "img_icon_url": "05c0148e8e414361742c38e3709ca9cdd9c637a8",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 953490,
+        "name": "CARRION",
+        "playtime_forever": 26,
+        "img_icon_url": "e6f76f606f82cdadbdac5cc829410eac3ab029ac",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 26,
+        "playtime_deck_forever": 26,
+        "rtime_last_played": 1712609880,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 954740,
+        "name": "Terminator: Resistance",
+        "playtime_2weeks": 792,
+        "playtime_forever": 806,
+        "img_icon_url": "a319e5b054ed6bf954db1b148142ec2e3921242b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 5,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 801,
+        "playtime_deck_forever": 801,
+        "rtime_last_played": 1766441153,
+        "has_leaderboards": true,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 960910,
+        "name": "Heavy Rain",
+        "playtime_forever": 0,
+        "img_icon_url": "ddc1b819a9c00d9642d290fc521e48d708af7329",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 960990,
+        "name": "Beyond: Two Souls",
+        "playtime_forever": 0,
+        "img_icon_url": "651960ab55d9385730101dc2cef12dd8ac57d5a0",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 972660,
+        "name": "Spiritfarer®: Farewell Edition",
+        "playtime_forever": 0,
+        "img_icon_url": "21c6c86b51df38e9480231792acf0cfc30f51820",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 976310,
+        "name": "Mortal Kombat 11",
+        "playtime_forever": 0,
+        "img_icon_url": "315c46ce25bcb6afa47473588b5fd8edeb3afdfa",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 976730,
+        "name": "Halo: The Master Chief Collection",
+        "playtime_forever": 456,
+        "img_icon_url": "196a45d8df1981ff6b6b1872a38dc38f6c22875d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 456,
+        "playtime_deck_forever": 456,
+        "rtime_last_played": 1709985432,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1030830,
+        "name": "Mafia II: Definitive Edition",
+        "playtime_forever": 806,
+        "img_icon_url": "f80e173ad5c242ca0d41e30af1f6358d1e64d9b4",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 806,
+        "playtime_deck_forever": 806,
+        "rtime_last_played": 1694955554,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1030840,
+        "name": "Mafia: Definitive Edition",
+        "playtime_forever": 622,
+        "img_icon_url": "883ceebf7d8ebce37c9244a62777ef4a800393ce",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 622,
+        "playtime_deck_forever": 622,
+        "rtime_last_played": 1694375834,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1042800,
+        "name": "Warhammer 40,000: Inquisitor - Prophecy",
+        "playtime_forever": 0,
+        "img_icon_url": "d164ce1cdf0d90b477f9ca1170ca36513ebb1ea8",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1086940,
+        "name": "Baldur's Gate 3",
+        "playtime_forever": 195,
+        "img_icon_url": "d866cae7ea1e471fdbc206287111f1b642373bd9",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 195,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1755870934,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1088710,
+        "name": "Yakuza 3 Remastered",
+        "playtime_forever": 0,
+        "img_icon_url": "2f3717fbf9b898644b9a77cefd7a851c7c805bd7",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1088850,
+        "name": "Marvel's Guardians of the Galaxy",
+        "playtime_forever": 1218,
+        "img_icon_url": "8aec558b5e9c3aa185869d438f78200a2d4bf885",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1218,
+        "playtime_deck_forever": 1218,
+        "rtime_last_played": 1693944603,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1091500,
+        "name": "Cyberpunk 2077",
+        "playtime_forever": 40,
+        "img_icon_url": "42b9b33fa0f0d997beb299c6157592a8fe7d8f68",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 40,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1758457387,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1097840,
+        "name": "Gears 5",
+        "playtime_forever": 104,
+        "img_icon_url": "df954557a7cbb1ae3ef632871025991082ed362f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 87,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 16,
+        "playtime_deck_forever": 16,
+        "rtime_last_played": 1758102123,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1105500,
+        "name": "Yakuza 4 Remastered",
+        "playtime_forever": 0,
+        "img_icon_url": "9c0917bca10b54193100c6e8071bc45c8c49d095",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1105510,
+        "name": "Yakuza 5 Remastered",
+        "playtime_forever": 0,
+        "img_icon_url": "0aa99cea8b752b22bd167752798d60bd1c112663",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1172380,
+        "name": "STAR WARS Jedi: Fallen Order™ ",
+        "playtime_forever": 1590,
+        "img_icon_url": "0ea1d285a8ee6fbeef0e8f7f3b2d7fa4cbcb423b",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 1590,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1575829153,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1174180,
+        "name": "Red Dead Redemption 2",
+        "playtime_forever": 336,
+        "img_icon_url": "5106abd9c1187a97f23295a0ba9470c94804ec6c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 244,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 91,
+        "playtime_deck_forever": 80,
+        "rtime_last_played": 1674922280,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1182620,
+        "name": "Impostor Factory",
+        "playtime_forever": 0,
+        "img_icon_url": "1480aaf1d4064636ed356d75a696de5f1216b730",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1182900,
+        "name": "A Plague Tale: Requiem",
+        "playtime_forever": 263,
+        "img_icon_url": "eaebd6a8952539659e28725f90802cd1a4f93d37",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 11,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 251,
+        "playtime_deck_forever": 251,
+        "rtime_last_played": 1757161248,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1194630,
+        "name": "The Dark Pictures Anthology: Little Hope",
+        "playtime_forever": 0,
+        "img_icon_url": "fc4d0355841fc85486e754ec5fb33e7294761332",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1196090,
+        "name": "Scars Above",
+        "playtime_forever": 0,
+        "img_icon_url": "78d296da1d82430396111178f6c8b17bbacb22f6",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1196590,
+        "name": "Resident Evil Village",
+        "playtime_forever": 0,
+        "img_icon_url": "d97fb0681f9517c65a9d7ba9dd7e63f775375645",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1222730,
+        "name": "STAR WARS™: Squadrons",
+        "playtime_forever": 0,
+        "img_icon_url": "fb47bc807e02c5ded16d36e13ba2d10dd1203205",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1225590,
+        "name": "Sea of Solitude",
+        "playtime_forever": 258,
+        "img_icon_url": "abb3dd4d60aaa3129368746b19599a2cfdddd7a1",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 258,
+        "playtime_deck_forever": 258,
+        "rtime_last_played": 1715193691,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1235140,
+        "name": "Yakuza: Like a Dragon",
+        "playtime_forever": 0,
+        "img_icon_url": "2dd517dc392377291d18d89722d26f737795829d",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1236300,
+        "name": "Resident Evil Re:Verse",
+        "playtime_forever": 0,
+        "img_icon_url": "eb2517104ec768ea3217ca875f94925bfcf3d7bb",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1238060,
+        "name": "Dead Space™ 3",
+        "playtime_forever": 0,
+        "img_icon_url": "22294a53f3376c8f8ad0c8ecea1bfd11a2559258",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1238810,
+        "name": "Battlefield™ V",
+        "playtime_forever": 0,
+        "img_icon_url": "23ded6a957b5ec7525679c2e7bdac90c0653dbc8",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1238840,
+        "name": "Battlefield™ 1",
+        "playtime_forever": 0,
+        "img_icon_url": "325c78f6940b57a43b65468d2dc10e22601b0ec5",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1259420,
+        "name": "Days Gone",
+        "playtime_forever": 238,
+        "img_icon_url": "839338fcedd1033ab7f0d2a31c194fb880ebf7b5",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 20,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 218,
+        "playtime_deck_forever": 218,
+        "rtime_last_played": 1757269326,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1281590,
+        "name": "The Dark Pictures Anthology: House of Ashes",
+        "playtime_forever": 486,
+        "img_icon_url": "1d506f35aef4da7596f333d5b542698a1308cc42",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 486,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1639263033,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1282690,
+        "name": "Crysis® 3 ",
+        "playtime_2weeks": 45,
+        "playtime_forever": 45,
+        "img_icon_url": "a41273a869d9c9c6900f07890f8be721e1bdb4f6",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 45,
+        "playtime_deck_forever": 45,
+        "rtime_last_played": 1766622540,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1293830,
+        "name": "Forza Horizon 4",
+        "playtime_forever": 0,
+        "img_icon_url": "7c993f9089d54fe2767efec47b75a7009cdd632e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1304930,
+        "name": "The Outlast Trials",
+        "playtime_forever": 0,
+        "img_icon_url": "159a7d66ffd179c920eefe07392e6a261e899965",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1373960,
+        "name": "INDIKA",
+        "playtime_forever": 0,
+        "img_icon_url": "3029a15f13070be45d00b1d49deffcf32d55678e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1388590,
+        "name": "Yakuza 6: The Song of Life",
+        "playtime_forever": 0,
+        "img_icon_url": "c50ac73856c541e2d6bab955369a12b1c8dceeae",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1432100,
+        "name": "The Bookwalker",
+        "playtime_forever": 548,
+        "img_icon_url": "8771e492f4559ab5fe57c73b4f8fe65513bcb39c",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 548,
+        "playtime_deck_forever": 548,
+        "rtime_last_played": 1713898311,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1449280,
+        "name": "Ghostbusters: The Video Game Remastered",
+        "playtime_forever": 0,
+        "img_icon_url": "c9ebd94acf66096fb786467017534f00f5705b60",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1449560,
+        "name": "Metro Exodus Enhanced Edition",
+        "playtime_forever": 0,
+        "img_icon_url": "f9863ed0ffc717b130744488f088ae95fe6e9bd8",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1462570,
+        "name": "Lost in Random™",
+        "playtime_forever": 18,
+        "img_icon_url": "187de0271c2e057bce6c74c39ad4676b9f1673b9",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 18,
+        "playtime_deck_forever": 18,
+        "rtime_last_played": 1715195703,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1537710,
+        "name": "The Dark Pictures Anthology: Little Hope - Friend's Pass",
+        "playtime_forever": 0,
+        "img_icon_url": "4d48452400f170ffc8b04f1fb61058c971c9c3e8",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1544020,
+        "name": "The Callisto Protocol",
+        "playtime_forever": 1025,
+        "img_icon_url": "c3ce7b2c108283a422c4bd44dcfe8cbc17fb4c88",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1025,
+        "playtime_deck_forever": 1025,
+        "rtime_last_played": 1712415451,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1552810,
+        "name": "Twin Mirror",
+        "playtime_forever": 509,
+        "img_icon_url": "0f8b7a8b7c70cf68702df4aa2d21042d63702f7e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 509,
+        "playtime_deck_forever": 509,
+        "rtime_last_played": 1729424804,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1567020,
+        "name": "The Dark Pictures Anthology: The Devil in Me",
+        "playtime_forever": 606,
+        "img_icon_url": "9d1a5776f1917fe1bf1842fd328dcbbb191076c6",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 606,
+        "playtime_deck_forever": 606,
+        "rtime_last_played": 1680463776,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1577120,
+        "name": "The Quarry",
+        "playtime_forever": 609,
+        "img_icon_url": "a07e751df943234665eb9b91fd44cbb4aa3477c6",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 609,
+        "playtime_deck_forever": 609,
+        "rtime_last_played": 1711198253,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1583230,
+        "name": "High On Life",
+        "playtime_forever": 0,
+        "img_icon_url": "edf77785498d06effc5d8c4db72c0d364978b66f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1623940,
+        "name": "Bramble: The Mountain King",
+        "playtime_forever": 385,
+        "img_icon_url": "334e35ae8c0cbd295d82e72cf9a7d31b14291a9f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 385,
+        "playtime_deck_forever": 385,
+        "rtime_last_played": 1708125884,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1693980,
+        "name": "Dead Space",
+        "playtime_forever": 0,
+        "img_icon_url": "3368d467f4f60f9f07ec4c206a22184fae060be2",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1708010,
+        "name": "The Expanse: A Telltale Series",
+        "playtime_forever": 379,
+        "img_icon_url": "9a8f7c0cc12b2a7c05c884e368cbd5f609467f2f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 379,
+        "playtime_deck_forever": 379,
+        "rtime_last_played": 1765110956,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1775270,
+        "name": "The Dark Pictures Anthology: House of Ashes - Friend's Pass",
+        "playtime_forever": 0,
+        "img_icon_url": "d5bc7ab65e7f93e93aefb3bd65e28ed00fd4d604",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1895880,
+        "name": "Ratchet & Clank: Rift Apart",
+        "playtime_2weeks": 272,
+        "playtime_forever": 982,
+        "img_icon_url": "fb45bd6f3ddb7ff6c63af3387ac76b7c898ba791",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 982,
+        "playtime_deck_forever": 982,
+        "rtime_last_played": 1765576055,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1931730,
+        "name": "Fort Solis",
+        "playtime_2weeks": 318,
+        "playtime_forever": 318,
+        "img_icon_url": "2207d3acb88ae756c00da04d25c3942a7dcd1136",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 318,
+        "playtime_deck_forever": 318,
+        "rtime_last_played": 1765834919,
+        "content_descriptorids": [
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1944430,
+        "name": "Amnesia: The Bunker",
+        "playtime_forever": 0,
+        "img_icon_url": "2a01ab3123fe95f66788a50c99c2855868220de5",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 1954200,
+        "name": "Kena: Bridge of Spirits",
+        "playtime_forever": 687,
+        "img_icon_url": "6aa6d99f50212e2b13ca564cdd5359f7db6b18be",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 687,
+        "playtime_deck_forever": 687,
+        "rtime_last_played": 1708785688,
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2050650,
+        "name": "Resident Evil 4",
+        "playtime_forever": 0,
+        "img_icon_url": "817358b8013c55831ea10d031ef9c0b151110826",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2173800,
+        "name": "Projekt: Passion",
+        "playtime_forever": 1,
+        "img_icon_url": "c73c8780ab7906977e8aa90a4f40c210e4e066bb",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1,
+        "playtime_deck_forever": 1,
+        "rtime_last_played": 1701283717,
+        "content_descriptorids": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2183900,
+        "name": "Warhammer 40,000: Space Marine 2",
+        "playtime_2weeks": 929,
+        "playtime_forever": 1194,
+        "img_icon_url": "0fccfb5eb2acb934db1fe95a4e578f25ccbd71ec",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 119,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 1074,
+        "playtime_deck_forever": 1074,
+        "rtime_last_played": 1766151959,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 59
+      },
+      {
+        "appid": 2186680,
+        "name": "Warhammer 40,000: Rogue Trader",
+        "playtime_forever": 5595,
+        "img_icon_url": "095b26e213960e2c2b6564fd7211ed6a20f39d18",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 5476,
+        "playtime_linux_forever": 119,
+        "playtime_deck_forever": 119,
+        "rtime_last_played": 1742044379,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2208920,
+        "name": "Assassin's Creed Valhalla",
+        "playtime_forever": 62,
+        "img_icon_url": "3946f91cf6beb0d384a85fc32d71616313dc362e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 62,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1762881832,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2239550,
+        "name": "Watch Dogs: Legion",
+        "playtime_forever": 0,
+        "img_icon_url": "66909b160660967933f4ffed89d10d1b1cc5df32",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2285890,
+        "name": "The Dark Pictures Anthology: The Devil in Me - Friend's Pass",
+        "playtime_forever": 0,
+        "img_icon_url": "92199362469f1d28b1dbff68ade1993bdf0eb374",
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2369390,
+        "name": "Far Cry 6",
+        "playtime_forever": 27,
+        "img_icon_url": "178c21f6ed3ea43c9e5b3c9ea2919e7bca63c7b0",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 27,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1757265866,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 2461850,
+        "name": "Senua’s Saga: Hellblade II",
+        "playtime_forever": 0,
+        "img_icon_url": "f70eeb6c1dbafe03301c6ddaa3da5907755e4834",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 3035570,
+        "name": "Assassin's Creed Mirage",
+        "playtime_forever": 0,
+        "img_icon_url": "e5d6098ec84423be04e5d8a4fac2784b392dae86",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 3240220,
+        "name": "Grand Theft Auto V Enhanced",
+        "playtime_forever": 11,
+        "img_icon_url": "8355a7bbdb704f727bfba80ec56bc7228991338e",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 11,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1757161031,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 3556750,
+        "name": "Warhammer 40,000: Dawn of War - Definitive Edition",
+        "playtime_forever": 56,
+        "img_icon_url": "003184e5ec7c892b369649feca3a13278bf2232f",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 56,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 1762093186,
+        "content_descriptorids": [
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      },
+      {
+        "appid": 3717340,
+        "name": "Yakuza Kiwami 2",
+        "playtime_forever": 0,
+        "img_icon_url": "9c8c6983afaee85ad983fa8bd9d61a530b226e23",
+        "has_community_visible_stats": true,
+        "playtime_windows_forever": 0,
+        "playtime_mac_forever": 0,
+        "playtime_linux_forever": 0,
+        "playtime_deck_forever": 0,
+        "rtime_last_played": 0,
+        "content_descriptorids": [
+          1,
+          2,
+          5
+        ],
+        "playtime_disconnected": 0
+      }
+    ]
+  }
+}

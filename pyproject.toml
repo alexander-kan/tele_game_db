@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "game-db"
+version = "0.1.0"
+description = "Telegram-бот и утилиты для личной базы видеоигр (SQLite + Excel + Steam API)"
+authors = ["Alexander Kan <akan.zce@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "game_db" }]
+license = "MIT"
+homepage = "https://github.com/alexander-kan/game_db"
+repository = "https://github.com/alexander-kan/game_db"
+keywords = ["telegram", "bot", "games", "sqlite", "steam", "excel"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment",
+    "Topic :: Utilities",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openpyxl = "^3.1.0"
+pytelegrambotapi = "^4.15.0"
+requests = "^2.32.0"
+pandas = "^2.2.0"
+beautifulsoup4 = "^4.12.0"
+pyxdameraulevenshtein = "^1.7.0"
+howlongtobeatpy = "^1.0.19"
+
+[tool.poetry.scripts]
+game-db-bot = "game_db.bot:main"
+game-db-init = "game_db.scripts.init_db:main"
+game-db-sync-steam = "game_db.scripts.sync_steam:main"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.0.0"
+isort = "^5.13.0"
+flake8 = "^7.0.0"
+mypy = "^1.10.0"
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.12.0"
+types-requests = "^2.32.0"
+types-beautifulsoup4 = "^4.12.0"
+types-openpyxl = "^3.1.0"
+pandas-stubs = "^2.2.0"
+pre-commit = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,33 @@
+.DS_Store
+.idea/.gitignore
+.idea/game_db.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+*.pyc
+
+# Sensitive config files (tokens, users)
+settings/t_token.ini
+settings/users.ini
+
+# Real data files
+backup_db/games.xlsx
+update_db/
+files/
+*.db
+
+# Python caches and virtualenvs
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.venv/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Temporary Excel lock files
+~$*.xlsx
