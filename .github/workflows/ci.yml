@@ -33,21 +33,20 @@ jobs:
           virtualenvs-in-project: true
           installer-parallel: true
 
-      - name: Verify Poetry installation
+      - name: Configure Poetry
         run: |
-          echo "POETRY_HOME: $POETRY_HOME"
-          echo "PATH: $PATH"
-          $HOME/.local/bin/poetry --version || poetry --version
-        shell: bash
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          export PATH="$HOME/.local/bin:$PATH"
+          poetry --version
 
       - name: Install dependencies
-        run: $HOME/.local/bin/poetry install --no-interaction --no-root || poetry install --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
-        run: $HOME/.local/bin/poetry install --no-interaction || poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Run tests with coverage
-        run: $HOME/.local/bin/poetry run pytest --cov=game_db --cov-report=xml --cov-report=html --cov-report=term || poetry run pytest --cov=game_db --cov-report=xml --cov-report=html --cov-report=term
+        run: poetry run pytest --cov=game_db --cov-report=xml --cov-report=html --cov-report=term
 
       - name: Upload coverage reports
         uses: codecov/codecov-action@v4
@@ -96,20 +95,26 @@ jobs:
           virtualenvs-in-project: true
           installer-parallel: true
 
+      - name: Configure Poetry
+        run: |
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          export PATH="$HOME/.local/bin:$PATH"
+          poetry --version
+
       - name: Install dependencies
-        run: $HOME/.local/bin/poetry install --no-interaction --no-root || poetry install --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
-        run: $HOME/.local/bin/poetry install --no-interaction || poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Run black check
-        run: $HOME/.local/bin/poetry run black --check game_db/ tests/ || poetry run black --check game_db/ tests/
+        run: poetry run black --check game_db/ tests/
 
       - name: Run isort check
-        run: $HOME/.local/bin/poetry run isort --check-only game_db/ tests/ || poetry run isort --check-only game_db/ tests/
+        run: poetry run isort --check-only game_db/ tests/
 
       - name: Run flake8
-        run: $HOME/.local/bin/poetry run flake8 game_db/ tests/ || poetry run flake8 game_db/ tests/
+        run: poetry run flake8 game_db/ tests/
 
   typecheck:
     name: Type Check
@@ -133,14 +138,20 @@ jobs:
           virtualenvs-in-project: true
           installer-parallel: true
 
+      - name: Configure Poetry
+        run: |
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          export PATH="$HOME/.local/bin:$PATH"
+          poetry --version
+
       - name: Install dependencies
-        run: $HOME/.local/bin/poetry install --no-interaction --no-root || poetry install --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
-        run: $HOME/.local/bin/poetry install --no-interaction || poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Run mypy
-        run: $HOME/.local/bin/poetry run mypy game_db/ --show-error-codes || poetry run mypy game_db/ --show-error-codes
+        run: poetry run mypy game_db/ --show-error-codes
 
   coverage-check:
     name: Coverage Check
@@ -165,11 +176,17 @@ jobs:
           virtualenvs-in-project: true
           installer-parallel: true
 
+      - name: Configure Poetry
+        run: |
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          export PATH="$HOME/.local/bin:$PATH"
+          poetry --version
+
       - name: Install dependencies
-        run: $HOME/.local/bin/poetry install --no-interaction --no-root || poetry install --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
-        run: $HOME/.local/bin/poetry install --no-interaction || poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Download coverage artifacts
         uses: actions/download-artifact@v4
@@ -178,4 +195,4 @@ jobs:
           path: ./
 
       - name: Check coverage threshold
-        run: $HOME/.local/bin/poetry run pytest --cov=game_db --cov-report=xml --cov-fail-under=80 || poetry run pytest --cov=game_db --cov-report=xml --cov-fail-under=80
+        run: poetry run pytest --cov=game_db --cov-report=xml --cov-fail-under=80
