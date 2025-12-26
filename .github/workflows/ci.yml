@@ -28,18 +28,25 @@ jobs:
       - name: Install Poetry
         run: |
           curl -sSL https://install.python-poetry.org | python3 -
+          export PATH="$HOME/.local/bin:$PATH"
           echo "$HOME/.local/bin" >> $GITHUB_PATH
+          $HOME/.local/bin/poetry --version
 
       - name: Verify Poetry installation
-        run: poetry --version
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          poetry --version
 
       - name: Configure Poetry
         run: |
+          export PATH="$HOME/.local/bin:$PATH"
           poetry config virtualenvs.create true
           poetry config virtualenvs.in-project true
 
       - name: Install dependencies
-        run: poetry install --no-interaction --no-root
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          poetry install --no-interaction --no-root
 
       - name: Install project
         run: |
