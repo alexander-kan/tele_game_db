@@ -25,38 +25,30 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: 'poetry'
 
+      - name: Install pipx
+        run: python -m pip install --user pipx
+
       - name: Install Poetry
         run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          export PATH="$HOME/.local/bin:$PATH"
+          pipx install poetry
           echo "$HOME/.local/bin" >> $GITHUB_PATH
-          $HOME/.local/bin/poetry --version
 
       - name: Verify Poetry installation
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry --version
+        run: poetry --version
 
       - name: Configure Poetry
         run: |
-          export PATH="$HOME/.local/bin:$PATH"
           poetry config virtualenvs.create true
           poetry config virtualenvs.in-project true
 
       - name: Install dependencies
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry install --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Run tests with coverage
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry run pytest --cov=game_db --cov-report=xml --cov-report=html --cov-report=term
+        run: poetry run pytest --cov=game_db --cov-report=xml --cov-report=html --cov-report=term
 
       - name: Upload coverage reports
         uses: codecov/codecov-action@v4
@@ -99,46 +91,31 @@ jobs:
 
       - name: Install Poetry
         run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          export PATH="$HOME/.local/bin:$PATH"
+          pipx install poetry
           echo "$HOME/.local/bin" >> $GITHUB_PATH
-          $HOME/.local/bin/poetry --version
 
       - name: Verify Poetry installation
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry --version
+        run: poetry --version
 
       - name: Configure Poetry
         run: |
-          export PATH="$HOME/.local/bin:$PATH"
           poetry config virtualenvs.create true
           poetry config virtualenvs.in-project true
 
       - name: Install dependencies
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry install --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Run black check
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry run black --check game_db/ tests/
+        run: poetry run black --check game_db/ tests/
 
       - name: Run isort check
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry run isort --check-only game_db/ tests/
+        run: poetry run isort --check-only game_db/ tests/
 
       - name: Run flake8
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry run flake8 game_db/ tests/
+        run: poetry run flake8 game_db/ tests/
 
   typecheck:
     name: Type Check
@@ -156,36 +133,25 @@ jobs:
 
       - name: Install Poetry
         run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          export PATH="$HOME/.local/bin:$PATH"
+          pipx install poetry
           echo "$HOME/.local/bin" >> $GITHUB_PATH
-          $HOME/.local/bin/poetry --version
 
       - name: Verify Poetry installation
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry --version
+        run: poetry --version
 
       - name: Configure Poetry
         run: |
-          export PATH="$HOME/.local/bin:$PATH"
           poetry config virtualenvs.create true
           poetry config virtualenvs.in-project true
 
       - name: Install dependencies
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry install --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Run mypy
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry run mypy game_db/ --show-error-codes
+        run: poetry run mypy game_db/ --show-error-codes
 
   coverage-check:
     name: Coverage Check
@@ -204,31 +170,22 @@ jobs:
 
       - name: Install Poetry
         run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          export PATH="$HOME/.local/bin:$PATH"
+          pipx install poetry
           echo "$HOME/.local/bin" >> $GITHUB_PATH
-          $HOME/.local/bin/poetry --version
 
       - name: Verify Poetry installation
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry --version
+        run: poetry --version
 
       - name: Configure Poetry
         run: |
-          export PATH="$HOME/.local/bin:$PATH"
           poetry config virtualenvs.create true
           poetry config virtualenvs.in-project true
 
       - name: Install dependencies
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry install --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
 
       - name: Install project
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry install --no-interaction
+        run: poetry install --no-interaction
 
       - name: Download coverage artifacts
         uses: actions/download-artifact@v4
@@ -237,6 +194,4 @@ jobs:
           path: ./
 
       - name: Check coverage threshold
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-          poetry run pytest --cov=game_db --cov-report=xml --cov-fail-under=80
+        run: poetry run pytest --cov=game_db --cov-report=xml --cov-fail-under=80
