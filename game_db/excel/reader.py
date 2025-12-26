@@ -47,26 +47,10 @@ class ExcelReader:
         return workbook[sheet_name]
 
     @staticmethod
-    def get_sheet_for_mode(workbook: Workbook, mode: str) -> Worksheet:
-        """Get appropriate sheet based on processing mode.
-
-        Args:
-            workbook: OpenPyXL Workbook object
-            mode: One of "full", "new_games", "update_games"
-
-        Returns:
-            OpenPyXL Worksheet object
-        """
-        if mode == "full":
-            return workbook["init_games"]
-        elif mode == "new_games":
-            return workbook["new_games"]
-        else:  # update_games
-            return workbook["update_games"]
-
-    @staticmethod
     def read_game_rows(sheet: Worksheet, max_row: int | None = None) -> list[GameRow]:
         """Read game data rows from Excel sheet.
+
+        Skips the first row (header) and reads data starting from row 2.
 
         Args:
             sheet: OpenPyXL Worksheet object
@@ -79,7 +63,8 @@ class ExcelReader:
             max_row = sheet.max_row
 
         game_rows: list[GameRow] = []
-        for i in range(1, max_row + 1):
+        # Start from row 2 to skip header (row 1)
+        for i in range(2, max_row + 1):
             row_data: list = []
             for col in range(
                 ExcelColumn.GAME_NAME, ExcelColumn.ADDITIONAL_TIME + 1

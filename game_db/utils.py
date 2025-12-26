@@ -11,7 +11,7 @@ logger = logging.getLogger("game_db.utils")
 def float_to_time(hours_float: float | str) -> str:
     """Convert hours (as float or string) to human-readable format.
 
-    Converts a decimal number of hours to Russian format "X часов Y минут".
+    Converts a decimal number of hours to English format "X hours Y minutes".
 
     Args:
         hours_float: Number of hours as float or string representation.
@@ -22,21 +22,21 @@ def float_to_time(hours_float: float | str) -> str:
             Negative numbers are treated as 0.
 
     Returns:
-        String in format "X часов Y минут" where:
+        String in format "X hours Y minutes" where:
         - X is the integer part (hours)
         - Y is the fractional part converted to minutes (0-59)
 
     Examples:
         >>> float_to_time(1.0)
-        '1 часов 0 минут'
+        '1 hours 0 minutes'
         >>> float_to_time(1.5)
-        '1 часов 30 минут'
+        '1 hours 30 minutes'
         >>> float_to_time(2.25)
-        '2 часов 15 минут'
+        '2 hours 15 minutes'
         >>> float_to_time(0)
-        '0 часов 0 минут'
+        '0 hours 0 minutes'
         >>> float_to_time("10.75")
-        '10 часов 45 минут'
+        '10 hours 45 minutes'
 
     Note:
         The function uses mathematical conversion:
@@ -63,22 +63,7 @@ def float_to_time(hours_float: float | str) -> str:
     # Round down to avoid exceeding 59 minutes
     minutes = int(fractional_hours * 60)
 
-    return f"{hours} часов {minutes} минут"
-
-
-def suffix(number: int) -> str:
-    """Return Russian suffix for word 'игра' depending on number."""
-    igri = ["2", "3", "4"]
-    if str(number)[-1:] == "1":
-        if str(number)[: -(len(str(number)) - 1)] != "1":
-            return "игра"
-        return "игр"
-    if (
-        str(number)[-1:] in igri
-        and str(number)[: -(len(str(number)) - 1)] != "1"
-    ):
-        return "игры"
-    return "игр"
+    return f"{hours} hours {minutes} minutes"
 
 
 def is_path_safe(target_path: Path, allowed_dir: Path) -> bool:

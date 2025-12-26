@@ -62,7 +62,7 @@ def mock_excel_file() -> Iterator[Path]:
         [
             "Test Game",
             "Steam",
-            "Не начата",
+            "Not Started",
             "January 1, 2024",
             "8",
             "7.5",
@@ -129,7 +129,7 @@ def mock_configs() -> tuple[TokensConfig, SettingsConfig]:
         sql_games_on_platforms=Path("games_on_platforms.sql"),
         sqlite_db_file=Path("test.db"),
     )
-    settings = SettingsConfig(paths=paths, db_files=db_files)
+    settings = SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
 
     return tokens, settings
 
@@ -171,8 +171,10 @@ def test_synchronize_steam_games_updates_excel(
     # Verify DB recreation was attempted
     assert mock_db_manager.execute_scripts_from_sql_file.call_count == 3
 
-    # Verify result
-    assert result is True
+    # Verify result (returns tuple: (success: bool, similarity_matches: list))
+    assert isinstance(result, tuple)
+    assert result[0] is True
+    assert isinstance(result[1], list)
 
 
 def test_synchronize_steam_games_game_not_found(
@@ -218,8 +220,10 @@ def test_synchronize_steam_games_game_not_found(
 
     result = synchronizer.synchronize_steam_games(str(mock_excel_file))
 
-    # Should still complete successfully
-    assert result is True
+    # Should still complete successfully (returns tuple: (success: bool, similarity_matches: list))
+    assert isinstance(result, tuple)
+    assert result[0] is True
+    assert isinstance(result[1], list)
     # Verify that find_row_by_game_name was called
     assert mock_excel_importer.reader.find_row_by_game_name.called
 

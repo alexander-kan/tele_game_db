@@ -34,7 +34,7 @@ def test_handle_text_clear_menu(
     admin_security: Security,
 ) -> None:
     """Test handle_text with clear menu command."""
-    mock_message.text = "Убрать меню"
+    mock_message.text = "Clear Menu"
 
     handlers.handle_text(mock_message, mock_bot, admin_security, test_config)
 
@@ -45,7 +45,7 @@ def test_handle_text_clear_menu(
         text_sent = call_args[0][1]
     else:
         text_sent = call_args[1].get("text", "")
-    assert "Меню очищено" in str(text_sent)
+    assert "Menu cleared" in str(text_sent)
 
 
 @patch("game_db.commands.game_commands.game_service")
@@ -61,7 +61,7 @@ def test_handle_text_getgame(
     mock_game_service.query_game.return_value = [
         (
             "Test Game",
-            "Пройдена",
+            "Completed",
             "Steam",
             "8",
             "10.5",
@@ -108,7 +108,7 @@ def test_handle_text_count_games(
     admin_security: Security,
 ) -> None:
     """Test handle_text with count games command."""
-    mock_message.text = "Сколько игр прошёл Александр"
+    mock_message.text = "How many games Alexander completed"
     # Mock get_platforms to return test platforms
     mock_game_service.get_platforms.return_value = [
         "Steam",
@@ -135,10 +135,10 @@ def test_handle_text_routing_table(
 ) -> None:
     """Test that routing table works for exact matches."""
     test_cases = [
-        "В главное меню",
-        "Меню управления файлами",
-        "Списки игр",
-        "Показать доступные команды",
+        "Back to Main Menu",
+        "File Management Menu",
+        "Game Lists",
+        "Show Available Commands",
     ]
 
     for text in test_cases:
@@ -314,7 +314,7 @@ def test_handle_sync_steam_success(
 
     with patch("game_db.handlers.db_module.ChangeDB") as mock_change_db:
         instance = mock_change_db.return_value
-        instance.synchronize_steam_games.return_value = True
+        instance.synchronize_steam_games.return_value = (True, [])
 
         handlers._handle_sync_steam(
             mock_message, mock_bot, admin_security, test_config

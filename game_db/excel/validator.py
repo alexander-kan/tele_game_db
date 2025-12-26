@@ -20,7 +20,7 @@ class ExcelValidator:
 
         Args:
             values_dictionaries: Dictionary mapping field names to
-                allowed values (e.g., {"STATUS": {"pass": "Пройдена"}})
+                allowed values (e.g., {"STATUS": {"pass": "Completed"}})
         """
         self.values_dictionaries = values_dictionaries
 
@@ -33,11 +33,8 @@ class ExcelValidator:
         Returns:
             True if valid, False otherwise
         """
-        allowed_statuses = [
-            self.values_dictionaries["STATUS"]["pass"],
-            self.values_dictionaries["STATUS"]["not_started"],
-            self.values_dictionaries["STATUS"]["abandoned"],
-        ]
+        # Dynamically get all status values from config
+        allowed_statuses = list(self.values_dictionaries["STATUS"].values())
         return status_text in allowed_statuses
 
     def validate_platform(self, platform_text: str) -> bool:
@@ -49,16 +46,8 @@ class ExcelValidator:
         Returns:
             True if valid, False otherwise
         """
-        allowed_platforms = [
-            self.values_dictionaries["PLATFORM"]["steam"],
-            self.values_dictionaries["PLATFORM"]["switch"],
-            self.values_dictionaries["PLATFORM"]["ps4"],
-            self.values_dictionaries["PLATFORM"]["ps_vita"],
-            self.values_dictionaries["PLATFORM"]["pc_origin"],
-            self.values_dictionaries["PLATFORM"]["pc_gog"],
-            self.values_dictionaries["PLATFORM"]["ps5"],
-            self.values_dictionaries["PLATFORM"]["n3ds"],
-        ]
+        # Dynamically get all platform values from config
+        allowed_platforms = list(self.values_dictionaries["PLATFORM"].values())
         return platform_text.strip() in allowed_platforms
 
     def validate_game_row(self, game_row: GameRow) -> tuple[bool, list[str]]:
@@ -79,9 +68,11 @@ class ExcelValidator:
         if not game_row.status:
             errors.append("Status is required")
         elif not self.validate_status(game_row.status):
+            # Dynamically build list of allowed statuses for error message
+            allowed_statuses = ", ".join(self.values_dictionaries["STATUS"].values())
             errors.append(
                 f"Invalid status: {game_row.status}. "
-                f"Must be one of: Пройдена, Не начата, Брошена"
+                f"Must be one of: {allowed_statuses}"
             )
 
         if not game_row.platforms:
@@ -124,20 +115,23 @@ class ExcelValidator:
     def get_platform_id(self, platform_text: str) -> int:
         """Map platform name to dictionary ID.
 
+        Platform IDs are assigned based on the order in values_dictionaries.ini:
+        - ID 1 = not_defined (reserved, returns 1 for unknown)
+        - ID 2+ = platforms in order of appearance in config
+
         Args:
             platform_text: Platform name
 
         Returns:
-            Platform ID (2=Steam, 3=Switch, etc., 1=unknown)
+            Platform ID (2=first platform after not_defined, 3=second, etc., 1=unknown)
         """
-        platform_map = {
-            self.values_dictionaries["PLATFORM"]["steam"]: 2,
-            self.values_dictionaries["PLATFORM"]["switch"]: 3,
-            self.values_dictionaries["PLATFORM"]["ps4"]: 4,
-            self.values_dictionaries["PLATFORM"]["ps_vita"]: 5,
-            self.values_dictionaries["PLATFORM"]["pc_origin"]: 6,
-            self.values_dictionaries["PLATFORM"]["pc_gog"]: 7,
-            self.values_dictionaries["PLATFORM"]["ps5"]: 8,
-            self.values_dictionaries["PLATFORM"]["n3ds"]: 9,
-        }
+        # Build platform map dynamically based on order in config
+        # Skip "not_defined" as it's ID 1 (reserved for unknown)
+        platform_map: dict[str, int] = {}
+        platform_items = list(self.values_dictionaries["PLATFORM"].items())
+        
+        for idx, (key, value) in enumerate(platform_items):
+            # ID starts from 2 (1 is reserved for "not_defined"/unknown)
+            platform_map[value] = idx + 1
+        
         return platform_map.get(platform_text.strip(), 1)

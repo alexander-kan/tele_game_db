@@ -124,7 +124,7 @@ class SteamGameListCommand(Command):
         bot.send_message(
             message.from_user.id,
             next_list[1],
-            reply_markup=menu.BotMenu.next_game(next_list[0]),
+            reply_markup=menu.BotMenu.next_game(next_list[0], settings.owner_name),
         )
 
 
@@ -151,7 +151,7 @@ class SwitchGameListCommand(Command):
         bot.send_message(
             message.from_user.id,
             next_list[1],
-            reply_markup=menu.BotMenu.next_game(next_list[0]),
+            reply_markup=menu.BotMenu.next_game(next_list[0], settings.owner_name),
         )
 
 
@@ -190,12 +190,12 @@ class CountGamesCommand(Command):
 
         formatter = MessageFormatter()
         count_complete_text = formatter.format_completed_games_stats(
-            platform_counts
+            platform_counts, settings.owner_name
         )
         bot.send_message(
             message.from_user.id,
             count_complete_text,
-            reply_markup=menu.BotMenu.next_game(message),
+            reply_markup=menu.BotMenu.next_game(message, settings.owner_name),
         )
 
 
@@ -245,11 +245,11 @@ class CountTimeCommand(Command):
         formatter = MessageFormatter()
         # For overall statistics, show total line
         count_complete_text = formatter.format_time_stats(
-            platform_times, total_real_seconds, show_total=True
+            platform_times, total_real_seconds, settings.owner_name, show_total=True
         )
 
         bot.send_message(
             message.from_user.id,
             count_complete_text,
-            reply_markup=menu.BotMenu.next_game(message),
+            reply_markup=menu.BotMenu.next_game(message, settings.owner_name),
         )

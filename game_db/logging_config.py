@@ -39,8 +39,7 @@ def configure_logging(level: int = logging.INFO) -> None:
     - dedicated named loggers:
       * ``game_db.bot``     – Telegram bot events;
       * ``game_db.sql``     – database/SQL operations;
-      * ``game_db.http``    – HTTP/requests and external APIs;
-      * ``game_db.genres``  – Metacritic/genres parser.
+      * ``game_db.http``    – HTTP/requests and external APIs.
     """
     handlers = _create_base_handlers(level)
 
@@ -51,9 +50,8 @@ def configure_logging(level: int = logging.INFO) -> None:
     bot_logger: Logger = logging.getLogger("game_db.bot")
     sql_logger: Logger = logging.getLogger("game_db.sql")
     http_logger: Logger = logging.getLogger("game_db.http")
-    genres_logger: Logger = logging.getLogger("game_db.genres")
 
-    for logger in (bot_logger, sql_logger, http_logger, genres_logger):
+    for logger in (bot_logger, sql_logger, http_logger):
         logger.setLevel(level)
         logger.propagate = True  # use root handlers
 

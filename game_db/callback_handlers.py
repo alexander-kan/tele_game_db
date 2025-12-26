@@ -6,6 +6,7 @@ import logging
 
 import telebot
 from telebot.types import CallbackQuery
+from telebot.apihelper import ApiTelegramException
 
 from .config import DEFAULT_PLATFORMS, SettingsConfig
 from .db import ChangeDB
@@ -18,6 +19,36 @@ from .services.message_formatter import MessageFormatter
 from . import texts
 
 logger = logging.getLogger("game_db.bot")
+
+
+def _safe_answer_callback_query(
+    bot: telebot.TeleBot,
+    callback_query_id: str,
+    text: str | None = None,
+    show_alert: bool = False,
+) -> None:
+    """Safely answer a callback query, handling expired queries gracefully.
+
+    Args:
+        bot: Telegram bot instance
+        callback_query_id: ID of the callback query to answer
+        text: Optional text to show to the user
+        show_alert: If True, show as alert instead of notification
+    """
+    try:
+        bot.answer_callback_query(callback_query_id, text=text, show_alert=show_alert)
+    except ApiTelegramException as e:
+        if "query is too old" in str(e) or "query ID is invalid" in str(e):
+            logger.debug(
+                "[CALLBACK] Callback query %s expired, skipping answer",
+                callback_query_id,
+            )
+        else:
+            logger.warning(
+                "[CALLBACK] Failed to answer callback query %s: %s",
+                callback_query_id,
+                str(e),
+            )
 
 
 def _send_menu_at_bottom(
@@ -61,7 +92,7 @@ def handle_callback_query(
             "[UNAUTHORIZED_ACCESS] Unauthorized user %s tried to use callback",
             user_id,
         )
-        bot.answer_callback_query(call.id, texts.PRIVATE_BOT_TEXT, show_alert=True)
+        _safe_answer_callback_query(bot, call.id, texts.PRIVATE_BOT_TEXT, show_alert=True)
         return
 
     try:
@@ -86,13 +117,13 @@ def handle_callback_query(
         elif action == CallbackAction.COUNT_COMPLETED:
             _handle_count_completed(call, bot, security, args)
         elif action == CallbackAction.COUNT_TIME:
-            _handle_count_time(call, bot, security, args)
+            _handle_count_time(call, bot, security, args, settings)
         elif action == CallbackAction.STATISTICS:
             _handle_statistics(call, bot, security)
         elif action == CallbackAction.STATS_COMPLETED:
-            _handle_stats_completed(call, bot, security)
+            _handle_stats_completed(call, bot, security, settings)
         elif action == CallbackAction.STATS_TIME:
-            _handle_stats_time(call, bot, security)
+            _handle_stats_time(call, bot, security, settings)
         elif action == CallbackAction.COMMANDS:
             _handle_commands(call, bot, security)
         elif action == CallbackAction.SHOW_USER_COMMANDS:
@@ -109,6 +140,10 @@ def handle_callback_query(
             _handle_download_template(call, bot, security, settings)
         elif action == CallbackAction.SYNC_MENU:
             _handle_sync_menu(call, bot, security)
+        elif action == CallbackAction.CHECK_STEAM:
+            _handle_check_steam(call, bot, security, settings)
+        elif action == CallbackAction.ADD_STEAM_GAMES:
+            _handle_add_steam_games(call, bot, security, settings)
         elif action == CallbackAction.SYNC_STEAM:
             _handle_sync_steam_menu(call, bot, security)
         elif action == CallbackAction.SYNC_STEAM_EXECUTE:
@@ -147,14 +182,37 @@ def handle_callback_query(
             logger.warning(
                 "[CALLBACK] Unknown action %s from user %s", action, user_id
             )
-            bot.answer_callback_query(call.id, "Неизвестное действие")
+            _safe_answer_callback_query(bot, call.id, "Unknown action")
 
+    except ApiTelegramException as e:
+        # Handle Telegram API errors, especially expired callback queries
+        if "query is too old" in str(e) or "query ID is invalid" in str(e):
+            logger.warning(
+                "[CALLBACK] Callback query expired for user %s: %s",
+                user_id,
+                str(e),
+            )
+            # Don't try to answer an expired query - it will fail again
+        else:
+            logger.exception(
+                "[CALLBACK] Telegram API error handling callback from user %s: %s",
+                user_id,
+                str(e),
+            )
+            # Try to answer only if it's not an expired query error
+            _safe_answer_callback_query(
+                bot,
+                call.id,
+                "An error occurred while processing the request",
+                show_alert=True,
+            )
     except Exception as e:
         logger.exception(
             "[CALLBACK] Error handling callback from user %s: %s", user_id, str(e)
         )
-        bot.answer_callback_query(
-            call.id, "Произошла ошибка при обработке запроса", show_alert=True
+        # Try to answer callback query using safe wrapper
+        _safe_answer_callback_query(
+            bot, call.id, "An error occurred while processing the request", show_alert=True
         )
 
 
@@ -167,40 +225,40 @@ def _handle_main_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Secur
         call.message.message_id,
         reply_markup=InlineMenu.main_menu(security, user_id),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_my_games(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle 'My Games' submenu callback."""
     bot.edit_message_text(
-        "Мои игры",
+        "My Games",
         call.message.chat.id,
         call.message.message_id,
         reply_markup=InlineMenu.my_games_menu(),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_steam_games(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle Steam games submenu callback."""
     bot.edit_message_text(
-        "Steam игры",
+        "Steam Games",
         call.message.chat.id,
         call.message.message_id,
         reply_markup=InlineMenu.platform_menu("Steam"),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_switch_games(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle Switch games submenu callback."""
     bot.edit_message_text(
-        "Switch игры",
+        "Switch Games",
         call.message.chat.id,
         call.message.message_id,
         reply_markup=InlineMenu.platform_menu("Switch"),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_games_list(
@@ -219,7 +277,7 @@ def _handle_games_list(
     """
     if len(args) < 3:
         logger.warning("[CALLBACK] Invalid args for GAMES_LIST: %s", args)
-        bot.answer_callback_query(call.id, "Ошибка: неверные параметры")
+        _safe_answer_callback_query(bot, call.id, "Error: invalid parameters")
         return
 
     platform = args[0]
@@ -228,7 +286,7 @@ def _handle_games_list(
         limit = int(args[2])
     except ValueError:
         logger.warning("[CALLBACK] Invalid offset/limit for GAMES_LIST: %s", args)
-        bot.answer_callback_query(call.id, "Ошибка: неверные параметры пагинации")
+        _safe_answer_callback_query(bot, call.id, "Error: invalid pagination parameters")
         return
 
     try:
@@ -247,12 +305,12 @@ def _handle_games_list(
                 platform, next_offset, limit
             ),
         )
-        bot.answer_callback_query(call.id)
+        _safe_answer_callback_query(bot, call.id)
     except (DatabaseError, GameDBError) as e:
         logger.exception(
             "[CALLBACK] Error getting games list for platform %s: %s", platform, str(e)
         )
-        bot.answer_callback_query(call.id, "Ошибка при получении списка игр", show_alert=True)
+        _safe_answer_callback_query(bot, call.id, "Error getting game list", show_alert=True)
 
 
 def _handle_count_completed(
@@ -271,28 +329,28 @@ def _handle_count_completed(
     """
     if not args:
         logger.warning("[CALLBACK] Invalid args for COUNT_COMPLETED: %s", args)
-        bot.answer_callback_query(call.id, "Ошибка: неверные параметры")
+        _safe_answer_callback_query(bot, call.id, "Error: invalid parameters")
         return
 
     platform = args[0]
     try:
         count = game_service.count_complete_games(platform)
-        message_text = f"Пройдено игр на {platform}: {count}"
+        message_text = f"Completed games on {platform}: {count}"
         bot.edit_message_text(
             message_text,
             call.message.chat.id,
             call.message.message_id,
             reply_markup=InlineMenu.platform_menu(platform),
         )
-        bot.answer_callback_query(call.id)
+        _safe_answer_callback_query(bot, call.id)
     except (DatabaseError, GameDBError) as e:
         logger.exception(
             "[CALLBACK] Error counting completed games for platform %s: %s",
             platform,
             str(e),
         )
-        bot.answer_callback_query(
-            call.id, "Ошибка при подсчёте пройденных игр", show_alert=True
+        _safe_answer_callback_query(
+            bot, call.id, "Error counting completed games", show_alert=True
         )
 
 
@@ -301,6 +359,7 @@ def _handle_count_time(
     bot: telebot.TeleBot,
     security: Security,
     args: list[str],
+    settings: SettingsConfig,
 ) -> None:
     """Handle count time callback.
 
@@ -309,10 +368,11 @@ def _handle_count_time(
         bot: Telegram bot instance
         security: Security instance
         args: List with [platform]
+        settings: Application settings
     """
     if not args:
         logger.warning("[CALLBACK] Invalid args for COUNT_TIME: %s", args)
-        bot.answer_callback_query(call.id, "Ошибка: неверные параметры")
+        _safe_answer_callback_query(bot, call.id, "Error: invalid parameters")
         return
 
     platform = args[0]
@@ -322,7 +382,7 @@ def _handle_count_time(
         formatter = MessageFormatter()
         platform_times = {platform: (expected_time, real_time)}
         message_text = formatter.format_time_stats(
-            platform_times, 0.0, show_total=False
+            platform_times, 0.0, settings.owner_name, show_total=False
         )
 
         bot.edit_message_text(
@@ -331,27 +391,36 @@ def _handle_count_time(
             call.message.message_id,
             reply_markup=InlineMenu.platform_menu(platform),
         )
-        bot.answer_callback_query(call.id)
+        _safe_answer_callback_query(bot, call.id)
     except (DatabaseError, GameDBError) as e:
         logger.exception(
             "[CALLBACK] Error counting time for platform %s: %s", platform, str(e)
         )
-        bot.answer_callback_query(call.id, "Ошибка при подсчёте времени", show_alert=True)
+        _safe_answer_callback_query(bot, call.id, "Error counting time", show_alert=True)
 
 
 def _handle_statistics(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle statistics submenu callback."""
     bot.edit_message_text(
-        "Статистика",
+        "Statistics",
         call.message.chat.id,
         call.message.message_id,
         reply_markup=InlineMenu.statistics_menu(),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
-def _handle_stats_completed(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
-    """Handle stats completed callback."""
+def _handle_stats_completed(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security, settings: SettingsConfig
+) -> None:
+    """Handle stats completed callback.
+
+    Args:
+        call: CallbackQuery object
+        bot: Telegram bot instance
+        security: Security instance
+        settings: Application settings
+    """
     try:
         platforms = game_service.get_platforms() or DEFAULT_PLATFORMS
         platform_counts = {}
@@ -363,7 +432,7 @@ def _handle_stats_completed(call: CallbackQuery, bot: telebot.TeleBot, security:
                 platform_counts[platform] = 0
 
         formatter = MessageFormatter()
-        message_text = formatter.format_completed_games_stats(platform_counts)
+        message_text = formatter.format_completed_games_stats(platform_counts, settings.owner_name)
 
         bot.edit_message_text(
             message_text,
@@ -371,16 +440,25 @@ def _handle_stats_completed(call: CallbackQuery, bot: telebot.TeleBot, security:
             call.message.message_id,
             reply_markup=InlineMenu.statistics_menu(),
         )
-        bot.answer_callback_query(call.id)
+        _safe_answer_callback_query(bot, call.id)
     except (DatabaseError, GameDBError) as e:
         logger.exception("[CALLBACK] Error getting stats completed: %s", str(e))
-        bot.answer_callback_query(
-            call.id, "Ошибка при получении статистики", show_alert=True
+        _safe_answer_callback_query(
+            bot, call.id, "Error getting statistics", show_alert=True
         )
 
 
-def _handle_stats_time(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
-    """Handle stats time callback."""
+def _handle_stats_time(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security, settings: SettingsConfig
+) -> None:
+    """Handle stats time callback.
+
+    Args:
+        call: CallbackQuery object
+        bot: Telegram bot instance
+        security: Security instance
+        settings: Application settings
+    """
     try:
         platforms = game_service.get_platforms() or DEFAULT_PLATFORMS
         platform_times = {}
@@ -397,7 +475,7 @@ def _handle_stats_time(call: CallbackQuery, bot: telebot.TeleBot, security: Secu
 
         formatter = MessageFormatter()
         message_text = formatter.format_time_stats(
-            platform_times, total_real_seconds, show_total=True
+            platform_times, total_real_seconds, settings.owner_name, show_total=True
         )
 
         bot.edit_message_text(
@@ -406,11 +484,11 @@ def _handle_stats_time(call: CallbackQuery, bot: telebot.TeleBot, security: Secu
             call.message.message_id,
             reply_markup=InlineMenu.statistics_menu(),
         )
-        bot.answer_callback_query(call.id)
+        _safe_answer_callback_query(bot, call.id)
     except (DatabaseError, GameDBError) as e:
         logger.exception("[CALLBACK] Error getting stats time: %s", str(e))
-        bot.answer_callback_query(
-            call.id, "Ошибка при получении статистики", show_alert=True
+        _safe_answer_callback_query(
+            bot, call.id, "Error getting statistics", show_alert=True
         )
 
 
@@ -418,12 +496,12 @@ def _handle_commands(call: CallbackQuery, bot: telebot.TeleBot, security: Securi
     """Handle commands submenu callback."""
     user_id = call.from_user.id if call.from_user else None
     bot.edit_message_text(
-        "Команды",
+        "Commands",
         call.message.chat.id,
         call.message.message_id,
         reply_markup=InlineMenu.commands_menu(security, user_id),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_show_user_commands(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
@@ -434,14 +512,14 @@ def _handle_show_user_commands(call: CallbackQuery, bot: telebot.TeleBot, securi
         call.message.message_id,
         reply_markup=InlineMenu.commands_menu(security, call.from_user.id if call.from_user else None),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_show_admin_commands(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle show admin commands callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        bot.answer_callback_query(call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
         return
 
     bot.edit_message_text(
@@ -450,30 +528,30 @@ def _handle_show_admin_commands(call: CallbackQuery, bot: telebot.TeleBot, secur
         call.message.message_id,
         reply_markup=InlineMenu.admin_panel_menu(),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_admin_panel(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle admin panel submenu callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        bot.answer_callback_query(call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
         return
 
     bot.edit_message_text(
-        "Админ-панель",
+        "Admin Panel",
         call.message.chat.id,
         call.message.message_id,
         reply_markup=InlineMenu.admin_panel_menu(),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_file_management(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle file management submenu callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        bot.answer_callback_query(call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
         return
 
     bot.edit_message_text(
@@ -482,7 +560,7 @@ def _handle_file_management(call: CallbackQuery, bot: telebot.TeleBot, security:
         call.message.message_id,
         reply_markup=InlineMenu.file_management_menu(),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_list_files(
@@ -494,7 +572,7 @@ def _handle_list_files(
     """Handle list files callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        bot.answer_callback_query(call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
         return
 
     try:
@@ -504,10 +582,10 @@ def _handle_list_files(
 
         files = sorted(files_dir.iterdir())
         if not files:
-            message_text = "Файлы не найдены"
+            message_text = "Files not found"
         else:
             file_list = "\n".join(f"• {f.name}" for f in files if f.is_file())
-            message_text = f"Доступные файлы:\n\n{file_list}"
+            message_text = f"Available files:\n\n{file_list}"
 
         bot.edit_message_text(
             message_text,
@@ -515,10 +593,10 @@ def _handle_list_files(
             call.message.message_id,
             reply_markup=InlineMenu.file_management_menu(),
         )
-        bot.answer_callback_query(call.id)
+        _safe_answer_callback_query(bot, call.id)
     except Exception as e:
         logger.exception("[CALLBACK] Error listing files: %s", str(e))
-        bot.answer_callback_query(call.id, "Ошибка при получении списка файлов", show_alert=True)
+        _safe_answer_callback_query(bot, call.id, "Error getting file list", show_alert=True)
 
 
 def _handle_download_template(
@@ -530,45 +608,154 @@ def _handle_download_template(
     """Handle download template callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        bot.answer_callback_query(call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
         return
 
     try:
         template_path = settings.paths.games_excel_file
         if not template_path.exists():
-            bot.answer_callback_query(
-                call.id, "Файл шаблона не найден", show_alert=True
+            _safe_answer_callback_query(
+                bot, call.id, "Template file not found", show_alert=True
             )
             return
 
         with open(template_path, "rb") as file_obj:
             bot.send_document(call.message.chat.id, file_obj)
-        bot.answer_callback_query(call.id, "Шаблон отправлен")
+        _safe_answer_callback_query(bot, call.id, "Template sent")
     except Exception as e:
         logger.exception("[CALLBACK] Error sending template: %s", str(e))
-        bot.answer_callback_query(call.id, "Ошибка при отправке шаблона", show_alert=True)
+        _safe_answer_callback_query(bot, call.id, "Error sending template", show_alert=True)
 
 
 def _handle_sync_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle sync menu callback."""
     bot.edit_message_text(
-        "Синхронизация Базы",
+        "Database Sync",
         call.message.chat.id,
         call.message.message_id,
         reply_markup=InlineMenu.sync_menu(),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
+
+
+def _handle_check_steam(
+    call: CallbackQuery,
+    bot: telebot.TeleBot,
+    security: Security,
+    settings: SettingsConfig,
+) -> None:
+    """Handle check Steam games callback."""
+    user_id = call.from_user.id if call.from_user else None
+    if not security.admin_check(user_id):
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        return
+
+    _safe_answer_callback_query(bot, call.id, "Checking Steam data...")
+
+    try:
+        create = ChangeDB()
+        xlsx_path = str(settings.paths.games_excel_file)
+        success, similarity_matches = create.check_steam_games(xlsx_path)
+
+        if success:
+            # Format missing games list with similarity matches
+            formatter = MessageFormatter()
+            missing_games_text = formatter.format_steam_sync_missing_games(
+                similarity_matches
+            )
+
+            # Determine if there are missing games (non-empty matches)
+            has_missing_games = len(similarity_matches) > 0
+
+            # Send results first, then menu
+            if missing_games_text:
+                bot.send_message(call.message.chat.id, missing_games_text)
+            bot.send_message(
+                call.message.chat.id,
+                "Check completed",
+                reply_markup=InlineMenu.steam_check_menu(
+                    has_missing_games=has_missing_games
+                ),
+            )
+        else:
+            bot.send_message(
+                call.message.chat.id,
+                "Error checking Steam data",
+                reply_markup=InlineMenu.steam_check_menu(has_missing_games=False),
+            )
+    except Exception as e:
+        logger.exception("[CALLBACK] Error checking Steam games: %s", str(e))
+        bot.send_message(
+            call.message.chat.id,
+            "Error checking Steam data",
+            reply_markup=InlineMenu.steam_check_menu(has_missing_games=False),
+        )
+
+
+def _handle_add_steam_games(
+    call: CallbackQuery,
+    bot: telebot.TeleBot,
+    security: Security,
+    settings: SettingsConfig,
+) -> None:
+    """Handle add Steam games callback."""
+    user_id = call.from_user.id if call.from_user else None
+    if not security.admin_check(user_id):
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        return
+
+    _safe_answer_callback_query(bot, call.id, "Adding games to database...")
+
+    try:
+        create = ChangeDB()
+        xlsx_path = str(settings.paths.games_excel_file)
+
+        # First, get current list of missing games
+        success_check, similarity_matches = create.check_steam_games(xlsx_path)
+        if not success_check or not similarity_matches:
+            bot.send_message(
+                call.message.chat.id,
+                "No games to add",
+                reply_markup=InlineMenu.steam_check_menu(has_missing_games=False),
+            )
+            return
+
+        # Extract game names from similarity matches
+        game_names = [match.original for match in similarity_matches]
+
+        # Add games to Excel
+        success = create.add_steam_games_to_excel(xlsx_path, game_names)
+
+        if success:
+            bot.send_message(
+                call.message.chat.id,
+                f"Successfully added {len(game_names)} games to database",
+                reply_markup=InlineMenu.steam_check_menu(has_missing_games=False),
+            )
+        else:
+            bot.send_message(
+                call.message.chat.id,
+                "Error adding games",
+                reply_markup=InlineMenu.steam_check_menu(has_missing_games=False),
+            )
+    except Exception as e:
+        logger.exception("[CALLBACK] Error adding Steam games: %s", str(e))
+        bot.send_message(
+            call.message.chat.id,
+            "Error adding games",
+            reply_markup=InlineMenu.steam_check_menu(has_missing_games=False),
+        )
 
 
 def _handle_sync_steam_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle Steam sync menu callback."""
     bot.edit_message_text(
-        "Синхронизация Steam",
+        "Steam Sync",
         call.message.chat.id,
         call.message.message_id,
-        reply_markup=InlineMenu.steam_sync_menu(),
+        reply_markup=InlineMenu.steam_check_menu(has_missing_games=False),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_sync_steam_execute(
@@ -580,10 +767,10 @@ def _handle_sync_steam_execute(
     """Handle Steam sync execution callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        bot.answer_callback_query(call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
         return
 
-    bot.answer_callback_query(call.id, "Запущена синхронизация Steam...")
+    _safe_answer_callback_query(bot, call.id, "Steam sync started...")
 
     try:
         create = ChangeDB()
@@ -600,32 +787,32 @@ def _handle_sync_steam_execute(
             bot.send_message(
                 call.message.chat.id,
                 texts.STEAM_SYNC_SUCCESS,
-                reply_markup=InlineMenu.steam_sync_menu(),
+                reply_markup=InlineMenu.sync_menu(),
             )
         else:
             bot.send_message(
                 call.message.chat.id,
                 texts.STEAM_SYNC_ERROR,
-                reply_markup=InlineMenu.steam_sync_menu(),
+                reply_markup=InlineMenu.sync_menu(),
             )
     except Exception as e:
         logger.exception("[CALLBACK] Error executing Steam sync: %s", str(e))
         bot.send_message(
             call.message.chat.id,
             texts.STEAM_SYNC_ERROR,
-            reply_markup=InlineMenu.steam_sync_menu(),
+            reply_markup=InlineMenu.sync_menu(),
         )
 
 
 def _handle_sync_metacritic_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle Metacritic sync menu callback."""
     bot.edit_message_text(
-        "Синхронизация Metacritic",
+        "Metacritic Sync",
         call.message.chat.id,
         call.message.message_id,
         reply_markup=InlineMenu.metacritic_sync_menu(),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_sync_metacritic_execute(
@@ -646,14 +833,16 @@ def _handle_sync_metacritic_execute(
     """
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        bot.answer_callback_query(call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
         return
 
-    bot.answer_callback_query(call.id, "Запущена синхронизация Metacritic...")
+    _safe_answer_callback_query(bot, call.id, "Metacritic sync started...")
 
     try:
         create = ChangeDB()
         xlsx_path = str(settings.paths.games_excel_file)
+        # Full sync: test_mode=False (no 20 game limit)
+        # Partial sync: test_mode=False (no 20 game limit)
         result = create.synchronize_metacritic_games(
             xlsx_path, test_mode=False, partial_mode=partial_mode
         )
@@ -683,12 +872,12 @@ def _handle_sync_metacritic_execute(
 def _handle_sync_hltb_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
     """Handle HowLongToBeat sync menu callback."""
     bot.edit_message_text(
-        "Синхронизация HowLongToBeat",
+        "HowLongToBeat Sync",
         call.message.chat.id,
         call.message.message_id,
         reply_markup=InlineMenu.hltb_sync_menu(),
     )
-    bot.answer_callback_query(call.id)
+    _safe_answer_callback_query(bot, call.id)
 
 
 def _handle_sync_hltb_execute(
@@ -709,14 +898,16 @@ def _handle_sync_hltb_execute(
     """
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        bot.answer_callback_query(call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
         return
 
-    bot.answer_callback_query(call.id, "Запущена синхронизация HowLongToBeat...")
+    _safe_answer_callback_query(bot, call.id, "HowLongToBeat sync started...")
 
     try:
         create = ChangeDB()
         xlsx_path = str(settings.paths.games_excel_file)
+        # Full sync: test_mode=False (no 20 game limit)
+        # Partial sync: test_mode=False (no 20 game limit)
         result = create.synchronize_hltb_games(
             xlsx_path, test_mode=False, partial_mode=partial_mode
         )

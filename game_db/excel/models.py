@@ -16,7 +16,7 @@ class GameRow:
 
     game_name: str
     platforms: str  # Comma-separated platform names
-    status: str  # "Пройдена", "Не начата", "Брошена"
+    status: str  # "Completed", "Not Started", "Dropped"
     release_date: str  # "Month DD, YYYY" format
     press_score: Optional[str] = None
     user_score: Optional[str] = None

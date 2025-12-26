@@ -46,6 +46,8 @@ class CallbackAction(str, Enum):
 
     # Sync menu
     SYNC_STEAM = "sync_steam"
+    CHECK_STEAM = "check_steam"
+    ADD_STEAM_GAMES = "add_steam_games"
     SYNC_STEAM_EXECUTE = "sync_steam_execute"
     BACK_TO_SYNC_MENU = "back_to_sync_menu"
     BACK_TO_MAIN_FROM_SYNC = "back_main_from_sync"

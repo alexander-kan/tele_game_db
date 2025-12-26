@@ -21,12 +21,21 @@ Thank you for your interest in contributing to `game-db`!
 Before opening a pull request, please make sure that:
 
 ```bash
-poetry run pytest
+# Run all tests with coverage (minimum 80% coverage required)
+poetry run pytest --cov=game_db --cov-report=term-missing
+
+# Code formatting
 poetry run black game_db scripts tests
 poetry run isort game_db scripts tests
+
+# Linting
 poetry run flake8 game_db scripts tests
+
+# Type checking
 poetry run mypy game_db
 ```
+
+**Note:** All tests must pass and code coverage must be at least 80%. The CI pipeline will automatically check this when you open a pull request.
 
 ### Pull requests
 

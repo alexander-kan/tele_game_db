@@ -73,10 +73,10 @@ class SteamExcelFormatter:
         current_status = sheet.cell(
             row=row_number, column=ExcelColumn.STATUS
         ).value
-        if current_status == "Не начата":
+        if current_status == "Not Started":
             sheet.cell(
                 row=row_number, column=ExcelColumn.STATUS
-            ).value = "Брошена"
+            ).value = "Dropped"
 
     @staticmethod
     def reset_game_without_playtime(
@@ -86,7 +86,7 @@ class SteamExcelFormatter:
         """Reset game row when playtime is zero and additional_time is 'none'.
 
         Sets MY_TIME_BEAT to EXCEL_NONE_VALUE, LAST_LAUNCH_DATE to
-        EXCEL_DATE_NOT_SET, and STATUS to "Не начата".
+        EXCEL_DATE_NOT_SET, and STATUS to "Not Started".
 
         Args:
             sheet: Excel worksheet to update
@@ -105,7 +105,7 @@ class SteamExcelFormatter:
             ).value = EXCEL_DATE_NOT_SET
             sheet.cell(
                 row=row_number, column=ExcelColumn.STATUS
-            ).value = "Не начата"
+            ).value = "Not Started"
 
     @staticmethod
     def update_game_row(

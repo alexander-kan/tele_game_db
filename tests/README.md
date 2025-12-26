@@ -5,9 +5,10 @@ This directory contains unit and integration tests for the game_db project.
 ## Test Structure
 
 ### Test Files
-- `test_time_and_suffix.py` - Unit tests for utility functions (`float_to_time`, `suffix`)
+- `test_time_and_suffix.py` - Unit tests for utility functions (`float_to_time`)
 - `test_file_safety.py` - Unit tests for file safety utilities (path validation, safe deletion, file type checking, OS error paths)
-- `test_excel_importer_mappings.py` - Unit tests for ExcelImporter mapping logic (status/platform IDs, date formatting, spend time calculation, DML generation)
+- `test_excel_importer_mappings.py` - Unit tests for ExcelImporter mapping logic (status/platform IDs, date formatting, spend time calculation)
+- `test_dml_generation.py` - Unit tests for DML SQL file generation from Excel files (`generate_dml_games_sql`, `generate_dml_games_on_platforms_sql`)
 - `test_excel_reader_writer.py` - Unit tests for Excel reader/writer helpers (sheet selection, row read/write, search by game name)
 - `test_game_service.py` - Integration tests for `GameRepository` (database queries, statistics)
 - `test_game_service_layer.py` - Unit tests for service layer (`game_service`) including success paths, error propagation and wrapping
@@ -15,6 +16,8 @@ This directory contains unit and integration tests for the game_db project.
 - `test_metacritic_synchronizer.py` - Integration tests for `MetacriticSynchronizer` with mocked Metacritic scraper and Excel files
 - `test_metacritic_search.py` - Unit tests for Metacritic search functionality (`search_metacritic_game_url`)
 - `test_metacritic_formatter.py` - Unit tests for Metacritic Excel formatter (`MetacriticExcelFormatter`)
+- `test_hltb_synchronizer.py` - Integration tests for `HowLongToBeatSynchronizer` with mocked HowLongToBeat client and Excel files
+- `test_hltb_formatter.py` - Unit tests for HowLongToBeat Excel formatter (`HowLongToBeatExcelFormatter`)
 - `test_handlers.py` - Integration tests for Telegram bot handlers with mocked bot and dependencies (including DB update and Steam sync helpers)
 - `test_file_commands.py` - Tests for file-related bot commands (`RemoveFileCommand`, `GetFileCommand`, `SyncSteamCommand`)
 - `test_game_commands.py` - Tests for game-related bot commands (`GetGameCommand`, `CountGamesCommand`, `CountTimeCommand`, Steam/Switch lists)
@@ -25,7 +28,6 @@ This directory contains unit and integration tests for the game_db project.
 - `test_menu.py` - Unit tests for menu.py
 - `test_db_dictionaries.py` - Unit tests for db_dictionaries.py
 - `test_steam_api.py` - Unit tests for steam_api.py
-- `test_genres.py` - Unit tests for genres.py
 - `test_error_handling.py` - Error handling tests for database, services, and edge cases
 - `test_error_handling_formatters.py` - Error handling tests for formatters and validators
 - `test_error_handling_handlers.py` - Error handling tests for handlers and commands
@@ -195,16 +197,19 @@ Tests use:
 ## Test Coverage
 
 Current test suite covers:
-- ✅ Utility functions (time formatting, suffix rules)
+- ✅ Utility functions (time formatting)
 - ✅ File safety utilities (path validation, safe deletion, file type checking, OS and filesystem error paths)
 - ✅ Excel reader/writer helpers (sheet selection, row reading/writing, row lookup)
-- ✅ Excel importer mappings and data transformations (status/platform IDs, month/text round‑trip, spend time calculation, DML generation)
+- ✅ Excel importer mappings and data transformations (status/platform IDs, month/text round‑trip, spend time calculation)
+- ✅ DML SQL file generation from Excel (games and games_on_platforms tables, date conversion, status/platform ID mapping, value formatting, validation)
 - ✅ Game repository queries (search, statistics, lists)
 - ✅ Service layer (`game_service`) including successful flows and error propagation/wrapping into `DatabaseError`
 - ✅ Steam synchronizer with dependency injection
 - ✅ Metacritic synchronizer with dependency injection
+- ✅ HowLongToBeat synchronizer with dependency injection
 - ✅ Metacritic search functionality
 - ✅ Metacritic Excel formatter
+- ✅ HowLongToBeat Excel formatter
 - ✅ Telegram bot handlers (commands, routing, authorization, DB update flows, Steam sync flows, Metacritic sync flows)
 - ✅ File commands (`removefile`, `getfile`, `sync_steam`) including security checks and filesystem errors
 - ✅ Game commands (game search, counters, time statistics, next games lists)

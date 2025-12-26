@@ -129,7 +129,7 @@ class TestMetacriticExcelFormatter:
             [
                 "Test Game",
                 "Steam",
-                "Не начата",
+                "Not Started",
                 "January 1, 2024",
                 "8.0",
                 "7.5",
@@ -191,7 +191,7 @@ class TestMetacriticExcelFormatter:
             [
                 "Test Game",
                 "Steam",
-                "Не начата",
+                "Not Started",
                 "January 1, 2024",
                 "8.0",
                 "7.5",

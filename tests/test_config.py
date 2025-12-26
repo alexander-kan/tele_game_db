@@ -84,9 +84,10 @@ class TestConfigDataclasses:
             sqlite_db_file=Path("/tmp/games.db"),
         )
 
-        settings = SettingsConfig(paths=paths, db_files=db_files)
+        settings = SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
         assert settings.paths == paths
         assert settings.db_files == db_files
+        assert settings.owner_name == "Alexander"
 
     def test_tokens_config_creation(self) -> None:
         """Test TokensConfig creation."""
@@ -230,6 +231,70 @@ class TestConfigLoaders:
                 settings_cfg.paths.games_excel_file
                 == tmp_path / "backup_db" / "games.xlsx"
             )
+            # Test default owner_name when OWNER section is missing
+            assert settings_cfg.owner_name == "Alexander"
+        finally:
+            config_module.PROJECT_ROOT = original_root
+
+    def test_load_settings_config_with_owner_name(self, tmp_path: Path) -> None:
+        """Test load_settings_config loads owner_name from OWNER section."""
+        import game_db.config as config_module
+        original_root = config_module.PROJECT_ROOT
+        config_module.PROJECT_ROOT = tmp_path
+
+        try:
+            # Create settings directory and files
+            (tmp_path / "settings").mkdir()
+            (tmp_path / "settings" / "settings.ini").write_text(
+                "[FILES]\n"
+                "sql_games = sql_querry/create_db/dml/dml_games.sql\n"
+                "sql_games_on_platforms = sql_querry/create_db/dml/dml_games_on_platforms.sql\n"
+                "sql_dictionaries = sql_querry/create_db/dml/dml_dictionaries.sql\n"
+                "sql_drop_tables = sql_querry/create_db/drop_tables.sql\n"
+                "sql_create_tables = sql_querry/create_db/create_tables.sql\n"
+                "sqlite_db_file = games.db\n"
+                "\n"
+                "[OWNER]\n"
+                "owner_name = John\n"
+            )
+            (tmp_path / "backup_db").mkdir()
+            (tmp_path / "update_db").mkdir()
+            (tmp_path / "files").mkdir()
+            (tmp_path / "sql_querry").mkdir()
+
+            settings_cfg = load_settings_config()
+
+            assert settings_cfg.owner_name == "John"
+        finally:
+            config_module.PROJECT_ROOT = original_root
+
+    def test_load_settings_config_owner_name_default(self, tmp_path: Path) -> None:
+        """Test load_settings_config uses default owner_name when OWNER section is missing."""
+        import game_db.config as config_module
+        original_root = config_module.PROJECT_ROOT
+        config_module.PROJECT_ROOT = tmp_path
+
+        try:
+            # Create settings directory and files (without OWNER section)
+            (tmp_path / "settings").mkdir()
+            (tmp_path / "settings" / "settings.ini").write_text(
+                "[FILES]\n"
+                "sql_games = sql_querry/create_db/dml/dml_games.sql\n"
+                "sql_games_on_platforms = sql_querry/create_db/dml/dml_games_on_platforms.sql\n"
+                "sql_dictionaries = sql_querry/create_db/dml/dml_dictionaries.sql\n"
+                "sql_drop_tables = sql_querry/create_db/drop_tables.sql\n"
+                "sql_create_tables = sql_querry/create_db/create_tables.sql\n"
+                "sqlite_db_file = games.db\n"
+            )
+            (tmp_path / "backup_db").mkdir()
+            (tmp_path / "update_db").mkdir()
+            (tmp_path / "files").mkdir()
+            (tmp_path / "sql_querry").mkdir()
+
+            settings_cfg = load_settings_config()
+
+            # Should default to "Alexander" when OWNER section is missing
+            assert settings_cfg.owner_name == "Alexander"
         finally:
             config_module.PROJECT_ROOT = original_root
 

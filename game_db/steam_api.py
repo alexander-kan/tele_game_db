@@ -13,7 +13,7 @@ from typing import Optional, cast
 
 import requests
 
-from .config import PROJECT_ROOT, load_tokens_config
+from .config import load_tokens_config
 from .types import SteamAPIResponseDict, SteamGame
 
 logger = logging.getLogger("game_db.http")
@@ -46,24 +46,6 @@ class SteamAPI:
             logger.info("Requesting owned games for SteamID %s", steam_id)
             response = requests.get(url, timeout=10)
             response.raise_for_status()
-            
-            # Save raw response to file for debugging
-            raw_response_file = PROJECT_ROOT / "steam_api_response.json"
-            try:
-                with raw_response_file.open("w", encoding="utf-8") as f:
-                    json.dump(
-                        json.loads(response.text),
-                        f,
-                        indent=2,
-                        ensure_ascii=False,
-                    )
-                logger.info(
-                    "Saved raw Steam API response to: %s", raw_response_file
-                )
-            except Exception as e:
-                logger.warning(
-                    "Failed to save raw Steam API response: %s", str(e)
-                )
             
             data = cast(SteamAPIResponseDict, json.loads(response.text))
             response_data = data.get("response", {})

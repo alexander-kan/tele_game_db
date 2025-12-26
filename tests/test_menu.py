@@ -33,11 +33,11 @@ class TestBotMenu:
                 else:
                     all_buttons.append(getattr(button, "text", ""))
 
-        assert "Убрать меню" in all_buttons
-        assert "Показать доступные команды" in all_buttons
-        assert "Списки игр" in all_buttons
-        assert "Меню управления файлами" in all_buttons
-        assert "Показать доступные команды админа" in all_buttons
+        assert "Clear Menu" in all_buttons
+        assert "Show Available Commands" in all_buttons
+        assert "Game Lists" in all_buttons
+        assert "File Management Menu" in all_buttons
+        assert "Show Admin Commands" in all_buttons
         assert "Synchronize games to Steam" in all_buttons
 
     def test_main_menu_regular_user(
@@ -57,12 +57,12 @@ class TestBotMenu:
                 else:
                     all_buttons.append(getattr(button, "text", ""))
 
-        assert "Убрать меню" in all_buttons
-        assert "Показать доступные команды" in all_buttons
-        assert "Списки игр" in all_buttons
+        assert "Clear Menu" in all_buttons
+        assert "Show Available Commands" in all_buttons
+        assert "Game Lists" in all_buttons
         # Admin buttons should not be present
-        assert "Меню управления файлами" not in all_buttons
-        assert "Показать доступные команды админа" not in all_buttons
+        assert "File Management Menu" not in all_buttons
+        assert "Show Admin Commands" not in all_buttons
         assert "Synchronize games to Steam" not in all_buttons
 
     def test_file_menu_admin(self, mock_message: Mock, admin_security: Security) -> None:
@@ -80,9 +80,9 @@ class TestBotMenu:
                 else:
                     all_buttons.append(getattr(button, "text", ""))
 
-        assert "Получить список файлов на сервере" in all_buttons
-        assert "Получить файл для заполнения игр" in all_buttons
-        assert "В главное меню" in all_buttons
+        assert "Get File List from Server" in all_buttons
+        assert "Get Game Template File" in all_buttons
+        assert "Back to Main Menu" in all_buttons
 
     def test_file_menu_regular_user(
         self, mock_message: Mock, user_security: Security
@@ -97,7 +97,8 @@ class TestBotMenu:
     def test_next_game_default(self, mock_message: Mock) -> None:
         """Test next_game with default message."""
         mock_message.text = "test message"
-        markup = BotMenu.next_game(mock_message)
+        owner_name = "Alexander"
+        markup = BotMenu.next_game(mock_message, owner_name)
 
         assert markup is not None
         assert hasattr(markup, "keyboard")
@@ -110,16 +111,17 @@ class TestBotMenu:
                 else:
                     all_buttons.append(getattr(button, "text", ""))
 
-        assert "Cписок Steam игр на прохождение,1,10" in all_buttons
-        assert "Cписок Switch игр на прохождение,1,10" in all_buttons
-        assert "Сколько игр прошёл Александр" in all_buttons
-        assert "Сколько времени Александр потратил на игры" in all_buttons
-        assert "В главное меню" in all_buttons
+        assert "Steam Games List,1,10" in all_buttons
+        assert "Switch Games List,1,10" in all_buttons
+        assert f"How many games {owner_name} completed" in all_buttons
+        assert f"How much time {owner_name} spent on games" in all_buttons
+        assert "Back to Main Menu" in all_buttons
 
     def test_next_game_steam_message(self, mock_message: Mock) -> None:
         """Test next_game with Steam message containing pagination."""
-        mock_message.text = "Cписок Steam игр на прохождение,5,20"
-        markup = BotMenu.next_game(mock_message)
+        mock_message.text = "Steam Games List,5,20"
+        owner_name = "Alexander"
+        markup = BotMenu.next_game(mock_message, owner_name)
 
         assert markup is not None
         assert hasattr(markup, "keyboard")
@@ -132,13 +134,14 @@ class TestBotMenu:
                 else:
                     all_buttons.append(getattr(button, "text", ""))
 
-        assert "Cписок Steam игр на прохождение,5,20" in all_buttons
-        assert "Cписок Switch игр на прохождение,1,10" in all_buttons
+        assert "Steam Games List,5,20" in all_buttons
+        assert "Switch Games List,1,10" in all_buttons
 
     def test_next_game_switch_message(self, mock_message: Mock) -> None:
         """Test next_game with Switch message containing pagination."""
-        mock_message.text = "Cписок Switch игр на прохождение,3,15"
-        markup = BotMenu.next_game(mock_message)
+        mock_message.text = "Switch Games List,3,15"
+        owner_name = "Alexander"
+        markup = BotMenu.next_game(mock_message, owner_name)
 
         assert markup is not None
         assert hasattr(markup, "keyboard")
@@ -151,8 +154,8 @@ class TestBotMenu:
                 else:
                     all_buttons.append(getattr(button, "text", ""))
 
-        assert "Cписок Steam игр на прохождение,1,10" in all_buttons
-        assert "Cписок Switch игр на прохождение,3,15" in all_buttons
+        assert "Steam Games List,1,10" in all_buttons
+        assert "Switch Games List,3,15" in all_buttons
 
     def test_clear_menu(self) -> None:
         """Test clear_menu returns ReplyKeyboardRemove."""

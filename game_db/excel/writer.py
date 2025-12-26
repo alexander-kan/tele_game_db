@@ -99,26 +99,19 @@ class ExcelWriter:
         game_row: GameRow | list,
         row_number: int,
         xlsx_path: str | Path,
-        mode: str,
     ) -> None:
-        """Update a row in init_games sheet and remove processed row.
+        """Update a row in init_games sheet.
 
         Args:
             workbook: OpenPyXL Workbook object
             game_row: GameRow instance or list of values
             xlsx_path: Path to Excel file
             row_number: Row number in init_games sheet
-            mode: Processing mode (for deleting from source sheet)
         """
         init_sheet = workbook["init_games"]
         ExcelWriter.write_game_row(
             init_sheet, row_number, game_row, xlsx_path, workbook
         )
-
-        # Delete processed row from source sheet
-        if mode in workbook.sheetnames:
-            workbook[mode].delete_rows(2, 1)
-
         workbook.save(str(xlsx_path))
 
     @staticmethod

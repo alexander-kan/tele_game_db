@@ -19,10 +19,10 @@ def sample_workbook() -> Workbook:
     wb.create_sheet("init_games")
     # Add header row
     sheet = wb["init_games"]
-    sheet.cell(row=1, column=ExcelColumn.STATUS).value = "Статус"
-    sheet.cell(row=1, column=ExcelColumn.MY_TIME_BEAT).value = "Время"
-    sheet.cell(row=1, column=ExcelColumn.LAST_LAUNCH_DATE).value = "Дата"
-    sheet.cell(row=1, column=ExcelColumn.ADDITIONAL_TIME).value = "Доп. время"
+    sheet.cell(row=1, column=ExcelColumn.STATUS).value = "Status"
+    sheet.cell(row=1, column=ExcelColumn.MY_TIME_BEAT).value = "My play time"
+    sheet.cell(row=1, column=ExcelColumn.LAST_LAUNCH_DATE).value = "Last launch"
+    sheet.cell(row=1, column=ExcelColumn.ADDITIONAL_TIME).value = "My play time (on the console when the game is also on Steam)"
     return wb
 
 
@@ -80,7 +80,7 @@ class TestSteamExcelFormatter:
         row_number = 2
 
         # Set initial status
-        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Не начата"
+        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Not Started"
 
         # Mock date formatter
         date_formatter = Mock(return_value="January 1, 2021")
@@ -101,7 +101,7 @@ class TestSteamExcelFormatter:
         )
         assert (
             sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Брошена"
+            == "Dropped"
         )
         date_formatter.assert_called_once_with(1609459200)
 
@@ -126,7 +126,7 @@ class TestSteamExcelFormatter:
             rtime_last_played=None,  # No last played date
         )
 
-        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Не начата"
+        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Not Started"
         date_formatter = Mock()
 
         SteamExcelFormatter.update_game_with_playtime(
@@ -143,7 +143,7 @@ class TestSteamExcelFormatter:
         )
         assert (
             sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Брошена"
+            == "Dropped"
         )
         date_formatter.assert_not_called()
 
@@ -159,7 +159,7 @@ class TestSteamExcelFormatter:
         sheet.cell(row=row_number, column=ExcelColumn.ADDITIONAL_TIME).value = (
             EXCEL_NONE_VALUE
         )
-        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Брошена"
+        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Dropped"
 
         SteamExcelFormatter.reset_game_without_playtime(sheet, row_number)
 
@@ -173,7 +173,7 @@ class TestSteamExcelFormatter:
         )
         assert (
             sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Не начата"
+            == "Not Started"
         )
 
     def test_reset_game_without_playtime_skips_if_additional_time_not_none(
@@ -187,7 +187,7 @@ class TestSteamExcelFormatter:
         # Set additional_time to something other than sentinel
         sheet.cell(row=row_number, column=ExcelColumn.ADDITIONAL_TIME).value = "10"
         sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value = "5.0"
-        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Брошена"
+        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Dropped"
 
         SteamExcelFormatter.reset_game_without_playtime(sheet, row_number)
 
@@ -198,7 +198,7 @@ class TestSteamExcelFormatter:
         )
         assert (
             sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Брошена"
+            == "Dropped"
         )
 
     def test_update_game_row_with_playtime(
@@ -209,7 +209,7 @@ class TestSteamExcelFormatter:
         """Test update_game_row with game that has playtime."""
         sheet = sample_workbook["init_games"]
         row_number = 2
-        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Не начата"
+        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Not Started"
 
         date_formatter = Mock(return_value="January 1, 2021")
 
@@ -227,7 +227,7 @@ class TestSteamExcelFormatter:
         )
         assert (
             sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Брошена"
+            == "Dropped"
         )
 
     def test_update_game_row_without_playtime(
@@ -241,7 +241,7 @@ class TestSteamExcelFormatter:
         sheet.cell(row=row_number, column=ExcelColumn.ADDITIONAL_TIME).value = (
             EXCEL_NONE_VALUE
         )
-        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Брошена"
+        sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Dropped"
 
         date_formatter = Mock()
 
@@ -259,6 +259,6 @@ class TestSteamExcelFormatter:
         )
         assert (
             sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Не начата"
+            == "Not Started"
         )
         date_formatter.assert_not_called()

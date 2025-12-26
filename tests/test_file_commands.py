@@ -37,7 +37,7 @@ def file_commands_settings(tmp_path: Path) -> SettingsConfig:
         sql_create_tables=tmp_path / "sql" / "create_tables.sql",
         sqlite_db_file=paths.sqlite_db_file,
     )
-    return SettingsConfig(paths=paths, db_files=db_files)
+    return SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
 
 
 def test_remove_file_command_non_admin_does_nothing(
@@ -199,7 +199,7 @@ def test_sync_steam_success(
     # locally as ``from .. import db as db_module``
     with patch("game_db.db.ChangeDB") as mock_change_db:
         instance = mock_change_db.return_value
-        instance.synchronize_steam_games.return_value = True
+        instance.synchronize_steam_games.return_value = (True, [])
 
         command = SyncSteamCommand()
         command.execute(mock_message, mock_bot, admin_security, file_commands_settings)

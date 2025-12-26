@@ -46,8 +46,11 @@ logger = logging.getLogger("game_db.bot")
 _command_handler: CommandHandler | None = None
 
 
-def _get_command_handler() -> CommandHandler:
+def _get_command_handler(owner_name: str | None = None) -> CommandHandler:
     """Get or create the global command handler instance.
+
+    Args:
+        owner_name: Name of the database owner (defaults to "Alexander")
 
     Returns:
         CommandHandler instance with all commands registered
@@ -57,28 +60,29 @@ def _get_command_handler() -> CommandHandler:
         _command_handler = CommandHandler()
 
         # Register menu commands
-        _command_handler.register_exact("Убрать меню", ClearMenuCommand())
-        _command_handler.register_exact("В главное меню", MainMenuCommand())
+        _command_handler.register_exact("Clear Menu", ClearMenuCommand())
+        _command_handler.register_exact("Back to Main Menu", MainMenuCommand())
         _command_handler.register_exact(
-            "Меню управления файлами", FileMenuCommand()
+            "File Management Menu", FileMenuCommand()
         )
         _command_handler.register_exact(
-            "Списки игр", GameListsMenuCommand()
+            "Game Lists", GameListsMenuCommand()
         )
         _command_handler.register_exact(
-            "Показать доступные команды", ShowCommandsCommand()
+            "Show Available Commands", ShowCommandsCommand()
         )
         _command_handler.register_exact(
-            "Показать доступные команды админа",
+            "Show Admin Commands",
             ShowAdminCommandsCommand(),
         )
 
-        # Register game commands
+        # Register game commands (use owner_name from settings, default to "Alexander")
+        owner = owner_name if owner_name is not None else "Alexander"
         _command_handler.register_exact(
-            "Сколько игр прошёл Александр", CountGamesCommand()
+            f"How many games {owner} completed", CountGamesCommand()
         )
         _command_handler.register_exact(
-            "Сколько времени Александр потратил на игры",
+            f"How much time {owner} spent on games",
             CountTimeCommand(),
         )
         _command_handler.register_exact(
@@ -86,10 +90,10 @@ def _get_command_handler() -> CommandHandler:
         )
         _command_handler.register_prefix("getgame", GetGameCommand())
         _command_handler.register_substring(
-            "Cписок Steam игр на прохождение", SteamGameListCommand()
+            "Steam Games List", SteamGameListCommand()
         )
         _command_handler.register_substring(
-            "Cписок Switch игр на прохождение", SwitchGameListCommand()
+            "Switch Games List", SwitchGameListCommand()
         )
 
         # Register file commands
@@ -195,7 +199,7 @@ def _handle_game_lists_menu(
     bot.send_message(
         message.chat.id,
         texts.GAME_LISTS_MENU,
-        reply_markup=menu.BotMenu.next_game(message),
+        reply_markup=menu.BotMenu.next_game(message, settings.owner_name),
     )
 
 
@@ -305,7 +309,7 @@ def _handle_sync_steam(
 
 
 def _handle_steam_game_list(
-    message: Message, bot: telebot.TeleBot, _sec: Security
+    message: Message, bot: telebot.TeleBot, _sec: Security, settings: SettingsConfig
 ) -> None:
     """Handle Steam game list command."""
     if not message.from_user:
@@ -314,12 +318,12 @@ def _handle_steam_game_list(
     bot.send_message(
         message.from_user.id,
         next_list[1],
-        reply_markup=menu.BotMenu.next_game(next_list[0]),
+        reply_markup=menu.BotMenu.next_game(next_list[0], settings.owner_name),
     )
 
 
 def _handle_switch_game_list(
-    message: Message, bot: telebot.TeleBot, _sec: Security
+    message: Message, bot: telebot.TeleBot, _sec: Security, settings: SettingsConfig
 ) -> None:
     """Handle Switch game list command."""
     if not message.from_user:
@@ -328,7 +332,7 @@ def _handle_switch_game_list(
     bot.send_message(
         message.from_user.id,
         next_list[1],
-        reply_markup=menu.BotMenu.next_game(next_list[0]),
+        reply_markup=menu.BotMenu.next_game(next_list[0], settings.owner_name),
     )
 
 
@@ -349,7 +353,7 @@ def handle_text(
         return
 
     # Use command handler to execute commands
-    command_handler = _get_command_handler()
+    command_handler = _get_command_handler(settings.owner_name)
     if command_handler.execute(message, bot, sec, settings):
         return
 
@@ -444,7 +448,7 @@ def _handle_remove_file(
         )
         bot.send_message(
             message.chat.id,
-            "Некорректное имя файла",
+            "Invalid file name",
             reply_markup=menu.BotMenu.file_menu(message, sec),
         )
         return
@@ -473,7 +477,7 @@ def _handle_remove_file(
         )
         bot.send_message(
             message.chat.id,
-            "Не удалось удалить файл",
+            "Failed to delete file",
             reply_markup=menu.BotMenu.file_menu(message, sec),
         )
 
@@ -502,7 +506,7 @@ def _handle_get_file(
         )
         bot.send_message(
             message.chat.id,
-            "Некорректное имя файла",
+            "Invalid file name",
             reply_markup=menu.BotMenu.file_menu(message, sec),
         )
         return
@@ -532,7 +536,7 @@ def _handle_get_file(
             )
             bot.send_message(
                 message.chat.id,
-                "Ошибка при чтении файла",
+                "Error reading file",
                 reply_markup=menu.BotMenu.file_menu(message, sec),
             )
     else:
@@ -540,7 +544,7 @@ def _handle_get_file(
 
 
 def _handle_count_games(
-    message: Message, bot: telebot.TeleBot, platforms: list[str]
+    message: Message, bot: telebot.TeleBot, platforms: list[str], settings: SettingsConfig
 ) -> None:
     """Handle count games command - format completed games statistics."""
     platform_counts = {}
@@ -560,19 +564,19 @@ def _handle_count_games(
 
     formatter = MessageFormatter()
     count_complete_text = formatter.format_completed_games_stats(
-        platform_counts
+        platform_counts, settings.owner_name
     )
     if not message.from_user:
         return
     bot.send_message(
         message.from_user.id,
         count_complete_text,
-        reply_markup=menu.BotMenu.next_game(message),
+        reply_markup=menu.BotMenu.next_game(message, settings.owner_name),
     )
 
 
 def _handle_count_time(
-    message: Message, bot: telebot.TeleBot, platforms: list[str]
+    message: Message, bot: telebot.TeleBot, platforms: list[str], settings: SettingsConfig
 ) -> None:
     """Handle count time command - format time statistics."""
     # Collect time data for completed games
@@ -603,7 +607,7 @@ def _handle_count_time(
     formatter = MessageFormatter()
     # For overall statistics, show total line
     count_complete_text = formatter.format_time_stats(
-        platform_times, total_real_seconds, show_total=True
+        platform_times, total_real_seconds, settings.owner_name, show_total=True
     )
 
     if not message.from_user:
@@ -611,7 +615,7 @@ def _handle_count_time(
     bot.send_message(
         message.from_user.id,
         count_complete_text,
-        reply_markup=menu.BotMenu.next_game(message),
+        reply_markup=menu.BotMenu.next_game(message, settings.owner_name),
     )
 
 
@@ -642,7 +646,7 @@ def handle_file_upload(
         )
         bot.send_message(
             message.chat.id,
-            "Ошибка: файл не содержит имени",
+            "Error: file does not contain a name",
             reply_markup=InlineMenu.main_menu(sec, message.chat.id),
         )
         return
@@ -658,7 +662,7 @@ def handle_file_upload(
         )
         bot.send_message(
             message.chat.id,
-            "Некорректное имя файла",
+            "Invalid file name",
             reply_markup=InlineMenu.main_menu(sec, message.chat.id),
         )
         return
@@ -670,11 +674,7 @@ def handle_file_upload(
     )
 
     # Check file type for non-Excel files
-    if file_name not in (
-        "games.xlsx",
-        "update_games.xlsx",
-        "games_add_new.xlsx",
-    ):
+    if file_name != "games.xlsx":
         if not is_file_type_allowed(file_name):
             logger.warning(
                 "[FILE_UPLOAD] User %s tried to upload file with disallowed extension: %s",
@@ -683,7 +683,7 @@ def handle_file_upload(
             )
             bot.send_message(
                 message.chat.id,
-                "Тип файла не разрешен",
+                "File type not allowed",
                 reply_markup=InlineMenu.main_menu(sec, message.chat.id),
             )
             return
@@ -707,7 +707,7 @@ def handle_file_upload(
         )
         bot.send_message(
             message.chat.id,
-            "Ошибка при загрузке файла",
+            "Error uploading file",
             reply_markup=InlineMenu.main_menu(sec, message.chat.id),
         )
         return
@@ -716,7 +716,7 @@ def handle_file_upload(
     files_dir = settings.paths.files_dir
 
     # Determine target path based on file name
-    if file_name in ("games.xlsx", "update_games.xlsx", "games_add_new.xlsx"):
+    if file_name == "games.xlsx":
         target_path = update_db_dir / file_name
         # Ensure target is within allowed directory
         if not is_path_safe(target_path, update_db_dir):
@@ -771,7 +771,7 @@ def handle_file_upload(
         )
         bot.send_message(
             message.chat.id,
-            "Ошибка при сохранении файла",
+            "Error saving file",
             reply_markup=InlineMenu.main_menu(sec, message.chat.id),
         )
         return
@@ -779,10 +779,6 @@ def handle_file_upload(
     # Process Excel files for database updates
     if file_name == "games.xlsx":
         update_db(message, "recreate", bot, sec, settings)
-    elif file_name == "update_games.xlsx":
-        update_db(message, "update_games", bot, sec, settings)
-    elif file_name == "games_add_new.xlsx":
-        update_db(message, "add_new", bot, sec, settings)
 
     try:
         bot.delete_message(message.chat.id, message.message_id)
@@ -877,74 +873,12 @@ def update_db(
                         texts.DB_RECREATE_ERROR,
                         reply_markup=InlineMenu.main_menu(sec, message.chat.id),
                     )
-            elif mode == "update_games":
-                logger.info(
-                    "[DB_UPDATE] User %s initiated game update from file: %s",
-                    user_id,
-                    update_path,
-                )
-                if db.add_games(str(update_path), "update_games"):
-                    logger.info(
-                        "[DB_UPDATE] Game update completed successfully "
-                        "(user: %s, file: %s)",
-                        user_id,
-                        update_path,
-                    )
-                    bot.send_message(
-                        message.chat.id,
-                        texts.GAME_UPDATED,
-                        reply_markup=InlineMenu.main_menu(sec, message.chat.id),
-                    )
-                else:
-                    logger.error(
-                        "[DB_UPDATE] Game update failed "
-                        "(user: %s, file: %s)",
-                        user_id,
-                        update_path,
-                        exc_info=True,
-                    )
-                    bot.send_message(
-                        message.chat.id,
-                        texts.GAME_UPDATE_ERROR,
-                        reply_markup=InlineMenu.main_menu(sec, message.chat.id),
-                    )
-            else:
-                logger.info(
-                    "[DB_UPDATE] User %s initiated adding new games from file: %s",
-                    user_id,
-                    update_path,
-                )
-                if db.add_games(str(update_path), "new_games"):
-                    logger.info(
-                        "[DB_UPDATE] New games added successfully "
-                        "(user: %s, file: %s)",
-                        user_id,
-                        update_path,
-                    )
-                    bot.send_message(
-                        message.chat.id,
-                        texts.GAMES_ADDED,
-                        reply_markup=InlineMenu.main_menu(sec, message.chat.id),
-                    )
-                else:
-                    logger.error(
-                        "[DB_UPDATE] Failed to add new games "
-                        "(user: %s, file: %s)",
-                        user_id,
-                        update_path,
-                        exc_info=True,
-                    )
-                    bot.send_message(
-                        message.chat.id,
-                        texts.GAMES_ADD_ERROR,
-                        reply_markup=InlineMenu.main_menu(sec, message.chat.id),
-                    )
             backup_path = settings.paths.backup_dir / "games.xlsx"
             update_path.replace(backup_path)
         else:
             bot.send_message(
                 message.chat.id,
-                f"Файл {message.document.file_name} не найден",
+                f"File {message.document.file_name} not found",
                 reply_markup=InlineMenu.main_menu(sec, message.chat.id),
             )
     else:

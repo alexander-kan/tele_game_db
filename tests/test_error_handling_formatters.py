@@ -18,7 +18,7 @@ class TestMessageFormatterErrorHandling:
         # Game row with missing optional fields
         game_row = (
             "Test Game",
-            "Пройдена",
+            "Completed",
             "Steam",
             None,  # Missing press_score
             None,  # Missing average_time_beat
@@ -33,7 +33,7 @@ class TestMessageFormatterErrorHandling:
         result = MessageFormatter.format_game_info(game_row)
 
         assert "Test Game" in result
-        assert "не указано" in result
+        assert "not specified" in result
 
     def test_format_game_info_empty_strings(self) -> None:
         """Test format_game_info handles empty strings."""
@@ -84,7 +84,7 @@ class TestMessageFormatterErrorHandling:
             "Switch": 0,
         }
 
-        result = MessageFormatter.format_completed_games_stats(platform_counts)
+        result = MessageFormatter.format_completed_games_stats(platform_counts, "TestOwner")
 
         assert isinstance(result, str)
         assert "0" in result
@@ -97,11 +97,11 @@ class TestMessageFormatterErrorHandling:
         }
 
         result = MessageFormatter.format_time_stats(
-            platform_times, 0.0  # type: ignore
+            platform_times, 0.0, "TestOwner"  # type: ignore
         )
 
         assert isinstance(result, str)
-        assert "0 часов 0 минут" in result
+        assert "0 hours 0 minutes" in result
 
 
 class TestExcelValidatorErrorHandling:
@@ -112,12 +112,12 @@ class TestExcelValidatorErrorHandling:
         """Create ExcelValidator instance."""
         values_dict = {
             "STATUS": {
-                "pass": "Пройдена",
-                "not_started": "Не начата",
-                "abandoned": "Брошена",
+                "pass": "Completed",
+                "not_started": "Not Started",
+                "abandoned": "Dropped",
             },
             "PLATFORM": {
-                "not_defined": "Не определена",
+                "not_defined": "NOT DEFINED",
                 "steam": "Steam",
                 "switch": "Switch",
                 "ps4": "PS4",
@@ -168,7 +168,7 @@ class TestExcelValidatorErrorHandling:
         game_row = GameRow(
             game_name="",  # Empty required field
             platforms="Steam",
-            status="Пройдена",
+            status="Completed",
             release_date="January 1, 2024",
         )
 
@@ -206,7 +206,7 @@ class TestExcelValidatorErrorHandling:
         game_row = GameRow(
             game_name="Test Game",
             platforms="InvalidPlatform",  # Invalid platform
-            status="Пройдена",
+            status="Completed",
             release_date="January 1, 2024",
         )
 

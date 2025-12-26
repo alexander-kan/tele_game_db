@@ -350,62 +350,6 @@ class SteamSynchronizer:
 
                 if not found_in_steam:
                     games_in_db_not_in_steam.append(game_name)
-                    # Debug logging for specific games to investigate matching issues
-                    if (
-                        "Project CARS" in game_name
-                        or "Pagani" in game_name
-                        or "Crysis" in game_name
-                    ):
-                        logger.info(
-                            "[STEAM_SYNC_DEBUG] Game '%s' (row %d) not found in Steam API. "
-                            "DB name repr: %r, DB name len: %d",
-                            game_name,
-                            row,
-                            game_name,
-                            len(game_name),
-                        )
-                        # Try to find similar names in Steam API
-                        similar_names = []
-                        if "Project" in game_name and "CARS" in game_name:
-                            similar_names = [
-                                steam_name
-                                for steam_name in steam_game_names
-                                if "Project" in steam_name
-                                and "CARS" in steam_name
-                            ]
-                        elif "Crysis" in game_name:
-                            similar_names = [
-                                steam_name
-                                for steam_name in steam_game_names
-                                if "Crysis" in steam_name
-                            ]
-
-                        if similar_names:
-                            logger.info(
-                                "[STEAM_SYNC_DEBUG] Found similar names in Steam API: %s",
-                                ", ".join(similar_names),
-                            )
-                            for similar_name in similar_names:
-                                logger.info(
-                                    "[STEAM_SYNC_DEBUG] Comparison: DB='%s' "
-                                    "(len=%d, repr=%r) vs Steam='%s' "
-                                    "(len=%d, repr=%r), exact_match=%s, "
-                                    "normalized_match=%s",
-                                    game_name,
-                                    len(game_name),
-                                    game_name,
-                                    similar_name,
-                                    len(similar_name),
-                                    similar_name,
-                                    game_name == similar_name,
-                                    game_name.strip() == similar_name.strip(),
-                                )
-                        else:
-                            logger.info(
-                                "[STEAM_SYNC_DEBUG] No similar names found in Steam API "
-                                "for '%s'",
-                                game_name,
-                            )
 
         if games_in_db_not_in_steam:
             logger.info(
@@ -437,6 +381,15 @@ class SteamSynchronizer:
         self.db_manager.execute_scripts_from_sql_file(
             db_files.sql_create_tables, db_files.sqlite_db_file
         )
+
+        # Generate dictionaries SQL file dynamically from values_dictionaries.ini
+        table_names = load_table_names_config()
+        column_table_names = load_column_table_names_config()
+        values_dictionaries = load_values_dictionaries_config()
+        dictionaries_builder = DictionariesBuilder(
+            table_names, column_table_names, values_dictionaries
+        )
+        dictionaries_builder.create_dml_dictionaries(str(db_files.sql_dictionaries))
 
         # Populate dictionaries
         self.db_manager.execute_scripts_from_sql_file(
@@ -501,6 +454,188 @@ class SteamSynchronizer:
         # Recreate database
         success = self._recreate_database(xlsx_path)
         return success, similarity_matches
+
+    def check_steam_games(
+        self, xlsx_path: str
+    ) -> tuple[bool, list[SimilarityMatch]]:
+        """Check which games from Steam are missing in database.
+
+        This method only checks without updating anything:
+        1. Loads Excel workbook
+        2. Fetches games from Steam API
+        3. Matches Steam games with Excel rows
+        4. Finds similar games for missing ones
+        5. Returns list of SimilarityMatch objects
+
+        Args:
+            xlsx_path: Path to Excel file
+
+        Returns:
+            Tuple of (success: bool, similarity_matches: list[SimilarityMatch])
+        """
+        # Load Excel workbook
+        workbook = self._load_workbook(xlsx_path)
+
+        # Fetch games from Steam
+        steam_game_list = self.steam_client.get_all_games(self.tokens.steam_id)
+        logger.info(
+            "[STEAM_CHECK] Fetched %d games from Steam API (SteamID: %s)",
+            len(steam_game_list),
+            self.tokens.steam_id,
+        )
+
+        # Match Steam games with Excel rows
+        matched_games, missing_games = self._match_steam_games_with_excel(
+            workbook, steam_game_list
+        )
+
+        # Find similar games for missing ones
+        similarity_matches = self._find_similar_games(missing_games, workbook)
+
+        logger.info(
+            "[STEAM_CHECK] Found %d missing games from Steam",
+            len(missing_games),
+        )
+
+        return True, similarity_matches
+
+    def add_steam_games_to_excel(
+        self, xlsx_path: str, game_names: list[str]
+    ) -> bool:
+        """Add Steam games to Excel with data from Steam API.
+
+        Finds the first free row (where GAME_NAME is empty) and starts adding games from there.
+
+        For each game:
+        - Game name (from Steam)
+        - Platform: "Steam"
+        - Release date: EXCEL_DATE_NOT_SET (December 12, 4712)
+        - MY_SCORE: "none"
+        - ADDITIONAL_TIME: "none"
+
+        If game was ever launched (has rtime_last_played in Steam API):
+        - Status: "Dropped" (via SteamExcelFormatter.update_game_with_playtime)
+        - MY_TIME_BEAT: from Steam API (playtime_forever converted to hours)
+        - LAST_LAUNCH_DATE: from Steam API (rtime_last_played converted to date)
+
+        If game was never launched:
+        - Status: "Not Started"
+        - MY_TIME_BEAT: "none"
+        - LAST_LAUNCH_DATE: EXCEL_DATE_NOT_SET
+
+        Args:
+            xlsx_path: Path to Excel file to update
+            game_names: List of game names to add
+
+        Returns:
+            True if operation succeeded, False otherwise
+        """
+        from .constants import EXCEL_DATE_NOT_SET, EXCEL_NONE_VALUE
+
+        # Fetch Steam games to get rtime_last_played for each game
+        steam_game_list = self.steam_client.get_all_games(self.tokens.steam_id)
+        logger.info(
+            "[STEAM_ADD] Fetched %d games from Steam API to get last played dates",
+            len(steam_game_list),
+        )
+
+        # Create a mapping of game name -> SteamGame for quick lookup
+        steam_game_map: dict[str, SteamGame] = {}
+        for game in steam_game_list:
+            steam_game_map[game.name] = game
+
+        workbook = self._load_workbook(xlsx_path)
+        sheet = workbook["init_games"]
+
+        # Find the first free row (first row where GAME_NAME is empty)
+        # Start from row 2 (row 1 is header)
+        first_free_row = 2
+        while first_free_row <= sheet.max_row:
+            game_name_cell = sheet.cell(
+                row=first_free_row, column=ExcelColumn.GAME_NAME
+            ).value
+            if not game_name_cell or str(game_name_cell).strip() == "":
+                break
+            first_free_row += 1
+        # If no free row found, use next row after max_row
+        if first_free_row > sheet.max_row:
+            first_free_row = sheet.max_row + 1
+
+        next_row = first_free_row
+        logger.info(
+            "[STEAM_ADD] Starting to add games from row %d (first free row)",
+            next_row,
+        )
+
+        for game_name in game_names:
+            # Add game name
+            sheet.cell(row=next_row, column=ExcelColumn.GAME_NAME).value = (
+                game_name
+            )
+            # Add platform
+            sheet.cell(row=next_row, column=ExcelColumn.PLATFORMS).value = "Steam"
+            # Add status
+            sheet.cell(row=next_row, column=ExcelColumn.STATUS).value = "Not Started"
+            # Add default date for release_date
+            sheet.cell(
+                row=next_row, column=ExcelColumn.RELEASE_DATE
+            ).value = EXCEL_DATE_NOT_SET
+
+            # Add MY_SCORE = "none"
+            sheet.cell(row=next_row, column=ExcelColumn.MY_SCORE).value = (
+                EXCEL_NONE_VALUE
+            )
+
+            # Get Steam game data
+            steam_game = steam_game_map.get(game_name)
+
+            # Check if game was ever launched (has rtime_last_played)
+            if steam_game and steam_game.rtime_last_played:
+                # Game was launched - apply full update logic
+                # Use SteamExcelFormatter to update playtime, last launch date, and status
+                SteamExcelFormatter.update_game_with_playtime(
+                    sheet, next_row, steam_game, self.epoch_date_convert
+                )
+                logger.info(
+                    "[STEAM_ADD] Game %s was launched, applied full update logic "
+                    "(playtime: %d min, last played: %d)",
+                    game_name,
+                    steam_game.playtime_forever,
+                    steam_game.rtime_last_played,
+                )
+            else:
+                # Game was never launched - set default values
+                # Add MY_TIME_BEAT = "none"
+                sheet.cell(row=next_row, column=ExcelColumn.MY_TIME_BEAT).value = (
+                    EXCEL_NONE_VALUE
+                )
+                # Add LAST_LAUNCH_DATE = default
+                sheet.cell(
+                    row=next_row, column=ExcelColumn.LAST_LAUNCH_DATE
+                ).value = EXCEL_DATE_NOT_SET
+                logger.debug(
+                    "[STEAM_ADD] Game %s was never launched, using defaults",
+                    game_name,
+                )
+
+            # Add ADDITIONAL_TIME = "none" (always)
+            sheet.cell(row=next_row, column=ExcelColumn.ADDITIONAL_TIME).value = (
+                EXCEL_NONE_VALUE
+            )
+
+            next_row += 1
+
+        logger.info(
+            "[STEAM_ADD] Added %d games to Excel starting from row %d",
+            len(game_names),
+            first_free_row,
+        )
+
+        # Save workbook
+        self._save_workbook(workbook, xlsx_path)
+
+        # Recreate database
+        return self._recreate_database(xlsx_path)
 
 
 class MetacriticSynchronizer:
@@ -659,6 +794,15 @@ class MetacriticSynchronizer:
             db_files.sql_create_tables, db_files.sqlite_db_file
         )
 
+        # Generate dictionaries SQL file dynamically from values_dictionaries.ini
+        table_names = load_table_names_config()
+        column_table_names = load_column_table_names_config()
+        values_dictionaries = load_values_dictionaries_config()
+        dictionaries_builder = DictionariesBuilder(
+            table_names, column_table_names, values_dictionaries
+        )
+        dictionaries_builder.create_dml_dictionaries(str(db_files.sql_dictionaries))
+
         # Populate dictionaries
         self.db_manager.execute_scripts_from_sql_file(
             db_files.sql_dictionaries, db_files.sqlite_db_file
@@ -761,6 +905,17 @@ class MetacriticSynchronizer:
                     # Ensure URL is set (use actual_url if scraper didn't set it)
                     if not scraper.game.get("url") or scraper.game["url"] == "":
                         scraper.game["url"] = actual_url
+                    
+                    # Log what data we received
+                    logger.info(
+                        "[METACRITIC_SYNC] Data for row %d: release_date=%r, "
+                        "critic_score=%r, user_score=%r",
+                        row_number,
+                        scraper.game.get("release_date"),
+                        scraper.game.get("critic_score"),
+                        scraper.game.get("user_score"),
+                    )
+                    
                     games_data.append((scraper.game, row_number))
                     logger.debug(
                         "[METACRITIC_SYNC] Successfully fetched data for row %d",
@@ -882,22 +1037,26 @@ class HowLongToBeatSynchronizer:
     def _update_excel_with_hltb_data(
         self,
         workbook: Workbook,
-        games_data: list[tuple[dict, int]],
+        games_data: list[tuple[dict | None, int]],
+        partial_mode: bool = False,
     ) -> None:
         """Update Excel cells with HowLongToBeat game data.
 
         Args:
             workbook: OpenPyXL Workbook instance
-            games_data: List of (hltb_data, row_number) tuples
+            games_data: List of (hltb_data or None, row_number) tuples
+            partial_mode: If True, write "0" when game not found.
+                         If False, only write "0" if field is empty.
         """
         sheet = workbook["init_games"]
         for hltb_data, row_number in games_data:
             HowLongToBeatExcelFormatter.update_game_row(
-                sheet, row_number, hltb_data
+                sheet, row_number, hltb_data, partial_mode
             )
         logger.debug(
-            "[HLTB_SYNC] Updated %d game rows in Excel",
+            "[HLTB_SYNC] Updated %d game rows in Excel (partial_mode: %s)",
             len(games_data),
+            partial_mode,
         )
 
     def _save_workbook(self, workbook: Workbook, xlsx_path: str | Path) -> None:
@@ -936,6 +1095,15 @@ class HowLongToBeatSynchronizer:
         self.db_manager.execute_scripts_from_sql_file(
             db_files.sql_create_tables, db_files.sqlite_db_file
         )
+
+        # Generate dictionaries SQL file dynamically from values_dictionaries.ini
+        table_names = load_table_names_config()
+        column_table_names = load_column_table_names_config()
+        values_dictionaries = load_values_dictionaries_config()
+        dictionaries_builder = DictionariesBuilder(
+            table_names, column_table_names, values_dictionaries
+        )
+        dictionaries_builder.create_dml_dictionaries(str(db_files.sql_dictionaries))
 
         # Populate dictionaries
         self.db_manager.execute_scripts_from_sql_file(
@@ -990,7 +1158,8 @@ class HowLongToBeatSynchronizer:
             return None
 
         # Fetch data from HowLongToBeat for each game
-        games_data: list[tuple[dict, int]] = []
+        # Store (hltb_data or None, row_number) for all games, including not found
+        games_data: list[tuple[dict | None, int]] = []
         total_games = len(games_for_sync)
 
         for i, (game_name, row_number) in enumerate(games_for_sync, 1):
@@ -1001,18 +1170,19 @@ class HowLongToBeatSynchronizer:
                 game_name,
             )
 
+            hltb_data = None
             try:
                 hltb_data = self.hltb_client.search_game(game_name)
                 if hltb_data:
-                    games_data.append((hltb_data, row_number))
                     logger.debug(
                         "[HLTB_SYNC] Successfully fetched data for row %d",
                         row_number,
                     )
                 else:
                     logger.warning(
-                        "[HLTB_SYNC] No data fetched for game: %s",
+                        "[HLTB_SYNC] No data fetched for game: %s (row %d)",
                         game_name,
+                        row_number,
                     )
             except Exception as e:  # pylint: disable=broad-except
                 logger.exception(
@@ -1020,6 +1190,10 @@ class HowLongToBeatSynchronizer:
                     game_name,
                     str(e),
                 )
+
+            # Always append, even if hltb_data is None
+            # This allows formatter to handle "not found" cases
+            games_data.append((hltb_data, row_number))
 
             # Wait 10 seconds between requests (except for the last one)
             if i < total_games:
@@ -1029,8 +1203,9 @@ class HowLongToBeatSynchronizer:
                 time.sleep(10)
 
         # Update Excel cells with HowLongToBeat data
+        # Pass partial_mode to formatter so it knows how to handle None values
         if games_data:
-            self._update_excel_with_hltb_data(workbook, games_data)
+            self._update_excel_with_hltb_data(workbook, games_data, partial_mode)
 
         # Save workbook
         self._save_workbook(workbook, xlsx_path)
@@ -1116,6 +1291,18 @@ class ChangeDB:
             Tuple of (success: bool, similarity_matches: list)
         """
         return self._service.synchronize_steam_games(xlsx_path)
+
+    def check_steam_games(
+        self, xlsx_path: str
+    ) -> tuple[bool, list]:
+        """Check which games from Steam are missing in database."""
+        return self._service.check_steam_games(xlsx_path)
+
+    def add_steam_games_to_excel(
+        self, xlsx_path: str, game_names: list[str]
+    ) -> bool:
+        """Add Steam games to Excel with minimal data."""
+        return self._service.add_steam_games_to_excel(xlsx_path, game_names)
 
     def synchronize_metacritic_games(
         self,

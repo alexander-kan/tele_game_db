@@ -2,20 +2,18 @@
 
 USER_COMMANDS_HELP = (
     "1) getgame:\n"
-    'Введи "getgame" затем, через пробел, любую часть названия игры.'
+    'Enter "getgame" followed by a space and any part of the game name.'
 )
 
 ADMIN_COMMANDS_HELP = (
     "1) removefile:\n"
-    'Введи "removefile" затем, через пробел, точное название файла, '
-    "для удаления его из папки files\n"
+    'Enter "removefile" followed by a space and the exact file name '
+    "to delete it from the files folder\n"
     "2) getfile:\n"
-    'Введи "getfile" затем, через пробел, точное название файла(с '
-    "расширением), для получения его из папки files\n"
-    "3) Загрузить файлы с именами:\n"
-    "games.xlsx - для переналивки базы\n"
-    "update_games.xlsx - для обновления строк базы\n"
-    "games_add_new.xlsx - для добавления новой игры"
+    'Enter "getfile" followed by a space and the exact file name (with '
+    "extension) to get it from the files folder\n"
+    "3) Upload files with names:\n"
+    "games.xlsx - to recreate the database"
 )
 
 PRIVATE_BOT_TEXT = "Sorry, this is private bot of @HailToTheKan"
@@ -25,75 +23,75 @@ PERMISSION_DENIED_TEXT = "permission denied"
 NICE_TRY_TEXT = "Nice try"
 
 # Menu texts
-MENU_CLEARED = "Меню очищено"
-MAIN_MENU = "Главное меню"
-FILE_MENU = "Меню управления файлами"
-GAME_LISTS_MENU = "Меню просмотра списков игр"
-AVAILABLE_ACTIONS = "Доступные действия"
+MENU_CLEARED = "Menu cleared"
+MAIN_MENU = "Main Menu"
+FILE_MENU = "File Management Menu"
+GAME_LISTS_MENU = "Game Lists Menu"
+AVAILABLE_ACTIONS = "Available Actions"
 
 # File operation texts
-FILE_DELETED = "файл удалён"
-FILE_NOT_FOUND = "Файл не найден"
+FILE_DELETED = "File deleted"
+FILE_NOT_FOUND = "File not found"
 
 # Game query texts
-GAME_QUERY_ERROR = "Что-то пошло не так"
-GAME_NOT_FOUND = "Извиняй - совпадений в базе не найдено"
+GAME_QUERY_ERROR = "Something went wrong"
+GAME_NOT_FOUND = "Sorry - no matches found in the database"
 
 # Steam sync texts
 STEAM_SYNC_SUCCESS = "synchronized"
 STEAM_SYNC_ERROR = "Something is going wrong"
 STEAM_SYNC_FILE_NOT_FOUND = (
-    "Не найден исходный файл games.xlsx для синхронизации"
+    "Source file games.xlsx not found for synchronization"
 )
 STEAM_SYNC_FILESYSTEM_ERROR = (
-    "Ошибка файловой системы при синхронизации"
+    "Filesystem error during synchronization"
 )
 STEAM_SYNC_ALL_UNIQUE = (
-    "Было проведено исследование по математическому алгоритму "
-    "Дамерау–Левенштейна и все значения уникальны."
+    "Research was conducted using the Damerau-Levenshtein mathematical algorithm "
+    "and all values are unique."
 )
 
 # Metacritic sync texts
-METACRITIC_SYNC_SUCCESS = "Синхронизация Metacritic завершена"
-METACRITIC_SYNC_ERROR = "Ошибка при синхронизации Metacritic"
-METACRITIC_SYNC_NO_DATA = "Данных для синхронизации нет"
+METACRITIC_SYNC_SUCCESS = "Metacritic sync completed"
+METACRITIC_SYNC_ERROR = "Error during Metacritic synchronization"
+METACRITIC_SYNC_NO_DATA = "No data to sync"
 METACRITIC_SYNC_FILE_NOT_FOUND = (
-    "Не найден исходный файл games.xlsx для синхронизации"
+    "Source file games.xlsx not found for synchronization"
 )
 METACRITIC_SYNC_FILESYSTEM_ERROR = (
-    "Ошибка файловой системы при синхронизации"
+    "Filesystem error during synchronization"
 )
 
 # HowLongToBeat sync texts
-HLTB_SYNC_SUCCESS = "Синхронизация HowLongToBeat завершена"
-HLTB_SYNC_ERROR = "Ошибка при синхронизации HowLongToBeat"
-HLTB_SYNC_NO_DATA = "Данных для синхронизации нет"
+HLTB_SYNC_SUCCESS = "HowLongToBeat sync completed"
+HLTB_SYNC_ERROR = "Error during HowLongToBeat synchronization"
+HLTB_SYNC_NO_DATA = "No data to sync"
 HLTB_SYNC_FILE_NOT_FOUND = (
-    "Не найден исходный файл games.xlsx для синхронизации"
+    "Source file games.xlsx not found for synchronization"
 )
 HLTB_SYNC_FILESYSTEM_ERROR = (
-    "Ошибка файловой системы при синхронизации"
+    "Filesystem error during synchronization"
 )
 
 # Database update texts
-DB_RECREATED = "База пересоздана"
+DB_RECREATED = "Database recreated"
 DB_RECREATE_ERROR = (
-    "База не пересоздана из-за внутренней ошибки, "
-    "обратитесь к @HailToTheKan"
+    "Database was not recreated due to an internal error, "
+    "please contact @HailToTheKan"
 )
-GAME_UPDATED = "Игра обновлена"
+GAME_UPDATED = "Game updated"
 GAME_UPDATE_ERROR = (
-    "Игра не обновлена из-за внутренней ошибки, "
-    "обратитесь к @HailToTheKan"
+    "Game was not updated due to an internal error, "
+    "please contact @HailToTheKan"
 )
-GAMES_ADDED = "Игры добавлены"
+GAMES_ADDED = "Games added"
 GAMES_ADD_ERROR = (
-    "Игры не добавлены из-за внутренней ошибки, "
-    "обратитесь к @HailToTheKan"
+    "Games were not added due to an internal error, "
+    "please contact @HailToTheKan"
 )
 
 # Game info formatting texts
-GAME_TIME_IS_NONE = "отсутствует"
-GAME_NEVER_PLAYED = "не запускалась"
-GAME_HAVE_NEXT_GAME = "Есть ещё игры, листай дальше."
-GAME_IN_DB = "Игра в базе"
+GAME_TIME_IS_NONE = "not specified"
+GAME_NEVER_PLAYED = "never played"
+GAME_HAVE_NEXT_GAME = "There are more games, continue browsing."
+GAME_IN_DB = "Game in database"

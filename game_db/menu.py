@@ -18,16 +18,16 @@ class BotMenu:
             row_width=1, resize_keyboard=True
         )
         show_commands = telebot.types.KeyboardButton(
-            text="Показать доступные команды"
+            text="Show Available Commands"
         )
-        button_clear = telebot.types.KeyboardButton(text="Убрать меню")
-        next_game_list = telebot.types.KeyboardButton(text="Списки игр")
+        button_clear = telebot.types.KeyboardButton(text="Clear Menu")
+        next_game_list = telebot.types.KeyboardButton(text="Game Lists")
         if security.admin_check(message.chat.id):
             file_menu = telebot.types.KeyboardButton(
-                text="Меню управления файлами"
+                text="File Management Menu"
             )
             show_admin_commands = telebot.types.KeyboardButton(
-                text="Показать доступные команды админа"
+                text="Show Admin Commands"
             )
             synchronize_steam_games = telebot.types.KeyboardButton(
                 text="Synchronize games to Steam"
@@ -50,7 +50,7 @@ class BotMenu:
     ) -> ReplyKeyboardMarkup | ReplyKeyboardRemove:
         """File management menu."""
         get_file_to_server_text = (
-            "Получить список файлов на сервере"
+            "Get File List from Server"
         )
 
         markup = telebot.types.ReplyKeyboardMarkup(
@@ -61,16 +61,21 @@ class BotMenu:
                 text=get_file_to_server_text
             )
             get_excel = telebot.types.KeyboardButton(
-                text="Получить файл для заполнения игр"
+                text="Get Game Template File"
             )
-            main_menu = telebot.types.KeyboardButton(text="В главное меню")
+            main_menu = telebot.types.KeyboardButton(text="Back to Main Menu")
             markup.add(get_file_to_server, get_excel, main_menu)
             return markup
         return telebot.types.ReplyKeyboardRemove()
 
     @staticmethod
-    def next_game(message: Message) -> ReplyKeyboardMarkup:
-        """Menu for iterating over next games."""
+    def next_game(message: Message, owner_name: str) -> ReplyKeyboardMarkup:
+        """Menu for iterating over next games.
+
+        Args:
+            message: Telegram message
+            owner_name: Name of the database owner
+        """
         list_from_steam = 1
         how_much_row_steam = 10
         list_from_switch = 1
@@ -95,23 +100,23 @@ class BotMenu:
 
         list_of_steam_next_games = telebot.types.KeyboardButton(
             text=(
-                "Cписок Steam игр на прохождение,"
+                "Steam Games List,"
                 f"{list_from_steam},{how_much_row_steam}"
             )
         )
         list_of_switch_next_games = telebot.types.KeyboardButton(
             text=(
-                "Cписок Switch игр на прохождение,"
+                "Switch Games List,"
                 f"{list_from_switch},{how_much_row_switch}"
             )
         )
         count_overall = telebot.types.KeyboardButton(
-            text="Сколько игр прошёл Александр"
+            text=f"How many games {owner_name} completed"
         )
         count_overall_time = telebot.types.KeyboardButton(
-            text="Сколько времени Александр потратил на игры"
+            text=f"How much time {owner_name} spent on games"
         )
-        main_menu = telebot.types.KeyboardButton(text="В главное меню")
+        main_menu = telebot.types.KeyboardButton(text="Back to Main Menu")
         markup.add(
             list_of_steam_next_games,
             list_of_switch_next_games,

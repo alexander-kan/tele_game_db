@@ -114,7 +114,7 @@ def test_config() -> SettingsConfig:
         sql_create_tables=Path("/tmp/sql/create_tables.sql"),
         sqlite_db_file=Path("/tmp/games.db"),
     )
-    return SettingsConfig(paths=paths, db_files=db_files)
+    return SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
 
 
 @pytest.fixture

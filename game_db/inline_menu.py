@@ -25,11 +25,11 @@ class InlineMenu:
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
             InlineKeyboardButton(
-                text="🎮 Мои игры",
+                text="🎮 My Games",
                 callback_data=build_callback_data(CallbackAction.MY_GAMES),
             ),
             InlineKeyboardButton(
-                text="📋 Команды",
+                text="📋 Commands",
                 callback_data=build_callback_data(CallbackAction.COMMANDS),
             ),
         )
@@ -37,14 +37,14 @@ class InlineMenu:
         if security.admin_check(user_id):
             markup.add(
                 InlineKeyboardButton(
-                    text="🛠 Админ-панель",
+                    text="🛠 Admin Panel",
                     callback_data=build_callback_data(CallbackAction.ADMIN_PANEL),
                 )
             )
 
         markup.add(
             InlineKeyboardButton(
-                text="🔄 Синхронизация Базы",
+                text="🔄 Database Sync",
                 callback_data=build_callback_data(CallbackAction.SYNC_MENU),
             )
         )
@@ -61,19 +61,19 @@ class InlineMenu:
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
             InlineKeyboardButton(
-                text="💾 Steam игры",
+                text="💾 Steam Games",
                 callback_data=build_callback_data(CallbackAction.STEAM_GAMES),
             ),
             InlineKeyboardButton(
-                text="🎮 Switch игры",
+                text="🎮 Switch Games",
                 callback_data=build_callback_data(CallbackAction.SWITCH_GAMES),
             ),
             InlineKeyboardButton(
-                text="📊 Статистика",
+                text="📊 Statistics",
                 callback_data=build_callback_data(CallbackAction.STATISTICS),
             ),
             InlineKeyboardButton(
-                text="⬅️ В главное меню",
+                text="⬅️ Back to Main Menu",
                 callback_data=build_callback_data(CallbackAction.MAIN_MENU),
             ),
         )
@@ -95,7 +95,7 @@ class InlineMenu:
         """
         markup = InlineKeyboardMarkup(row_width=1)
         end_range = offset + limit - 1
-        range_text = f"🔢 Игры ({offset}–{end_range})"
+        range_text = f"🔢 Games ({offset}–{end_range})"
         markup.add(
             InlineKeyboardButton(
                 text=range_text,
@@ -104,19 +104,19 @@ class InlineMenu:
                 ),
             ),
             InlineKeyboardButton(
-                text="📈 Сколько пройдено",
+                text="📈 Completed Count",
                 callback_data=build_callback_data(
                     CallbackAction.COUNT_COMPLETED, platform
                 ),
             ),
             InlineKeyboardButton(
-                text="⏱ Время в играх",
+                text="⏱ Time in Games",
                 callback_data=build_callback_data(
                     CallbackAction.COUNT_TIME, platform
                 ),
             ),
             InlineKeyboardButton(
-                text="⬅️ Назад",
+                text="⬅️ Back",
                 callback_data=build_callback_data(CallbackAction.BACK_TO_MY_GAMES),
             ),
         )
@@ -138,7 +138,7 @@ class InlineMenu:
         """
         markup = InlineKeyboardMarkup(row_width=1)
         end_range = offset + limit - 1
-        range_text = f"🔢 Игры ({offset}–{end_range})"
+        range_text = f"🔢 Games ({offset}–{end_range})"
         markup.add(
             InlineKeyboardButton(
                 text=range_text,
@@ -147,19 +147,19 @@ class InlineMenu:
                 ),
             ),
             InlineKeyboardButton(
-                text="📈 Сколько пройдено",
+                text="📈 Completed Count",
                 callback_data=build_callback_data(
                     CallbackAction.COUNT_COMPLETED, platform
                 ),
             ),
             InlineKeyboardButton(
-                text="⏱ Время в играх",
+                text="⏱ Time in Games",
                 callback_data=build_callback_data(
                     CallbackAction.COUNT_TIME, platform
                 ),
             ),
             InlineKeyboardButton(
-                text="⬅️ Назад",
+                text="⬅️ Back",
                 callback_data=build_callback_data(CallbackAction.BACK_TO_MY_GAMES),
             ),
         )
@@ -175,15 +175,15 @@ class InlineMenu:
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
             InlineKeyboardButton(
-                text="📈 Пройдено игр",
+                text="📈 Completed Games",
                 callback_data=build_callback_data(CallbackAction.STATS_COMPLETED),
             ),
             InlineKeyboardButton(
-                text="⏱ Потрачено времени",
+                text="⏱ Time Spent",
                 callback_data=build_callback_data(CallbackAction.STATS_TIME),
             ),
             InlineKeyboardButton(
-                text="⬅️ Назад",
+                text="⬅️ Back",
                 callback_data=build_callback_data(
                     CallbackAction.BACK_TO_MY_GAMES_FROM_STATS
                 ),
@@ -205,11 +205,11 @@ class InlineMenu:
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
             InlineKeyboardButton(
-                text="📖 Обычные команды",
+                text="📖 User Commands",
                 callback_data=build_callback_data(CallbackAction.SHOW_USER_COMMANDS),
             ),
             InlineKeyboardButton(
-                text="⬅️ В главное меню",
+                text="⬅️ Back to Main Menu",
                 callback_data=build_callback_data(
                     CallbackAction.BACK_TO_MAIN
                 ),
@@ -227,15 +227,15 @@ class InlineMenu:
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
             InlineKeyboardButton(
-                text="📁 Управление файлами",
+                text="📁 File Management",
                 callback_data=build_callback_data(CallbackAction.FILE_MANAGEMENT),
             ),
             InlineKeyboardButton(
-                text="🧰 Админ-команды",
+                text="🧰 Admin Commands",
                 callback_data=build_callback_data(CallbackAction.ADMIN_COMMANDS),
             ),
             InlineKeyboardButton(
-                text="⬅️ В главное меню",
+                text="⬅️ Back to Main Menu",
                 callback_data=build_callback_data(
                     CallbackAction.BACK_TO_MAIN_FROM_ADMIN
                 ),
@@ -253,15 +253,15 @@ class InlineMenu:
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
             InlineKeyboardButton(
-                text="📄 Список файлов",
+                text="📄 File List",
                 callback_data=build_callback_data(CallbackAction.LIST_FILES),
             ),
             InlineKeyboardButton(
-                text="⬇️ Скачать шаблон игр",
+                text="⬇️ Download Game Template",
                 callback_data=build_callback_data(CallbackAction.DOWNLOAD_TEMPLATE),
             ),
             InlineKeyboardButton(
-                text="⬅️ Назад",
+                text="⬅️ Back",
                 callback_data=build_callback_data(CallbackAction.BACK_TO_ADMIN),
             ),
         )
@@ -277,40 +277,58 @@ class InlineMenu:
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
             InlineKeyboardButton(
-                text="🔄 Синхронизация Steam",
-                callback_data=build_callback_data(CallbackAction.SYNC_STEAM),
+                text="🔍 Check Steam Data",
+                callback_data=build_callback_data(CallbackAction.CHECK_STEAM),
             ),
             InlineKeyboardButton(
-                text="🎯 Синхронизация Metacritic",
+                text="🔄 Steam Sync",
+                callback_data=build_callback_data(CallbackAction.SYNC_STEAM_EXECUTE),
+            ),
+            InlineKeyboardButton(
+                text="🎯 Metacritic Sync",
                 callback_data=build_callback_data(CallbackAction.SYNC_METACRITIC),
             ),
             InlineKeyboardButton(
-                text="⏱ Синхронизация HowLongToBeat",
+                text="⏱ HowLongToBeat Sync",
                 callback_data=build_callback_data(CallbackAction.SYNC_HLTB),
             ),
             InlineKeyboardButton(
-                text="⬅️ В главное меню",
+                text="⬅️ Back to Main Menu",
                 callback_data=build_callback_data(CallbackAction.BACK_TO_MAIN_FROM_SYNC),
             ),
         )
         return markup
 
     @staticmethod
-    def steam_sync_menu() -> InlineKeyboardMarkup:
-        """Build Steam sync submenu inline keyboard.
+    def steam_check_menu(has_missing_games: bool = False) -> InlineKeyboardMarkup:
+        """Build Steam check menu inline keyboard.
+
+        Args:
+            has_missing_games: If True, show "Add Found Games to DB" button
 
         Returns:
-            InlineKeyboardMarkup with Steam sync menu buttons
+            InlineKeyboardMarkup with Steam check menu buttons
         """
         markup = InlineKeyboardMarkup(row_width=1)
+        if has_missing_games:
+            markup.add(
+                InlineKeyboardButton(
+                    text="➕ Add Found Games to DB",
+                    callback_data=build_callback_data(
+                        CallbackAction.ADD_STEAM_GAMES
+                    ),
+                ),
+            )
         markup.add(
             InlineKeyboardButton(
-                text="🔄 Синхронизировать с Steam",
-                callback_data=build_callback_data(CallbackAction.SYNC_STEAM_EXECUTE),
+                text="🔍 Check Steam Data",
+                callback_data=build_callback_data(CallbackAction.CHECK_STEAM),
             ),
             InlineKeyboardButton(
-                text="⬅️ В меню синхронизации",
-                callback_data=build_callback_data(CallbackAction.BACK_TO_SYNC_MENU),
+                text="⬅️ Back to Sync Menu",
+                callback_data=build_callback_data(
+                    CallbackAction.BACK_TO_SYNC_MENU
+                ),
             ),
         )
         return markup
@@ -325,19 +343,19 @@ class InlineMenu:
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
             InlineKeyboardButton(
-                text="🎯 Синхронизация Metacritic Полная",
+                text="🎯 Metacritic Sync Full",
                 callback_data=build_callback_data(
                     CallbackAction.SYNC_METACRITIC_FULL
                 ),
             ),
             InlineKeyboardButton(
-                text="🎯 Синхронизация Metacritic Частичная",
+                text="🎯 Metacritic Sync Partial",
                 callback_data=build_callback_data(
                     CallbackAction.SYNC_METACRITIC_PARTIAL
                 ),
             ),
             InlineKeyboardButton(
-                text="⬅️ В меню синхронизации",
+                text="⬅️ Back to Sync Menu",
                 callback_data=build_callback_data(
                     CallbackAction.BACK_TO_SYNC_MENU_FROM_METACRITIC
                 ),
@@ -355,19 +373,19 @@ class InlineMenu:
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
             InlineKeyboardButton(
-                text="⏱ Синхронизация HowLongToBeat Полная",
+                text="⏱ HowLongToBeat Sync Full",
                 callback_data=build_callback_data(
                     CallbackAction.SYNC_HLTB_FULL
                 ),
             ),
             InlineKeyboardButton(
-                text="⏱ Синхронизация HowLongToBeat Частичная",
+                text="⏱ HowLongToBeat Sync Partial",
                 callback_data=build_callback_data(
                     CallbackAction.SYNC_HLTB_PARTIAL
                 ),
             ),
             InlineKeyboardButton(
-                text="⬅️ В меню синхронизации",
+                text="⬅️ Back to Sync Menu",
                 callback_data=build_callback_data(
                     CallbackAction.BACK_TO_SYNC_MENU_FROM_HLTB
                 ),

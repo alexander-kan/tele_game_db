@@ -60,7 +60,7 @@ def mock_excel_file_with_url() -> Iterator[Path]:
         [
             "Test Game",
             "Steam",
-            "Не начата",
+            "Not Started",
             "January 1, 2024",
             "8.0",
             "7.5",
@@ -117,7 +117,7 @@ def mock_excel_file_without_url() -> Iterator[Path]:
         [
             "Test Game Without URL",
             "Steam",
-            "Не начата",
+            "Not Started",
             "January 1, 2024",
             "8.0",
             "7.5",
@@ -157,7 +157,7 @@ def mock_configs() -> SettingsConfig:
         sql_games_on_platforms=Path("games_on_platforms.sql"),
         sqlite_db_file=Path("test.db"),
     )
-    settings = SettingsConfig(paths=paths, db_files=db_files)
+    settings = SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
 
     return settings
 
@@ -357,7 +357,7 @@ def test_synchronize_metacritic_games_test_mode_limit(
             [
                 f"Game {i}",
                 "Steam",
-                "Не начата",
+                "Not Started",
                 "January 1, 2024",
                 "8.0",
                 "7.5",
@@ -453,8 +453,8 @@ def test_synchronize_metacritic_games_no_games_found(
         # Verify MetaCriticScraper was NOT called
         mock_scraper_class.assert_not_called()
 
-        # Verify result is False (no games found)
-        assert result is False
+        # Verify result is None (no games found)
+        assert result is None
     finally:
         excel_path.unlink(missing_ok=True)
 

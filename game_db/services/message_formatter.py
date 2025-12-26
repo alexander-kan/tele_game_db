@@ -56,36 +56,36 @@ class MessageFormatter:
         )
 
         press_score_str = (
-            str(press_score) if press_score else "не указано"
+            str(press_score) if press_score else "not specified"
         )
         avg_time_str = (
             float_to_time(str(average_time_beat))
             if average_time_beat
-            else "не указано"
+            else "not specified"
         )
         user_score_str = (
-            str(user_score) if user_score else "не указано"
+            str(user_score) if user_score else "not specified"
         )
-        my_score_str = str(my_score) if my_score else "не указано"
+        my_score_str = str(my_score) if my_score else "not specified"
         metacritic_str = (
-            str(metacritic_url) if metacritic_url else "не указано"
+            str(metacritic_url) if metacritic_url else "not specified"
         )
         trailer_str = (
-            str(trailer_url) if trailer_url else "не указано"
+            str(trailer_url) if trailer_url else "not specified"
         )
 
         return (
-            f"Полное название игры \n{str(game_name)}\n"
-            f"Статус прохождения: {str(status)}\n"
-            f"Платформы: {str(platforms)}\n"
-            f"Оценка игры прессой: {press_score_str}\n"
-            f"Среднее время прохождения: {avg_time_str}\n"
-            f"Оценка пользователей: {user_score_str}\n"
-            f"Моя оценка: {my_score_str}\n"
-            f"Моё время в игре: {my_time}\n"
-            f"Дата последнего запуска: {last_launch}\n"
-            f"Ссылка на Metacritic: {metacritic_str}\n"
-            f"Ссылка на трейлер: {trailer_str}"
+            f"Full Game Name\n{str(game_name)}\n"
+            f"Status: {str(status)}\n"
+            f"Platforms: {str(platforms)}\n"
+            f"Press Score: {press_score_str}\n"
+            f"Average Playtime: {avg_time_str}\n"
+            f"User Score: {user_score_str}\n"
+            f"My Score: {my_score_str}\n"
+            f"My Playtime: {my_time}\n"
+            f"Last Launch Date: {last_launch}\n"
+            f"Metacritic Link: {metacritic_str}\n"
+            f"Trailer Link: {trailer_str}"
         )
 
     @staticmethod
@@ -100,11 +100,11 @@ class MessageFormatter:
         """
         game_list_text = "\n".join(f" {row[0]}\n" for row in games)
         return (
-            f"Много игр ({len(games)}), "
-            "уточни какая интересна:\n\n"
+            f"Multiple games ({len(games)}), "
+            "please specify which one:\n\n"
             f"{game_list_text}\n"
-            'Если интересна именно эта игра, введи "getgame",'
-            " затем точное название и знак # в конце (без пробела)"
+            'If you want this specific game, enter "getgame",'
+            " then the exact name and # at the end (no space)"
         )
 
     @staticmethod
@@ -121,10 +121,10 @@ class MessageFormatter:
         platform_game_list = ""
         for row in games:
             platform_game_list += (
-                f"\n\nПолное название игры - {str(row[0])}\n"
-                f"Оценка игры прессой - {str(row[1])}\n"
-                f"Среднее время прохождения - {str(row[2])}\n"
-                f"Трейлер - {str(row[3])}\n"
+                f"\n\nFull Game Name - {str(row[0])}\n"
+                f"Press Score - {str(row[1])}\n"
+                f"Average Playtime - {str(row[2])}\n"
+                f"Trailer - {str(row[3])}\n"
             )
         return platform_game_list
 
@@ -143,24 +143,27 @@ class MessageFormatter:
             lines.append(
                 "\n".join(
                     [
-                        f"Полное название игры - {game.game_name}",
-                        f"Оценка игры прессой - {game.press_score or 'не указано'}",
+                        f"Full Game Name - {game.game_name}",
+                        f"Press Score - {game.press_score or 'not specified'}",
                         "\n",
                     ]
                 )
             )
 
         if not lines:
-            return "Список игр пуст."
+            return "Game list is empty."
 
         return "".join(lines) + "\n" + GAME_HAVE_NEXT_GAME
 
     @staticmethod
-    def format_completed_games_stats(platform_counts: dict[str, int]) -> str:
+    def format_completed_games_stats(
+        platform_counts: dict[str, int], owner_name: str
+    ) -> str:
         """Format completed games statistics by platform.
 
         Args:
             platform_counts: Dictionary mapping platform names to completed game counts
+            owner_name: Name of the database owner
 
         Returns:
             Formatted string with statistics
@@ -168,12 +171,13 @@ class MessageFormatter:
         stats_lines = []
         for platform, count in sorted(platform_counts.items()):
             stats_lines.append(f"{platform}: {count}")
-        return "Сколько игр прошёл Александр:\n" + "\n".join(stats_lines)
+        return f"How many games {owner_name} completed:\n" + "\n".join(stats_lines)
 
     @staticmethod
     def format_time_stats(
         platform_times: dict[str, tuple[float | None, float | None]],
         total_real_seconds: float,
+        owner_name: str,
         show_total: bool = True,
     ) -> str:
         """Format time statistics by platform.
@@ -182,7 +186,8 @@ class MessageFormatter:
             platform_times: Dictionary mapping platform names to
                 (expected_time, real_time) tuples in hours
             total_real_seconds: Total real time in seconds across all platforms
-            show_total: Whether to show "Всего времени потрачено" line.
+            owner_name: Name of the database owner
+            show_total: Whether to show "Total time spent" line.
                 Should be False for single platform views,
                 True for overall stats.
 
@@ -193,13 +198,13 @@ class MessageFormatter:
         for platform, (expected, real) in sorted(platform_times.items()):
             if expected is not None or real is not None:
                 expected_str = (
-                    float_to_time(expected) if expected is not None else "не указано"
+                    float_to_time(expected) if expected is not None else "not specified"
                 )
                 real_str = (
-                    float_to_time(real) if real is not None else "не указано"
+                    float_to_time(real) if real is not None else "not specified"
                 )
                 stats_lines.append(
-                    f"{platform}: ожидаемое - {expected_str}, реальное - {real_str}"
+                    f"{platform}: expected - {expected_str}, real - {real_str}"
                 )
 
         # Only show total line for overall statistics (multiple platforms)
@@ -207,10 +212,10 @@ class MessageFormatter:
             total_hours = total_real_seconds / 3600
             total_str = float_to_time(total_hours)
             stats_lines.append(
-                f"\nВсего времени потрачено: {total_str}"
+                f"\nTotal time spent: {total_str}"
             )
 
-        return "Сколько времени Александр потратил на игры:\n" + "\n".join(stats_lines)
+        return f"How much time {owner_name} spent on games:\n" + "\n".join(stats_lines)
 
     @staticmethod
     def format_steam_sync_missing_games(
@@ -227,7 +232,7 @@ class MessageFormatter:
         if not matches:
             return ""
 
-        lines = ["Игры из Steam, которых нет в базе:"]
+        lines = ["Games from Steam not found in database:"]
         has_any_match = False
 
         for match in matches:
@@ -236,7 +241,7 @@ class MessageFormatter:
                 has_any_match = True
                 lines.append(
                     f"  closestMatch: {match.closest_match} "
-                    f"(расстояние: {match.distance}, скор: {match.score:.2f})"
+                    f"(distance: {match.distance}, score: {match.score:.2f})"
                 )
             else:
                 lines.append("  closestMatch: null")

@@ -48,7 +48,7 @@ def temp_excel() -> Iterator[Path]:
         [
             "Test Game 1",
             "Steam",
-            "Пройдена",
+            "Completed",
             "January 1, 2024",
             "8.0",
             "8.5",
@@ -59,46 +59,6 @@ def temp_excel() -> Iterator[Path]:
             "12.0",
             "January 15, 2024",
             "0",
-        ]
-    )
-
-    # Create new_games sheet
-    new_sheet = wb.create_sheet("new_games")
-    new_sheet.append(
-        [
-            "Game Name",
-            "Platforms",
-            "Status",
-            "Release Date",
-            "Press Score",
-            "User Score",
-            "My Score",
-            "Metacritic URL",
-            "Average Time Beat",
-            "Trailer URL",
-            "My Time Beat",
-            "Last Launch Date",
-            "Additional Time",
-        ]
-    )
-
-    # Create update_games sheet
-    update_sheet = wb.create_sheet("update_games")
-    update_sheet.append(
-        [
-            "Game Name",
-            "Platforms",
-            "Status",
-            "Release Date",
-            "Press Score",
-            "User Score",
-            "My Score",
-            "Metacritic URL",
-            "Average Time Beat",
-            "Trailer URL",
-            "My Time Beat",
-            "Last Launch Date",
-            "Additional Time",
         ]
     )
 

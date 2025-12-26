@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "game-db"
 version = "0.1.0"
-description = "Telegram-бот и утилиты для личной базы видеоигр (SQLite + Excel + Steam API)"
+description = "Telegram bot and utilities for personal video game database (SQLite + Excel + Steam API)"
 authors = ["Alexander Kan <akan.zce@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "game_db" }]
 license = "MIT"
-homepage = "https://github.com/alexander-kan/game_db"
-repository = "https://github.com/alexander-kan/game_db"
+homepage = "https://github.com/alexander-kan/tele_game_db"
+repository = "https://github.com/alexander-kan/tele_game_db"
 keywords = ["telegram", "bot", "games", "sqlite", "steam", "excel"]
 classifiers = [
     "Programming Language :: Python :: 3",

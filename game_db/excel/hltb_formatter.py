@@ -43,7 +43,8 @@ class HowLongToBeatExcelFormatter:
     def update_game_row(
         sheet: Worksheet,
         row_number: int,
-        hltb_data: dict,
+        hltb_data: dict | None,
+        partial_mode: bool = False,
     ) -> None:
         """Update Excel row with HowLongToBeat game data.
 
@@ -52,9 +53,52 @@ class HowLongToBeatExcelFormatter:
         Args:
             sheet: Excel worksheet to update
             row_number: Row number (1-based) to update
-            hltb_data: Dictionary with HowLongToBeat data
+            hltb_data: Dictionary with HowLongToBeat data, or None if game not found
+            partial_mode: If True, write "0" when game not found.
+                         If False, only write "0" if field is empty
+                         (preserve existing value).
         """
-        # Update average time to beat
+        # If game not found (hltb_data is None)
+        if hltb_data is None:
+            if partial_mode:
+                # Partial mode: always write "0" when game not found
+                sheet.cell(
+                    row=row_number, column=ExcelColumn.AVERAGE_TIME_BEAT
+                ).value = "0"
+                logger.info(
+                    "[HLTB_FORMATTER] Row %d: Game not found, "
+                    "wrote '0' (partial_mode=True)",
+                    row_number,
+                )
+            else:
+                # Full mode: only write "0" if field is currently empty
+                current_value = sheet.cell(
+                    row=row_number, column=ExcelColumn.AVERAGE_TIME_BEAT
+                ).value
+                current_value_str = (
+                    str(current_value).strip() if current_value else ""
+                )
+                if not current_value_str:
+                    # Field is empty, write "0"
+                    sheet.cell(
+                        row=row_number, column=ExcelColumn.AVERAGE_TIME_BEAT
+                    ).value = "0"
+                    logger.info(
+                        "[HLTB_FORMATTER] Row %d: Game not found, "
+                        "wrote '0' (field was empty)",
+                        row_number,
+                    )
+                else:
+                    # Field has value, preserve it
+                    logger.info(
+                        "[HLTB_FORMATTER] Row %d: Game not found, "
+                        "preserved existing value: %s",
+                        row_number,
+                        current_value_str,
+                    )
+            return
+
+        # Game found: extract time data
         # Use main_story if available, otherwise use completionist
         time_hours = hltb_data.get("main_story") or hltb_data.get(
             "completionist"
@@ -65,8 +109,13 @@ class HowLongToBeatExcelFormatter:
             sheet.cell(
                 row=row_number, column=ExcelColumn.AVERAGE_TIME_BEAT
             ).value = formatted_time
-            logger.debug(
-                "Updated AVERAGE_TIME_BEAT for row %d: %s hours",
+            logger.info(
+                "[HLTB_FORMATTER] Row %d: Updated AVERAGE_TIME_BEAT: %s hours",
                 row_number,
                 formatted_time,
+            )
+        else:
+            logger.debug(
+                "[HLTB_FORMATTER] Row %d: No valid time data to update",
+                row_number,
             )

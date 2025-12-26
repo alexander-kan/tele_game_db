@@ -59,6 +59,7 @@ class SettingsConfig:
 
     paths: Paths
     db_files: DBFilesConfig
+    owner_name: str
 
 
 @dataclass(frozen=True)
@@ -148,7 +149,12 @@ def load_settings_config() -> SettingsConfig:
         games_excel_file=games_excel_file,
     )
 
-    return SettingsConfig(paths=paths, db_files=db_files)
+    # Load owner name from OWNER section, default to "Alexander"
+    owner_name = "Alexander"
+    if settings.has_section("OWNER"):
+        owner_name = settings.get("OWNER", "owner_name", fallback="Alexander")
+
+    return SettingsConfig(paths=paths, db_files=db_files, owner_name=owner_name)
 
 
 def load_tokens_config() -> TokensConfig:

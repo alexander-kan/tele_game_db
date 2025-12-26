@@ -17,6 +17,12 @@ update_db/
 files/
 *.db
 
+# Log files
+logs/game_db.log
+
+# Temporary API response files
+steam_api_response.json
+
 # Python caches and virtualenvs
 __pycache__/
 .pytest_cache/

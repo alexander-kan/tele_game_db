@@ -228,38 +228,6 @@ class TestExternalAPIErrorHandling:
 
         assert result == []
 
-    @patch("game_db.genres.MetaCriticScraper")
-    def test_extract_genre_timeout(self, mock_scraper_class: Mock) -> None:
-        """Test extract_genre_from_metacritic handles timeout."""
-        from game_db.genres import extract_genre_from_metacritic
-
-        # Mock MetaCriticScraper to raise timeout exception
-        from urllib.error import URLError
-
-        mock_scraper_class.side_effect = URLError("Request timeout")
-
-        url = "https://metacritic.com/game/test"
-        result = extract_genre_from_metacritic(url)
-
-        assert result is None
-
-    @patch("game_db.genres.MetaCriticScraper")
-    def test_extract_genre_connection_error(
-        self, mock_scraper_class: Mock
-    ) -> None:
-        """Test extract_genre_from_metacritic handles connection errors."""
-        from game_db.genres import extract_genre_from_metacritic
-
-        # Mock MetaCriticScraper to raise connection error
-        from urllib.error import URLError
-
-        mock_scraper_class.side_effect = URLError("Connection failed")
-
-        url = "https://metacritic.com/game/test"
-        result = extract_genre_from_metacritic(url)
-
-        assert result is None
-
 
 class TestEdgeCases:
     """Test edge cases and boundary conditions."""
@@ -324,7 +292,7 @@ class TestEdgeCases:
         repo = GameRepository(temp_db)
 
         # Unicode game name
-        results = repo.query_game("Тест 🎮 游戏")
+        results = repo.query_game("Test 🎮 游戏")
 
         assert isinstance(results, list)
 
@@ -335,7 +303,7 @@ class TestEdgeCases:
         repo = GameRepository(temp_db)
 
         # Unicode platform name
-        count = repo.count_complete_games("Платформа🎮")
+        count = repo.count_complete_games("Platform🎮")
 
         assert isinstance(count, int)
 

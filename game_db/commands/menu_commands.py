@@ -104,7 +104,7 @@ class GameListsMenuCommand(Command):
         bot.send_message(
             message.chat.id,
             texts.GAME_LISTS_MENU,
-            reply_markup=menu.BotMenu.next_game(message),
+            reply_markup=menu.BotMenu.next_game(message, settings.owner_name),
         )
 
 

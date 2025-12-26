@@ -60,8 +60,6 @@ def normalize_string(s: str) -> str:
     - trim whitespace
     - lowercase
     - compress multiple spaces to single space
-    - replace ё with е for Russian text
-    - remove leading/trailing special characters (optional)
 
     Args:
         s: Input string
@@ -71,9 +69,6 @@ def normalize_string(s: str) -> str:
     """
     # Trim and lowercase
     normalized = s.strip().lower()
-
-    # Replace ё with е for Russian text
-    normalized = normalized.replace("ё", "е")
 
     # Compress multiple spaces to single space
     normalized = re.sub(r"\s+", " ", normalized)

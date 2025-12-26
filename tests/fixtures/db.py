@@ -76,13 +76,13 @@ def temp_db() -> Iterator[Path]:
     cursor.execute(
         (
             "INSERT INTO status_dictionary "
-            "(status_dictionary_id, status_name) VALUES (1, 'Пройдена')"
+            "(status_dictionary_id, status_name) VALUES (1, 'Completed')"
         )
     )
     cursor.execute(
         (
             "INSERT INTO status_dictionary "
-            "(status_dictionary_id, status_name) VALUES (2, 'Не начата')"
+            "(status_dictionary_id, status_name) VALUES (2, 'Not Started')"
         )
     )
     cursor.execute(

@@ -51,7 +51,7 @@ class TestHandlersErrorHandling:
             sql_create_tables=Path("/tmp/sql/create_tables.sql"),
             sqlite_db_file=paths.sqlite_db_file,
         )
-        test_config = SettingsConfig(paths=paths, db_files=db_files)
+        test_config = SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
         handlers.handle_text(mock_message, mock_bot, admin_security, test_config)
 
         # Should send error message to user
@@ -72,7 +72,7 @@ class TestHandlersErrorHandling:
         """Test handle_count_games handles database errors gracefully."""
         from game_db import handlers
 
-        mock_message.text = "Сколько игр прошёл Александр"
+        mock_message.text = "How many games Alexander completed"
         mock_game_service.get_platforms.return_value = ["Steam", "Switch"]
         mock_game_service.count_complete_games.side_effect = DatabaseError(
             "Query failed"
@@ -95,7 +95,7 @@ class TestHandlersErrorHandling:
         """Test handle_count_time handles database errors gracefully."""
         from game_db import handlers
 
-        mock_message.text = "Сколько времени Александр потратил на игры"
+        mock_message.text = "How much time Alexander spent on games"
         mock_game_service.get_platforms.return_value = ["Steam", "Switch"]
         mock_game_service.count_spend_time.side_effect = DatabaseError(
             "Query failed"
@@ -140,7 +140,7 @@ class TestHandlersErrorHandling:
             sql_create_tables=Path("/tmp/sql/create_tables.sql"),
             sqlite_db_file=paths.sqlite_db_file,
         )
-        test_config = SettingsConfig(paths=paths, db_files=db_files)
+        test_config = SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
         handlers.handle_text(mock_message, mock_bot, admin_security, test_config)
 
         # Should send "game not found" message

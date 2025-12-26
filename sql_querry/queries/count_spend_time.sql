@@ -1,8 +1,9 @@
 -- Count time spent for a platform
 -- When mode = 0: only completed games
 -- When mode = 1: all games (no status filter)
-SELECT SUM(g.average_time_beat) as sum,
-       SUM(g.my_time_beat)      as my_sum
+-- Expected time (average_time_beat) is counted only for games that were launched (my_time_beat IS NOT NULL)
+SELECT SUM(CASE WHEN g.my_time_beat IS NOT NULL THEN g.average_time_beat ELSE 0 END) as sum,
+       SUM(g.my_time_beat) as my_sum
 FROM games g
 INNER JOIN status_dictionary sd
     ON g.status = sd.status_dictionary_id

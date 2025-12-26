@@ -31,7 +31,7 @@ def test_write_game_row_from_gamerow(tmp_path: Path) -> None:
     game_row = GameRow(
         game_name="Test Game",
         platforms="Steam,Switch",
-        status="Пройдена",
+        status="Completed",
         release_date="January 1, 2024",
         press_score="8.0",
         user_score="8.5",
@@ -51,7 +51,7 @@ def test_write_game_row_from_gamerow(tmp_path: Path) -> None:
         sheet.cell(row=1, column=ExcelColumn.PLATFORMS).value
         == "Steam,Switch"
     )
-    assert sheet.cell(row=1, column=ExcelColumn.STATUS).value == "Пройдена"
+    assert sheet.cell(row=1, column=ExcelColumn.STATUS).value == "Completed"
     assert (
         sheet.cell(row=1, column=ExcelColumn.RELEASE_DATE).value
         == "January 1, 2024"
@@ -90,7 +90,7 @@ def test_write_game_row_from_list(tmp_path: Path) -> None:
     row_data = [
         "List Game",
         "Steam",
-        "Не начата",
+        "Not Started",
         "February 2, 2024",
         "7.0",
         "7.5",
@@ -107,37 +107,7 @@ def test_write_game_row_from_list(tmp_path: Path) -> None:
 
     assert sheet.cell(row=2, column=ExcelColumn.GAME_NAME).value == "List Game"
     assert sheet.cell(row=2, column=ExcelColumn.PLATFORMS).value == "Steam"
-    assert sheet.cell(row=2, column=ExcelColumn.STATUS).value == "Не начата"
-
-
-def test_update_init_games_sheet_deletes_source_row(tmp_path: Path) -> None:
-    """update_init_games_sheet copies row and deletes processed row."""
-    wb = _make_workbook_with_init_sheet()
-    init_sheet = wb["init_games"]
-    update_sheet = wb.create_sheet("update_games")
-
-    # Header for visibility plus one data row in update_games
-    update_sheet.append(["Game Name"])
-    update_sheet.append(["Update Game"])
-
-    xlsx_path = tmp_path / "games.xlsx"
-    wb.save(xlsx_path)
-
-    ExcelWriter.update_init_games_sheet(
-        wb,
-        ["Update Game"],
-        row_number=1,
-        xlsx_path=xlsx_path,
-        mode="update_games",
-    )
-
-    # Row copied to init_games
-    assert (
-        init_sheet.cell(row=1, column=ExcelColumn.GAME_NAME).value
-        == "Update Game"
-    )
-    # Second row in update_games should be deleted
-    assert update_sheet.max_row == 1
+    assert sheet.cell(row=2, column=ExcelColumn.STATUS).value == "Not Started"
 
 
 def test_append_to_init_games_sheet_appends_at_end(tmp_path: Path) -> None:
@@ -186,37 +156,36 @@ def test_excel_reader_load_and_get_sheet(tmp_path: Path) -> None:
     assert loaded_sheet.max_row == sheet.max_row
 
 
-def test_get_sheet_for_mode_selects_correct_sheet(tmp_path: Path) -> None:
-    """get_sheet_for_mode returns sheet based on mode value."""
-    wb = Workbook()
-    wb.remove(wb.active)
-    init_sheet = wb.create_sheet("init_games")
-    new_sheet = wb.create_sheet("new_games")
-    update_sheet = wb.create_sheet("update_games")
-    xlsx_path = tmp_path / "games.xlsx"
-    wb.save(xlsx_path)
-
-    reader = ExcelReader()
-    loaded_wb = reader.load_workbook(xlsx_path)
-
-    assert reader.get_sheet_for_mode(loaded_wb, "full").title == "init_games"
-    assert reader.get_sheet_for_mode(loaded_wb, "new_games").title == "new_games"
-    assert (
-        reader.get_sheet_for_mode(loaded_wb, "update_games").title
-        == "update_games"
-    )
 
 
 def test_read_game_rows_and_find_row_by_game_name(tmp_path: Path) -> None:
     """read_game_rows returns GameRow objects and supports row lookup."""
     wb = _make_workbook_with_init_sheet()
     sheet = wb["init_games"]
-    # Two data rows
+    # Add header row (row 1)
+    sheet.append(
+        [
+            "Name of the game",
+            "Platform",
+            "Status",
+            "Release year",
+            "Press Score",
+            "User Score",
+            "My Score",
+            "Metacritic",
+            "Play time (HLTB)",
+            "Trailer",
+            "My play time",
+            "Last launch",
+            "My play time (on the console when the game is also on Steam)",
+        ]
+    )
+    # Two data rows (rows 2 and 3)
     sheet.append(
         [
             "Game 1",
             "Steam",
-            "Пройдена",
+            "Completed",
             "January 1, 2024",
             "8",
             "8.5",
@@ -233,7 +202,7 @@ def test_read_game_rows_and_find_row_by_game_name(tmp_path: Path) -> None:
         [
             "Game 2",
             "Switch",
-            "Не начата",
+            "Not Started",
             "February 1, 2024",
             "7",
             "7.5",
@@ -260,8 +229,9 @@ def test_read_game_rows_and_find_row_by_game_name(tmp_path: Path) -> None:
     assert game_rows[1].platforms == "Switch"
 
     # find_row_by_game_name should locate correct row (1‑based)
+    # Game 2 is in row 3 (row 1 is header, row 2 is Game 1, row 3 is Game 2)
     row_index = reader.find_row_by_game_name(loaded_sheet, "Game 2")
-    assert row_index == 2
+    assert row_index == 3
     assert (
         reader.find_row_by_game_name(loaded_sheet, "Nonexistent Game") is None
     )

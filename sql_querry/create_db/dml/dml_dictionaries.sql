@@ -1,8 +1,8 @@
 INSERT             INTO status_dictionary (status_name)
 VALUES
-   ("Пройдена"),
-   ("Не начата"),
-   ("Брошена");
+   ("Completed"),
+   ("Not Started"),
+   ("Dropped");
 INSERT             INTO platform_dictionary (platform_name)                    
 VALUES
    ("NOT DEFINED"),

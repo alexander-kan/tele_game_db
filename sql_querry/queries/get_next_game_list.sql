@@ -10,7 +10,7 @@ INNER JOIN games_on_platforms gop
     ON gop.reference_game_id = g.game_id
 INNER JOIN platform_dictionary pd
     ON pd.platform_dictionary_id = gop.platform_id
-WHERE sd.status_name = "Не начата"
+WHERE sd.status_name = "Not Started"
   AND g.press_score >= 7
   AND pd.platform_name = ?
 GROUP BY g.game_name

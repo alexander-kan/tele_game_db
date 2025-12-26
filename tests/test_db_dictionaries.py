@@ -33,12 +33,12 @@ class TestDictionariesBuilder:
 
         values_dictionaries = configparser.ConfigParser()
         values_dictionaries["STATUS"] = {
-            "pass": "Пройдена",
-            "not_started": "Не начата",
-            "abandoned": "Брошена",
+            "pass": "Completed",
+            "not_started": "Not Started",
+            "abandoned": "Dropped",
         }
         values_dictionaries["PLATFORM"] = {
-            "not_defined": "Не определена",
+            "not_defined": "NOT DEFINED",
             "steam": "Steam",
             "switch": "Switch",
             "ps4": "PS4",
@@ -95,9 +95,9 @@ class TestDictionariesBuilder:
         assert "INSERT INTO" in content
         assert "status_dictionary" in content
         assert "status_name" in content
-        assert "Пройдена" in content
-        assert "Не начата" in content
-        assert "Брошена" in content
+        assert "Completed" in content
+        assert "Not Started" in content
+        assert "Dropped" in content
 
     def test_create_dml_dictionaries_platform_inserts(
         self, builder: DictionariesBuilder, tmp_path: Path
@@ -110,7 +110,8 @@ class TestDictionariesBuilder:
         content = sql_file.read_text()
         assert "platform_dictionary" in content
         assert "platform_name" in content
-        assert "Не определена" in content
+        # Check that all platforms from mock config are present
+        assert "NOT DEFINED" in content
         assert "Steam" in content
         assert "Switch" in content
         assert "PS4" in content

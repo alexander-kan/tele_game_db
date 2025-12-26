@@ -189,6 +189,45 @@ class DatabaseService:
         )
         return self.steam_synchronizer.synchronize_steam_games(str(xlsx))
 
+    def check_steam_games(
+        self, xlsx_path: str | Path
+    ) -> tuple[bool, list]:
+        """Check which games from Steam are missing in database.
+
+        Args:
+            xlsx_path: Path to Excel file
+
+        Returns:
+            Tuple of (success: bool, similarity_matches: list[SimilarityMatch])
+        """
+        xlsx = Path(xlsx_path)
+        logger.info(
+            "[STEAM_CHECK] Starting Steam games check with Excel file: %s", xlsx
+        )
+        return self.steam_synchronizer.check_steam_games(str(xlsx))
+
+    def add_steam_games_to_excel(
+        self, xlsx_path: str | Path, game_names: list[str]
+    ) -> bool:
+        """Add Steam games to Excel with minimal data.
+
+        Args:
+            xlsx_path: Path to Excel file to update
+            game_names: List of game names to add
+
+        Returns:
+            True if operation succeeded, False otherwise
+        """
+        xlsx = Path(xlsx_path)
+        logger.info(
+            "[STEAM_ADD] Adding %d Steam games to Excel file: %s",
+            len(game_names),
+            xlsx,
+        )
+        return self.steam_synchronizer.add_steam_games_to_excel(
+            str(xlsx), game_names
+        )
+
     def synchronize_metacritic_games(
         self,
         xlsx_path: str | Path,

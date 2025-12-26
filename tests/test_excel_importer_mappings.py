@@ -30,6 +30,7 @@ def _make_excel_importer() -> ExcelImporter:
             sql_create_tables=Path("create_tables.sql"),
             sqlite_db_file=Path("/tmp/test.db"),
         ),
+        owner_name="Alexander",
     )
     table_names = configparser.ConfigParser()
     column_table_names = configparser.ConfigParser()

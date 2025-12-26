@@ -51,7 +51,7 @@ class BotApplication:
                     self.bot.send_message(user, text)
                 except OSError:
                     logger.exception(
-                        "Ошибка отправки сообщения '%s' пользователю %s",
+                        "Error sending message '%s' to user %s",
                         text,
                         user,
                     )

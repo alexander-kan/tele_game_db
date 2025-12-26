@@ -52,7 +52,7 @@ class RemoveFileCommand(Command):
             )
             bot.send_message(
                 message.chat.id,
-                "Некорректное имя файла",
+                "Invalid file name",
                 reply_markup=menu.BotMenu.file_menu(message, security),
             )
             return
@@ -73,7 +73,7 @@ class RemoveFileCommand(Command):
             )
             bot.send_message(
                 message.chat.id,
-                "Не удалось удалить файл",
+                "Failed to delete file",
                 reply_markup=menu.BotMenu.file_menu(message, security),
             )
 
@@ -109,7 +109,7 @@ class GetFileCommand(Command):
             )
             bot.send_message(
                 message.chat.id,
-                "Некорректное имя файла",
+                "Invalid file name",
                 reply_markup=menu.BotMenu.file_menu(message, security),
             )
             return
@@ -138,7 +138,7 @@ class GetFileCommand(Command):
                 )
                 bot.send_message(
                     message.chat.id,
-                    "Ошибка при чтении файла",
+                    "Error reading file",
                     reply_markup=menu.BotMenu.file_menu(message, security),
                 )
         else:
