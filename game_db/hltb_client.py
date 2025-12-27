@@ -11,7 +11,7 @@ import logging
 try:
     from howlongtobeatpy import HowLongToBeat  # type: ignore[import-untyped]
 except ImportError:
-    HowLongToBeat = None  # type: ignore[assignment]
+    HowLongToBeat = None
 
 logger = logging.getLogger("game_db.hltb")
 
