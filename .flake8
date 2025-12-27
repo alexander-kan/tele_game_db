@@ -23,3 +23,4 @@ per-file-ignores =
     tests/test_steam_synchronizer.py:E501
     game_db/excel/steam_formatter.py:F401
     tests/fixtures/telegram.py:F821
+    tests/test_menu.py:F401
