@@ -38,7 +38,9 @@ def _safe_answer_callback_query(
     try:
         # Convert to int if it's a string (for compatibility)
         query_id = (
-            int(callback_query_id) if isinstance(callback_query_id, str) else callback_query_id
+            int(callback_query_id)
+            if isinstance(callback_query_id, str)
+            else callback_query_id
         )
         bot.answer_callback_query(query_id, text=text, show_alert=show_alert)
     except ApiTelegramException as e:
@@ -539,7 +541,9 @@ def _handle_commands(
         "Commands",
         call.message.chat.id,
         call.message.message_id,
-        reply_markup=InlineMenu.commands_menu(security, user_id if user_id is not None else 0),
+        reply_markup=InlineMenu.commands_menu(
+            security, user_id if user_id is not None else 0
+        ),
     )
     _safe_answer_callback_query(bot, call.id)
 
