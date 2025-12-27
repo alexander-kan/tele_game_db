@@ -8,37 +8,21 @@ import telebot
 from telebot.types import Message
 
 from . import db as db_module
-from . import menu
-from .inline_menu import InlineMenu
-from .commands import (
-    ClearMenuCommand,
-    CommandHandler,
-    CountGamesCommand,
-    CountTimeCommand,
-    FileMenuCommand,
-    GameListsMenuCommand,
-    GetFileCommand,
-    GetGameCommand,
-    MainMenuCommand,
-    RemoveFileCommand,
-    ShowAdminCommandsCommand,
-    ShowCommandsCommand,
-    SteamGameListCommand,
-    SwitchGameListCommand,
-    SyncSteamCommand,
-)
+from . import menu, texts
+from .commands import (ClearMenuCommand, CommandHandler, CountGamesCommand,
+                       CountTimeCommand, FileMenuCommand, GameListsMenuCommand,
+                       GetFileCommand, GetGameCommand, MainMenuCommand,
+                       RemoveFileCommand, ShowAdminCommandsCommand,
+                       ShowCommandsCommand, SteamGameListCommand,
+                       SwitchGameListCommand, SyncSteamCommand)
 from .config import DEFAULT_PLATFORMS, SettingsConfig
 from .exceptions import DatabaseError, GameDBError
+from .inline_menu import InlineMenu
 from .security import Security
-from . import texts
 from .services import game_service
 from .services.message_formatter import MessageFormatter
-from .utils import (
-    is_file_type_allowed,
-    is_path_safe,
-    safe_delete_file,
-    validate_file_name,
-)
+from .utils import (is_file_type_allowed, is_path_safe, safe_delete_file,
+                    validate_file_name)
 
 logger = logging.getLogger("game_db.bot")
 

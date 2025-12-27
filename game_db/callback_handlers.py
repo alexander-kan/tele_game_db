@@ -5,9 +5,10 @@ from __future__ import annotations
 import logging
 
 import telebot
-from telebot.types import CallbackQuery
 from telebot.apihelper import ApiTelegramException
+from telebot.types import CallbackQuery
 
+from . import texts
 from .config import DEFAULT_PLATFORMS, SettingsConfig
 from .db import ChangeDB
 from .exceptions import DatabaseError, GameDBError
@@ -16,7 +17,6 @@ from .menu_callbacks import CallbackAction, parse_callback_data
 from .security import Security
 from .services import game_service
 from .services.message_formatter import MessageFormatter
-from . import texts
 
 logger = logging.getLogger("game_db.bot")
 

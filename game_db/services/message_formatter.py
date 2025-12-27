@@ -6,13 +6,8 @@ from typing import Iterable
 
 from ..constants import DB_DATE_NOT_SET, EXCEL_NONE_VALUE
 from ..similarity_search import SimilarityMatch
-from ..texts import (
-    GAME_HAVE_NEXT_GAME,
-    GAME_IN_DB,
-    GAME_NEVER_PLAYED,
-    GAME_TIME_IS_NONE,
-    STEAM_SYNC_ALL_UNIQUE,
-)
+from ..texts import (GAME_HAVE_NEXT_GAME, GAME_IN_DB, GAME_NEVER_PLAYED,
+                     GAME_TIME_IS_NONE, STEAM_SYNC_ALL_UNIQUE)
 from ..types import GameInfo, GameListItem
 from ..utils import float_to_time
 

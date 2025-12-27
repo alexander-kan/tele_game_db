@@ -2,13 +2,9 @@
 
 from __future__ import annotations
 
-from game_db.exceptions import (
-    DatabaseError,
-    DatabaseQueryError,
-    GameNotFoundError,
-    PlatformNotFoundError,
-    SQLFileNotFoundError,
-)
+from game_db.exceptions import (DatabaseError, DatabaseQueryError,
+                                GameNotFoundError, PlatformNotFoundError,
+                                SQLFileNotFoundError)
 
 
 def test_database_error_stores_message_and_original() -> None:

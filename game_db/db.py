@@ -11,26 +11,20 @@ from time import localtime, strftime
 from openpyxl import Workbook, load_workbook
 
 from . import steam_api
-from .config import (
-    PROJECT_ROOT,
-    SettingsConfig,
-    TokensConfig,
-    load_settings_config,
-    load_similarity_thresholds_config,
-    load_tokens_config,
-    load_table_names_config,
-    load_column_table_names_config,
-    load_values_dictionaries_config,
-)
+from .config import (PROJECT_ROOT, SettingsConfig, TokensConfig,
+                     load_column_table_names_config, load_settings_config,
+                     load_similarity_thresholds_config,
+                     load_table_names_config, load_tokens_config,
+                     load_values_dictionaries_config)
 from .constants import ExcelColumn
 from .db_dictionaries import DictionariesBuilder
 from .db_excel import ExcelImporter
-from .excel.steam_formatter import SteamExcelFormatter
-from .excel.metacritic_formatter import MetacriticExcelFormatter
 from .excel.hltb_formatter import HowLongToBeatExcelFormatter
-from .MetaCriticScraper import MetaCriticScraper
-from .metacritic_search import search_metacritic_game_url
+from .excel.metacritic_formatter import MetacriticExcelFormatter
+from .excel.steam_formatter import SteamExcelFormatter
 from .hltb_client import HowLongToBeatClient
+from .metacritic_search import search_metacritic_game_url
+from .MetaCriticScraper import MetaCriticScraper
 from .similarity_search import SimilarityMatch, find_closest_match
 from .types import SteamGame
 
@@ -1315,8 +1309,8 @@ def main() -> None:
     Note: This function uses hardcoded path. Consider using
     scripts/init_db.py instead, which uses settings configuration.
     """
-    from .logging_config import configure_logging
     from .config import load_settings_config, load_tokens_config
+    from .logging_config import configure_logging
     from .services.database_service import DatabaseService
 
     configure_logging()

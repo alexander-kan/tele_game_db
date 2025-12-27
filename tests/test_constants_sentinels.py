@@ -2,11 +2,8 @@
 
 from __future__ import annotations
 
-from game_db.constants import (
-    DB_DATE_NOT_SET,
-    EXCEL_DATE_NOT_SET,
-    EXCEL_NONE_VALUE,
-)
+from game_db.constants import (DB_DATE_NOT_SET, EXCEL_DATE_NOT_SET,
+                               EXCEL_NONE_VALUE)
 
 
 def test_excel_sentinel_values_are_stable() -> None:

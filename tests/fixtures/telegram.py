@@ -7,13 +7,8 @@ from unittest.mock import Mock
 
 import pytest
 
-from game_db.config import (
-    DBFilesConfig,
-    Paths,
-    SettingsConfig,
-    TokensConfig,
-    UsersConfig,
-)
+from game_db.config import (DBFilesConfig, Paths, SettingsConfig, TokensConfig,
+                            UsersConfig)
 from game_db.security import Security
 
 

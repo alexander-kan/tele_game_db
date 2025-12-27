@@ -8,20 +8,14 @@ from time import sleep
 import telebot
 from telebot.types import Message
 
-from .config import (
-    SettingsConfig,
-    TokensConfig,
-    UsersConfig,
-    load_settings_config,
-    load_tokens_config,
-    load_users_config,
-)
-from .security import Security
-from .logging_config import configure_logging
-from .utils import clean_directory_safely
 from . import handlers
 from .callback_handlers import handle_callback_query
-
+from .config import (SettingsConfig, TokensConfig, UsersConfig,
+                     load_settings_config, load_tokens_config,
+                     load_users_config)
+from .logging_config import configure_logging
+from .security import Security
+from .utils import clean_directory_safely
 
 logger = logging.getLogger("game_db.bot")
 telebot.telebot.logger.setLevel(logging.INFO)

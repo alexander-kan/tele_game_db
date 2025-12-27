@@ -13,7 +13,6 @@ from typing import Final, cast
 
 from .types import SettingsINIDict, TokensINIDict, UsersINIDict
 
-
 PROJECT_ROOT: Final[Path] = Path(__file__).resolve().parent.parent
 
 # Fallback list of platforms if database is unavailable

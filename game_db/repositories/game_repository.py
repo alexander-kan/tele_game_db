@@ -8,11 +8,8 @@ import sqlite3
 from pathlib import Path
 
 from ..config import PROJECT_ROOT, load_settings_config
-from ..exceptions import (
-    DatabaseConnectionError,
-    DatabaseQueryError,
-    SQLFileNotFoundError,
-)
+from ..exceptions import (DatabaseConnectionError, DatabaseQueryError,
+                          SQLFileNotFoundError)
 
 logger = logging.getLogger("game_db.sql")
 _settings_cfg = load_settings_config()

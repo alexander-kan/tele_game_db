@@ -11,15 +11,10 @@ from pathlib import Path
 
 import pytest
 
-from game_db.utils import (
-    clean_directory_safely,
-    get_allowed_file_extensions,
-    is_file_type_allowed,
-    is_path_safe,
-    safe_delete_directory,
-    safe_delete_file,
-    validate_file_name,
-)
+from game_db.utils import (clean_directory_safely, get_allowed_file_extensions,
+                           is_file_type_allowed, is_path_safe,
+                           safe_delete_directory, safe_delete_file,
+                           validate_file_name)
 
 # Ensure project root is on sys.path when running tests directly
 PROJECT_ROOT = pathlib.Path(__file__).resolve().parents[1]

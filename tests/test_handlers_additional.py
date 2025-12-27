@@ -28,8 +28,9 @@ def user_security() -> Security:
 @pytest.fixture
 def test_config() -> SettingsConfig:
     """Create test settings."""
-    from game_db.config import DBFilesConfig, Paths
     from pathlib import Path
+
+    from game_db.config import DBFilesConfig, Paths
 
     paths = Paths(
         backup_dir=Path("/tmp"),

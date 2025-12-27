@@ -6,9 +6,9 @@ from unittest.mock import Mock
 
 import pytest
 
+from game_db.config import UsersConfig
 from game_db.inline_menu import InlineMenu
 from game_db.security import Security
-from game_db.config import UsersConfig
 
 
 @pytest.fixture

@@ -12,7 +12,7 @@ from typing import TYPE_CHECKING
 from openpyxl.workbook import Workbook
 from openpyxl.worksheet.worksheet import Worksheet
 
-from ..constants import ExcelColumn, EXCEL_DATE_NOT_SET, EXCEL_NONE_VALUE
+from ..constants import EXCEL_DATE_NOT_SET, EXCEL_NONE_VALUE, ExcelColumn
 from ..types import SteamGame
 
 if TYPE_CHECKING:

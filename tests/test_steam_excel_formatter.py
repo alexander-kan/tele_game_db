@@ -7,7 +7,7 @@ from unittest.mock import MagicMock, Mock
 import pytest
 from openpyxl import Workbook
 
-from game_db.constants import ExcelColumn, EXCEL_DATE_NOT_SET, EXCEL_NONE_VALUE
+from game_db.constants import EXCEL_DATE_NOT_SET, EXCEL_NONE_VALUE, ExcelColumn
 from game_db.excel.steam_formatter import SteamExcelFormatter
 from game_db.types import SteamGame
 

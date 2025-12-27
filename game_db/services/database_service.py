@@ -10,19 +10,11 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
-from ..config import (
-    SettingsConfig,
-    TokensConfig,
-    load_table_names_config,
-    load_column_table_names_config,
-    load_values_dictionaries_config,
-)
-from ..db import (
-    DatabaseManager,
-    HowLongToBeatSynchronizer,
-    MetacriticSynchronizer,
-    SteamSynchronizer,
-)
+from ..config import (SettingsConfig, TokensConfig,
+                      load_column_table_names_config, load_table_names_config,
+                      load_values_dictionaries_config)
+from ..db import (DatabaseManager, HowLongToBeatSynchronizer,
+                  MetacriticSynchronizer, SteamSynchronizer)
 from ..db_dictionaries import DictionariesBuilder
 from ..db_excel import ExcelImporter
 

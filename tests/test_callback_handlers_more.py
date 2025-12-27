@@ -6,17 +6,14 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from game_db.callback_handlers import (
-    _handle_count_completed,
-    _handle_count_time,
-    _handle_games_list,
-    _handle_stats_completed,
-    _handle_stats_time,
-)
+from game_db.callback_handlers import (_handle_count_completed,
+                                       _handle_count_time, _handle_games_list,
+                                       _handle_stats_completed,
+                                       _handle_stats_time)
 from game_db.config import SettingsConfig, UsersConfig
-from game_db.security import Security
-from game_db.menu_callbacks import CallbackAction
 from game_db.exceptions import DatabaseError
+from game_db.menu_callbacks import CallbackAction
+from game_db.security import Security
 
 
 @pytest.fixture
@@ -36,8 +33,9 @@ def user_security() -> Security:
 @pytest.fixture
 def test_settings() -> SettingsConfig:
     """Create test settings."""
-    from game_db.config import DBFilesConfig, Paths
     from pathlib import Path
+
+    from game_db.config import DBFilesConfig, Paths
 
     paths = Paths(
         backup_dir=Path("/tmp"),

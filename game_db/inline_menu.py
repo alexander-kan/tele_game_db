@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from telebot.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from .menu_callbacks import CallbackAction, build_callback_data
 from .security import Security

@@ -5,16 +5,14 @@ from __future__ import annotations
 from unittest.mock import Mock, patch
 
 import pytest
-
-from game_db.callback_handlers import (
-    _safe_answer_callback_query,
-    _send_menu_at_bottom,
-    handle_callback_query,
-)
-from game_db.config import SettingsConfig, UsersConfig
-from game_db.security import Security
 import telebot
 from telebot.apihelper import ApiTelegramException
+
+from game_db.callback_handlers import (_safe_answer_callback_query,
+                                       _send_menu_at_bottom,
+                                       handle_callback_query)
+from game_db.config import SettingsConfig, UsersConfig
+from game_db.security import Security
 
 
 @pytest.fixture
@@ -59,8 +57,9 @@ def user_security() -> Security:
 @pytest.fixture
 def test_settings() -> SettingsConfig:
     """Create test settings."""
-    from game_db.config import DBFilesConfig, Paths
     from pathlib import Path
+
+    from game_db.config import DBFilesConfig, Paths
 
     paths = Paths(
         backup_dir=Path("/tmp"),
@@ -141,8 +140,8 @@ def test_safe_answer_callback_query_other_error(mock_bot: Mock) -> None:
 
 def test_send_menu_at_bottom_with_text(mock_bot: Mock) -> None:
     """Test sending menu with custom text."""
-    from game_db.inline_menu import InlineMenu
     from game_db.config import UsersConfig
+    from game_db.inline_menu import InlineMenu
     from game_db.security import Security
 
     security = Security(UsersConfig(users=["12345"], admins=["12345"]))
@@ -157,8 +156,8 @@ def test_send_menu_at_bottom_with_text(mock_bot: Mock) -> None:
 
 def test_send_menu_at_bottom_without_text(mock_bot: Mock) -> None:
     """Test sending menu without custom text."""
-    from game_db.inline_menu import InlineMenu
     from game_db.config import UsersConfig
+    from game_db.inline_menu import InlineMenu
     from game_db.security import Security
 
     security = Security(UsersConfig(users=["12345"], admins=["12345"]))

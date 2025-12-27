@@ -9,13 +9,8 @@ from datetime import datetime
 from pathlib import Path
 
 from .config import SettingsConfig, load_settings_config
-from .constants import (
-    DB_DATE_NOT_SET,
-    ExcelColumn,
-    ExcelRowIndex,
-    EXCEL_DATE_NOT_SET,
-    EXCEL_NONE_VALUE,
-)
+from .constants import (DB_DATE_NOT_SET, EXCEL_DATE_NOT_SET, EXCEL_NONE_VALUE,
+                        ExcelColumn, ExcelRowIndex)
 from .excel import ExcelReader, ExcelValidator, ExcelWriter
 from .excel.models import GameRow
 

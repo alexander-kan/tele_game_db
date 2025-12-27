@@ -7,8 +7,8 @@ from unittest.mock import Mock, patch
 
 import pytest
 
+from game_db.config import DBFilesConfig, Paths, SettingsConfig, TokensConfig
 from game_db.services.database_service import DatabaseService
-from game_db.config import SettingsConfig, DBFilesConfig, Paths, TokensConfig
 
 
 @pytest.fixture
