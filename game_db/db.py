@@ -119,7 +119,7 @@ class DatabaseManager:
 class SteamSynchronizer:
     """Synchronize Excel with Steam API and trigger DB recreation."""
 
-    def __init__(
+    def __init__(  # type: ignore[no-untyped-def]
         self,
         tokens: TokensConfig,
         excel_importer: ExcelImporter,

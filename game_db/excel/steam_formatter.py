@@ -33,7 +33,7 @@ class SteamExcelFormatter:
         return str(round(playtime_minutes / 60, 2)).replace(",", ".")
 
     @staticmethod
-    def update_game_with_playtime(
+    def update_game_with_playtime(  # type: ignore[no-untyped-def]
         sheet: Worksheet,
         row_number: int,
         game: SteamGame,
@@ -98,7 +98,7 @@ class SteamExcelFormatter:
             sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Not Started"
 
     @staticmethod
-    def update_game_row(
+    def update_game_row(  # type: ignore[no-untyped-def]
         sheet: Worksheet,
         row_number: int,
         game: SteamGame,
