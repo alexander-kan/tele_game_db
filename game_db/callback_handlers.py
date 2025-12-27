@@ -543,11 +543,11 @@ def _handle_show_user_commands(
     call: CallbackQuery, bot: telebot.TeleBot, security: Security
 ) -> None:
     """Handle show user commands callback."""
+    user_id = call.from_user.id if call.from_user else 0
     bot.edit_message_text(
         texts.USER_COMMANDS_HELP,
         call.message.chat.id,
         call.message.message_id,
-        user_id = call.from_user.id if call.from_user else 0
         reply_markup=InlineMenu.commands_menu(security, user_id),
     )
     _safe_answer_callback_query(bot, call.id)
