@@ -1,6 +1,6 @@
 [flake8]
 max-line-length = 88
-extend-ignore = E203, W503
+extend-ignore = E203, W503, E501
 exclude =
     .git,
     __pycache__,
@@ -11,19 +11,6 @@ exclude =
     build,
     dist
 per-file-ignores =
-    game_db/MetaCriticScraper.py:E501
-    game_db/db.py:E501
-    game_db/db_excel.py:E501
-    game_db/handlers.py:E501
-    game_db/services/database_service.py:E501
-    game_db/steam_api.py:E501
-    tests/test_config.py:E501
-    tests/test_metacritic_scraper.py:E501
-    tests/test_steam_api.py:E501
-    tests/test_steam_synchronizer.py:E501
-    tests/test_handlers_additional.py:E501
-    tests/test_hltb_formatter.py:E501
-    tests/test_hltb_synchronizer.py:E501
     game_db/excel/steam_formatter.py:F401
     tests/fixtures/telegram.py:F821
     tests/test_menu.py:F401
