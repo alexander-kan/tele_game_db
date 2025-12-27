@@ -202,6 +202,16 @@ jobs:
       - name: Install project
         run: poetry install --no-interaction
 
+      - name: Create test configuration files
+        run: |
+          mkdir -p settings
+          cat > settings/t_token.ini << EOF
+          [token]
+          token = test_telegram_token
+          steam_key = test_steam_key
+          steam_id = test_steam_id
+          EOF
+
       - name: Download coverage artifacts
         uses: actions/download-artifact@v4
         with:
