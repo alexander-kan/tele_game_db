@@ -872,6 +872,7 @@ class MetacriticSynchronizer:
                         time.sleep(10)
                     continue
 
+                actual_url = metacritic_url
                 logger.info(
                     "[METACRITIC_SYNC] Found Metacritic URL for '%s': %s",
                     game_name,

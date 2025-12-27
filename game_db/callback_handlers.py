@@ -36,12 +36,15 @@ def _safe_answer_callback_query(
         show_alert: If True, show as alert instead of notification
     """
     try:
-        # Convert to int if it's a string (for compatibility)
-        query_id = (
-            int(callback_query_id)
-            if isinstance(callback_query_id, str)
-            else callback_query_id
-        )
+        # Convert to int if it's a string that represents a number
+        if isinstance(callback_query_id, str):
+            try:
+                query_id = int(callback_query_id)
+            except ValueError:
+                # If string is not a number, use it as-is (Telegram API accepts both)
+                query_id = callback_query_id
+        else:
+            query_id = callback_query_id
         bot.answer_callback_query(query_id, text=text, show_alert=show_alert)
     except ApiTelegramException as e:
         if "query is too old" in str(e) or "query ID is invalid" in str(e):
