@@ -17,27 +17,27 @@ except ImportError:
     def damerau_levenshtein_distance(seq1: str, seq2: str) -> int:  # type: ignore[misc]
         """Simple fallback implementation."""
         # This is a simplified version - for production use the library
-        if s1 == s2:
+        if seq1 == seq2:
             return 0
-        if len(s1) == 0:
-            return len(s2)
-        if len(s2) == 0:
-            return len(s1)
+        if len(seq1) == 0:
+            return len(seq2)
+        if len(seq2) == 0:
+            return len(seq1)
         # Simple Levenshtein distance (not full Damerau-Levenshtein)
-        d = [[0] * (len(s2) + 1) for _ in range(len(s1) + 1)]
-        for i in range(len(s1) + 1):
+        d = [[0] * (len(seq2) + 1) for _ in range(len(seq1) + 1)]
+        for i in range(len(seq1) + 1):
             d[i][0] = i
-        for j in range(len(s2) + 1):
+        for j in range(len(seq2) + 1):
             d[0][j] = j
-        for i in range(1, len(s1) + 1):
-            for j in range(1, len(s2) + 1):
-                cost = 0 if s1[i - 1] == s2[j - 1] else 1
+        for i in range(1, len(seq1) + 1):
+            for j in range(1, len(seq2) + 1):
+                cost = 0 if seq1[i - 1] == seq2[j - 1] else 1
                 d[i][j] = min(
                     d[i - 1][j] + 1,  # deletion
                     d[i][j - 1] + 1,  # insertion
                     d[i - 1][j - 1] + cost,  # substitution
                 )
-        return d[len(s1)][len(s2)]
+        return d[len(seq1)][len(seq2)]
 
 
 if TYPE_CHECKING:

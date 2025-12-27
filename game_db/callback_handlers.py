@@ -102,8 +102,6 @@ def handle_callback_query(
         return
 
     try:
-        # call.data is checked for None above, but mypy doesn't understand
-        assert call.data is not None
         action, args = parse_callback_data(call.data)
         logger.debug(
             "[CALLBACK] User %s triggered action %s with args %s",
@@ -229,7 +227,7 @@ def _handle_main_menu(
     call: CallbackQuery, bot: telebot.TeleBot, security: Security
 ) -> None:
     """Handle main menu callback."""
-    user_id = call.from_user.id if call.from_user else None
+    user_id = call.from_user.id if call.from_user else 0
     bot.edit_message_text(
         texts.MAIN_MENU,
         call.message.chat.id,
