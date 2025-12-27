@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from game_db.constants import DB_DATE_NOT_SET, EXCEL_NONE_VALUE
 from game_db.services.message_formatter import MessageFormatter
+from game_db.similarity_search import SimilarityMatch
 
 
 class TestMessageFormatter:
@@ -104,3 +105,92 @@ class TestMessageFormatter:
         assert f"How much time {owner_name} spent on games" in result
         assert "Steam:" in result
         assert "Total time spent:" not in result  # show_total=False
+
+    def test_format_next_game_message_empty(self) -> None:
+        """Test format_next_game_message with empty list."""
+        result = MessageFormatter.format_next_game_message([])
+        assert result == "Game list is empty."
+
+    def test_format_next_game_message_with_games(self) -> None:
+        """Test format_next_game_message with games."""
+        from game_db.types import GameListItem
+        
+        games = [
+            GameListItem(
+                game_name="Test Game 1",
+                press_score="8.5",
+                average_time_beat=None,
+                trailer_url=None,
+            ),
+            GameListItem(
+                game_name="Test Game 2",
+                press_score=None,
+                average_time_beat=None,
+                trailer_url=None,
+            ),
+        ]
+        
+        result = MessageFormatter.format_next_game_message(games)
+        
+        assert "Test Game 1" in result
+        assert "Test Game 2" in result
+        assert "8.5" in result  # press_score
+        assert "not specified" in result
+
+    def test_format_steam_sync_missing_games_empty(self) -> None:
+        """Test format_steam_sync_missing_games with empty list."""
+        result = MessageFormatter.format_steam_sync_missing_games([])
+        assert result == ""
+
+    def test_format_steam_sync_missing_games_with_matches(self) -> None:
+        """Test format_steam_sync_missing_games with matches."""
+        from game_db.similarity_search import SimilarityMatch
+        
+        matches = [
+            SimilarityMatch(
+                original="Game 1",
+                closest_match="Game 1 Match",
+                distance=1,
+                score=0.95,
+            ),
+            SimilarityMatch(
+                original="Game 2",
+                closest_match=None,
+                distance=5,
+                score=0.3,
+            ),
+        ]
+        
+        result = MessageFormatter.format_steam_sync_missing_games(matches)
+        
+        assert "Game 1" in result
+        assert "Game 1 Match" in result
+        assert "Game 2" in result
+        assert "closestMatch: null" in result
+        assert "distance: 1" in result
+        assert "score: 0.95" in result
+
+    def test_format_steam_sync_missing_games_no_matches(self) -> None:
+        """Test format_steam_sync_missing_games with no matches."""
+        from game_db.similarity_search import SimilarityMatch
+        
+        matches = [
+            SimilarityMatch(
+                original="Game 1",
+                closest_match=None,
+                distance=10,
+                score=0.1,
+            ),
+            SimilarityMatch(
+                original="Game 2",
+                closest_match=None,
+                distance=8,
+                score=0.2,
+            ),
+        ]
+        
+        result = MessageFormatter.format_steam_sync_missing_games(matches)
+        
+        assert "Game 1" in result
+        assert "Game 2" in result
+        assert "closestMatch: null" in result
