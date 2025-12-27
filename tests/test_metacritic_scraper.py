@@ -85,7 +85,9 @@ def mock_html_content() -> str:
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_init_success(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_init_success(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test MetaCriticScraper initialization with successful request."""
     mock_session = Mock()
     mock_response = Mock()
@@ -94,9 +96,9 @@ def test_metacritic_scraper_init_success(mock_session_class: Mock, mock_html_con
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     assert scraper.game["url"] == "https://www.metacritic.com/game/test-game"
     assert scraper.soup is not None
     mock_session.get.assert_called_once()
@@ -108,9 +110,9 @@ def test_metacritic_scraper_init_request_exception(mock_session_class: Mock) -> 
     mock_session = Mock()
     mock_session.get.side_effect = requests.RequestException("Connection error")
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should initialize with empty game dict
     assert scraper.game["url"] == ""
     assert scraper.game["title"] == ""
@@ -122,16 +124,18 @@ def test_metacritic_scraper_init_general_exception(mock_session_class: Mock) -> 
     mock_session = Mock()
     mock_session.get.side_effect = ValueError("Invalid URL")
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should initialize with empty game dict
     assert scraper.game["url"] == ""
     assert scraper.game["title"] == ""
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_title(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_title(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping title from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -140,14 +144,16 @@ def test_metacritic_scraper_scrape_title(mock_session_class: Mock, mock_html_con
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     assert scraper.game["title"] == "Test Game"
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_publisher(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_publisher(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping publisher from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -156,14 +162,16 @@ def test_metacritic_scraper_scrape_publisher(mock_session_class: Mock, mock_html
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     assert scraper.game["publisher"] == "Test Publisher"
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_release_date(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_release_date(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping release date from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -172,14 +180,16 @@ def test_metacritic_scraper_scrape_release_date(mock_session_class: Mock, mock_h
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     assert scraper.game["release_date"] == "Jan 1, 2024"
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_critic_score(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_critic_score(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping critic score from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -188,15 +198,17 @@ def test_metacritic_scraper_scrape_critic_score(mock_session_class: Mock, mock_h
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Critic score should be extracted from JSON-LD or HTML
     assert scraper.game["critic_score"] in ["85", ""]  # May come from JSON-LD or HTML
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_user_score(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_user_score(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping user score from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -205,15 +217,17 @@ def test_metacritic_scraper_scrape_user_score(mock_session_class: Mock, mock_htm
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # User score should be extracted from HTML
     assert scraper.game["user_score"] in ["8.5", ""]  # May be extracted or empty
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_developer(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_developer(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping developer from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -222,15 +236,20 @@ def test_metacritic_scraper_scrape_developer(mock_session_class: Mock, mock_html
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Developer should be extracted from HTML
-    assert scraper.game["developer"] in ["Test Developer", ""]  # May be extracted or empty
+    assert scraper.game["developer"] in [
+        "Test Developer",
+        "",
+    ]  # May be extracted or empty
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_genre(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_genre(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping genre from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -239,15 +258,20 @@ def test_metacritic_scraper_scrape_genre(mock_session_class: Mock, mock_html_con
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Genre should be extracted from HTML
-    assert scraper.game["genre"] in ["Action, Adventure", ""]  # May be extracted or empty
+    assert scraper.game["genre"] in [
+        "Action, Adventure",
+        "",
+    ]  # May be extracted or empty
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_rating(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_rating(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping rating from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -256,15 +280,17 @@ def test_metacritic_scraper_scrape_rating(mock_session_class: Mock, mock_html_co
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Rating should be extracted from HTML
     assert scraper.game["rating"] in ["ESRB: M", "M", ""]  # May be extracted or empty
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_description(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_description(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping description from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -273,15 +299,20 @@ def test_metacritic_scraper_scrape_description(mock_session_class: Mock, mock_ht
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Description should be extracted from JSON-LD or HTML
-    assert "test game description" in scraper.game["description"].lower() or scraper.game["description"] == ""
+    assert (
+        "test game description" in scraper.game["description"].lower()
+        or scraper.game["description"] == ""
+    )
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_scrape_image(mock_session_class: Mock, mock_html_content: str) -> None:
+def test_metacritic_scraper_scrape_image(
+    mock_session_class: Mock, mock_html_content: str
+) -> None:
     """Test scraping image URL from HTML."""
     mock_session = Mock()
     mock_response = Mock()
@@ -290,11 +321,14 @@ def test_metacritic_scraper_scrape_image(mock_session_class: Mock, mock_html_con
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Image URL should be extracted from JSON-LD
-    assert scraper.game["image"] in ["https://example.com/image.jpg", ""]  # May be extracted or empty
+    assert scraper.game["image"] in [
+        "https://example.com/image.jpg",
+        "",
+    ]  # May be extracted or empty
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
@@ -307,9 +341,9 @@ def test_metacritic_scraper_scrape_empty_html(mock_session_class: Mock) -> None:
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle empty HTML gracefully
     assert scraper.game["url"] == "https://www.metacritic.com/game/test-game"
     assert scraper.game["title"] == ""
@@ -334,9 +368,9 @@ def test_metacritic_scraper_scrape_missing_elements(mock_session_class: Mock) ->
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should extract title but leave other fields empty
     assert scraper.game["title"] == "Test Game"
     assert scraper.game["publisher"] == ""
@@ -351,9 +385,9 @@ def test_metacritic_scraper_http_error(mock_session_class: Mock) -> None:
     mock_response.raise_for_status.side_effect = requests.HTTPError("404 Not Found")
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle error gracefully
     assert scraper.game["url"] == ""
 
@@ -364,9 +398,9 @@ def test_metacritic_scraper_timeout(mock_session_class: Mock) -> None:
     mock_session = Mock()
     mock_session.get.side_effect = requests.Timeout("Request timeout")
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle timeout gracefully
     assert scraper.game["url"] == ""
 
@@ -390,9 +424,9 @@ def test_metacritic_scraper_release_date_method2(mock_session_class: Mock) -> No
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find release date using method 2
     assert "2024" in scraper.game["release_date"] or scraper.game["release_date"] == ""
 
@@ -419,9 +453,9 @@ def test_metacritic_scraper_release_date_json_ld(mock_session_class: Mock) -> No
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find release date from JSON-LD
     assert "2024" in scraper.game["release_date"] or scraper.game["release_date"] == ""
 
@@ -447,9 +481,9 @@ def test_metacritic_scraper_user_score_methods(mock_session_class: Mock) -> None
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find user score
     assert scraper.game["user_score"] in ["7.5", ""]
 
@@ -483,9 +517,9 @@ def test_metacritic_scraper_developer_genre_rating(mock_session_class: Mock) -> 
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should extract developer, genre, and rating
     assert scraper.game["developer"] in ["Test Developer", ""]
     assert scraper.game["genre"] in ["Action", ""]
@@ -493,19 +527,23 @@ def test_metacritic_scraper_developer_genre_rating(mock_session_class: Mock) -> 
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_exception_handling_in_scrape(mock_session_class: Mock) -> None:
+def test_metacritic_scraper_exception_handling_in_scrape(
+    mock_session_class: Mock,
+) -> None:
     """Test exception handling during scraping."""
     mock_session = Mock()
     mock_response = Mock()
     mock_response.url = "https://www.metacritic.com/game/test-game"
     # Create HTML that will cause BeautifulSoup to work but scrape() to handle exceptions
-    mock_response.content = b"<html><body><div class='product_title'></div></body></html>"
+    mock_response.content = (
+        b"<html><body><div class='product_title'></div></body></html>"
+    )
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle exceptions gracefully
     assert scraper.game["url"] == "https://www.metacritic.com/game/test-game"
 
@@ -530,9 +568,9 @@ def test_metacritic_scraper_title_exception(mock_session_class: Mock) -> None:
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle missing anchor gracefully
     assert scraper.game["title"] == ""
 
@@ -556,15 +594,17 @@ def test_metacritic_scraper_release_date_method1_alt(mock_session_class: Mock) -
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should extract date from text after colon
     assert "2024" in scraper.game["release_date"] or scraper.game["release_date"] == ""
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_release_date_method2_with_month(mock_session_class: Mock) -> None:
+def test_metacritic_scraper_release_date_method2_with_month(
+    mock_session_class: Mock,
+) -> None:
     """Test release date extraction using method 2 with month detection."""
     html = """
     <html>
@@ -582,9 +622,9 @@ def test_metacritic_scraper_release_date_method2_with_month(mock_session_class: 
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find release date using method 2
     assert "2024" in scraper.game["release_date"] or scraper.game["release_date"] == ""
 
@@ -608,9 +648,9 @@ def test_metacritic_scraper_release_date_method2_alt(mock_session_class: Mock) -
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should extract date from text
     assert "2024" in scraper.game["release_date"] or scraper.game["release_date"] == ""
 
@@ -635,9 +675,9 @@ def test_metacritic_scraper_json_ld_exception(mock_session_class: Mock) -> None:
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle JSON parsing error gracefully
     assert scraper.game["url"] == "https://www.metacritic.com/game/test-game"
 
@@ -666,9 +706,9 @@ def test_metacritic_scraper_user_score_json_ld(mock_session_class: Mock) -> None
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should extract user score from JSON-LD
     assert scraper.game["user_score"] in ["8.5", ""]
 
@@ -694,9 +734,9 @@ def test_metacritic_scraper_user_score_method1_alt(mock_session_class: Mock) -> 
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find user score using method 1 alt
     assert scraper.game["user_score"] in ["7.8", ""]
 
@@ -721,9 +761,9 @@ def test_metacritic_scraper_user_score_method2(mock_session_class: Mock) -> None
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find user score as second metascore (i == 1)
     assert scraper.game["user_score"] in ["8.2", "85", ""]  # May pick first or second
 
@@ -747,9 +787,9 @@ def test_metacritic_scraper_user_score_method3(mock_session_class: Mock) -> None
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find user score using method 3
     assert scraper.game["user_score"] in ["7.5", ""]
 
@@ -774,15 +814,17 @@ def test_metacritic_scraper_user_score_method4(mock_session_class: Mock) -> None
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find user score near "User Score" text
     assert scraper.game["user_score"] in ["8.0", ""]
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_user_score_method4_sibling(mock_session_class: Mock) -> None:
+def test_metacritic_scraper_user_score_method4_sibling(
+    mock_session_class: Mock,
+) -> None:
     """Test user score extraction using method 4 sibling search."""
     html = """
     <html>
@@ -805,9 +847,9 @@ def test_metacritic_scraper_user_score_method4_sibling(mock_session_class: Mock)
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find user score in sibling elements
     assert scraper.game["user_score"] in ["8.3", ""]
 
@@ -831,9 +873,9 @@ def test_metacritic_scraper_user_score_method5(mock_session_class: Mock) -> None
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should find user score in span
     assert scraper.game["user_score"] in ["7.9", ""]
 
@@ -859,15 +901,17 @@ def test_metacritic_scraper_user_count(mock_session_class: Mock) -> None:
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should extract user count
     assert scraper.game["user_count"] in ["150", ""]
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_publisher_release_exception(mock_session_class: Mock) -> None:
+def test_metacritic_scraper_publisher_release_exception(
+    mock_session_class: Mock,
+) -> None:
     """Test exception handling in publisher/release date extraction."""
     # Create HTML that might cause exceptions during parsing
     html = """
@@ -886,9 +930,9 @@ def test_metacritic_scraper_publisher_release_exception(mock_session_class: Mock
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle exceptions gracefully
     assert scraper.game["publisher"] in ["Test Publisher", ""]
 
@@ -917,9 +961,9 @@ def test_metacritic_scraper_critic_score_exception(mock_session_class: Mock) -> 
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle exceptions gracefully
     assert scraper.game["url"] == "https://www.metacritic.com/game/test-game"
 
@@ -943,15 +987,17 @@ def test_metacritic_scraper_user_score_exception(mock_session_class: Mock) -> No
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle exceptions gracefully
     assert scraper.game["url"] == "https://www.metacritic.com/game/test-game"
 
 
 @patch("game_db.MetaCriticScraper.requests.Session")
-def test_metacritic_scraper_developer_genre_rating_exception(mock_session_class: Mock) -> None:
+def test_metacritic_scraper_developer_genre_rating_exception(
+    mock_session_class: Mock,
+) -> None:
     """Test exception handling in developer/genre/rating extraction."""
     html = """
     <html>
@@ -971,8 +1017,8 @@ def test_metacritic_scraper_developer_genre_rating_exception(mock_session_class:
     mock_response.raise_for_status = Mock()
     mock_session.get.return_value = mock_response
     mock_session_class.return_value = mock_session
-    
+
     scraper = MetaCriticScraper("https://www.metacritic.com/game/test-game")
-    
+
     # Should handle exceptions gracefully
     assert scraper.game["url"] == "https://www.metacritic.com/game/test-game"

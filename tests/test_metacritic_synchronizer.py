@@ -235,7 +235,9 @@ def test_synchronize_metacritic_games_without_url(
     settings = mock_configs
 
     # Mock search to return URL
-    mock_search.return_value = "https://www.metacritic.com/game/pc/test-game-without-url"
+    mock_search.return_value = (
+        "https://www.metacritic.com/game/pc/test-game-without-url"
+    )
 
     # Mock MetaCriticScraper
     mock_scraper = Mock()
