@@ -13,7 +13,7 @@ Initially, I needed to keep track of all my games across all platforms to avoid 
 - **Choose the next game to play** from my library based on various criteria
 - **Quickly record game completions**
 - **View game statistics**
-- **Most importantly**: I wanted to be able to add features myself and own my database. I didn't want to experience what happened with Notion—where suddenly all your records are blocked for no reason (see [this example](https://www.reddit.com/r/Notion/comments/1odxw00/notion_will_ban_your_account_for_no_reason_and/))
+- **Most importantly**: I wanted to be able to add features myself and own my database. I didn't want to experience what happened with Notion - where suddenly all your records are blocked for no reason (see [this example](https://www.reddit.com/r/Notion/comments/1odxw00/notion_will_ban_your_account_for_no_reason_and/))
 
 I also wanted to have this always at hand. I didn't want to write a full mobile app, so I created a Telegram bot instead.
 
