@@ -432,8 +432,8 @@ class ExcelImporter:
                         platform_entries.append((str(platform_id), game_id))
 
             # Write all platform entries
-            for i, (platform_id, ref_game_id) in enumerate(platform_entries):
-                f.write(f'("{platform_id}", "{ref_game_id}")')
+            for i, (platform_id_str, ref_game_id) in enumerate(platform_entries):
+                f.write(f'("{platform_id_str}", "{ref_game_id}")')
                 if i < len(platform_entries) - 1:
                     f.write(",\n")
                 else:

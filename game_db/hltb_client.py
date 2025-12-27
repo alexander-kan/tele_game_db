@@ -9,9 +9,9 @@ from __future__ import annotations
 import logging
 
 try:
-    from howlongtobeatpy import HowLongToBeat
+    from howlongtobeatpy import HowLongToBeat  # type: ignore[import-untyped]
 except ImportError:
-    HowLongToBeat = None  # type: ignore[assignment, misc]
+    HowLongToBeat = None  # type: ignore[assignment]
 
 logger = logging.getLogger("game_db.hltb")
 

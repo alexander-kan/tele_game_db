@@ -48,12 +48,15 @@ class SteamAPI:
             data = cast(SteamAPIResponseDict, json.loads(response.text))
             response_data = data.get("response", {})
             games_data = response_data.get("games", [])
-            game_count = response_data.get("game_count", len(games_data))
+            game_count_raw = response_data.get("game_count", len(games_data))
+            game_count = (
+                game_count_raw if isinstance(game_count_raw, int) else len(games_data)
+            )
 
             # Log warning if API returns fewer games than reported count
             # This is a known Steam API limitation - some games (DLC, hidden games, etc.)
             # may not be returned even though they exist in the account
-            if len(games_data) < game_count:
+            if isinstance(games_data, list) and len(games_data) < game_count:
                 logger.warning(
                     "[STEAM_API] API reports %d games but returned only %d. "
                     "Some games (DLC, hidden games, removed from store) may not be included.",

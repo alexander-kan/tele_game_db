@@ -94,7 +94,11 @@ class MetaCriticScraper:
         # Get Title and Platform
         try:
             product_title_div = self.soup.find("div", class_="product_title")
-            if product_title_div and product_title_div.a:
+            if (
+                product_title_div
+                and hasattr(product_title_div, "a")
+                and product_title_div.a
+            ):
                 self.game["title"] = product_title_div.a.text.strip()
         except Exception:
             logger.debug("Problem getting title and platform information")
@@ -103,15 +107,15 @@ class MetaCriticScraper:
         # Get publisher and release date
         try:
             publisher_li = self.soup.find("li", class_="summary_detail publisher")
-            if publisher_li and publisher_li.a:
+            if publisher_li and hasattr(publisher_li, "a") and publisher_li.a:
                 self.game["publisher"] = publisher_li.a.text.strip()
 
             # Try multiple ways to find release date
             # Method 1: Standard selector
             release_li = self.soup.find("li", class_="summary_detail release_data")
-            if release_li:
+            if release_li and hasattr(release_li, "find"):
                 data_span = release_li.find("span", class_="data")
-                if data_span:
+                if data_span and hasattr(data_span, "text"):
                     self.game["release_date"] = data_span.text.strip()
                     logger.info(
                         "[METACRITIC_SCRAPER] Found release_date (method 1): %s",

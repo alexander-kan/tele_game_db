@@ -860,8 +860,8 @@ class MetacriticSynchronizer:
                     total_games,
                     game_name,
                 )
-                actual_url = search_metacritic_game_url(game_name)
-                if not actual_url:
+                metacritic_url: str | None = search_metacritic_game_url(game_name)
+                if not metacritic_url:
                     logger.warning(
                         "[METACRITIC_SYNC] Could not find Metacritic URL "
                         "for game: %s",

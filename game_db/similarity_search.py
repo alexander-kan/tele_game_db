@@ -14,7 +14,7 @@ try:
     from pyxdameraulevenshtein import damerau_levenshtein_distance
 except ImportError:
     # Fallback to simple implementation if library not available
-    def damerau_levenshtein_distance(s1: str, s2: str) -> int:
+    def damerau_levenshtein_distance(seq1: str, seq2: str) -> int:  # type: ignore[misc]
         """Simple fallback implementation."""
         # This is a simplified version - for production use the library
         if s1 == s2:

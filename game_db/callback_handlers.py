@@ -23,7 +23,7 @@ logger = logging.getLogger("game_db.bot")
 
 def _safe_answer_callback_query(
     bot: telebot.TeleBot,
-    callback_query_id: str,
+    callback_query_id: str | int,
     text: str | None = None,
     show_alert: bool = False,
 ) -> None:
@@ -36,7 +36,11 @@ def _safe_answer_callback_query(
         show_alert: If True, show as alert instead of notification
     """
     try:
-        bot.answer_callback_query(callback_query_id, text=text, show_alert=show_alert)
+        # Convert to int if it's a string (for compatibility)
+        query_id = (
+            int(callback_query_id) if isinstance(callback_query_id, str) else callback_query_id
+        )
+        bot.answer_callback_query(query_id, text=text, show_alert=show_alert)
     except ApiTelegramException as e:
         if "query is too old" in str(e) or "query ID is invalid" in str(e):
             logger.debug(
@@ -87,13 +91,13 @@ def handle_callback_query(
     """
     user_id = call.from_user.id if call.from_user else None
 
-    if not security.user_check(user_id):
+    if user_id is None or not security.user_check(user_id):
         logger.warning(
             "[UNAUTHORIZED_ACCESS] Unauthorized user %s tried to use callback",
             user_id,
         )
         _safe_answer_callback_query(
-            bot, call.id, texts.PRIVATE_BOT_TEXT, show_alert=True
+            bot, str(call.id), texts.PRIVATE_BOT_TEXT, show_alert=True
         )
         return
 

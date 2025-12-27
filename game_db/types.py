@@ -34,30 +34,34 @@ class SteamGame(NamedTuple):
             img_icon_url=str(data.get("img_icon_url", "")),
             img_logo_url=str(data.get("img_logo_url", "")),
             has_community_visible_stats=(
-                data.get("has_community_visible_stats")
+                bool(data.get("has_community_visible_stats"))
                 if isinstance(
                     data.get("has_community_visible_stats"), (bool, type(None))
                 )
                 else None
             ),
             playtime_windows_forever=(
-                data.get("playtime_windows_forever")
+                int(data.get("playtime_windows_forever"))  # type: ignore[call-overload]
                 if isinstance(data.get("playtime_windows_forever"), (int, type(None)))
+                and data.get("playtime_windows_forever") is not None
                 else None
             ),
             playtime_mac_forever=(
-                data.get("playtime_mac_forever")
+                int(data.get("playtime_mac_forever"))  # type: ignore[call-overload]
                 if isinstance(data.get("playtime_mac_forever"), (int, type(None)))
+                and data.get("playtime_mac_forever") is not None
                 else None
             ),
             playtime_linux_forever=(
-                data.get("playtime_linux_forever")
+                int(data.get("playtime_linux_forever"))  # type: ignore[call-overload]
                 if isinstance(data.get("playtime_linux_forever"), (int, type(None)))
+                and data.get("playtime_linux_forever") is not None
                 else None
             ),
             rtime_last_played=(
-                data.get("rtime_last_played")
+                int(data.get("rtime_last_played"))  # type: ignore[call-overload]
                 if isinstance(data.get("rtime_last_played"), (int, type(None)))
+                and data.get("rtime_last_played") is not None
                 else None
             ),
         )
