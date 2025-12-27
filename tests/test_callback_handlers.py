@@ -7,9 +7,11 @@ from unittest.mock import Mock, patch
 import pytest
 from telebot.apihelper import ApiTelegramException
 
-from game_db.callback_handlers import (_safe_answer_callback_query,
-                                       _send_menu_at_bottom,
-                                       handle_callback_query)
+from game_db.callback_handlers import (
+    _safe_answer_callback_query,
+    _send_menu_at_bottom,
+    handle_callback_query,
+)
 from game_db.config import SettingsConfig, UsersConfig
 from game_db.security import Security
 

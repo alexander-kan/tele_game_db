@@ -10,7 +10,7 @@ from telebot.types import Message
 from .. import menu, texts
 from ..config import SettingsConfig
 from ..security import Security
-from ..utils import (is_path_safe, safe_delete_file, validate_file_name)
+from ..utils import is_path_safe, safe_delete_file, validate_file_name
 from .base import Command
 
 logger = logging.getLogger("game_db.bot")

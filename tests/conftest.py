@@ -7,10 +7,18 @@ from __future__ import annotations
 # Using absolute imports for pytest compatibility
 from tests.fixtures.db import empty_db, temp_db
 from tests.fixtures.excel import empty_excel, temp_excel
-from tests.fixtures.telegram import (admin_security, bot_app, mock_bot,
-                                     mock_message, mock_message_with_document,
-                                     mock_steam_api, test_config, test_tokens,
-                                     test_users, user_security)
+from tests.fixtures.telegram import (
+    admin_security,
+    bot_app,
+    mock_bot,
+    mock_message,
+    mock_message_with_document,
+    mock_steam_api,
+    test_config,
+    test_tokens,
+    test_users,
+    user_security,
+)
 
 __all__ = [
     # Database fixtures

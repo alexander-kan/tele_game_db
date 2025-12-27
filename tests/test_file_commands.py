@@ -7,8 +7,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from game_db.commands import (GetFileCommand, RemoveFileCommand,
-                              SyncSteamCommand)
+from game_db.commands import GetFileCommand, RemoveFileCommand, SyncSteamCommand
 from game_db.config import DBFilesConfig, Paths, SettingsConfig
 
 

@@ -6,10 +6,17 @@ from pathlib import Path
 
 import pytest
 
-from game_db.config import (DEFAULT_PLATFORMS, DBFilesConfig, Paths,
-                            SettingsConfig, TokensConfig, UsersConfig,
-                            load_settings_config, load_tokens_config,
-                            load_users_config)
+from game_db.config import (
+    DEFAULT_PLATFORMS,
+    DBFilesConfig,
+    Paths,
+    SettingsConfig,
+    TokensConfig,
+    UsersConfig,
+    load_settings_config,
+    load_tokens_config,
+    load_users_config,
+)
 
 
 class TestConfigDataclasses:

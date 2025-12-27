@@ -6,9 +6,13 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from game_db.commands import (CountGamesCommand, CountTimeCommand,
-                              GetGameCommand, SteamGameListCommand,
-                              SwitchGameListCommand)
+from game_db.commands import (
+    CountGamesCommand,
+    CountTimeCommand,
+    GetGameCommand,
+    SteamGameListCommand,
+    SwitchGameListCommand,
+)
 from game_db.config import SettingsConfig
 from game_db.security import Security
 

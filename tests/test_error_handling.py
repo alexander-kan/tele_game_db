@@ -7,8 +7,12 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from game_db.exceptions import (DatabaseConnectionError, DatabaseError,
-                                DatabaseQueryError, SQLFileNotFoundError)
+from game_db.exceptions import (
+    DatabaseConnectionError,
+    DatabaseError,
+    DatabaseQueryError,
+    SQLFileNotFoundError,
+)
 from game_db.repositories.game_repository import GameRepository
 from game_db.services import game_service
 

@@ -10,9 +10,14 @@ from telebot.types import Message
 
 from . import handlers
 from .callback_handlers import handle_callback_query
-from .config import (SettingsConfig, TokensConfig, UsersConfig,
-                     load_settings_config, load_tokens_config,
-                     load_users_config)
+from .config import (
+    SettingsConfig,
+    TokensConfig,
+    UsersConfig,
+    load_settings_config,
+    load_tokens_config,
+    load_users_config,
+)
 from .logging_config import configure_logging
 from .security import Security
 from .utils import clean_directory_safely
