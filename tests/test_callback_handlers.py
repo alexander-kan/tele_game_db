@@ -5,7 +5,6 @@ from __future__ import annotations
 from unittest.mock import Mock, patch
 
 import pytest
-import telebot
 from telebot.apihelper import ApiTelegramException
 
 from game_db.callback_handlers import (_safe_answer_callback_query,

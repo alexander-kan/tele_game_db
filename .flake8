@@ -1,0 +1,22 @@
+[flake8]
+max-line-length = 88
+extend-ignore = E203, W503
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    .eggs,
+    *.egg,
+    build,
+    dist
+per-file-ignores =
+    game_db/MetaCriticScraper.py:E501
+    game_db/db.py:E501
+    game_db/db_excel.py:E501
+    game_db/handlers.py:E501
+    game_db/services/database_service.py:E501
+    game_db/steam_api.py:E501
+    tests/test_config.py:E501
+    game_db/excel/steam_formatter.py:F401
+    tests/fixtures/telegram.py:F821

@@ -9,8 +9,6 @@ import sys
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-import pytest
-
 from game_db import handlers
 from game_db.config import SettingsConfig, UsersConfig
 from game_db.security import Security

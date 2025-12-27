@@ -4,9 +4,7 @@ from __future__ import annotations
 
 from unittest.mock import Mock, patch
 
-import pytest
 import requests
-from bs4 import BeautifulSoup
 
 from game_db.metacritic_search import search_metacritic_game_url
 

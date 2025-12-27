@@ -13,7 +13,7 @@ import pytest
 from openpyxl import Workbook
 
 from game_db.config import DBFilesConfig, Paths, SettingsConfig
-from game_db.constants import EXCEL_DATE_NOT_SET, EXCEL_NONE_VALUE
+from game_db.constants import EXCEL_DATE_NOT_SET
 from game_db.db import DatabaseManager
 from game_db.db_excel import ExcelImporter
 

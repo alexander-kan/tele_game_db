@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import pytest
-
 from game_db.config import UsersConfig
 from game_db.security import Security
 

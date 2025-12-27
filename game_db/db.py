@@ -11,11 +11,16 @@ from time import localtime, strftime
 from openpyxl import Workbook, load_workbook
 
 from . import steam_api
-from .config import (PROJECT_ROOT, SettingsConfig, TokensConfig,
-                     load_column_table_names_config, load_settings_config,
-                     load_similarity_thresholds_config,
-                     load_table_names_config, load_tokens_config,
-                     load_values_dictionaries_config)
+from .config import (
+    SettingsConfig,
+    TokensConfig,
+    load_column_table_names_config,
+    load_settings_config,
+    load_similarity_thresholds_config,
+    load_table_names_config,
+    load_tokens_config,
+    load_values_dictionaries_config,
+)
 from .constants import ExcelColumn
 from .db_dictionaries import DictionariesBuilder
 from .db_excel import ExcelImporter
@@ -301,9 +306,6 @@ class SteamSynchronizer:
             workbook: OpenPyXL Workbook instance
             steam_game_list: List of SteamGame instances from Steam API
         """
-        # Create a set of Steam game names for fast lookup
-        steam_game_names = {game.name for game in steam_game_list}
-
         sheet = workbook["init_games"]
         games_in_db_not_in_steam: list[str] = []
 

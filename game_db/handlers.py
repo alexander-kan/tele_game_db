@@ -166,6 +166,9 @@ def _handle_game_lists_menu(
     message: Message, bot: telebot.TeleBot, _sec: Security
 ) -> None:
     """Handle game lists menu command."""
+    from .config import load_settings_config
+
+    settings = load_settings_config()
     bot.send_message(
         message.chat.id,
         texts.GAME_LISTS_MENU,

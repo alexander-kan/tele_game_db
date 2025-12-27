@@ -5,8 +5,6 @@ from __future__ import annotations
 import configparser
 from pathlib import Path
 
-import pytest
-
 from game_db.config import DBFilesConfig, Paths, SettingsConfig
 from game_db.constants import EXCEL_NONE_VALUE, ExcelRowIndex
 from game_db.db_excel import ExcelImporter

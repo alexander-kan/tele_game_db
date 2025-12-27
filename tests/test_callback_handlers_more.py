@@ -12,7 +12,6 @@ from game_db.callback_handlers import (_handle_count_completed,
                                        _handle_stats_time)
 from game_db.config import SettingsConfig, UsersConfig
 from game_db.exceptions import DatabaseError
-from game_db.menu_callbacks import CallbackAction
 from game_db.security import Security
 
 

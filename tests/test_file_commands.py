@@ -216,7 +216,6 @@ def test_sync_steam_success(
     file_commands_settings: SettingsConfig,
 ) -> None:
     """SyncSteamCommand calls ChangeDB.synchronize_steam_games and updates backup."""
-    from game_db import texts
 
     backup_excel = file_commands_settings.paths.games_excel_file
     backup_excel.parent.mkdir(parents=True, exist_ok=True)

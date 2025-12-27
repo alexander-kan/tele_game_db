@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import logging
-from typing import Callable
 
 import telebot
 from telebot.types import Message

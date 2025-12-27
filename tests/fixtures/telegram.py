@@ -170,7 +170,8 @@ def bot_app(
     test_config: SettingsConfig,
     test_tokens: TokensConfig,
     test_users: UsersConfig,
-) -> "BotApplication":
+    ):
+        # type: () -> game_db.bot.BotApplication
     """Create a BotApplication instance for testing.
 
     Returns:

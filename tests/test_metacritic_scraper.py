@@ -2,11 +2,10 @@
 
 from __future__ import annotations
 
-from unittest.mock import MagicMock, Mock, patch
+from unittest.mock import Mock, patch
 
 import pytest
 import requests
-from bs4 import BeautifulSoup
 
 from game_db.MetaCriticScraper import MetaCriticScraper
 

@@ -2,15 +2,13 @@
 
 from __future__ import annotations
 
-from unittest.mock import Mock, patch
-
-import pytest
-
 from game_db.config import SimilarityThresholdsConfig
-from game_db.similarity_search import (SimilarityMatch,
-                                       calculate_similarity_score,
-                                       find_closest_match, is_acceptable_match,
-                                       normalize_string)
+from game_db.similarity_search import (
+    calculate_similarity_score,
+    find_closest_match,
+    is_acceptable_match,
+    normalize_string,
+)
 
 
 def test_normalize_string() -> None:
