@@ -45,7 +45,7 @@ class ExcelImporter:
     Column 13: additional_time (str | None, hours as float string, optional)
     """
 
-    def __init__(
+    def __init__(  # type: ignore[no-untyped-def]
         self,
         settings: SettingsConfig,
         table_names: configparser.ConfigParser,

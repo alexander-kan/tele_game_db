@@ -102,7 +102,12 @@ def handle_callback_query(
         return
 
     try:
-        action, args = parse_callback_data(call.data)
+        # call.data is checked for None above
+        callback_data = call.data
+        if callback_data is None:
+            _safe_answer_callback_query(bot, call.id, "Invalid callback data")
+            return
+        action, args = parse_callback_data(callback_data)
         logger.debug(
             "[CALLBACK] User %s triggered action %s with args %s",
             user_id,
