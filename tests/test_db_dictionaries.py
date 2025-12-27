@@ -57,9 +57,7 @@ class TestDictionariesBuilder:
     ) -> DictionariesBuilder:
         """Create DictionariesBuilder instance."""
         table_names, column_table_names, values_dictionaries = mock_configs
-        return DictionariesBuilder(
-            table_names, column_table_names, values_dictionaries
-        )
+        return DictionariesBuilder(table_names, column_table_names, values_dictionaries)
 
     def test_create_dml_dictionaries_creates_file(
         self, builder: DictionariesBuilder, tmp_path: Path

@@ -62,12 +62,8 @@ def _get_command_handler(owner_name: str | None = None) -> CommandHandler:
         # Register menu commands
         _command_handler.register_exact("Clear Menu", ClearMenuCommand())
         _command_handler.register_exact("Back to Main Menu", MainMenuCommand())
-        _command_handler.register_exact(
-            "File Management Menu", FileMenuCommand()
-        )
-        _command_handler.register_exact(
-            "Game Lists", GameListsMenuCommand()
-        )
+        _command_handler.register_exact("File Management Menu", FileMenuCommand())
+        _command_handler.register_exact("Game Lists", GameListsMenuCommand())
         _command_handler.register_exact(
             "Show Available Commands", ShowCommandsCommand()
         )
@@ -89,9 +85,7 @@ def _get_command_handler(owner_name: str | None = None) -> CommandHandler:
             "Synchronize games to Steam", SyncSteamCommand()
         )
         _command_handler.register_prefix("getgame", GetGameCommand())
-        _command_handler.register_substring(
-            "Steam Games List", SteamGameListCommand()
-        )
+        _command_handler.register_substring("Steam Games List", SteamGameListCommand())
         _command_handler.register_substring(
             "Switch Games List", SwitchGameListCommand()
         )
@@ -132,9 +126,7 @@ def _get_platforms() -> list[str]:
         return DEFAULT_PLATFORMS
 
 
-def handle_start_help(
-    message: Message, bot: telebot.TeleBot, sec: Security
-) -> None:
+def handle_start_help(message: Message, bot: telebot.TeleBot, sec: Security) -> None:
     """Handle /start and /help commands."""
     user_id = message.chat.id if message.chat else None
     if not sec.user_check(message.chat.id):
@@ -155,9 +147,7 @@ def handle_start_help(
     )
 
 
-def _handle_clear_menu(
-    message: Message, bot: telebot.TeleBot, _sec: Security
-) -> None:
+def _handle_clear_menu(message: Message, bot: telebot.TeleBot, _sec: Security) -> None:
     """Handle clear menu command."""
     if not message.from_user:
         return
@@ -168,9 +158,7 @@ def _handle_clear_menu(
     )
 
 
-def _handle_main_menu(
-    message: Message, bot: telebot.TeleBot, sec: Security
-) -> None:
+def _handle_main_menu(message: Message, bot: telebot.TeleBot, sec: Security) -> None:
     """Handle main menu command."""
     if not message.from_user:
         return
@@ -181,9 +169,7 @@ def _handle_main_menu(
     )
 
 
-def _handle_file_menu(
-    message: Message, bot: telebot.TeleBot, sec: Security
-) -> None:
+def _handle_file_menu(message: Message, bot: telebot.TeleBot, sec: Security) -> None:
     """Handle file menu command."""
     bot.send_message(
         message.chat.id,
@@ -268,9 +254,7 @@ def _handle_sync_steam(
                 backup_excel,
                 user_id,
             )
-            bot.send_message(
-                message.chat.id, texts.STEAM_SYNC_FILE_NOT_FOUND
-            )
+            bot.send_message(message.chat.id, texts.STEAM_SYNC_FILE_NOT_FOUND)
             return
 
         # Copy current backup Excel to update_db
@@ -292,8 +276,7 @@ def _handle_sync_steam(
             bot.send_message(message.chat.id, texts.STEAM_SYNC_SUCCESS)
         else:
             logger.error(
-                "[STEAM_SYNC] Steam synchronization failed "
-                "(user: %s, file: %s)",
+                "[STEAM_SYNC] Steam synchronization failed " "(user: %s, file: %s)",
                 user_id,
                 update_excel,
                 exc_info=True,
@@ -365,9 +348,7 @@ def handle_text(
     )
 
 
-def _handle_get_game(
-    message: Message, bot: telebot.TeleBot, sec: Security
-) -> None:
+def _handle_get_game(message: Message, bot: telebot.TeleBot, sec: Security) -> None:
     """Handle getgame command - query and format game information."""
     if not message.text:
         return
@@ -458,8 +439,7 @@ def _handle_remove_file(
     # Use safe file deletion with path validation
     if safe_delete_file(target_path, settings.paths.files_dir):
         logger.info(
-            "[FILE_DELETION] File deleted successfully "
-            "(user: %s, file: %s)",
+            "[FILE_DELETION] File deleted successfully " "(user: %s, file: %s)",
             user_id,
             target_path,
         )
@@ -544,15 +524,16 @@ def _handle_get_file(
 
 
 def _handle_count_games(
-    message: Message, bot: telebot.TeleBot, platforms: list[str], settings: SettingsConfig
+    message: Message,
+    bot: telebot.TeleBot,
+    platforms: list[str],
+    settings: SettingsConfig,
 ) -> None:
     """Handle count games command - format completed games statistics."""
     platform_counts = {}
     for platform in platforms:
         try:
-            platform_counts[platform] = game_service.count_complete_games(
-                platform
-            )
+            platform_counts[platform] = game_service.count_complete_games(platform)
         except DatabaseError as e:
             logger.error(
                 "Database error counting games for platform '%s': %s",
@@ -576,7 +557,10 @@ def _handle_count_games(
 
 
 def _handle_count_time(
-    message: Message, bot: telebot.TeleBot, platforms: list[str], settings: SettingsConfig
+    message: Message,
+    bot: telebot.TeleBot,
+    platforms: list[str],
+    settings: SettingsConfig,
 ) -> None:
     """Handle count time command - format time statistics."""
     # Collect time data for completed games
@@ -721,8 +705,7 @@ def handle_file_upload(
         # Ensure target is within allowed directory
         if not is_path_safe(target_path, update_db_dir):
             logger.error(
-                "[FILE_UPLOAD] Path traversal attempt detected "
-                "(user: %s, path: %s)",
+                "[FILE_UPLOAD] Path traversal attempt detected " "(user: %s, path: %s)",
                 user_id,
                 target_path,
                 exc_info=True,
@@ -738,8 +721,7 @@ def handle_file_upload(
         # Ensure target is within allowed directory
         if not is_path_safe(target_path, files_dir):
             logger.error(
-                "[FILE_UPLOAD] Path traversal attempt detected "
-                "(user: %s, path: %s)",
+                "[FILE_UPLOAD] Path traversal attempt detected " "(user: %s, path: %s)",
                 user_id,
                 target_path,
                 exc_info=True,
@@ -755,15 +737,13 @@ def handle_file_upload(
         with open(target_path, "wb") as new_file:
             new_file.write(downloaded_file)
         logger.info(
-            "[FILE_UPLOAD] Successfully saved uploaded file "
-            "(user: %s, file: %s)",
+            "[FILE_UPLOAD] Successfully saved uploaded file " "(user: %s, file: %s)",
             user_id,
             target_path,
         )
     except OSError as e:
         logger.error(
-            "[FILE_UPLOAD] Failed to save uploaded file "
-            "(user: %s, file: %s): %s",
+            "[FILE_UPLOAD] Failed to save uploaded file " "(user: %s, file: %s): %s",
             user_id,
             target_path,
             str(e),
@@ -819,9 +799,7 @@ def game_list(message: Message, platform: str) -> tuple[Message, str]:
 
     formatter = MessageFormatter()
     platform_game_list = formatter.format_game_list(next_game_list)
-    message.text = (
-        f"{platform},{int(message_text[1]) + 10},{int(message_text[2])}"
-    )
+    message.text = f"{platform},{int(message_text[1]) + 10},{int(message_text[2])}"
     return (message, platform_game_list)
 
 
@@ -837,9 +815,7 @@ def update_db(
     if sec.admin_check(message.chat.id):
         if not message.document or not message.document.file_name:
             return
-        update_path = (
-            settings.paths.update_db_dir / message.document.file_name
-        )
+        update_path = settings.paths.update_db_dir / message.document.file_name
         if update_path.is_file():
             db = db_module.ChangeDB()
             if mode == "recreate":

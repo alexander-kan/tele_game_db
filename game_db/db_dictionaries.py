@@ -38,13 +38,9 @@ class DictionariesBuilder:
             status_name_col = self.column_table_names["status_dictionary"][
                 "status_name"
             ]
-            f.write(
-                "INSERT INTO "
-                f"{status_table} "
-                f"({status_name_col})\n"
-            )
+            f.write("INSERT INTO " f"{status_table} " f"({status_name_col})\n")
             f.write("VALUES\n")
-            
+
             # Dynamically iterate over all status entries
             status_items = list(self.values_dictionaries["STATUS"].items())
             for idx, (key, value) in enumerate(status_items):
@@ -59,13 +55,9 @@ class DictionariesBuilder:
             platform_name_col = self.column_table_names["platform_dictionary"][
                 "platform_name"
             ]
-            f.write(
-                "INSERT INTO "
-                f"{platform_table} "
-                f"({platform_name_col})\n"
-            )
+            f.write("INSERT INTO " f"{platform_table} " f"({platform_name_col})\n")
             f.write("VALUES\n")
-            
+
             # Dynamically iterate over all platform entries
             platform_items = list(self.values_dictionaries["PLATFORM"].items())
             for idx, (key, value) in enumerate(platform_items):

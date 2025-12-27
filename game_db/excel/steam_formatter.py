@@ -58,25 +58,21 @@ class SteamExcelFormatter:
         playtime_hours = SteamExcelFormatter.format_playtime_hours(
             game.playtime_forever
         )
-        sheet.cell(
-            row=row_number, column=ExcelColumn.MY_TIME_BEAT
-        ).value = playtime_hours
+        sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value = (
+            playtime_hours
+        )
 
         # Update last launch date if available
         if game.rtime_last_played is not None:
             formatted_date = date_formatter(game.rtime_last_played)
-            sheet.cell(
-                row=row_number, column=ExcelColumn.LAST_LAUNCH_DATE
-            ).value = formatted_date
+            sheet.cell(row=row_number, column=ExcelColumn.LAST_LAUNCH_DATE).value = (
+                formatted_date
+            )
 
         # Update status if game was not started
-        current_status = sheet.cell(
-            row=row_number, column=ExcelColumn.STATUS
-        ).value
+        current_status = sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
         if current_status == "Not Started":
-            sheet.cell(
-                row=row_number, column=ExcelColumn.STATUS
-            ).value = "Dropped"
+            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Dropped"
 
     @staticmethod
     def reset_game_without_playtime(
@@ -97,15 +93,13 @@ class SteamExcelFormatter:
         ).value
 
         if additional_time == EXCEL_NONE_VALUE:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.MY_TIME_BEAT
-            ).value = EXCEL_NONE_VALUE
-            sheet.cell(
-                row=row_number, column=ExcelColumn.LAST_LAUNCH_DATE
-            ).value = EXCEL_DATE_NOT_SET
-            sheet.cell(
-                row=row_number, column=ExcelColumn.STATUS
-            ).value = "Not Started"
+            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value = (
+                EXCEL_NONE_VALUE
+            )
+            sheet.cell(row=row_number, column=ExcelColumn.LAST_LAUNCH_DATE).value = (
+                EXCEL_DATE_NOT_SET
+            )
+            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = "Not Started"
 
     @staticmethod
     def update_game_row(

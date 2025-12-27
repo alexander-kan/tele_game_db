@@ -25,17 +25,13 @@ def search_metacritic_game_url(game_name: str) -> str | None:
         # and lowercase for search terms
         search_term = game_name.lower().replace(" ", "-")
         # Remove special characters that might break URL
-        search_term = "".join(
-            c if c.isalnum() or c in "-" else "" for c in search_term
-        )
+        search_term = "".join(c if c.isalnum() or c in "-" else "" for c in search_term)
         # Remove multiple consecutive hyphens
         while "--" in search_term:
             search_term = search_term.replace("--", "-")
         search_term = search_term.strip("-")
 
-        search_url = (
-            f"https://www.metacritic.com/search/game/{search_term}/results"
-        )
+        search_url = f"https://www.metacritic.com/search/game/{search_term}/results"
 
         # Use realistic browser headers
         headers = {
@@ -119,16 +115,15 @@ def search_metacritic_game_url(game_name: str) -> str | None:
                         elif href.startswith("http") and "metacritic.com/game/" in href:
                             result_url = href
                         if result_url:
-                            logger.debug(
-                                "Found game URL via method 2: %s", result_url
-                            )
+                            logger.debug("Found game URL via method 2: %s", result_url)
                             break
 
         # Method 3: Look for divs or sections with game information
         if not result_url:
             game_containers = soup.find_all(
                 ["div", "section", "article"],
-                class_=lambda x: x and ("game" in str(x).lower() or "result" in str(x).lower()),
+                class_=lambda x: x
+                and ("game" in str(x).lower() or "result" in str(x).lower()),
             )
             for container in game_containers:
                 link = container.find("a", href=True)
@@ -145,9 +140,7 @@ def search_metacritic_game_url(game_name: str) -> str | None:
                                 break
 
         if result_url:
-            logger.info(
-                "Found Metacritic URL for '%s': %s", game_name, result_url
-            )
+            logger.info("Found Metacritic URL for '%s': %s", game_name, result_url)
             return result_url
 
         logger.warning(

@@ -165,9 +165,7 @@ class DatabaseService:
         )
         return self.excel_importer.add_games(str(xlsx_path), mode)
 
-    def synchronize_steam_games(
-        self, xlsx_path: str | Path
-    ) -> tuple[bool, list]:
+    def synchronize_steam_games(self, xlsx_path: str | Path) -> tuple[bool, list]:
         """Synchronize Steam playtime and dates with Excel and recreate DB.
 
         This operation:
@@ -189,9 +187,7 @@ class DatabaseService:
         )
         return self.steam_synchronizer.synchronize_steam_games(str(xlsx))
 
-    def check_steam_games(
-        self, xlsx_path: str | Path
-    ) -> tuple[bool, list]:
+    def check_steam_games(self, xlsx_path: str | Path) -> tuple[bool, list]:
         """Check which games from Steam are missing in database.
 
         Args:
@@ -224,9 +220,7 @@ class DatabaseService:
             len(game_names),
             xlsx,
         )
-        return self.steam_synchronizer.add_steam_games_to_excel(
-            str(xlsx), game_names
-        )
+        return self.steam_synchronizer.add_steam_games_to_excel(str(xlsx), game_names)
 
     def synchronize_metacritic_games(
         self,
@@ -322,7 +316,5 @@ class DatabaseService:
             sql_dictionaries: Path to output SQL file
         """
         sql_path = Path(sql_dictionaries)
-        logger.info(
-            "[DML_GENERATION] Creating DML dictionaries file: %s", sql_path
-        )
+        logger.info("[DML_GENERATION] Creating DML dictionaries file: %s", sql_path)
         self.dictionaries_builder.create_dml_dictionaries(str(sql_path))

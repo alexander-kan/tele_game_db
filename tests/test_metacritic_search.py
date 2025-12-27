@@ -15,9 +15,7 @@ class TestSearchMetacriticGameUrl:
     """Test search_metacritic_game_url function."""
 
     @patch("game_db.metacritic_search.requests.Session")
-    def test_search_success_with_result_list(
-        self, mock_session_class: Mock
-    ) -> None:
+    def test_search_success_with_result_list(self, mock_session_class: Mock) -> None:
         """Test successful search when results are in <li class="result">."""
         # Mock HTML response with search results
         html_content = """
@@ -47,9 +45,7 @@ class TestSearchMetacriticGameUrl:
         mock_session.get.assert_called_once()
 
     @patch("game_db.metacritic_search.requests.Session")
-    def test_search_success_with_direct_links(
-        self, mock_session_class: Mock
-    ) -> None:
+    def test_search_success_with_direct_links(self, mock_session_class: Mock) -> None:
         """Test successful search when results are direct game links."""
         # Mock HTML response with direct game links
         html_content = """

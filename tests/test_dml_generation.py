@@ -322,8 +322,12 @@ class TestDMLGamesGeneration:
 
             # Verify float values are not quoted
             # Should have numeric values for scores and times
-            assert re.search(r',\s*8\.5,', content) or re.search(r',\s*8\.5\s*,', content)
-            assert re.search(r',\s*12\.5,', content) or re.search(r',\s*12\.5\s*,', content)
+            assert re.search(r",\s*8\.5,", content) or re.search(
+                r",\s*8\.5\s*,", content
+            )
+            assert re.search(r",\s*12\.5,", content) or re.search(
+                r",\s*12\.5\s*,", content
+            )
 
             # Verify URLs are quoted
             assert '"https://www.metacritic.com/game/pc/test-game-1"' in content
@@ -406,9 +410,7 @@ class TestDMLGamesGeneration:
         sql_file.close()
 
         try:
-            game_id_map = excel_importer.generate_dml_games_sql(
-                excel_path, sql_path
-            )
+            game_id_map = excel_importer.generate_dml_games_sql(excel_path, sql_path)
 
             # Should only have 1 game (invalid row skipped)
             assert len(game_id_map) == 1

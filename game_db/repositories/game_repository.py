@@ -151,9 +151,7 @@ class GameRepository:
                 f"Missing or unreadable SQL files: {', '.join(missing_files)}"
             )
 
-        logger.info(
-            "Validated %d SQL files successfully", len(_REQUIRED_SQL_FILES)
-        )
+        logger.info("Validated %d SQL files successfully", len(_REQUIRED_SQL_FILES))
 
     @staticmethod
     def clear_sql_cache() -> None:
@@ -164,9 +162,7 @@ class GameRepository:
         GameRepository._load_sql_cached.cache_clear()
         logger.debug("SQL cache cleared")
 
-    def _execute_query(
-        self, sql: str, params: tuple | None = None
-    ) -> list[tuple]:
+    def _execute_query(self, sql: str, params: tuple | None = None) -> list[tuple]:
         """Execute a SELECT query and return results.
 
         Args:
@@ -309,10 +305,7 @@ class GameRepository:
         Raises:
             DatabaseQueryError: If query execution fails
         """
-        sql = (
-            "SELECT platform_name FROM platform_dictionary "
-            "ORDER BY platform_name"
-        )
+        sql = "SELECT platform_name FROM platform_dictionary " "ORDER BY platform_name"
         logger.debug("Fetching platforms from database")
         results = self._execute_query(sql)
         platforms = [row[0] for row in results if row[0]]

@@ -55,24 +55,16 @@ class MessageFormatter:
             else GAME_NEVER_PLAYED
         )
 
-        press_score_str = (
-            str(press_score) if press_score else "not specified"
-        )
+        press_score_str = str(press_score) if press_score else "not specified"
         avg_time_str = (
             float_to_time(str(average_time_beat))
             if average_time_beat
             else "not specified"
         )
-        user_score_str = (
-            str(user_score) if user_score else "not specified"
-        )
+        user_score_str = str(user_score) if user_score else "not specified"
         my_score_str = str(my_score) if my_score else "not specified"
-        metacritic_str = (
-            str(metacritic_url) if metacritic_url else "not specified"
-        )
-        trailer_str = (
-            str(trailer_url) if trailer_url else "not specified"
-        )
+        metacritic_str = str(metacritic_url) if metacritic_url else "not specified"
+        trailer_str = str(trailer_url) if trailer_url else "not specified"
 
         return (
             f"Full Game Name\n{str(game_name)}\n"
@@ -200,9 +192,7 @@ class MessageFormatter:
                 expected_str = (
                     float_to_time(expected) if expected is not None else "not specified"
                 )
-                real_str = (
-                    float_to_time(real) if real is not None else "not specified"
-                )
+                real_str = float_to_time(real) if real is not None else "not specified"
                 stats_lines.append(
                     f"{platform}: expected - {expected_str}, real - {real_str}"
                 )
@@ -211,9 +201,7 @@ class MessageFormatter:
         if show_total:
             total_hours = total_real_seconds / 3600
             total_str = float_to_time(total_hours)
-            stats_lines.append(
-                f"\nTotal time spent: {total_str}"
-            )
+            stats_lines.append(f"\nTotal time spent: {total_str}")
 
         return f"How much time {owner_name} spent on games:\n" + "\n".join(stats_lines)
 

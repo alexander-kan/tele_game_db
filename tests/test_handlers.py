@@ -208,9 +208,7 @@ def test_game_list_success(mock_message: Mock) -> None:
             ("Game 2", None, None, None),
         ]
 
-        updated_message, game_list_text = handlers.game_list(
-            mock_message, "Steam"
-        )
+        updated_message, game_list_text = handlers.game_list(mock_message, "Steam")
 
     assert "Game" in game_list_text
     # Offset should be incremented by 10
@@ -221,9 +219,7 @@ def test_game_list_invalid_input_returns_empty(mock_message: Mock) -> None:
     """game_list handles invalid input format gracefully."""
     mock_message.text = "Steam"  # Not enough comma‑separated parts
 
-    updated_message, game_list_text = handlers.game_list(
-        mock_message, "Steam"
-    )
+    updated_message, game_list_text = handlers.game_list(mock_message, "Steam")
 
     assert updated_message is mock_message
     assert game_list_text == ""
@@ -293,9 +289,7 @@ def test_handle_sync_steam_file_not_found(
     if test_config.paths.games_excel_file.exists():
         test_config.paths.games_excel_file.unlink()
 
-    handlers._handle_sync_steam(
-        mock_message, mock_bot, admin_security, test_config
-    )
+    handlers._handle_sync_steam(mock_message, mock_bot, admin_security, test_config)
 
     mock_bot.send_message.assert_called_once()
 
@@ -316,9 +310,7 @@ def test_handle_sync_steam_success(
         instance = mock_change_db.return_value
         instance.synchronize_steam_games.return_value = (True, [])
 
-        handlers._handle_sync_steam(
-            mock_message, mock_bot, admin_security, test_config
-        )
+        handlers._handle_sync_steam(mock_message, mock_bot, admin_security, test_config)
 
     instance.synchronize_steam_games.assert_called_once()
     mock_bot.send_message.assert_called()
@@ -373,9 +365,7 @@ def test_handle_file_upload_no_document(
     """Test handle_file_upload handles missing document."""
     mock_message.document = None
 
-    handlers.handle_file_upload(
-        mock_message, mock_bot, admin_security, test_config
-    )
+    handlers.handle_file_upload(mock_message, mock_bot, admin_security, test_config)
 
     # Should send error message
     mock_bot.send_message.assert_called_once()

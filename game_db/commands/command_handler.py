@@ -28,9 +28,7 @@ class CommandHandler:
         self._prefix_commands: list[tuple[str, Command]] = []
         self._substring_commands: list[tuple[str, Command]] = []
 
-    def register_exact(
-        self, trigger: str, command: Command
-    ) -> None:
+    def register_exact(self, trigger: str, command: Command) -> None:
         """Register command for exact text match.
 
         Args:
@@ -40,9 +38,7 @@ class CommandHandler:
         self._exact_commands[trigger] = command
         logger.debug("Registered exact command: %s -> %s", trigger, command.name)
 
-    def register_prefix(
-        self, prefix: str, command: Command
-    ) -> None:
+    def register_prefix(self, prefix: str, command: Command) -> None:
         """Register command for prefix match.
 
         Args:
@@ -50,13 +46,9 @@ class CommandHandler:
             command: Command instance to execute
         """
         self._prefix_commands.append((prefix, command))
-        logger.debug(
-            "Registered prefix command: %s -> %s", prefix, command.name
-        )
+        logger.debug("Registered prefix command: %s -> %s", prefix, command.name)
 
-    def register_substring(
-        self, substring: str, command: Command
-    ) -> None:
+    def register_substring(self, substring: str, command: Command) -> None:
         """Register command for substring match.
 
         Args:
@@ -107,9 +99,7 @@ class CommandHandler:
         # Check substring matches
         for substring, command in self._substring_commands:
             if substring in text:
-                logger.debug(
-                    "Executing substring command: %s", command.name
-                )
+                logger.debug("Executing substring command: %s", command.name)
                 command.execute(message, bot, security, settings)
                 return True
 

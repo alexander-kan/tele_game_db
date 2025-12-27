@@ -92,7 +92,9 @@ def handle_callback_query(
             "[UNAUTHORIZED_ACCESS] Unauthorized user %s tried to use callback",
             user_id,
         )
-        _safe_answer_callback_query(bot, call.id, texts.PRIVATE_BOT_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PRIVATE_BOT_TEXT, show_alert=True
+        )
         return
 
     try:
@@ -179,9 +181,7 @@ def handle_callback_query(
         elif action == CallbackAction.BACK_TO_SYNC_MENU_FROM_HLTB:
             _handle_sync_menu(call, bot, security)
         else:
-            logger.warning(
-                "[CALLBACK] Unknown action %s from user %s", action, user_id
-            )
+            logger.warning("[CALLBACK] Unknown action %s from user %s", action, user_id)
             _safe_answer_callback_query(bot, call.id, "Unknown action")
 
     except ApiTelegramException as e:
@@ -212,11 +212,16 @@ def handle_callback_query(
         )
         # Try to answer callback query using safe wrapper
         _safe_answer_callback_query(
-            bot, call.id, "An error occurred while processing the request", show_alert=True
+            bot,
+            call.id,
+            "An error occurred while processing the request",
+            show_alert=True,
         )
 
 
-def _handle_main_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_main_menu(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle main menu callback."""
     user_id = call.from_user.id if call.from_user else None
     bot.edit_message_text(
@@ -228,7 +233,9 @@ def _handle_main_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Secur
     _safe_answer_callback_query(bot, call.id)
 
 
-def _handle_my_games(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_my_games(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle 'My Games' submenu callback."""
     bot.edit_message_text(
         "My Games",
@@ -239,7 +246,9 @@ def _handle_my_games(call: CallbackQuery, bot: telebot.TeleBot, security: Securi
     _safe_answer_callback_query(bot, call.id)
 
 
-def _handle_steam_games(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_steam_games(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle Steam games submenu callback."""
     bot.edit_message_text(
         "Steam Games",
@@ -250,7 +259,9 @@ def _handle_steam_games(call: CallbackQuery, bot: telebot.TeleBot, security: Sec
     _safe_answer_callback_query(bot, call.id)
 
 
-def _handle_switch_games(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_switch_games(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle Switch games submenu callback."""
     bot.edit_message_text(
         "Switch Games",
@@ -286,7 +297,9 @@ def _handle_games_list(
         limit = int(args[2])
     except ValueError:
         logger.warning("[CALLBACK] Invalid offset/limit for GAMES_LIST: %s", args)
-        _safe_answer_callback_query(bot, call.id, "Error: invalid pagination parameters")
+        _safe_answer_callback_query(
+            bot, call.id, "Error: invalid pagination parameters"
+        )
         return
 
     try:
@@ -310,7 +323,9 @@ def _handle_games_list(
         logger.exception(
             "[CALLBACK] Error getting games list for platform %s: %s", platform, str(e)
         )
-        _safe_answer_callback_query(bot, call.id, "Error getting game list", show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, "Error getting game list", show_alert=True
+        )
 
 
 def _handle_count_completed(
@@ -396,10 +411,14 @@ def _handle_count_time(
         logger.exception(
             "[CALLBACK] Error counting time for platform %s: %s", platform, str(e)
         )
-        _safe_answer_callback_query(bot, call.id, "Error counting time", show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, "Error counting time", show_alert=True
+        )
 
 
-def _handle_statistics(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_statistics(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle statistics submenu callback."""
     bot.edit_message_text(
         "Statistics",
@@ -411,7 +430,10 @@ def _handle_statistics(call: CallbackQuery, bot: telebot.TeleBot, security: Secu
 
 
 def _handle_stats_completed(
-    call: CallbackQuery, bot: telebot.TeleBot, security: Security, settings: SettingsConfig
+    call: CallbackQuery,
+    bot: telebot.TeleBot,
+    security: Security,
+    settings: SettingsConfig,
 ) -> None:
     """Handle stats completed callback.
 
@@ -432,7 +454,9 @@ def _handle_stats_completed(
                 platform_counts[platform] = 0
 
         formatter = MessageFormatter()
-        message_text = formatter.format_completed_games_stats(platform_counts, settings.owner_name)
+        message_text = formatter.format_completed_games_stats(
+            platform_counts, settings.owner_name
+        )
 
         bot.edit_message_text(
             message_text,
@@ -449,7 +473,10 @@ def _handle_stats_completed(
 
 
 def _handle_stats_time(
-    call: CallbackQuery, bot: telebot.TeleBot, security: Security, settings: SettingsConfig
+    call: CallbackQuery,
+    bot: telebot.TeleBot,
+    security: Security,
+    settings: SettingsConfig,
 ) -> None:
     """Handle stats time callback.
 
@@ -466,7 +493,9 @@ def _handle_stats_time(
 
         for platform in platforms:
             try:
-                expected_time, real_time = game_service.count_spend_time(platform, mode=1)
+                expected_time, real_time = game_service.count_spend_time(
+                    platform, mode=1
+                )
                 platform_times[platform] = (expected_time, real_time)
                 if real_time is not None:
                     total_real_seconds += real_time * 3600
@@ -492,7 +521,9 @@ def _handle_stats_time(
         )
 
 
-def _handle_commands(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_commands(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle commands submenu callback."""
     user_id = call.from_user.id if call.from_user else None
     bot.edit_message_text(
@@ -504,22 +535,30 @@ def _handle_commands(call: CallbackQuery, bot: telebot.TeleBot, security: Securi
     _safe_answer_callback_query(bot, call.id)
 
 
-def _handle_show_user_commands(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_show_user_commands(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle show user commands callback."""
     bot.edit_message_text(
         texts.USER_COMMANDS_HELP,
         call.message.chat.id,
         call.message.message_id,
-        reply_markup=InlineMenu.commands_menu(security, call.from_user.id if call.from_user else None),
+        reply_markup=InlineMenu.commands_menu(
+            security, call.from_user.id if call.from_user else None
+        ),
     )
     _safe_answer_callback_query(bot, call.id)
 
 
-def _handle_show_admin_commands(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_show_admin_commands(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle show admin commands callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     bot.edit_message_text(
@@ -531,11 +570,15 @@ def _handle_show_admin_commands(call: CallbackQuery, bot: telebot.TeleBot, secur
     _safe_answer_callback_query(bot, call.id)
 
 
-def _handle_admin_panel(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_admin_panel(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle admin panel submenu callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     bot.edit_message_text(
@@ -547,11 +590,15 @@ def _handle_admin_panel(call: CallbackQuery, bot: telebot.TeleBot, security: Sec
     _safe_answer_callback_query(bot, call.id)
 
 
-def _handle_file_management(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_file_management(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle file management submenu callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     bot.edit_message_text(
@@ -572,7 +619,9 @@ def _handle_list_files(
     """Handle list files callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     try:
@@ -596,7 +645,9 @@ def _handle_list_files(
         _safe_answer_callback_query(bot, call.id)
     except Exception as e:
         logger.exception("[CALLBACK] Error listing files: %s", str(e))
-        _safe_answer_callback_query(bot, call.id, "Error getting file list", show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, "Error getting file list", show_alert=True
+        )
 
 
 def _handle_download_template(
@@ -608,7 +659,9 @@ def _handle_download_template(
     """Handle download template callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     try:
@@ -624,10 +677,14 @@ def _handle_download_template(
         _safe_answer_callback_query(bot, call.id, "Template sent")
     except Exception as e:
         logger.exception("[CALLBACK] Error sending template: %s", str(e))
-        _safe_answer_callback_query(bot, call.id, "Error sending template", show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, "Error sending template", show_alert=True
+        )
 
 
-def _handle_sync_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_sync_menu(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle sync menu callback."""
     bot.edit_message_text(
         "Database Sync",
@@ -647,7 +704,9 @@ def _handle_check_steam(
     """Handle check Steam games callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     _safe_answer_callback_query(bot, call.id, "Checking Steam data...")
@@ -701,7 +760,9 @@ def _handle_add_steam_games(
     """Handle add Steam games callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     _safe_answer_callback_query(bot, call.id, "Adding games to database...")
@@ -747,7 +808,9 @@ def _handle_add_steam_games(
         )
 
 
-def _handle_sync_steam_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_sync_steam_menu(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle Steam sync menu callback."""
     bot.edit_message_text(
         "Steam Sync",
@@ -767,7 +830,9 @@ def _handle_sync_steam_execute(
     """Handle Steam sync execution callback."""
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     _safe_answer_callback_query(bot, call.id, "Steam sync started...")
@@ -779,7 +844,9 @@ def _handle_sync_steam_execute(
 
         if success:
             formatter = MessageFormatter()
-            missing_games_text = formatter.format_steam_sync_missing_games(similarity_matches)
+            missing_games_text = formatter.format_steam_sync_missing_games(
+                similarity_matches
+            )
 
             # Send results first, then menu
             if missing_games_text:
@@ -804,7 +871,9 @@ def _handle_sync_steam_execute(
         )
 
 
-def _handle_sync_metacritic_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_sync_metacritic_menu(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle Metacritic sync menu callback."""
     bot.edit_message_text(
         "Metacritic Sync",
@@ -833,7 +902,9 @@ def _handle_sync_metacritic_execute(
     """
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     _safe_answer_callback_query(bot, call.id, "Metacritic sync started...")
@@ -869,7 +940,9 @@ def _handle_sync_metacritic_execute(
         )
 
 
-def _handle_sync_hltb_menu(call: CallbackQuery, bot: telebot.TeleBot, security: Security) -> None:
+def _handle_sync_hltb_menu(
+    call: CallbackQuery, bot: telebot.TeleBot, security: Security
+) -> None:
     """Handle HowLongToBeat sync menu callback."""
     bot.edit_message_text(
         "HowLongToBeat Sync",
@@ -898,7 +971,9 @@ def _handle_sync_hltb_execute(
     """
     user_id = call.from_user.id if call.from_user else None
     if not security.admin_check(user_id):
-        _safe_answer_callback_query(bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True)
+        _safe_answer_callback_query(
+            bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
+        )
         return
 
     _safe_answer_callback_query(bot, call.id, "HowLongToBeat sync started...")

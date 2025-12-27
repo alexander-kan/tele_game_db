@@ -75,9 +75,7 @@ class HowLongToBeatExcelFormatter:
                 current_value = sheet.cell(
                     row=row_number, column=ExcelColumn.AVERAGE_TIME_BEAT
                 ).value
-                current_value_str = (
-                    str(current_value).strip() if current_value else ""
-                )
+                current_value_str = str(current_value).strip() if current_value else ""
                 if not current_value_str:
                     # Field is empty, write "0"
                     sheet.cell(
@@ -100,15 +98,18 @@ class HowLongToBeatExcelFormatter:
 
         # Game found: extract time data
         # Use main_story if available, otherwise use completionist
-        time_hours = hltb_data.get("main_story") or hltb_data.get(
-            "completionist"
-        ) or hltb_data.get("main_extra") or hltb_data.get("all_styles")
+        time_hours = (
+            hltb_data.get("main_story")
+            or hltb_data.get("completionist")
+            or hltb_data.get("main_extra")
+            or hltb_data.get("all_styles")
+        )
 
         formatted_time = HowLongToBeatExcelFormatter.format_time(time_hours)
         if formatted_time is not None:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.AVERAGE_TIME_BEAT
-            ).value = formatted_time
+            sheet.cell(row=row_number, column=ExcelColumn.AVERAGE_TIME_BEAT).value = (
+                formatted_time
+            )
             logger.info(
                 "[HLTB_FORMATTER] Row %d: Updated AVERAGE_TIME_BEAT: %s hours",
                 row_number,

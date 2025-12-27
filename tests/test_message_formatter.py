@@ -58,17 +58,17 @@ class TestMessageFormatter:
 
         assert "Test Game" in result
         # Check for English text indicating missing time data
-        assert (
-            "not specified" in result or "never played" in result
-        )
+        assert "not specified" in result or "never played" in result
 
     def test_format_completed_games_stats_with_owner_name(self) -> None:
         """Test format_completed_games_stats with custom owner name."""
         platform_counts = {"Steam": 45, "Switch": 12, "PS4": 8}
         owner_name = "Alexander"
-        
-        result = MessageFormatter.format_completed_games_stats(platform_counts, owner_name)
-        
+
+        result = MessageFormatter.format_completed_games_stats(
+            platform_counts, owner_name
+        )
+
         assert f"How many games {owner_name} completed" in result
         assert "Steam: 45" in result
         assert "Switch: 12" in result
@@ -82,11 +82,11 @@ class TestMessageFormatter:
         }
         owner_name = "Alexander"
         total_real_seconds = (120.5 + 45.0) * 3600
-        
+
         result = MessageFormatter.format_time_stats(
             platform_times, total_real_seconds, owner_name, show_total=True
         )
-        
+
         assert f"How much time {owner_name} spent on games" in result
         assert "Steam:" in result
         assert "Switch:" in result
@@ -97,11 +97,11 @@ class TestMessageFormatter:
         platform_times = {"Steam": (100.0, 120.5)}
         owner_name = "John"
         total_real_seconds = 120.5 * 3600
-        
+
         result = MessageFormatter.format_time_stats(
             platform_times, total_real_seconds, owner_name, show_total=False
         )
-        
+
         assert f"How much time {owner_name} spent on games" in result
         assert "Steam:" in result
         assert "Total time spent:" not in result  # show_total=False
@@ -114,7 +114,7 @@ class TestMessageFormatter:
     def test_format_next_game_message_with_games(self) -> None:
         """Test format_next_game_message with games."""
         from game_db.types import GameListItem
-        
+
         games = [
             GameListItem(
                 game_name="Test Game 1",
@@ -129,9 +129,9 @@ class TestMessageFormatter:
                 trailer_url=None,
             ),
         ]
-        
+
         result = MessageFormatter.format_next_game_message(games)
-        
+
         assert "Test Game 1" in result
         assert "Test Game 2" in result
         assert "8.5" in result  # press_score
@@ -145,7 +145,7 @@ class TestMessageFormatter:
     def test_format_steam_sync_missing_games_with_matches(self) -> None:
         """Test format_steam_sync_missing_games with matches."""
         from game_db.similarity_search import SimilarityMatch
-        
+
         matches = [
             SimilarityMatch(
                 original="Game 1",
@@ -160,9 +160,9 @@ class TestMessageFormatter:
                 score=0.3,
             ),
         ]
-        
+
         result = MessageFormatter.format_steam_sync_missing_games(matches)
-        
+
         assert "Game 1" in result
         assert "Game 1 Match" in result
         assert "Game 2" in result
@@ -173,7 +173,7 @@ class TestMessageFormatter:
     def test_format_steam_sync_missing_games_no_matches(self) -> None:
         """Test format_steam_sync_missing_games with no matches."""
         from game_db.similarity_search import SimilarityMatch
-        
+
         matches = [
             SimilarityMatch(
                 original="Game 1",
@@ -188,9 +188,9 @@ class TestMessageFormatter:
                 score=0.2,
             ),
         ]
-        
+
         result = MessageFormatter.format_steam_sync_missing_games(matches)
-        
+
         assert "Game 1" in result
         assert "Game 2" in result
         assert "closestMatch: null" in result

@@ -84,7 +84,9 @@ class TestMessageFormatterErrorHandling:
             "Switch": 0,
         }
 
-        result = MessageFormatter.format_completed_games_stats(platform_counts, "TestOwner")
+        result = MessageFormatter.format_completed_games_stats(
+            platform_counts, "TestOwner"
+        )
 
         assert isinstance(result, str)
         assert "0" in result
@@ -142,9 +144,7 @@ class TestExcelValidatorErrorHandling:
 
         assert result is False
 
-    def test_validate_platform_empty_string(
-        self, validator: ExcelValidator
-    ) -> None:
+    def test_validate_platform_empty_string(self, validator: ExcelValidator) -> None:
         """Test validate_platform handles empty string."""
         result = validator.validate_platform("")
 
@@ -179,9 +179,7 @@ class TestExcelValidatorErrorHandling:
         error_msg = errors[0].lower()
         assert "required" in error_msg or "game name" in error_msg
 
-    def test_validate_game_row_invalid_status(
-        self, validator: ExcelValidator
-    ) -> None:
+    def test_validate_game_row_invalid_status(self, validator: ExcelValidator) -> None:
         """Test validate_game_row handles invalid status."""
         from game_db.excel.models import GameRow
 
@@ -215,18 +213,14 @@ class TestExcelValidatorErrorHandling:
         assert is_valid is False
         assert any("platform" in error.lower() for error in errors)
 
-    def test_get_status_id_unknown_status(
-        self, validator: ExcelValidator
-    ) -> None:
+    def test_get_status_id_unknown_status(self, validator: ExcelValidator) -> None:
         """Test get_status_id handles unknown status."""
         status_id = validator.get_status_id("Unknown Status")
 
         # Should return 0 for unknown
         assert status_id == 0
 
-    def test_get_platform_id_unknown_platform(
-        self, validator: ExcelValidator
-    ) -> None:
+    def test_get_platform_id_unknown_platform(self, validator: ExcelValidator) -> None:
         """Test get_platform_id handles unknown platform."""
         platform_id = validator.get_platform_id("Unknown Platform")
 

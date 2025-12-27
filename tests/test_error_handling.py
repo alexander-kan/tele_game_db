@@ -52,15 +52,11 @@ class TestDatabaseErrorHandling:
         db_path.touch()
 
         # Mock PROJECT_ROOT to point to directory without SQL files
-        with patch(
-            "game_db.repositories.game_repository.PROJECT_ROOT", tmp_path
-        ):
+        with patch("game_db.repositories.game_repository.PROJECT_ROOT", tmp_path):
             with pytest.raises(SQLFileNotFoundError):
                 GameRepository(db_path)
 
-    def test_game_service_database_error_propagation(
-        self, temp_db: Path
-    ) -> None:
+    def test_game_service_database_error_propagation(self, temp_db: Path) -> None:
         """Test that game_service propagates database errors."""
         repo = GameRepository(temp_db)
 
@@ -148,9 +144,7 @@ class TestInvalidInputHandling:
         # Should not crash, may return empty results
         assert isinstance(results, list)
 
-    def test_count_complete_games_invalid_platform(
-        self, temp_db: Path
-    ) -> None:
+    def test_count_complete_games_invalid_platform(self, temp_db: Path) -> None:
         """Test count_complete_games handles invalid platform name."""
         repo = GameRepository(temp_db)
 
@@ -186,9 +180,7 @@ class TestExternalAPIErrorHandling:
 
     @patch("game_db.steam_api.requests.get")
     @patch("game_db.steam_api.load_tokens_config")
-    def test_steam_api_timeout(
-        self, mock_load_tokens: Mock, mock_get: Mock
-    ) -> None:
+    def test_steam_api_timeout(self, mock_load_tokens: Mock, mock_get: Mock) -> None:
         """Test SteamAPI handles timeout errors."""
         import requests
 
@@ -274,9 +266,7 @@ class TestEdgeCases:
         with pytest.raises(DatabaseConnectionError):
             repo.query_game("test")
 
-    def test_get_platforms_with_sql_injection_attempt(
-        self, temp_db: Path
-    ) -> None:
+    def test_get_platforms_with_sql_injection_attempt(self, temp_db: Path) -> None:
         """Test get_platforms is safe from SQL injection."""
         repo = GameRepository(temp_db)
 
@@ -296,9 +286,7 @@ class TestEdgeCases:
 
         assert isinstance(results, list)
 
-    def test_count_complete_games_unicode_platform(
-        self, temp_db: Path
-    ) -> None:
+    def test_count_complete_games_unicode_platform(self, temp_db: Path) -> None:
         """Test count_complete_games handles unicode platform names."""
         repo = GameRepository(temp_db)
 
@@ -307,9 +295,7 @@ class TestEdgeCases:
 
         assert isinstance(count, int)
 
-    def test_repository_sql_file_validation_on_init(
-        self, tmp_path: Path
-    ) -> None:
+    def test_repository_sql_file_validation_on_init(self, tmp_path: Path) -> None:
         """Test that repository validates SQL files on initialization."""
         db_path = tmp_path / "test.db"
         db_path.touch()
@@ -318,9 +304,7 @@ class TestEdgeCases:
         queries_dir = tmp_path / "sql_querry" / "queries"
         queries_dir.mkdir(parents=True)
 
-        with patch(
-            "game_db.repositories.game_repository.PROJECT_ROOT", tmp_path
-        ):
+        with patch("game_db.repositories.game_repository.PROJECT_ROOT", tmp_path):
             with pytest.raises(SQLFileNotFoundError):
                 GameRepository(db_path)
 
@@ -354,9 +338,7 @@ class TestServiceLayerErrorHandling:
 
         original_repo = gs_module._repository
         try:
-            with patch.object(
-                original_repo, "count_complete_games"
-            ) as mock_count:
+            with patch.object(original_repo, "count_complete_games") as mock_count:
                 mock_count.side_effect = RuntimeError("Unexpected error")
 
                 with pytest.raises(DatabaseError) as exc_info:

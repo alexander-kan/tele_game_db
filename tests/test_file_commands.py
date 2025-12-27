@@ -29,9 +29,7 @@ def file_commands_settings(tmp_path: Path) -> SettingsConfig:
 
     db_files = DBFilesConfig(
         sql_games=tmp_path / "sql" / "dml_games.sql",
-        sql_games_on_platforms=tmp_path
-        / "sql"
-        / "dml_games_on_platforms.sql",
+        sql_games_on_platforms=tmp_path / "sql" / "dml_games_on_platforms.sql",
         sql_dictionaries=tmp_path / "sql" / "dml_dictionaries.sql",
         sql_drop_tables=tmp_path / "sql" / "drop_tables.sql",
         sql_create_tables=tmp_path / "sql" / "create_tables.sql",
@@ -41,7 +39,10 @@ def file_commands_settings(tmp_path: Path) -> SettingsConfig:
 
 
 def test_remove_file_command_non_admin_does_nothing(
-    mock_bot: Mock, mock_message: Mock, user_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    user_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """Non-admin user should receive NICE_TRY_TEXT."""
     from game_db import texts
@@ -57,7 +58,10 @@ def test_remove_file_command_non_admin_does_nothing(
 
 
 def test_remove_file_command_invalid_filename(
-    mock_bot: Mock, mock_message: Mock, admin_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    admin_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """Invalid filename should be rejected with error message."""
     mock_message.text = "removefile ../../../etc/passwd"
@@ -70,7 +74,10 @@ def test_remove_file_command_invalid_filename(
 
 
 def test_remove_file_command_success(
-    mock_bot: Mock, mock_message: Mock, admin_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    admin_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """Valid file inside files_dir should be deleted."""
     from game_db import texts
@@ -82,9 +89,7 @@ def test_remove_file_command_success(
     mock_message.text = "removefile test.txt"
 
     command = RemoveFileCommand()
-    command.execute(
-        mock_message, mock_bot, admin_security, file_commands_settings
-    )
+    command.execute(mock_message, mock_bot, admin_security, file_commands_settings)
 
     assert not target_file.exists()
     # Just assert that FILE_DELETED was sent, ignoring exact reply_markup
@@ -93,7 +98,10 @@ def test_remove_file_command_success(
 
 
 def test_get_file_command_non_admin_denied(
-    mock_bot: Mock, mock_message: Mock, user_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    user_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """Non-admin user should not be able to get file."""
     from game_db import texts
@@ -109,7 +117,10 @@ def test_get_file_command_non_admin_denied(
 
 
 def test_get_file_command_invalid_filename(
-    mock_bot: Mock, mock_message: Mock, admin_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    admin_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """Invalid filename should be rejected."""
     mock_message.text = "getfile ../../etc/passwd"
@@ -121,7 +132,10 @@ def test_get_file_command_invalid_filename(
 
 
 def test_get_file_command_not_found(
-    mock_bot: Mock, mock_message: Mock, admin_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    admin_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """Requesting nonexistent file should send FILE_NOT_FOUND."""
     from game_db import texts
@@ -137,7 +151,10 @@ def test_get_file_command_not_found(
 
 
 def test_get_file_command_success(
-    mock_bot: Mock, mock_message: Mock, admin_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    admin_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """Existing file inside files_dir should be sent as document."""
     files_dir = file_commands_settings.paths.files_dir
@@ -154,7 +171,10 @@ def test_get_file_command_success(
 
 
 def test_sync_steam_non_admin_denied(
-    mock_bot: Mock, mock_message: Mock, user_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    user_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """Non-admin user cannot trigger SyncSteamCommand."""
     from game_db import texts
@@ -168,7 +188,10 @@ def test_sync_steam_non_admin_denied(
 
 
 def test_sync_steam_file_not_found(
-    mock_bot: Mock, mock_message: Mock, admin_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    admin_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """SyncSteamCommand reports missing Excel backup file."""
     from game_db import texts
@@ -186,7 +209,10 @@ def test_sync_steam_file_not_found(
 
 
 def test_sync_steam_success(
-    mock_bot: Mock, mock_message: Mock, admin_security, file_commands_settings: SettingsConfig
+    mock_bot: Mock,
+    mock_message: Mock,
+    admin_security,
+    file_commands_settings: SettingsConfig,
 ) -> None:
     """SyncSteamCommand calls ChangeDB.synchronize_steam_games and updates backup."""
     from game_db import texts
@@ -206,4 +232,3 @@ def test_sync_steam_success(
 
     instance.synchronize_steam_games.assert_called_once()
     mock_bot.send_message.assert_called()
-

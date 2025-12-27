@@ -14,9 +14,7 @@ def _create_base_handlers(level: int) -> list[logging.Handler]:
     log_dir.mkdir(exist_ok=True)
     log_file = log_dir / "game_db.log"
 
-    formatter = logging.Formatter(
-        "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
-    )
+    formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 
     file_handler = RotatingFileHandler(
         log_file, maxBytes=5 * 1024 * 1024, backupCount=3, encoding="utf-8"

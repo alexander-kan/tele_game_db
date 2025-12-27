@@ -111,9 +111,7 @@ class InlineMenu:
             ),
             InlineKeyboardButton(
                 text="⏱ Time in Games",
-                callback_data=build_callback_data(
-                    CallbackAction.COUNT_TIME, platform
-                ),
+                callback_data=build_callback_data(CallbackAction.COUNT_TIME, platform),
             ),
             InlineKeyboardButton(
                 text="⬅️ Back",
@@ -154,9 +152,7 @@ class InlineMenu:
             ),
             InlineKeyboardButton(
                 text="⏱ Time in Games",
-                callback_data=build_callback_data(
-                    CallbackAction.COUNT_TIME, platform
-                ),
+                callback_data=build_callback_data(CallbackAction.COUNT_TIME, platform),
             ),
             InlineKeyboardButton(
                 text="⬅️ Back",
@@ -210,9 +206,7 @@ class InlineMenu:
             ),
             InlineKeyboardButton(
                 text="⬅️ Back to Main Menu",
-                callback_data=build_callback_data(
-                    CallbackAction.BACK_TO_MAIN
-                ),
+                callback_data=build_callback_data(CallbackAction.BACK_TO_MAIN),
             ),
         )
         return markup
@@ -294,7 +288,9 @@ class InlineMenu:
             ),
             InlineKeyboardButton(
                 text="⬅️ Back to Main Menu",
-                callback_data=build_callback_data(CallbackAction.BACK_TO_MAIN_FROM_SYNC),
+                callback_data=build_callback_data(
+                    CallbackAction.BACK_TO_MAIN_FROM_SYNC
+                ),
             ),
         )
         return markup
@@ -314,9 +310,7 @@ class InlineMenu:
             markup.add(
                 InlineKeyboardButton(
                     text="➕ Add Found Games to DB",
-                    callback_data=build_callback_data(
-                        CallbackAction.ADD_STEAM_GAMES
-                    ),
+                    callback_data=build_callback_data(CallbackAction.ADD_STEAM_GAMES),
                 ),
             )
         markup.add(
@@ -326,9 +320,7 @@ class InlineMenu:
             ),
             InlineKeyboardButton(
                 text="⬅️ Back to Sync Menu",
-                callback_data=build_callback_data(
-                    CallbackAction.BACK_TO_SYNC_MENU
-                ),
+                callback_data=build_callback_data(CallbackAction.BACK_TO_SYNC_MENU),
             ),
         )
         return markup
@@ -344,9 +336,7 @@ class InlineMenu:
         markup.add(
             InlineKeyboardButton(
                 text="🎯 Metacritic Sync Full",
-                callback_data=build_callback_data(
-                    CallbackAction.SYNC_METACRITIC_FULL
-                ),
+                callback_data=build_callback_data(CallbackAction.SYNC_METACRITIC_FULL),
             ),
             InlineKeyboardButton(
                 text="🎯 Metacritic Sync Partial",
@@ -374,15 +364,11 @@ class InlineMenu:
         markup.add(
             InlineKeyboardButton(
                 text="⏱ HowLongToBeat Sync Full",
-                callback_data=build_callback_data(
-                    CallbackAction.SYNC_HLTB_FULL
-                ),
+                callback_data=build_callback_data(CallbackAction.SYNC_HLTB_FULL),
             ),
             InlineKeyboardButton(
                 text="⏱ HowLongToBeat Sync Partial",
-                callback_data=build_callback_data(
-                    CallbackAction.SYNC_HLTB_PARTIAL
-                ),
+                callback_data=build_callback_data(CallbackAction.SYNC_HLTB_PARTIAL),
             ),
             InlineKeyboardButton(
                 text="⬅️ Back to Sync Menu",

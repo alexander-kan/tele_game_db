@@ -40,16 +40,12 @@ def test_get_game_command_database_error(
         mock_service.query_game.side_effect = DatabaseError("DB error")
 
         command = GetGameCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     mock_bot.send_message.assert_called()
     # Should send generic GAME_QUERY_ERROR
     args, kwargs = mock_bot.send_message.call_args
-    assert texts.GAME_QUERY_ERROR in args or texts.GAME_QUERY_ERROR in str(
-        kwargs
-    )
+    assert texts.GAME_QUERY_ERROR in args or texts.GAME_QUERY_ERROR in str(kwargs)
 
 
 def test_get_game_command_multiple_results(
@@ -68,9 +64,7 @@ def test_get_game_command_multiple_results(
         ]
 
         command = GetGameCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     mock_bot.send_message.assert_called_once()
 
@@ -90,9 +84,7 @@ def test_get_game_command_not_found(
         mock_service.query_game.return_value = []
 
         command = GetGameCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     args, kwargs = mock_bot.send_message.call_args
     assert texts.GAME_NOT_FOUND in args or texts.GAME_NOT_FOUND in str(kwargs)
@@ -114,9 +106,7 @@ def test_get_game_command_hash_selector(
         ]
 
         command = GetGameCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     mock_bot.send_message.assert_called_once()
 
@@ -136,9 +126,7 @@ def test_steam_game_list_command(
         mock_game_list.return_value = (mock_message, "Games list")
 
         command = SteamGameListCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     mock_game_list.assert_called_once()
     mock_bot.send_message.assert_called_once()
@@ -158,9 +146,7 @@ def test_switch_game_list_command(
         mock_game_list.return_value = (mock_message, "Games list")
 
         command = SwitchGameListCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     mock_game_list.assert_called_once()
     mock_bot.send_message.assert_called_once()
@@ -180,9 +166,7 @@ def test_count_games_command_success(
         mock_service.count_complete_games.return_value = 5
 
         command = CountGamesCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     assert mock_service.count_complete_games.call_count == 2
     mock_bot.send_message.assert_called_once()
@@ -207,9 +191,7 @@ def test_count_games_command_with_errors(
         ]
 
         command = CountGamesCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     mock_bot.send_message.assert_called_once()
 
@@ -237,9 +219,7 @@ def test_count_time_command_success(
         ]
 
         command = CountTimeCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     # Should be called once per platform with mode=0
     assert mock_service.count_spend_time.call_count == 3
@@ -262,9 +242,6 @@ def test_count_time_command_with_errors(
         mock_service.count_spend_time.side_effect = DatabaseError("failed")
 
         command = CountTimeCommand()
-        command.execute(
-            mock_message, mock_bot, admin_security, game_commands_settings
-        )
+        command.execute(mock_message, mock_bot, admin_security, game_commands_settings)
 
     mock_bot.send_message.assert_called_once()
-

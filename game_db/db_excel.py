@@ -123,19 +123,17 @@ class ExcelImporter:
                 return False
 
             db_files = self.settings.db_files
-            
+
             # Generate SQL files from Excel
             logger.info(
                 "[EXCEL_IMPORT] Generating SQL files from Excel: %s",
                 xlsx_path,
             )
-            game_id_map = self.generate_dml_games_sql(
-                xlsx_path, db_files.sql_games
-            )
+            game_id_map = self.generate_dml_games_sql(xlsx_path, db_files.sql_games)
             self.generate_dml_games_on_platforms_sql(
                 xlsx_path, db_files.sql_games_on_platforms, game_id_map
             )
-            
+
             # Now use the generated SQL files
             sql_file = db_files.sql_games
             if sql_file.exists():
@@ -153,14 +151,11 @@ class ExcelImporter:
                         db_files.sqlite_db_file,
                     )
                 logger.info(
-                    "[EXCEL_IMPORT] Successfully imported games "
-                    "from SQL file"
+                    "[EXCEL_IMPORT] Successfully imported games " "from SQL file"
                 )
                 return True
             else:
-                logger.error(
-                    "[EXCEL_IMPORT] Failed to generate SQL file: %s", sql_file
-                )
+                logger.error("[EXCEL_IMPORT] Failed to generate SQL file: %s", sql_file)
                 return False
 
         except Exception as e:
@@ -192,9 +187,7 @@ class ExcelImporter:
             date_str_clean = date_str.strip()
             # Normalize: ensure day has leading zero if it's a single digit
             # "May 2, 2024" -> "May 02, 2024"
-            date_str_normalized = re.sub(
-                r"(\w+) (\d{1}),", r"\1 0\2,", date_str_clean
-            )
+            date_str_normalized = re.sub(r"(\w+) (\d{1}),", r"\1 0\2,", date_str_clean)
             date_obj = datetime.strptime(date_str_normalized, "%B %d, %Y")
             return date_obj.strftime("%Y-%m-%d")
         except (ValueError, AttributeError) as e:
@@ -341,9 +334,7 @@ class ExcelImporter:
                 press_score = self._format_sql_value(game_row.press_score, "float")
                 user_score = self._format_sql_value(game_row.user_score, "float")
                 my_score = self._format_sql_value(game_row.my_score, "str")
-                metacritic_url = self._format_sql_value(
-                    game_row.metacritic_url, "str"
-                )
+                metacritic_url = self._format_sql_value(game_row.metacritic_url, "str")
                 average_time_beat = self._format_sql_value(
                     game_row.average_time_beat, "float"
                 )
@@ -354,7 +345,7 @@ class ExcelImporter:
                 f.write(
                     f'("{game_id}", {game_name}, "{status_id}", '
                     f'"{release_date_db}", {press_score}, {user_score}, '
-                    f'{my_score}, {metacritic_url}, {average_time_beat}, '
+                    f"{my_score}, {metacritic_url}, {average_time_beat}, "
                     f'{trailer_url}, {my_time_beat}, "{last_launch_date_db}")'
                 )
 
@@ -402,8 +393,7 @@ class ExcelImporter:
         # Write SQL file
         with open(sql_platforms_path, "w", encoding="utf-8") as f:
             f.write(
-                "INSERT INTO games_on_platforms "
-                "(platform_id, reference_game_id)\n"
+                "INSERT INTO games_on_platforms " "(platform_id, reference_game_id)\n"
             )
             f.write("VALUES\n")
 

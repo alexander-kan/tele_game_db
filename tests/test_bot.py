@@ -98,9 +98,9 @@ def test_prepare_directories_creates_directories(
     bot_app: BotApplication,
 ) -> None:
     """Test that prepare_directories creates required directories."""
-    with patch("pathlib.Path.mkdir") as mock_mkdir, \
-         patch("pathlib.Path.exists", return_value=True), \
-         patch("pathlib.Path.iterdir", return_value=[]):
+    with patch("pathlib.Path.mkdir") as mock_mkdir, patch(
+        "pathlib.Path.exists", return_value=True
+    ), patch("pathlib.Path.iterdir", return_value=[]):
 
         bot_app.prepare_directories()
 
@@ -116,12 +116,15 @@ def test_prepare_directories_cleans_update_db_dir(
     mock_file.is_file.return_value = True
     mock_file.unlink = Mock()
 
-    with patch("pathlib.Path.mkdir"), \
-         patch("pathlib.Path.exists", return_value=True), \
-         patch("pathlib.Path.is_dir", return_value=True), \
-         patch("pathlib.Path.iterdir", return_value=[mock_file]), \
-         patch("game_db.utils.safe_delete_file") as mock_safe_delete, \
-         patch("game_db.utils.is_path_safe", return_value=True):
+    with patch("pathlib.Path.mkdir"), patch(
+        "pathlib.Path.exists", return_value=True
+    ), patch("pathlib.Path.is_dir", return_value=True), patch(
+        "pathlib.Path.iterdir", return_value=[mock_file]
+    ), patch(
+        "game_db.utils.safe_delete_file"
+    ) as mock_safe_delete, patch(
+        "game_db.utils.is_path_safe", return_value=True
+    ):
 
         bot_app.prepare_directories()
 
@@ -133,13 +136,11 @@ def test_prepare_directories_validates_excel_file(
     bot_app: BotApplication,
 ) -> None:
     """Test that prepare_directories validates Excel file exists."""
-    with patch("pathlib.Path.mkdir"), \
-         patch("pathlib.Path.exists", return_value=False), \
-         patch("pathlib.Path.iterdir", return_value=[]):
+    with patch("pathlib.Path.mkdir"), patch(
+        "pathlib.Path.exists", return_value=False
+    ), patch("pathlib.Path.iterdir", return_value=[]):
 
-        with pytest.raises(
-            ValueError, match="You don't have file for DB creation"
-        ):
+        with pytest.raises(ValueError, match="You don't have file for DB creation"):
             bot_app.prepare_directories()
 
 
@@ -158,8 +159,7 @@ def test_run_handles_os_error(bot_app: BotApplication) -> None:
     bot_app.bot.polling = Mock(side_effect=[OSError("Network error"), None])
     bot_app.bot.stop_polling = Mock()
 
-    with patch.object(bot_app, "prepare_directories"), \
-         patch("time.sleep"):
+    with patch.object(bot_app, "prepare_directories"), patch("time.sleep"):
 
         bot_app.run()
 
@@ -169,11 +169,15 @@ def test_run_handles_os_error(bot_app: BotApplication) -> None:
 
 def test_main_creates_and_runs_app() -> None:
     """Test that main function creates and runs BotApplication."""
-    with patch("game_db.bot.configure_logging"), \
-         patch("game_db.bot.load_settings_config") as mock_load_settings, \
-         patch("game_db.bot.load_tokens_config") as mock_load_tokens, \
-         patch("game_db.bot.load_users_config") as mock_load_users, \
-         patch("game_db.bot.BotApplication") as mock_app_class:
+    with patch("game_db.bot.configure_logging"), patch(
+        "game_db.bot.load_settings_config"
+    ) as mock_load_settings, patch(
+        "game_db.bot.load_tokens_config"
+    ) as mock_load_tokens, patch(
+        "game_db.bot.load_users_config"
+    ) as mock_load_users, patch(
+        "game_db.bot.BotApplication"
+    ) as mock_app_class:
 
         test_config = Mock()
         test_tokens = Mock()
@@ -186,10 +190,9 @@ def test_main_creates_and_runs_app() -> None:
         mock_app_class.return_value = mock_app
 
         from game_db.bot import main
+
         main()
 
-        mock_app_class.assert_called_once_with(
-            test_config, test_tokens, test_users
-        )
+        mock_app_class.assert_called_once_with(test_config, test_tokens, test_users)
         mock_app.setup_handlers.assert_called_once()
         mock_app.run.assert_called_once()

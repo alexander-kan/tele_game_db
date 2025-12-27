@@ -75,16 +75,16 @@ class TestConfigDataclasses:
 
         db_files = DBFilesConfig(
             sql_games=Path("/tmp/sql/dml_games.sql"),
-            sql_games_on_platforms=Path(
-                "/tmp/sql/dml_games_on_platforms.sql"
-            ),
+            sql_games_on_platforms=Path("/tmp/sql/dml_games_on_platforms.sql"),
             sql_dictionaries=Path("/tmp/sql/dml_dictionaries.sql"),
             sql_drop_tables=Path("/tmp/sql/drop_tables.sql"),
             sql_create_tables=Path("/tmp/sql/create_tables.sql"),
             sqlite_db_file=Path("/tmp/games.db"),
         )
 
-        settings = SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
+        settings = SettingsConfig(
+            paths=paths, db_files=db_files, owner_name="Alexander"
+        )
         assert settings.paths == paths
         assert settings.db_files == db_files
         assert settings.owner_name == "Alexander"
@@ -123,14 +123,11 @@ class TestConfigLoaders:
         """Test load_users_config with temporary config file."""
         # Create temporary users.ini
         users_ini = tmp_path / "users.ini"
-        users_ini.write_text(
-            "[users]\n"
-            "users = 12345 67890\n"
-            "admins = 12345\n"
-        )
+        users_ini.write_text("[users]\n" "users = 12345 67890\n" "admins = 12345\n")
 
         # Mock PROJECT_ROOT to point to tmp_path
         import game_db.config as config_module
+
         original_root = config_module.PROJECT_ROOT
         config_module.PROJECT_ROOT = tmp_path
 
@@ -138,9 +135,7 @@ class TestConfigLoaders:
             # Create settings directory
             (tmp_path / "settings").mkdir()
             (tmp_path / "settings" / "users.ini").write_text(
-                "[users]\n"
-                "users = 12345 67890\n"
-                "admins = 12345\n"
+                "[users]\n" "users = 12345 67890\n" "admins = 12345\n"
             )
 
             users_cfg = load_users_config()
@@ -154,6 +149,7 @@ class TestConfigLoaders:
     def test_load_users_config_empty(self, tmp_path: Path) -> None:
         """Test load_users_config with empty values."""
         import game_db.config as config_module
+
         original_root = config_module.PROJECT_ROOT
         config_module.PROJECT_ROOT = tmp_path
 
@@ -161,9 +157,7 @@ class TestConfigLoaders:
             # Create settings directory
             (tmp_path / "settings").mkdir()
             (tmp_path / "settings" / "users.ini").write_text(
-                "[users]\n"
-                "users = \n"
-                "admins = \n"
+                "[users]\n" "users = \n" "admins = \n"
             )
 
             users_cfg = load_users_config()
@@ -176,6 +170,7 @@ class TestConfigLoaders:
     def test_load_tokens_config(self, tmp_path: Path) -> None:
         """Test load_tokens_config with temporary config file."""
         import game_db.config as config_module
+
         original_root = config_module.PROJECT_ROOT
         config_module.PROJECT_ROOT = tmp_path
 
@@ -200,6 +195,7 @@ class TestConfigLoaders:
     def test_load_settings_config(self, tmp_path: Path) -> None:
         """Test load_settings_config with temporary config file."""
         import game_db.config as config_module
+
         original_root = config_module.PROJECT_ROOT
         config_module.PROJECT_ROOT = tmp_path
 
@@ -239,6 +235,7 @@ class TestConfigLoaders:
     def test_load_settings_config_with_owner_name(self, tmp_path: Path) -> None:
         """Test load_settings_config loads owner_name from OWNER section."""
         import game_db.config as config_module
+
         original_root = config_module.PROJECT_ROOT
         config_module.PROJECT_ROOT = tmp_path
 
@@ -271,6 +268,7 @@ class TestConfigLoaders:
     def test_load_settings_config_owner_name_default(self, tmp_path: Path) -> None:
         """Test load_settings_config uses default owner_name when OWNER section is missing."""
         import game_db.config as config_module
+
         original_root = config_module.PROJECT_ROOT
         config_module.PROJECT_ROOT = tmp_path
 

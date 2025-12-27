@@ -1,8 +1,7 @@
 """Text constants for Telegram bot messages (for easier localization)."""
 
 USER_COMMANDS_HELP = (
-    "1) getgame:\n"
-    'Enter "getgame" followed by a space and any part of the game name.'
+    "1) getgame:\n" 'Enter "getgame" followed by a space and any part of the game name.'
 )
 
 ADMIN_COMMANDS_HELP = (
@@ -40,12 +39,8 @@ GAME_NOT_FOUND = "Sorry - no matches found in the database"
 # Steam sync texts
 STEAM_SYNC_SUCCESS = "synchronized"
 STEAM_SYNC_ERROR = "Something is going wrong"
-STEAM_SYNC_FILE_NOT_FOUND = (
-    "Source file games.xlsx not found for synchronization"
-)
-STEAM_SYNC_FILESYSTEM_ERROR = (
-    "Filesystem error during synchronization"
-)
+STEAM_SYNC_FILE_NOT_FOUND = "Source file games.xlsx not found for synchronization"
+STEAM_SYNC_FILESYSTEM_ERROR = "Filesystem error during synchronization"
 STEAM_SYNC_ALL_UNIQUE = (
     "Research was conducted using the Damerau-Levenshtein mathematical algorithm "
     "and all values are unique."
@@ -55,23 +50,15 @@ STEAM_SYNC_ALL_UNIQUE = (
 METACRITIC_SYNC_SUCCESS = "Metacritic sync completed"
 METACRITIC_SYNC_ERROR = "Error during Metacritic synchronization"
 METACRITIC_SYNC_NO_DATA = "No data to sync"
-METACRITIC_SYNC_FILE_NOT_FOUND = (
-    "Source file games.xlsx not found for synchronization"
-)
-METACRITIC_SYNC_FILESYSTEM_ERROR = (
-    "Filesystem error during synchronization"
-)
+METACRITIC_SYNC_FILE_NOT_FOUND = "Source file games.xlsx not found for synchronization"
+METACRITIC_SYNC_FILESYSTEM_ERROR = "Filesystem error during synchronization"
 
 # HowLongToBeat sync texts
 HLTB_SYNC_SUCCESS = "HowLongToBeat sync completed"
 HLTB_SYNC_ERROR = "Error during HowLongToBeat synchronization"
 HLTB_SYNC_NO_DATA = "No data to sync"
-HLTB_SYNC_FILE_NOT_FOUND = (
-    "Source file games.xlsx not found for synchronization"
-)
-HLTB_SYNC_FILESYSTEM_ERROR = (
-    "Filesystem error during synchronization"
-)
+HLTB_SYNC_FILE_NOT_FOUND = "Source file games.xlsx not found for synchronization"
+HLTB_SYNC_FILESYSTEM_ERROR = "Filesystem error during synchronization"
 
 # Database update texts
 DB_RECREATED = "Database recreated"
@@ -81,13 +68,11 @@ DB_RECREATE_ERROR = (
 )
 GAME_UPDATED = "Game updated"
 GAME_UPDATE_ERROR = (
-    "Game was not updated due to an internal error, "
-    "please contact @HailToTheKan"
+    "Game was not updated due to an internal error, " "please contact @HailToTheKan"
 )
 GAMES_ADDED = "Games added"
 GAMES_ADD_ERROR = (
-    "Games were not added due to an internal error, "
-    "please contact @HailToTheKan"
+    "Games were not added due to an internal error, " "please contact @HailToTheKan"
 )
 
 # Game info formatting texts

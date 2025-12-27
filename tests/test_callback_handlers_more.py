@@ -38,7 +38,7 @@ def test_settings() -> SettingsConfig:
     """Create test settings."""
     from game_db.config import DBFilesConfig, Paths
     from pathlib import Path
-    
+
     paths = Paths(
         backup_dir=Path("/tmp"),
         update_db_dir=Path("/tmp"),
@@ -98,10 +98,10 @@ def test_handle_games_list_success(
 ) -> None:
     """Test _handle_games_list with successful retrieval."""
     from game_db.types import GameListItem
-    
+
     mock_callback_query.data = "action:games_list:Steam:1:10"
     args = ["Steam", "1", "10"]
-    
+
     mock_games = [
         GameListItem(
             game_name="Game 1",
@@ -112,13 +112,15 @@ def test_handle_games_list_success(
     ]
     mock_game_service.get_next_game_list.return_value = mock_games
     # MessageFormatter.format_next_game_message is a static method
-    with patch("game_db.callback_handlers.MessageFormatter.format_next_game_message") as mock_format:
+    with patch(
+        "game_db.callback_handlers.MessageFormatter.format_next_game_message"
+    ) as mock_format:
         mock_format.return_value = "Game list text"
     mock_menu = Mock()
     mock_inline_menu.platform_menu_with_pagination.return_value = mock_menu
-    
+
     _handle_games_list(mock_callback_query, mock_bot, user_security, args)
-    
+
     mock_game_service.get_next_game_list.assert_called_once_with(0, 10, "Steam")
     mock_bot.edit_message_text.assert_called_once()
     mock_safe_answer.assert_called_once()
@@ -133,12 +135,15 @@ def test_handle_games_list_invalid_args(
 ) -> None:
     """Test _handle_games_list with invalid args."""
     args = ["Steam"]  # Missing offset and limit
-    
+
     _handle_games_list(mock_callback_query, mock_bot, user_security, args)
-    
+
     mock_safe_answer.assert_called_once()
     # Should not call game_service
-    assert not hasattr(mock_bot, 'edit_message_text') or not mock_bot.edit_message_text.called
+    assert (
+        not hasattr(mock_bot, "edit_message_text")
+        or not mock_bot.edit_message_text.called
+    )
 
 
 @patch("game_db.callback_handlers._safe_answer_callback_query")
@@ -150,9 +155,9 @@ def test_handle_games_list_invalid_pagination(
 ) -> None:
     """Test _handle_games_list with invalid pagination parameters."""
     args = ["Steam", "invalid", "10"]  # Invalid offset
-    
+
     _handle_games_list(mock_callback_query, mock_bot, user_security, args)
-    
+
     mock_safe_answer.assert_called_once()
 
 
@@ -168,9 +173,9 @@ def test_handle_games_list_database_error(
     """Test _handle_games_list with database error."""
     args = ["Steam", "1", "10"]
     mock_game_service.get_next_game_list.side_effect = DatabaseError("DB error")
-    
+
     _handle_games_list(mock_callback_query, mock_bot, user_security, args)
-    
+
     mock_safe_answer.assert_called_once()
     call_args = mock_safe_answer.call_args
     assert call_args[1]["show_alert"] is True
@@ -192,9 +197,9 @@ def test_handle_count_completed_success(
     mock_game_service.count_complete_games.return_value = 42
     mock_menu = Mock()
     mock_inline_menu.platform_menu.return_value = mock_menu
-    
+
     _handle_count_completed(mock_callback_query, mock_bot, user_security, args)
-    
+
     mock_game_service.count_complete_games.assert_called_once_with("Steam")
     mock_bot.edit_message_text.assert_called_once()
     mock_safe_answer.assert_called_once()
@@ -209,9 +214,9 @@ def test_handle_count_completed_no_args(
 ) -> None:
     """Test _handle_count_completed with no args."""
     args = []
-    
+
     _handle_count_completed(mock_callback_query, mock_bot, user_security, args)
-    
+
     mock_safe_answer.assert_called_once()
 
 
@@ -227,9 +232,9 @@ def test_handle_count_completed_database_error(
     """Test _handle_count_completed with database error."""
     args = ["Steam"]
     mock_game_service.count_complete_games.side_effect = DatabaseError("DB error")
-    
+
     _handle_count_completed(mock_callback_query, mock_bot, user_security, args)
-    
+
     mock_safe_answer.assert_called_once()
     call_args = mock_safe_answer.call_args
     assert call_args[1]["show_alert"] is True
@@ -258,9 +263,11 @@ def test_handle_count_time_success(
     mock_formatter.return_value = mock_formatter_instance
     mock_menu = Mock()
     mock_inline_menu.platform_menu.return_value = mock_menu
-    
-    _handle_count_time(mock_callback_query, mock_bot, user_security, args, test_settings)
-    
+
+    _handle_count_time(
+        mock_callback_query, mock_bot, user_security, args, test_settings
+    )
+
     mock_game_service.count_spend_time.assert_called_once_with("Steam", mode=1)
     mock_bot.edit_message_text.assert_called_once()
     mock_safe_answer.assert_called_once()
@@ -276,9 +283,11 @@ def test_handle_count_time_no_args(
 ) -> None:
     """Test _handle_count_time with no args."""
     args = []
-    
-    _handle_count_time(mock_callback_query, mock_bot, user_security, args, test_settings)
-    
+
+    _handle_count_time(
+        mock_callback_query, mock_bot, user_security, args, test_settings
+    )
+
     mock_safe_answer.assert_called_once()
 
 
@@ -303,9 +312,9 @@ def test_handle_stats_completed_success(
     mock_formatter.return_value = mock_formatter_instance
     mock_menu = Mock()
     mock_inline_menu.statistics_menu.return_value = mock_menu
-    
+
     _handle_stats_completed(mock_callback_query, mock_bot, user_security, test_settings)
-    
+
     mock_bot.edit_message_text.assert_called_once()
     mock_safe_answer.assert_called_once()
 
@@ -334,8 +343,8 @@ def test_handle_stats_time_success(
     mock_formatter.return_value = mock_formatter_instance
     mock_menu = Mock()
     mock_inline_menu.statistics_menu.return_value = mock_menu
-    
+
     _handle_stats_time(mock_callback_query, mock_bot, user_security, test_settings)
-    
+
     mock_bot.edit_message_text.assert_called_once()
     mock_safe_answer.assert_called_once()

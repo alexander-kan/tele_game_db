@@ -132,8 +132,7 @@ def load_settings_config() -> SettingsConfig:
 
     db_files = DBFilesConfig(
         sql_games=PROJECT_ROOT / files_section["sql_games"],
-        sql_games_on_platforms=PROJECT_ROOT
-        / files_section["sql_games_on_platforms"],
+        sql_games_on_platforms=PROJECT_ROOT / files_section["sql_games_on_platforms"],
         sql_dictionaries=PROJECT_ROOT / files_section["sql_dictionaries"],
         sql_drop_tables=PROJECT_ROOT / files_section["sql_drop_tables"],
         sql_create_tables=PROJECT_ROOT / files_section["sql_create_tables"],

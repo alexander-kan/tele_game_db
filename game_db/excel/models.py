@@ -41,19 +41,67 @@ class GameRow:
         from ..constants import ExcelRowIndex
 
         return cls(
-            game_name=row[ExcelRowIndex.GAME_NAME] if len(row) > ExcelRowIndex.GAME_NAME else "",
-            platforms=row[ExcelRowIndex.PLATFORMS] if len(row) > ExcelRowIndex.PLATFORMS else "",
+            game_name=(
+                row[ExcelRowIndex.GAME_NAME]
+                if len(row) > ExcelRowIndex.GAME_NAME
+                else ""
+            ),
+            platforms=(
+                row[ExcelRowIndex.PLATFORMS]
+                if len(row) > ExcelRowIndex.PLATFORMS
+                else ""
+            ),
             status=row[ExcelRowIndex.STATUS] if len(row) > ExcelRowIndex.STATUS else "",
-            release_date=row[ExcelRowIndex.RELEASE_DATE] if len(row) > ExcelRowIndex.RELEASE_DATE else "",
-            press_score=row[ExcelRowIndex.PRESS_SCORE] if len(row) > ExcelRowIndex.PRESS_SCORE else None,
-            user_score=row[ExcelRowIndex.USER_SCORE] if len(row) > ExcelRowIndex.USER_SCORE else None,
-            my_score=row[ExcelRowIndex.MY_SCORE] if len(row) > ExcelRowIndex.MY_SCORE else None,
-            metacritic_url=row[ExcelRowIndex.METACRITIC_URL] if len(row) > ExcelRowIndex.METACRITIC_URL else None,
-            average_time_beat=row[ExcelRowIndex.AVERAGE_TIME_BEAT] if len(row) > ExcelRowIndex.AVERAGE_TIME_BEAT else None,
-            trailer_url=row[ExcelRowIndex.TRAILER_URL] if len(row) > ExcelRowIndex.TRAILER_URL else None,
-            my_time_beat=row[ExcelRowIndex.MY_TIME_BEAT] if len(row) > ExcelRowIndex.MY_TIME_BEAT else None,
-            last_launch_date=row[ExcelRowIndex.LAST_LAUNCH_DATE] if len(row) > ExcelRowIndex.LAST_LAUNCH_DATE else None,
-            additional_time=row[ExcelRowIndex.ADDITIONAL_TIME] if len(row) > ExcelRowIndex.ADDITIONAL_TIME else None,
+            release_date=(
+                row[ExcelRowIndex.RELEASE_DATE]
+                if len(row) > ExcelRowIndex.RELEASE_DATE
+                else ""
+            ),
+            press_score=(
+                row[ExcelRowIndex.PRESS_SCORE]
+                if len(row) > ExcelRowIndex.PRESS_SCORE
+                else None
+            ),
+            user_score=(
+                row[ExcelRowIndex.USER_SCORE]
+                if len(row) > ExcelRowIndex.USER_SCORE
+                else None
+            ),
+            my_score=(
+                row[ExcelRowIndex.MY_SCORE]
+                if len(row) > ExcelRowIndex.MY_SCORE
+                else None
+            ),
+            metacritic_url=(
+                row[ExcelRowIndex.METACRITIC_URL]
+                if len(row) > ExcelRowIndex.METACRITIC_URL
+                else None
+            ),
+            average_time_beat=(
+                row[ExcelRowIndex.AVERAGE_TIME_BEAT]
+                if len(row) > ExcelRowIndex.AVERAGE_TIME_BEAT
+                else None
+            ),
+            trailer_url=(
+                row[ExcelRowIndex.TRAILER_URL]
+                if len(row) > ExcelRowIndex.TRAILER_URL
+                else None
+            ),
+            my_time_beat=(
+                row[ExcelRowIndex.MY_TIME_BEAT]
+                if len(row) > ExcelRowIndex.MY_TIME_BEAT
+                else None
+            ),
+            last_launch_date=(
+                row[ExcelRowIndex.LAST_LAUNCH_DATE]
+                if len(row) > ExcelRowIndex.LAST_LAUNCH_DATE
+                else None
+            ),
+            additional_time=(
+                row[ExcelRowIndex.ADDITIONAL_TIME]
+                if len(row) > ExcelRowIndex.ADDITIONAL_TIME
+                else None
+            ),
         )
 
     def to_list(self) -> list:

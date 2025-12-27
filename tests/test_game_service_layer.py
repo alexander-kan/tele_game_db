@@ -147,4 +147,3 @@ def test_count_spend_time_wraps_generic_exception() -> None:
             game_service.count_spend_time("Steam", 0)
 
         assert "Unexpected error counting time" in str(exc_info.value)
-

@@ -31,7 +31,7 @@ def test_settings() -> SettingsConfig:
     """Create test settings."""
     from game_db.config import DBFilesConfig, Paths
     from pathlib import Path
-    
+
     paths = Paths(
         backup_dir=Path("/tmp"),
         update_db_dir=Path("/tmp"),
@@ -87,9 +87,11 @@ def test_handle_callback_query_steam_games(
     """Test handling STEAM_GAMES callback."""
     with patch("game_db.callback_handlers.parse_callback_data") as mock_parse:
         mock_parse.return_value = (CallbackAction.STEAM_GAMES, [])
-        
-        handle_callback_query(mock_callback_query, mock_bot, user_security, test_settings)
-        
+
+        handle_callback_query(
+            mock_callback_query, mock_bot, user_security, test_settings
+        )
+
         mock_handle.assert_called_once()
 
 
@@ -104,9 +106,11 @@ def test_handle_callback_query_switch_games(
     """Test handling SWITCH_GAMES callback."""
     with patch("game_db.callback_handlers.parse_callback_data") as mock_parse:
         mock_parse.return_value = (CallbackAction.SWITCH_GAMES, [])
-        
-        handle_callback_query(mock_callback_query, mock_bot, user_security, test_settings)
-        
+
+        handle_callback_query(
+            mock_callback_query, mock_bot, user_security, test_settings
+        )
+
         mock_handle.assert_called_once()
 
 
@@ -121,9 +125,11 @@ def test_handle_callback_query_games_list(
     """Test handling GAMES_LIST callback."""
     with patch("game_db.callback_handlers.parse_callback_data") as mock_parse:
         mock_parse.return_value = (CallbackAction.GAMES_LIST, ["Steam", "1", "10"])
-        
-        handle_callback_query(mock_callback_query, mock_bot, user_security, test_settings)
-        
+
+        handle_callback_query(
+            mock_callback_query, mock_bot, user_security, test_settings
+        )
+
         mock_handle.assert_called_once()
 
 
@@ -138,9 +144,11 @@ def test_handle_callback_query_statistics(
     """Test handling STATISTICS callback."""
     with patch("game_db.callback_handlers.parse_callback_data") as mock_parse:
         mock_parse.return_value = (CallbackAction.STATISTICS, [])
-        
-        handle_callback_query(mock_callback_query, mock_bot, user_security, test_settings)
-        
+
+        handle_callback_query(
+            mock_callback_query, mock_bot, user_security, test_settings
+        )
+
         mock_handle.assert_called_once()
 
 
@@ -155,9 +163,11 @@ def test_handle_callback_query_commands(
     """Test handling COMMANDS callback."""
     with patch("game_db.callback_handlers.parse_callback_data") as mock_parse:
         mock_parse.return_value = (CallbackAction.COMMANDS, [])
-        
-        handle_callback_query(mock_callback_query, mock_bot, user_security, test_settings)
-        
+
+        handle_callback_query(
+            mock_callback_query, mock_bot, user_security, test_settings
+        )
+
         mock_handle.assert_called_once()
 
 
@@ -172,9 +182,11 @@ def test_handle_callback_query_admin_panel(
     """Test handling ADMIN_PANEL callback."""
     with patch("game_db.callback_handlers.parse_callback_data") as mock_parse:
         mock_parse.return_value = (CallbackAction.ADMIN_PANEL, [])
-        
-        handle_callback_query(mock_callback_query, mock_bot, admin_security, test_settings)
-        
+
+        handle_callback_query(
+            mock_callback_query, mock_bot, admin_security, test_settings
+        )
+
         mock_handle.assert_called_once()
 
 
@@ -189,9 +201,11 @@ def test_handle_callback_query_file_management(
     """Test handling FILE_MANAGEMENT callback."""
     with patch("game_db.callback_handlers.parse_callback_data") as mock_parse:
         mock_parse.return_value = (CallbackAction.FILE_MANAGEMENT, [])
-        
-        handle_callback_query(mock_callback_query, mock_bot, admin_security, test_settings)
-        
+
+        handle_callback_query(
+            mock_callback_query, mock_bot, admin_security, test_settings
+        )
+
         mock_handle.assert_called_once()
 
 
@@ -206,7 +220,9 @@ def test_handle_callback_query_sync_menu(
     """Test handling SYNC_MENU callback."""
     with patch("game_db.callback_handlers.parse_callback_data") as mock_parse:
         mock_parse.return_value = (CallbackAction.SYNC_MENU, [])
-        
-        handle_callback_query(mock_callback_query, mock_bot, user_security, test_settings)
-        
+
+        handle_callback_query(
+            mock_callback_query, mock_bot, user_security, test_settings
+        )
+
         mock_handle.assert_called_once()

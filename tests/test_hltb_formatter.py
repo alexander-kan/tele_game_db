@@ -85,7 +85,9 @@ class TestHowLongToBeatExcelFormatter:
             "similarity": 0.95,
         }
 
-        HowLongToBeatExcelFormatter.update_game_row(ws, 2, hltb_data, partial_mode=False)
+        HowLongToBeatExcelFormatter.update_game_row(
+            ws, 2, hltb_data, partial_mode=False
+        )
 
         # Verify update
         assert ws.cell(row=2, column=ExcelColumn.AVERAGE_TIME_BEAT).value == "12.5"
@@ -240,7 +242,9 @@ class TestHowLongToBeatExcelFormatter:
         HowLongToBeatExcelFormatter.update_game_row(ws, 2, None, partial_mode=False)
 
         # Verify original value was preserved
-        assert ws.cell(row=2, column=ExcelColumn.AVERAGE_TIME_BEAT).value == original_value
+        assert (
+            ws.cell(row=2, column=ExcelColumn.AVERAGE_TIME_BEAT).value == original_value
+        )
         assert ws.cell(row=2, column=ExcelColumn.AVERAGE_TIME_BEAT).value == "15.5"
 
     def test_update_game_row_uses_main_story(self) -> None:
@@ -297,7 +301,9 @@ class TestHowLongToBeatExcelFormatter:
             "similarity": 0.95,
         }
 
-        HowLongToBeatExcelFormatter.update_game_row(ws, 2, hltb_data, partial_mode=False)
+        HowLongToBeatExcelFormatter.update_game_row(
+            ws, 2, hltb_data, partial_mode=False
+        )
 
         # Verify main_story was used
         assert ws.cell(row=2, column=ExcelColumn.AVERAGE_TIME_BEAT).value == "10.0"
@@ -356,7 +362,9 @@ class TestHowLongToBeatExcelFormatter:
             "similarity": 0.95,
         }
 
-        HowLongToBeatExcelFormatter.update_game_row(ws, 2, hltb_data, partial_mode=False)
+        HowLongToBeatExcelFormatter.update_game_row(
+            ws, 2, hltb_data, partial_mode=False
+        )
 
         # Verify completionist was used
         assert ws.cell(row=2, column=ExcelColumn.AVERAGE_TIME_BEAT).value == "25.0"
@@ -417,7 +425,11 @@ class TestHowLongToBeatExcelFormatter:
             "similarity": 0.95,
         }
 
-        HowLongToBeatExcelFormatter.update_game_row(ws, 2, hltb_data, partial_mode=False)
+        HowLongToBeatExcelFormatter.update_game_row(
+            ws, 2, hltb_data, partial_mode=False
+        )
 
         # Verify value remains unchanged (None)
-        assert ws.cell(row=2, column=ExcelColumn.AVERAGE_TIME_BEAT).value == original_value
+        assert (
+            ws.cell(row=2, column=ExcelColumn.AVERAGE_TIME_BEAT).value == original_value
+        )

@@ -39,6 +39,7 @@ except ImportError:
                 )
         return d[len(s1)][len(s2)]
 
+
 if TYPE_CHECKING:
     from .config import SimilarityThresholdsConfig
 
@@ -76,9 +77,7 @@ def normalize_string(s: str) -> str:
     return normalized
 
 
-def calculate_similarity_score(
-    distance: int, len_a: int, len_b: int
-) -> float:
+def calculate_similarity_score(distance: int, len_a: int, len_b: int) -> float:
     """Calculate normalized similarity score.
 
     Args:
@@ -162,8 +161,7 @@ def find_closest_match(
     filtered_candidates = [
         c
         for c in candidates
-        if abs(len(normalize_string(c)) - original_len)
-        <= length_diff_threshold
+        if abs(len(normalize_string(c)) - original_len) <= length_diff_threshold
     ]
 
     if not filtered_candidates:
@@ -180,9 +178,7 @@ def find_closest_match(
         )
 
         # Calculate score
-        score = calculate_similarity_score(
-            distance, original_len, candidate_len
-        )
+        score = calculate_similarity_score(distance, original_len, candidate_len)
 
         # Check if this is the best match so far
         if distance < best_distance:

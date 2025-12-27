@@ -52,4 +52,3 @@ def test_sql_file_not_found_error_message_and_attr() -> None:
 
     assert "missing.sql" in str(err)
     assert err.sql_file == "missing.sql"
-

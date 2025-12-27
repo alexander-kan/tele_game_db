@@ -129,9 +129,9 @@ class ExcelValidator:
         # Skip "not_defined" as it's ID 1 (reserved for unknown)
         platform_map: dict[str, int] = {}
         platform_items = list(self.values_dictionaries["PLATFORM"].items())
-        
+
         for idx, (key, value) in enumerate(platform_items):
             # ID starts from 2 (1 is reserved for "not_defined"/unknown)
             platform_map[value] = idx + 1
-        
+
         return platform_map.get(platform_text.strip(), 1)

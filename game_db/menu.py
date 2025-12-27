@@ -14,18 +14,12 @@ class BotMenu:
     @staticmethod
     def main_menu(message: Message, security: Security) -> ReplyKeyboardMarkup:
         """Build main menu keyboard for the given user."""
-        markup = telebot.types.ReplyKeyboardMarkup(
-            row_width=1, resize_keyboard=True
-        )
-        show_commands = telebot.types.KeyboardButton(
-            text="Show Available Commands"
-        )
+        markup = telebot.types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
+        show_commands = telebot.types.KeyboardButton(text="Show Available Commands")
         button_clear = telebot.types.KeyboardButton(text="Clear Menu")
         next_game_list = telebot.types.KeyboardButton(text="Game Lists")
         if security.admin_check(message.chat.id):
-            file_menu = telebot.types.KeyboardButton(
-                text="File Management Menu"
-            )
+            file_menu = telebot.types.KeyboardButton(text="File Management Menu")
             show_admin_commands = telebot.types.KeyboardButton(
                 text="Show Admin Commands"
             )
@@ -49,20 +43,14 @@ class BotMenu:
         message: Message, security: Security
     ) -> ReplyKeyboardMarkup | ReplyKeyboardRemove:
         """File management menu."""
-        get_file_to_server_text = (
-            "Get File List from Server"
-        )
+        get_file_to_server_text = "Get File List from Server"
 
-        markup = telebot.types.ReplyKeyboardMarkup(
-            row_width=1, resize_keyboard=True
-        )
+        markup = telebot.types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
         if security.admin_check(message.chat.id):
             get_file_to_server = telebot.types.KeyboardButton(
                 text=get_file_to_server_text
             )
-            get_excel = telebot.types.KeyboardButton(
-                text="Get Game Template File"
-            )
+            get_excel = telebot.types.KeyboardButton(text="Get Game Template File")
             main_menu = telebot.types.KeyboardButton(text="Back to Main Menu")
             markup.add(get_file_to_server, get_excel, main_menu)
             return markup
@@ -80,9 +68,7 @@ class BotMenu:
         how_much_row_steam = 10
         list_from_switch = 1
         how_much_row_switch = 10
-        markup = telebot.types.ReplyKeyboardMarkup(
-            row_width=1, resize_keyboard=True
-        )
+        markup = telebot.types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
         if message.text and "Steam" in message.text:
             message_text: list[str] = []
             for i in message.text.split(","):
@@ -99,16 +85,10 @@ class BotMenu:
                 how_much_row_switch = int(message_text[2])
 
         list_of_steam_next_games = telebot.types.KeyboardButton(
-            text=(
-                "Steam Games List,"
-                f"{list_from_steam},{how_much_row_steam}"
-            )
+            text=("Steam Games List," f"{list_from_steam},{how_much_row_steam}")
         )
         list_of_switch_next_games = telebot.types.KeyboardButton(
-            text=(
-                "Switch Games List,"
-                f"{list_from_switch},{how_much_row_switch}"
-            )
+            text=("Switch Games List," f"{list_from_switch},{how_much_row_switch}")
         )
         count_overall = telebot.types.KeyboardButton(
             text=f"How many games {owner_name} completed"

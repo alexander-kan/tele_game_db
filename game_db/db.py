@@ -58,9 +58,7 @@ class DatabaseManager:
             cursor = conn.cursor()
             cursor.execute(create_table_sql)
         except Error:
-            logger.exception(
-                "Failed to create table with SQL: %s", create_table_sql
-            )
+            logger.exception("Failed to create table with SQL: %s", create_table_sql)
 
     def execute_scripts_from_sql_file(
         self, sql_file: str | Path, db_file: str | Path
@@ -78,8 +76,7 @@ class DatabaseManager:
         conn = self.create_connection(db_file)
         if conn is None:
             logger.error(
-                "Could not obtain DB connection for '%s', "
-                "skipping SQL file '%s'",
+                "Could not obtain DB connection for '%s', " "skipping SQL file '%s'",
                 db_file,
                 sql_file,
             )
@@ -145,15 +142,21 @@ class SteamSynchronizer:
             date_list.append(part)
         # Simple month mapping - can be extracted to a helper if needed
         month_map = {
-            "01": "January", "02": "February", "03": "March", "04": "April",
-            "05": "May", "06": "June", "07": "July", "08": "August",
-            "09": "September", "10": "October", "11": "November", "12": "December"
+            "01": "January",
+            "02": "February",
+            "03": "March",
+            "04": "April",
+            "05": "May",
+            "06": "June",
+            "07": "July",
+            "08": "August",
+            "09": "September",
+            "10": "October",
+            "11": "November",
+            "12": "December",
         }
         month_name = month_map.get(date_list[1], date_list[1])
-        return (
-            f"{month_name} "
-            f"{date_list[2]}, {date_list[0]}"
-        )
+        return f"{month_name} " f"{date_list[2]}, {date_list[0]}"
 
     def _load_workbook(self, xlsx_path: str | Path) -> Workbook:
         """Load Excel workbook from file.
@@ -164,9 +167,7 @@ class SteamSynchronizer:
         Returns:
             OpenPyXL Workbook instance
         """
-        logger.debug(
-            "[STEAM_SYNC] Loading Excel workbook from: %s", xlsx_path
-        )
+        logger.debug("[STEAM_SYNC] Loading Excel workbook from: %s", xlsx_path)
         return load_workbook(filename=xlsx_path)
 
     def _match_steam_games_with_excel(
@@ -217,9 +218,7 @@ class SteamSynchronizer:
             SteamExcelFormatter.update_game_row(
                 sheet, row_number, game, self.epoch_date_convert
             )
-        logger.debug(
-            "[STEAM_SYNC] Updated %d game rows in Excel", len(matched_games)
-        )
+        logger.debug("[STEAM_SYNC] Updated %d game rows in Excel", len(matched_games))
 
     def _save_workbook(self, workbook: Workbook, xlsx_path: str | Path) -> None:
         """Save workbook to file.
@@ -455,9 +454,7 @@ class SteamSynchronizer:
         success = self._recreate_database(xlsx_path)
         return success, similarity_matches
 
-    def check_steam_games(
-        self, xlsx_path: str
-    ) -> tuple[bool, list[SimilarityMatch]]:
+    def check_steam_games(self, xlsx_path: str) -> tuple[bool, list[SimilarityMatch]]:
         """Check which games from Steam are missing in database.
 
         This method only checks without updating anything:
@@ -499,9 +496,7 @@ class SteamSynchronizer:
 
         return True, similarity_matches
 
-    def add_steam_games_to_excel(
-        self, xlsx_path: str, game_names: list[str]
-    ) -> bool:
+    def add_steam_games_to_excel(self, xlsx_path: str, game_names: list[str]) -> bool:
         """Add Steam games to Excel with data from Steam API.
 
         Finds the first free row (where GAME_NAME is empty) and starts adding games from there.
@@ -569,17 +564,15 @@ class SteamSynchronizer:
 
         for game_name in game_names:
             # Add game name
-            sheet.cell(row=next_row, column=ExcelColumn.GAME_NAME).value = (
-                game_name
-            )
+            sheet.cell(row=next_row, column=ExcelColumn.GAME_NAME).value = game_name
             # Add platform
             sheet.cell(row=next_row, column=ExcelColumn.PLATFORMS).value = "Steam"
             # Add status
             sheet.cell(row=next_row, column=ExcelColumn.STATUS).value = "Not Started"
             # Add default date for release_date
-            sheet.cell(
-                row=next_row, column=ExcelColumn.RELEASE_DATE
-            ).value = EXCEL_DATE_NOT_SET
+            sheet.cell(row=next_row, column=ExcelColumn.RELEASE_DATE).value = (
+                EXCEL_DATE_NOT_SET
+            )
 
             # Add MY_SCORE = "none"
             sheet.cell(row=next_row, column=ExcelColumn.MY_SCORE).value = (
@@ -610,9 +603,9 @@ class SteamSynchronizer:
                     EXCEL_NONE_VALUE
                 )
                 # Add LAST_LAUNCH_DATE = default
-                sheet.cell(
-                    row=next_row, column=ExcelColumn.LAST_LAUNCH_DATE
-                ).value = EXCEL_DATE_NOT_SET
+                sheet.cell(row=next_row, column=ExcelColumn.LAST_LAUNCH_DATE).value = (
+                    EXCEL_DATE_NOT_SET
+                )
                 logger.debug(
                     "[STEAM_ADD] Game %s was never launched, using defaults",
                     game_name,
@@ -670,9 +663,7 @@ class MetacriticSynchronizer:
         Returns:
             OpenPyXL Workbook instance
         """
-        logger.debug(
-            "[METACRITIC_SYNC] Loading Excel workbook from: %s", xlsx_path
-        )
+        logger.debug("[METACRITIC_SYNC] Loading Excel workbook from: %s", xlsx_path)
         return load_workbook(filename=xlsx_path)
 
     def _get_games_for_sync(
@@ -707,9 +698,7 @@ class MetacriticSynchronizer:
 
             # In partial mode, skip games that already have both scores
             if partial_mode:
-                press_score_str = (
-                    str(press_score).strip() if press_score else ""
-                )
+                press_score_str = str(press_score).strip() if press_score else ""
                 user_score_str = str(user_score).strip() if user_score else ""
                 # Skip if both scores are filled
                 if press_score_str and user_score_str:
@@ -749,9 +738,7 @@ class MetacriticSynchronizer:
         """
         sheet = workbook["init_games"]
         for metacritic_data, row_number in games_data:
-            MetacriticExcelFormatter.update_game_row(
-                sheet, row_number, metacritic_data
-            )
+            MetacriticExcelFormatter.update_game_row(sheet, row_number, metacritic_data)
         logger.debug(
             "[METACRITIC_SYNC] Updated %d game rows in Excel",
             len(games_data),
@@ -764,9 +751,7 @@ class MetacriticSynchronizer:
             workbook: OpenPyXL Workbook instance
             xlsx_path: Path to save the workbook
         """
-        logger.debug(
-            "[METACRITIC_SYNC] Saving workbook to: %s", xlsx_path
-        )
+        logger.debug("[METACRITIC_SYNC] Saving workbook to: %s", xlsx_path)
         workbook.save(str(xlsx_path))
 
     def _recreate_database(self, xlsx_path: str | Path) -> bool:
@@ -859,9 +844,7 @@ class MetacriticSynchronizer:
         games_data: list[tuple[dict, int]] = []
         total_games = len(games_for_sync)
 
-        for i, (url_or_name, row_number, has_url) in enumerate(
-            games_for_sync, 1
-        ):
+        for i, (url_or_name, row_number, has_url) in enumerate(games_for_sync, 1):
             # Determine actual URL to use
             if has_url:
                 # Use existing URL
@@ -905,7 +888,7 @@ class MetacriticSynchronizer:
                     # Ensure URL is set (use actual_url if scraper didn't set it)
                     if not scraper.game.get("url") or scraper.game["url"] == "":
                         scraper.game["url"] = actual_url
-                    
+
                     # Log what data we received
                     logger.info(
                         "[METACRITIC_SYNC] Data for row %d: release_date=%r, "
@@ -915,7 +898,7 @@ class MetacriticSynchronizer:
                         scraper.game.get("critic_score"),
                         scraper.game.get("user_score"),
                     )
-                    
+
                     games_data.append((scraper.game, row_number))
                     logger.debug(
                         "[METACRITIC_SYNC] Successfully fetched data for row %d",
@@ -984,9 +967,7 @@ class HowLongToBeatSynchronizer:
         Returns:
             OpenPyXL Workbook instance
         """
-        logger.debug(
-            "[HLTB_SYNC] Loading Excel workbook from: %s", xlsx_path
-        )
+        logger.debug("[HLTB_SYNC] Loading Excel workbook from: %s", xlsx_path)
         return load_workbook(filename=xlsx_path)
 
     def _get_games_for_sync(
@@ -1016,9 +997,7 @@ class HowLongToBeatSynchronizer:
 
             # In partial mode, skip games that already have average_time_beat
             if partial_mode:
-                time_str = (
-                    str(average_time_beat).strip() if average_time_beat else ""
-                )
+                time_str = str(average_time_beat).strip() if average_time_beat else ""
                 # Skip if time is filled
                 if time_str:
                     continue
@@ -1066,9 +1045,7 @@ class HowLongToBeatSynchronizer:
             workbook: OpenPyXL Workbook instance
             xlsx_path: Path to save the workbook
         """
-        logger.debug(
-            "[HLTB_SYNC] Saving workbook to: %s", xlsx_path
-        )
+        logger.debug("[HLTB_SYNC] Saving workbook to: %s", xlsx_path)
         workbook.save(str(xlsx_path))
 
     def _recreate_database(self, xlsx_path: str | Path) -> bool:
@@ -1197,9 +1174,7 @@ class HowLongToBeatSynchronizer:
 
             # Wait 10 seconds between requests (except for the last one)
             if i < total_games:
-                logger.debug(
-                    "[HLTB_SYNC] Waiting 10 seconds before next request..."
-                )
+                logger.debug("[HLTB_SYNC] Waiting 10 seconds before next request...")
                 time.sleep(10)
 
         # Update Excel cells with HowLongToBeat data
@@ -1279,9 +1254,7 @@ class ChangeDB:
         """
         self._service.create_dml_dictionaries(sql_dictionaries)
 
-    def synchronize_steam_games(
-        self, xlsx_path: str
-    ) -> tuple[bool, list]:
+    def synchronize_steam_games(self, xlsx_path: str) -> tuple[bool, list]:
         """Synchronize Steam playtime with Excel and recreate DB.
 
         Args:
@@ -1292,15 +1265,11 @@ class ChangeDB:
         """
         return self._service.synchronize_steam_games(xlsx_path)
 
-    def check_steam_games(
-        self, xlsx_path: str
-    ) -> tuple[bool, list]:
+    def check_steam_games(self, xlsx_path: str) -> tuple[bool, list]:
         """Check which games from Steam are missing in database."""
         return self._service.check_steam_games(xlsx_path)
 
-    def add_steam_games_to_excel(
-        self, xlsx_path: str, game_names: list[str]
-    ) -> bool:
+    def add_steam_games_to_excel(self, xlsx_path: str, game_names: list[str]) -> bool:
         """Add Steam games to Excel with minimal data."""
         return self._service.add_steam_games_to_excel(xlsx_path, game_names)
 

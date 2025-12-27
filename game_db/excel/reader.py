@@ -66,9 +66,7 @@ class ExcelReader:
         # Start from row 2 to skip header (row 1)
         for i in range(2, max_row + 1):
             row_data: list = []
-            for col in range(
-                ExcelColumn.GAME_NAME, ExcelColumn.ADDITIONAL_TIME + 1
-            ):
+            for col in range(ExcelColumn.GAME_NAME, ExcelColumn.ADDITIONAL_TIME + 1):
                 cell_value = sheet.cell(row=i, column=col).value
                 row_data.append(cell_value)
             # Only add non-empty rows
@@ -78,9 +76,7 @@ class ExcelReader:
         return game_rows
 
     @staticmethod
-    def find_row_by_game_name(
-        sheet: Worksheet, game_name: str
-    ) -> int | None:
+    def find_row_by_game_name(sheet: Worksheet, game_name: str) -> int | None:
         """Find row index in sheet by game name.
 
         Args:
@@ -91,9 +87,7 @@ class ExcelReader:
             Row number (1-based) if found, None otherwise
         """
         for row in range(1, sheet.max_row + 1):
-            cell_value = sheet.cell(
-                row=row, column=ExcelColumn.GAME_NAME
-            ).value
+            cell_value = sheet.cell(row=row, column=ExcelColumn.GAME_NAME).value
             if cell_value == game_name:
                 return row
         return None

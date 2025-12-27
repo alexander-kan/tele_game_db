@@ -171,9 +171,7 @@ class SyncSteamCommand(Command):
 
         try:
             if not backup_excel.exists():
-                bot.send_message(
-                    message.chat.id, texts.STEAM_SYNC_FILE_NOT_FOUND
-                )
+                bot.send_message(message.chat.id, texts.STEAM_SYNC_FILE_NOT_FOUND)
                 return
 
             # Copy current backup Excel to update_db
@@ -191,6 +189,4 @@ class SyncSteamCommand(Command):
                 bot.send_message(message.chat.id, texts.STEAM_SYNC_ERROR)
         except OSError:
             logger.exception("Filesystem error during Steam sync")
-            bot.send_message(
-                message.chat.id, texts.STEAM_SYNC_FILESYSTEM_ERROR
-            )
+            bot.send_message(message.chat.id, texts.STEAM_SYNC_FILESYSTEM_ERROR)

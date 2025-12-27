@@ -64,4 +64,3 @@ EXCEL_DATE_NOT_SET = "December 12, 4712"
 
 # Database date string that represents "no date set" in games table.
 DB_DATE_NOT_SET = "4712-12-12"
-

@@ -30,7 +30,7 @@ def test_config() -> SettingsConfig:
     """Create test settings."""
     from game_db.config import DBFilesConfig, Paths
     from pathlib import Path
-    
+
     paths = Paths(
         backup_dir=Path("/tmp"),
         update_db_dir=Path("/tmp"),
@@ -83,9 +83,9 @@ def test_handle_main_menu(
     mock_texts.MAIN_MENU = "Main menu"
     mock_menu_markup = Mock()
     mock_menu.BotMenu.main_menu.return_value = mock_menu_markup
-    
+
     handlers._handle_main_menu(mock_message, mock_bot, admin_security)
-    
+
     mock_bot.send_message.assert_called_once()
     call_args = mock_bot.send_message.call_args
     assert call_args[0][0] == mock_message.from_user.id
@@ -104,9 +104,9 @@ def test_handle_file_menu(
     mock_texts.FILE_MENU = "File menu"
     mock_menu_markup = Mock()
     mock_menu.BotMenu.file_menu.return_value = mock_menu_markup
-    
+
     handlers._handle_file_menu(mock_message, mock_bot, admin_security)
-    
+
     mock_bot.send_message.assert_called_once()
 
 
@@ -126,9 +126,9 @@ def test_handle_show_commands(
     mock_texts.USER_COMMANDS_HELP = "User commands text"
     mock_menu_markup = Mock()
     mock_menu.BotMenu.main_menu.return_value = mock_menu_markup
-    
+
     handlers._handle_show_commands(mock_message, mock_bot, admin_security)
-    
+
     mock_bot.send_message.assert_called_once()
     call_args = mock_bot.send_message.call_args
     assert call_args[0][0] == mock_message.chat.id
@@ -147,9 +147,9 @@ def test_handle_show_admin_commands(
     mock_texts.ADMIN_COMMANDS_HELP = "Admin commands text"
     mock_menu_markup = Mock()
     mock_inline_menu.main_menu.return_value = mock_menu_markup
-    
+
     handlers._handle_show_admin_commands(mock_message, mock_bot, admin_security)
-    
+
     mock_bot.send_message.assert_called_once()
 
 
@@ -163,7 +163,7 @@ def test_handle_steam_game_list(
 ) -> None:
     """Test _handle_steam_game_list handler."""
     from game_db.types import GameListItem
-    
+
     mock_game_service.get_platform_games.return_value = [
         GameListItem(
             game_name="Game 1",
@@ -172,9 +172,11 @@ def test_handle_steam_game_list(
             trailer_url=None,
         )
     ]
-    
-    handlers._handle_steam_game_list(mock_message, mock_bot, admin_security, test_config)
-    
+
+    handlers._handle_steam_game_list(
+        mock_message, mock_bot, admin_security, test_config
+    )
+
     mock_bot.send_message.assert_called()
 
 
@@ -188,7 +190,7 @@ def test_handle_switch_game_list(
 ) -> None:
     """Test _handle_switch_game_list handler."""
     from game_db.types import GameListItem
-    
+
     mock_game_service.get_platform_games.return_value = [
         GameListItem(
             game_name="Game 1",
@@ -197,9 +199,11 @@ def test_handle_switch_game_list(
             trailer_url=None,
         )
     ]
-    
-    handlers._handle_switch_game_list(mock_message, mock_bot, admin_security, test_config)
-    
+
+    handlers._handle_switch_game_list(
+        mock_message, mock_bot, admin_security, test_config
+    )
+
     mock_bot.send_message.assert_called()
 
 
@@ -223,9 +227,9 @@ def test_handle_count_games(
     mock_formatter.return_value = mock_formatter_instance
     mock_menu_markup = Mock()
     mock_menu.BotMenu.next_game.return_value = mock_menu_markup
-    
+
     handlers._handle_count_games(mock_message, mock_bot, platforms, test_config)
-    
+
     mock_bot.send_message.assert_called_once()
     assert mock_game_service.count_complete_games.call_count == len(platforms)
 
@@ -251,9 +255,9 @@ def test_handle_count_time(
     mock_formatter.return_value = mock_formatter_instance
     mock_menu_markup = Mock()
     mock_menu.BotMenu.next_game.return_value = mock_menu_markup
-    
+
     handlers._handle_count_time(mock_message, mock_bot, platforms, test_config)
-    
+
     mock_bot.send_message.assert_called_once()
     assert mock_game_service.count_spend_time.call_count == len(platforms)
 
@@ -276,9 +280,9 @@ def test_handle_remove_file_success(
     mock_safe_delete.return_value = True
     mock_menu_markup = Mock()
     mock_menu.BotMenu.file_menu.return_value = mock_menu_markup
-    
+
     handlers._handle_remove_file(mock_message, mock_bot, admin_security, test_config)
-    
+
     mock_validate.assert_called_once_with("test.txt")
     mock_safe_delete.assert_called_once()
     mock_bot.send_message.assert_called_once()
@@ -299,9 +303,9 @@ def test_handle_remove_file_invalid_name(
     mock_validate.return_value = False
     mock_menu_markup = Mock()
     mock_menu.BotMenu.file_menu.return_value = mock_menu_markup
-    
+
     handlers._handle_remove_file(mock_message, mock_bot, admin_security, test_config)
-    
+
     mock_validate.assert_called_once()
     mock_bot.send_message.assert_called_once()
 
@@ -330,8 +334,8 @@ def test_handle_get_file_invalid_name(
     mock_validate.return_value = False
     mock_menu_markup = Mock()
     mock_menu.BotMenu.file_menu.return_value = mock_menu_markup
-    
+
     handlers._handle_get_file(mock_message, mock_bot, admin_security, test_config)
-    
+
     mock_validate.assert_called_once()
     mock_bot.send_message.assert_called_once()

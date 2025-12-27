@@ -67,9 +67,9 @@ class TestValidateFileName:
             "file\\..\\other.txt",
         ]
         for name in invalid_names:
-            assert validate_file_name(name) is False, (
-                f"{name} should be rejected (path traversal)"
-            )
+            assert (
+                validate_file_name(name) is False
+            ), f"{name} should be rejected (path traversal)"
 
     def test_null_bytes(self) -> None:
         """Test that null bytes are rejected."""
@@ -79,9 +79,9 @@ class TestValidateFileName:
         """Test that reserved characters are rejected."""
         reserved = '<>:"|?*'
         for char in reserved:
-            assert validate_file_name(f"file{char}name.txt") is False, (
-                f"Character '{char}' should be rejected"
-            )
+            assert (
+                validate_file_name(f"file{char}name.txt") is False
+            ), f"Character '{char}' should be rejected"
 
     def test_empty_or_whitespace(self) -> None:
         """Test that empty or whitespace-only names are rejected."""
@@ -106,9 +106,7 @@ class TestIsPathSafe:
 
         assert is_path_safe(safe_path, allowed_dir) is True
 
-    def test_path_outside_allowed_dir(
-        self, allowed_dir: Path, temp_dir: Path
-    ) -> None:
+    def test_path_outside_allowed_dir(self, allowed_dir: Path, temp_dir: Path) -> None:
         """Test that paths outside allowed directory are unsafe."""
         outside_path = temp_dir / "outside" / "file.txt"
         outside_path.parent.mkdir()
@@ -304,9 +302,7 @@ class TestCleanDirectorySafely:
         clean_directory_safely(allowed_dir, allowed_dir, keep_dirs=False)
         assert len(list(allowed_dir.iterdir())) == 0
 
-    def test_clean_directory_removes_subdirectories(
-        self, allowed_dir: Path
-    ) -> None:
+    def test_clean_directory_removes_subdirectories(self, allowed_dir: Path) -> None:
         """Test that cleaning directory removes subdirectories."""
         subdir = allowed_dir / "subdir"
         subdir.mkdir()
@@ -386,9 +382,9 @@ class TestFileTypeValidation:
             "file.doc",
         ]
         for filename in allowed_files:
-            assert is_file_type_allowed(filename) is True, (
-                f"{filename} should be allowed"
-            )
+            assert (
+                is_file_type_allowed(filename) is True
+            ), f"{filename} should be allowed"
 
     def test_disallowed_file_types(self) -> None:
         """Test that disallowed file types are rejected."""
@@ -399,9 +395,9 @@ class TestFileTypeValidation:
             "file.unknown",
         ]
         for filename in disallowed_files:
-            assert is_file_type_allowed(filename) is False, (
-                f"{filename} should be rejected"
-            )
+            assert (
+                is_file_type_allowed(filename) is False
+            ), f"{filename} should be rejected"
 
     def test_file_without_extension(self) -> None:
         """Test that files without extension are rejected."""

@@ -16,14 +16,16 @@ class TestBotMenu:
     # Fixtures are now imported from conftest.py
     # mock_message, admin_security, user_security
 
-    def test_main_menu_admin(self, mock_message: Mock, admin_security: Security) -> None:
+    def test_main_menu_admin(
+        self, mock_message: Mock, admin_security: Security
+    ) -> None:
         """Test main_menu for admin user."""
         markup = BotMenu.main_menu(mock_message, admin_security)
 
         assert markup is not None
         assert hasattr(markup, "keyboard")
         assert len(markup.keyboard) > 0
-        
+
         # Check that admin buttons are present by checking keyboard structure
         all_buttons = []
         for row in markup.keyboard:
@@ -48,7 +50,7 @@ class TestBotMenu:
 
         assert markup is not None
         assert hasattr(markup, "keyboard")
-        
+
         all_buttons = []
         for row in markup.keyboard:
             for button in row:
@@ -65,13 +67,15 @@ class TestBotMenu:
         assert "Show Admin Commands" not in all_buttons
         assert "Synchronize games to Steam" not in all_buttons
 
-    def test_file_menu_admin(self, mock_message: Mock, admin_security: Security) -> None:
+    def test_file_menu_admin(
+        self, mock_message: Mock, admin_security: Security
+    ) -> None:
         """Test file_menu for admin user."""
         markup = BotMenu.file_menu(mock_message, admin_security)
 
         assert markup is not None
         assert hasattr(markup, "keyboard")
-        
+
         all_buttons = []
         for row in markup.keyboard:
             for button in row:
@@ -102,7 +106,7 @@ class TestBotMenu:
 
         assert markup is not None
         assert hasattr(markup, "keyboard")
-        
+
         all_buttons = []
         for row in markup.keyboard:
             for button in row:
@@ -125,7 +129,7 @@ class TestBotMenu:
 
         assert markup is not None
         assert hasattr(markup, "keyboard")
-        
+
         all_buttons = []
         for row in markup.keyboard:
             for button in row:
@@ -145,7 +149,7 @@ class TestBotMenu:
 
         assert markup is not None
         assert hasattr(markup, "keyboard")
-        
+
         all_buttons = []
         for row in markup.keyboard:
             for button in row:

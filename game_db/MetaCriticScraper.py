@@ -108,9 +108,7 @@ class MetaCriticScraper:
 
             # Try multiple ways to find release date
             # Method 1: Standard selector
-            release_li = self.soup.find(
-                "li", class_="summary_detail release_data"
-            )
+            release_li = self.soup.find("li", class_="summary_detail release_data")
             if release_li:
                 data_span = release_li.find("span", class_="data")
                 if data_span:
@@ -131,7 +129,7 @@ class MetaCriticScraper:
                                 "[METACRITIC_SCRAPER] Found release_date (method 1 alt): %s",
                                 self.game["release_date"],
                             )
-            
+
             # Method 2: Look in all summary_detail elements
             if not self.game["release_date"]:
                 all_summary_details = self.soup.find_all("li", class_="summary_detail")
@@ -147,7 +145,11 @@ class MetaCriticScraper:
                         li_class,
                         li_text[:100],
                     )
-                    if "release" in li_text or "date" in li_text or "release" in li_class:
+                    if (
+                        "release" in li_text
+                        or "date" in li_text
+                        or "release" in li_class
+                    ):
                         data_span = li.find("span", class_="data")
                         if data_span:
                             date_text = data_span.text.strip()
@@ -178,13 +180,26 @@ class MetaCriticScraper:
                         else:
                             # Try getting text directly
                             date_text = li.get_text(strip=True)
-                            if date_text and ("release" in date_text.lower() or any(
-                                month in date_text.lower()
-                                for month in [
-                                    "jan", "feb", "mar", "apr", "may", "jun",
-                                    "jul", "aug", "sep", "oct", "nov", "dec",
-                                ]
-                            )):
+                            if date_text and (
+                                "release" in date_text.lower()
+                                or any(
+                                    month in date_text.lower()
+                                    for month in [
+                                        "jan",
+                                        "feb",
+                                        "mar",
+                                        "apr",
+                                        "may",
+                                        "jun",
+                                        "jul",
+                                        "aug",
+                                        "sep",
+                                        "oct",
+                                        "nov",
+                                        "dec",
+                                    ]
+                                )
+                            ):
                                 # Extract date part
                                 parts = date_text.split(":", 1)
                                 if len(parts) > 1:
@@ -196,7 +211,7 @@ class MetaCriticScraper:
                                         self.game["release_date"],
                                     )
                                     break
-            
+
             # Method 3: Try finding in JSON-LD structured data
             if not self.game["release_date"]:
                 try:
@@ -212,7 +227,7 @@ class MetaCriticScraper:
                             )
                 except Exception:
                     pass
-            
+
             if not self.game["release_date"]:
                 logger.warning(
                     "[METACRITIC_SCRAPER] Could not find release_date with any method"
@@ -271,7 +286,7 @@ class MetaCriticScraper:
                         pass
             except Exception as e:
                 logger.debug("Could not get user_score from JSON-LD: %s", str(e))
-            
+
             # Method 1: Try finding in details side_details
             if not self.game["user_score"]:
                 users = self.soup.find("div", class_="details side_details")
@@ -286,7 +301,7 @@ class MetaCriticScraper:
                                 "[METACRITIC_SCRAPER] Found user_score (method 1): %s",
                                 self.game["user_score"],
                             )
-                    
+
                     # If not found, try finding all metascore divs
                     if not self.game["user_score"]:
                         user_score_divs = users.find_all(
@@ -313,7 +328,7 @@ class MetaCriticScraper:
                                         self.game["user_score"],
                                     )
                                     break
-            
+
             # Method 2: Look in the main summary area
             if not self.game["user_score"]:
                 summary_section = self.soup.find("div", class_="summary")
@@ -338,9 +353,10 @@ class MetaCriticScraper:
                         )
                         # User score is typically in metascore_w or the second metascore
                         if (
-                            "metascore_w" in elem_class.lower()
-                            or i == 1
-                        ) and text and text.lower() != "tbd":
+                            ("metascore_w" in elem_class.lower() or i == 1)
+                            and text
+                            and text.lower() != "tbd"
+                        ):
                             # Validate it's a number
                             try:
                                 float(text)
@@ -352,7 +368,7 @@ class MetaCriticScraper:
                                 break
                             except ValueError:
                                 pass
-            
+
             # Method 3: Try finding all divs with "score" in class or id
             if not self.game["user_score"]:
                 # Try finding divs with "score" in class name
@@ -392,7 +408,7 @@ class MetaCriticScraper:
                                 break
                         except ValueError:
                             pass
-            
+
             # Method 4: Try finding by text "User Score" or similar and nearby numbers
             if not self.game["user_score"]:
                 # Look for text containing "user" and "score"
@@ -439,7 +455,7 @@ class MetaCriticScraper:
                                         break
                                 except ValueError:
                                     pass
-                        
+
                         # Also check siblings and parent's siblings
                         if not self.game["user_score"] and parent.parent:
                             siblings = parent.parent.find_all(["div", "span"])
@@ -457,10 +473,10 @@ class MetaCriticScraper:
                                             break
                                     except ValueError:
                                         pass
-                        
+
                         if self.game["user_score"]:
                             break
-            
+
             # Method 5: Try finding in spans or other elements with numeric text
             if not self.game["user_score"]:
                 # Look for spans with numeric text that might be user score
@@ -476,8 +492,10 @@ class MetaCriticScraper:
                     parent_text = ""
                     if span.parent:
                         parent_text = span.parent.get_text().lower()
-                    
-                    if span_text and ("user" in span_class.lower() or "user" in parent_text):
+
+                    if span_text and (
+                        "user" in span_class.lower() or "user" in parent_text
+                    ):
                         try:
                             score_val = float(span_text)
                             if 0 <= score_val <= 10:
@@ -489,7 +507,7 @@ class MetaCriticScraper:
                                 break
                         except ValueError:
                             pass
-            
+
             if not self.game["user_score"]:
                 logger.warning(
                     "[METACRITIC_SCRAPER] Could not find user_score with any method"
@@ -516,7 +534,9 @@ class MetaCriticScraper:
         try:
             product_section = self.soup.find("div", class_="section product_details")
             if product_section:
-                product_info = product_section.find("div", class_="details side_details")
+                product_info = product_section.find(
+                    "div", class_="details side_details"
+                )
                 if product_info:
                     developer_li = product_info.find(
                         "li", class_="summary_detail developer"

@@ -41,57 +41,57 @@ class ExcelWriter:
 
         # Write each column value
         if len(row_data) > ExcelRowIndex.GAME_NAME:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.GAME_NAME
-            ).value = row_data[ExcelRowIndex.GAME_NAME]
+            sheet.cell(row=row_number, column=ExcelColumn.GAME_NAME).value = row_data[
+                ExcelRowIndex.GAME_NAME
+            ]
         if len(row_data) > ExcelRowIndex.PLATFORMS:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.PLATFORMS
-            ).value = row_data[ExcelRowIndex.PLATFORMS]
+            sheet.cell(row=row_number, column=ExcelColumn.PLATFORMS).value = row_data[
+                ExcelRowIndex.PLATFORMS
+            ]
         if len(row_data) > ExcelRowIndex.STATUS:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.STATUS
-            ).value = row_data[ExcelRowIndex.STATUS]
+            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value = row_data[
+                ExcelRowIndex.STATUS
+            ]
         if len(row_data) > ExcelRowIndex.RELEASE_DATE:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.RELEASE_DATE
-            ).value = row_data[ExcelRowIndex.RELEASE_DATE]
+            sheet.cell(row=row_number, column=ExcelColumn.RELEASE_DATE).value = (
+                row_data[ExcelRowIndex.RELEASE_DATE]
+            )
         if len(row_data) > ExcelRowIndex.PRESS_SCORE:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.PRESS_SCORE
-            ).value = row_data[ExcelRowIndex.PRESS_SCORE]
+            sheet.cell(row=row_number, column=ExcelColumn.PRESS_SCORE).value = row_data[
+                ExcelRowIndex.PRESS_SCORE
+            ]
         if len(row_data) > ExcelRowIndex.USER_SCORE:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.USER_SCORE
-            ).value = row_data[ExcelRowIndex.USER_SCORE]
+            sheet.cell(row=row_number, column=ExcelColumn.USER_SCORE).value = row_data[
+                ExcelRowIndex.USER_SCORE
+            ]
         if len(row_data) > ExcelRowIndex.MY_SCORE:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.MY_SCORE
-            ).value = row_data[ExcelRowIndex.MY_SCORE]
+            sheet.cell(row=row_number, column=ExcelColumn.MY_SCORE).value = row_data[
+                ExcelRowIndex.MY_SCORE
+            ]
         if len(row_data) > ExcelRowIndex.METACRITIC_URL:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.METACRITIC_URL
-            ).value = row_data[ExcelRowIndex.METACRITIC_URL]
+            sheet.cell(row=row_number, column=ExcelColumn.METACRITIC_URL).value = (
+                row_data[ExcelRowIndex.METACRITIC_URL]
+            )
         if len(row_data) > ExcelRowIndex.AVERAGE_TIME_BEAT:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.AVERAGE_TIME_BEAT
-            ).value = row_data[ExcelRowIndex.AVERAGE_TIME_BEAT]
+            sheet.cell(row=row_number, column=ExcelColumn.AVERAGE_TIME_BEAT).value = (
+                row_data[ExcelRowIndex.AVERAGE_TIME_BEAT]
+            )
         if len(row_data) > ExcelRowIndex.TRAILER_URL:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.TRAILER_URL
-            ).value = row_data[ExcelRowIndex.TRAILER_URL]
+            sheet.cell(row=row_number, column=ExcelColumn.TRAILER_URL).value = row_data[
+                ExcelRowIndex.TRAILER_URL
+            ]
         if len(row_data) > ExcelRowIndex.MY_TIME_BEAT:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.MY_TIME_BEAT
-            ).value = row_data[ExcelRowIndex.MY_TIME_BEAT]
+            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value = (
+                row_data[ExcelRowIndex.MY_TIME_BEAT]
+            )
         if len(row_data) > ExcelRowIndex.LAST_LAUNCH_DATE:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.LAST_LAUNCH_DATE
-            ).value = row_data[ExcelRowIndex.LAST_LAUNCH_DATE]
+            sheet.cell(row=row_number, column=ExcelColumn.LAST_LAUNCH_DATE).value = (
+                row_data[ExcelRowIndex.LAST_LAUNCH_DATE]
+            )
         if len(row_data) > ExcelRowIndex.ADDITIONAL_TIME:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.ADDITIONAL_TIME
-            ).value = row_data[ExcelRowIndex.ADDITIONAL_TIME]
+            sheet.cell(row=row_number, column=ExcelColumn.ADDITIONAL_TIME).value = (
+                row_data[ExcelRowIndex.ADDITIONAL_TIME]
+            )
 
     @staticmethod
     def update_init_games_sheet(

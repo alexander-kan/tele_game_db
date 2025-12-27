@@ -47,25 +47,16 @@ def test_write_game_row_from_gamerow(tmp_path: Path) -> None:
     ExcelWriter.write_game_row(sheet, 1, game_row, xlsx_path, wb)
 
     assert sheet.cell(row=1, column=ExcelColumn.GAME_NAME).value == "Test Game"
-    assert (
-        sheet.cell(row=1, column=ExcelColumn.PLATFORMS).value
-        == "Steam,Switch"
-    )
+    assert sheet.cell(row=1, column=ExcelColumn.PLATFORMS).value == "Steam,Switch"
     assert sheet.cell(row=1, column=ExcelColumn.STATUS).value == "Completed"
-    assert (
-        sheet.cell(row=1, column=ExcelColumn.RELEASE_DATE).value
-        == "January 1, 2024"
-    )
+    assert sheet.cell(row=1, column=ExcelColumn.RELEASE_DATE).value == "January 1, 2024"
     assert sheet.cell(row=1, column=ExcelColumn.PRESS_SCORE).value == "8.0"
     assert sheet.cell(row=1, column=ExcelColumn.USER_SCORE).value == "8.5"
     assert sheet.cell(row=1, column=ExcelColumn.MY_SCORE).value == "9.0"
     assert sheet.cell(row=1, column=ExcelColumn.METACRITIC_URL).value == (
         "https://metacritic.com/game"
     )
-    assert (
-        sheet.cell(row=1, column=ExcelColumn.AVERAGE_TIME_BEAT).value
-        == "10.5"
-    )
+    assert sheet.cell(row=1, column=ExcelColumn.AVERAGE_TIME_BEAT).value == "10.5"
     assert (
         sheet.cell(row=1, column=ExcelColumn.TRAILER_URL).value
         == "https://youtube.com/trailer"
@@ -75,9 +66,7 @@ def test_write_game_row_from_gamerow(tmp_path: Path) -> None:
         sheet.cell(row=1, column=ExcelColumn.LAST_LAUNCH_DATE).value
         == "January 15, 2024"
     )
-    assert (
-        sheet.cell(row=1, column=ExcelColumn.ADDITIONAL_TIME).value == "1.5"
-    )
+    assert sheet.cell(row=1, column=ExcelColumn.ADDITIONAL_TIME).value == "1.5"
 
 
 def test_write_game_row_from_list(tmp_path: Path) -> None:
@@ -118,9 +107,7 @@ def test_append_to_init_games_sheet_appends_at_end(tmp_path: Path) -> None:
     xlsx_path = tmp_path / "games.xlsx"
     wb.save(xlsx_path)
 
-    ExcelWriter.append_to_init_games_sheet(
-        wb, ["Appended Game"], xlsx_path=xlsx_path
-    )
+    ExcelWriter.append_to_init_games_sheet(wb, ["Appended Game"], xlsx_path=xlsx_path)
 
     # New row should be at max_row and contain the provided value
     last_row = init_sheet.max_row
@@ -154,8 +141,6 @@ def test_excel_reader_load_and_get_sheet(tmp_path: Path) -> None:
 
     assert loaded_sheet.title == "init_games"
     assert loaded_sheet.max_row == sheet.max_row
-
-
 
 
 def test_read_game_rows_and_find_row_by_game_name(tmp_path: Path) -> None:
@@ -232,7 +217,4 @@ def test_read_game_rows_and_find_row_by_game_name(tmp_path: Path) -> None:
     # Game 2 is in row 3 (row 1 is header, row 2 is Game 1, row 3 is Game 2)
     row_index = reader.find_row_by_game_name(loaded_sheet, "Game 2")
     assert row_index == 3
-    assert (
-        reader.find_row_by_game_name(loaded_sheet, "Nonexistent Game") is None
-    )
-
+    assert reader.find_row_by_game_name(loaded_sheet, "Nonexistent Game") is None

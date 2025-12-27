@@ -22,7 +22,9 @@ def sample_workbook() -> Workbook:
     sheet.cell(row=1, column=ExcelColumn.STATUS).value = "Status"
     sheet.cell(row=1, column=ExcelColumn.MY_TIME_BEAT).value = "My play time"
     sheet.cell(row=1, column=ExcelColumn.LAST_LAUNCH_DATE).value = "Last launch"
-    sheet.cell(row=1, column=ExcelColumn.ADDITIONAL_TIME).value = "My play time (on the console when the game is also on Steam)"
+    sheet.cell(row=1, column=ExcelColumn.ADDITIONAL_TIME).value = (
+        "My play time (on the console when the game is also on Steam)"
+    )
     return wb
 
 
@@ -92,17 +94,13 @@ class TestSteamExcelFormatter:
 
         # Verify updates
         assert (
-            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value
-            == "2.0"
+            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value == "2.0"
         )
         assert (
             sheet.cell(row=row_number, column=ExcelColumn.LAST_LAUNCH_DATE).value
             == "January 1, 2021"
         )
-        assert (
-            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Dropped"
-        )
+        assert sheet.cell(row=row_number, column=ExcelColumn.STATUS).value == "Dropped"
         date_formatter.assert_called_once_with(1609459200)
 
     def test_update_game_with_playtime_no_last_played(
@@ -134,17 +132,13 @@ class TestSteamExcelFormatter:
         )
 
         assert (
-            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value
-            == "3.0"
+            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value == "3.0"
         )
         assert (
             sheet.cell(row=row_number, column=ExcelColumn.LAST_LAUNCH_DATE).value
             is None
         )
-        assert (
-            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Dropped"
-        )
+        assert sheet.cell(row=row_number, column=ExcelColumn.STATUS).value == "Dropped"
         date_formatter.assert_not_called()
 
     def test_reset_game_without_playtime(
@@ -172,8 +166,7 @@ class TestSteamExcelFormatter:
             == EXCEL_DATE_NOT_SET
         )
         assert (
-            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Not Started"
+            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value == "Not Started"
         )
 
     def test_reset_game_without_playtime_skips_if_additional_time_not_none(
@@ -193,13 +186,9 @@ class TestSteamExcelFormatter:
 
         # Values should remain unchanged
         assert (
-            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value
-            == "5.0"
+            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value == "5.0"
         )
-        assert (
-            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Dropped"
-        )
+        assert sheet.cell(row=row_number, column=ExcelColumn.STATUS).value == "Dropped"
 
     def test_update_game_row_with_playtime(
         self,
@@ -218,17 +207,13 @@ class TestSteamExcelFormatter:
         )
 
         assert (
-            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value
-            == "2.0"
+            sheet.cell(row=row_number, column=ExcelColumn.MY_TIME_BEAT).value == "2.0"
         )
         assert (
             sheet.cell(row=row_number, column=ExcelColumn.LAST_LAUNCH_DATE).value
             == "January 1, 2021"
         )
-        assert (
-            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Dropped"
-        )
+        assert sheet.cell(row=row_number, column=ExcelColumn.STATUS).value == "Dropped"
 
     def test_update_game_row_without_playtime(
         self,
@@ -258,7 +243,6 @@ class TestSteamExcelFormatter:
             == EXCEL_DATE_NOT_SET
         )
         assert (
-            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value
-            == "Not Started"
+            sheet.cell(row=row_number, column=ExcelColumn.STATUS).value == "Not Started"
         )
         date_formatter.assert_not_called()

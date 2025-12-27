@@ -28,12 +28,16 @@ class SteamGame(NamedTuple):
         return cls(
             appid=int(appid_val) if isinstance(appid_val, (int, str)) else 0,
             name=str(data.get("name", "")),
-            playtime_forever=int(playtime_val) if isinstance(playtime_val, (int, str)) else 0,
+            playtime_forever=(
+                int(playtime_val) if isinstance(playtime_val, (int, str)) else 0
+            ),
             img_icon_url=str(data.get("img_icon_url", "")),
             img_logo_url=str(data.get("img_logo_url", "")),
             has_community_visible_stats=(
                 data.get("has_community_visible_stats")
-                if isinstance(data.get("has_community_visible_stats"), (bool, type(None)))
+                if isinstance(
+                    data.get("has_community_visible_stats"), (bool, type(None))
+                )
                 else None
             ),
             playtime_windows_forever=(

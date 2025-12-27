@@ -41,9 +41,7 @@ class HowLongToBeatClient:
         try:
             results = self.client.search(game_name)
             if not results:
-                logger.warning(
-                    "No HowLongToBeat results found for game: %s", game_name
-                )
+                logger.warning("No HowLongToBeat results found for game: %s", game_name)
                 return None
 
             # Get best match by similarity

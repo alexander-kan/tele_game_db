@@ -166,18 +166,16 @@ class MetacriticExcelFormatter:
             release_date,
         )
         if release_date:
-            formatted_date = MetacriticExcelFormatter.parse_release_date(
-                release_date
-            )
+            formatted_date = MetacriticExcelFormatter.parse_release_date(release_date)
             logger.info(
                 "[METACRITIC_FORMATTER] Row %d: release_date formatted=%r",
                 row_number,
                 formatted_date,
             )
             if formatted_date:
-                sheet.cell(
-                    row=row_number, column=ExcelColumn.RELEASE_DATE
-                ).value = formatted_date
+                sheet.cell(row=row_number, column=ExcelColumn.RELEASE_DATE).value = (
+                    formatted_date
+                )
                 logger.info(
                     "[METACRITIC_FORMATTER] Updated release_date for row %d: %s",
                     row_number,
@@ -198,9 +196,9 @@ class MetacriticExcelFormatter:
             press_score,
         )
         if press_score is not None:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.PRESS_SCORE
-            ).value = press_score
+            sheet.cell(row=row_number, column=ExcelColumn.PRESS_SCORE).value = (
+                press_score
+            )
             logger.info(
                 "[METACRITIC_FORMATTER] Updated press_score for row %d: %s",
                 row_number,
@@ -221,9 +219,7 @@ class MetacriticExcelFormatter:
             user_score,
         )
         if user_score is not None:
-            sheet.cell(
-                row=row_number, column=ExcelColumn.USER_SCORE
-            ).value = user_score
+            sheet.cell(row=row_number, column=ExcelColumn.USER_SCORE).value = user_score
             logger.info(
                 "[METACRITIC_FORMATTER] Updated user_score for row %d: %s",
                 row_number,
@@ -232,6 +228,6 @@ class MetacriticExcelFormatter:
 
         # Update Metacritic URL
         if "url" in metacritic_data and metacritic_data.get("url"):
-            sheet.cell(
-                row=row_number, column=ExcelColumn.METACRITIC_URL
-            ).value = metacritic_data["url"]
+            sheet.cell(row=row_number, column=ExcelColumn.METACRITIC_URL).value = (
+                metacritic_data["url"]
+            )

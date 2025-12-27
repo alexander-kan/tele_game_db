@@ -43,15 +43,15 @@ class TestHandlersErrorHandling:
         )
         db_files = DBFilesConfig(
             sql_games=Path("/tmp/sql/dml_games.sql"),
-            sql_games_on_platforms=Path(
-                "/tmp/sql/dml_games_on_platforms.sql"
-            ),
+            sql_games_on_platforms=Path("/tmp/sql/dml_games_on_platforms.sql"),
             sql_dictionaries=Path("/tmp/sql/dml_dictionaries.sql"),
             sql_drop_tables=Path("/tmp/sql/drop_tables.sql"),
             sql_create_tables=Path("/tmp/sql/create_tables.sql"),
             sqlite_db_file=paths.sqlite_db_file,
         )
-        test_config = SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
+        test_config = SettingsConfig(
+            paths=paths, db_files=db_files, owner_name="Alexander"
+        )
         handlers.handle_text(mock_message, mock_bot, admin_security, test_config)
 
         # Should send error message to user
@@ -97,9 +97,7 @@ class TestHandlersErrorHandling:
 
         mock_message.text = "How much time Alexander spent on games"
         mock_game_service.get_platforms.return_value = ["Steam", "Switch"]
-        mock_game_service.count_spend_time.side_effect = DatabaseError(
-            "Query failed"
-        )
+        mock_game_service.count_spend_time.side_effect = DatabaseError("Query failed")
 
         handlers.handle_text(mock_message, mock_bot, admin_security, test_config)
 
@@ -132,15 +130,15 @@ class TestHandlersErrorHandling:
         )
         db_files = DBFilesConfig(
             sql_games=Path("/tmp/sql/dml_games.sql"),
-            sql_games_on_platforms=Path(
-                "/tmp/sql/dml_games_on_platforms.sql"
-            ),
+            sql_games_on_platforms=Path("/tmp/sql/dml_games_on_platforms.sql"),
             sql_dictionaries=Path("/tmp/sql/dml_dictionaries.sql"),
             sql_drop_tables=Path("/tmp/sql/drop_tables.sql"),
             sql_create_tables=Path("/tmp/sql/create_tables.sql"),
             sqlite_db_file=paths.sqlite_db_file,
         )
-        test_config = SettingsConfig(paths=paths, db_files=db_files, owner_name="Alexander")
+        test_config = SettingsConfig(
+            paths=paths, db_files=db_files, owner_name="Alexander"
+        )
         handlers.handle_text(mock_message, mock_bot, admin_security, test_config)
 
         # Should send "game not found" message

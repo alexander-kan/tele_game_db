@@ -176,9 +176,7 @@ class CountGamesCommand(Command):
         platform_counts = {}
         for platform in platforms:
             try:
-                platform_counts[platform] = game_service.count_complete_games(
-                    platform
-                )
+                platform_counts[platform] = game_service.count_complete_games(platform)
             except DatabaseError as e:
                 logger.error(
                     "Database error counting games for platform '%s': %s",

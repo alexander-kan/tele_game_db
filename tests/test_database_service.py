@@ -57,7 +57,7 @@ def test_database_service_init(test_settings: SettingsConfig) -> None:
         steam_id="test_id",
     )
     service = DatabaseService(test_settings, tokens)
-    
+
     assert service.settings == test_settings
     assert service.excel_importer is not None
     assert service.db_manager is not None
@@ -85,10 +85,10 @@ def test_recreate_db_success(
     mock_db_manager = mock_db_manager_class.return_value
     mock_excel_importer = mock_excel_importer_class.return_value
     mock_excel_importer.add_games.return_value = True
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.recreate_db("/tmp/test.xlsx")
-    
+
     assert result is True
     assert mock_db_manager.execute_scripts_from_sql_file.call_count == 3
     mock_excel_importer.add_games.assert_called_once_with("/tmp/test.xlsx", "full")
@@ -105,10 +105,10 @@ def test_recreate_db_failure(
     mock_db_manager = mock_db_manager_class.return_value
     mock_excel_importer = mock_excel_importer_class.return_value
     mock_excel_importer.add_games.return_value = False
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.recreate_db("/tmp/test.xlsx")
-    
+
     assert result is False
     assert mock_db_manager.execute_scripts_from_sql_file.call_count == 3
     mock_excel_importer.add_games.assert_called_once_with("/tmp/test.xlsx", "full")
@@ -124,10 +124,10 @@ def test_add_games(
     """Test adding games."""
     mock_excel_importer = mock_excel_importer_class.return_value
     mock_excel_importer.add_games.return_value = True
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.add_games("/tmp/test.xlsx", "full")
-    
+
     assert result is True
     mock_excel_importer.add_games.assert_called_once_with("/tmp/test.xlsx", "full")
 
@@ -140,10 +140,10 @@ def test_synchronize_steam_games(
     """Test Steam games synchronization."""
     mock_steam_sync = mock_steam_sync_class.return_value
     mock_steam_sync.synchronize_steam_games.return_value = (True, [])
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.synchronize_steam_games("/tmp/test.xlsx")
-    
+
     assert result == (True, [])
     mock_steam_sync.synchronize_steam_games.assert_called_once_with("/tmp/test.xlsx")
 
@@ -155,16 +155,16 @@ def test_check_steam_games(
 ) -> None:
     """Test checking Steam games."""
     from game_db.similarity_search import SimilarityMatch
-    
+
     mock_steam_sync = mock_steam_sync_class.return_value
     mock_matches = [
         SimilarityMatch(original="Game 1", closest_match=None, distance=5, score=0.5)
     ]
     mock_steam_sync.check_steam_games.return_value = mock_matches
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.check_steam_games("/tmp/test.xlsx")
-    
+
     assert result == mock_matches
     mock_steam_sync.check_steam_games.assert_called_once_with("/tmp/test.xlsx")
 
@@ -177,10 +177,10 @@ def test_add_steam_games_to_excel(
     """Test adding Steam games to Excel."""
     mock_steam_sync = mock_steam_sync_class.return_value
     mock_steam_sync.add_steam_games_to_excel.return_value = True
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.add_steam_games_to_excel("/tmp/test.xlsx", ["Game 1", "Game 2"])
-    
+
     assert result is True
     mock_steam_sync.add_steam_games_to_excel.assert_called_once_with(
         "/tmp/test.xlsx", ["Game 1", "Game 2"]
@@ -195,10 +195,10 @@ def test_synchronize_metacritic_games(
     """Test Metacritic games synchronization."""
     mock_metacritic_sync = mock_metacritic_sync_class.return_value
     mock_metacritic_sync.synchronize_metacritic_games.return_value = True
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.synchronize_metacritic_games("/tmp/test.xlsx", partial_mode=False)
-    
+
     assert result is True
     mock_metacritic_sync.synchronize_metacritic_games.assert_called_once_with(
         "/tmp/test.xlsx", partial_mode=False
@@ -213,10 +213,10 @@ def test_synchronize_metacritic_games_partial(
     """Test Metacritic games synchronization in partial mode."""
     mock_metacritic_sync = mock_metacritic_sync_class.return_value
     mock_metacritic_sync.synchronize_metacritic_games.return_value = True
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.synchronize_metacritic_games("/tmp/test.xlsx", partial_mode=True)
-    
+
     assert result is True
     mock_metacritic_sync.synchronize_metacritic_games.assert_called_once_with(
         "/tmp/test.xlsx", partial_mode=True
@@ -231,10 +231,10 @@ def test_synchronize_hltb_games(
     """Test HowLongToBeat games synchronization."""
     mock_hltb_sync = mock_hltb_sync_class.return_value
     mock_hltb_sync.synchronize_hltb_games.return_value = True
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.synchronize_hltb_games("/tmp/test.xlsx", partial_mode=False)
-    
+
     assert result is True
     mock_hltb_sync.synchronize_hltb_games.assert_called_once_with(
         "/tmp/test.xlsx", partial_mode=False
@@ -249,10 +249,10 @@ def test_synchronize_hltb_games_partial(
     """Test HowLongToBeat games synchronization in partial mode."""
     mock_hltb_sync = mock_hltb_sync_class.return_value
     mock_hltb_sync.synchronize_hltb_games.return_value = True
-    
+
     service = DatabaseService(test_settings, test_tokens)
     result = service.synchronize_hltb_games("/tmp/test.xlsx", partial_mode=True)
-    
+
     assert result is True
     mock_hltb_sync.synchronize_hltb_games.assert_called_once_with(
         "/tmp/test.xlsx", partial_mode=True
@@ -267,8 +267,10 @@ def test_create_dml_dictionaries(
     """Test creating DML dictionaries."""
     mock_builder = mock_dictionaries_builder_class.return_value
     mock_builder.create_dml_dictionaries = Mock()
-    
+
     service = DatabaseService(test_settings, test_tokens)
     service.create_dml_dictionaries("/tmp/dictionaries.sql")
-    
-    mock_builder.create_dml_dictionaries.assert_called_once_with("/tmp/dictionaries.sql")
+
+    mock_builder.create_dml_dictionaries.assert_called_once_with(
+        "/tmp/dictionaries.sql"
+    )

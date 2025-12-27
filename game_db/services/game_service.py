@@ -41,9 +41,7 @@ def query_game(game_name: str) -> list[tuple]:
             game_name,
             exc_info=True,
         )
-        raise DatabaseError(
-            f"Unexpected error querying game: {str(e)}"
-        ) from e
+        raise DatabaseError(f"Unexpected error querying game: {str(e)}") from e
 
 
 def get_next_game_list(
@@ -74,9 +72,7 @@ def get_next_game_list(
             platform,
             exc_info=True,
         )
-        raise DatabaseError(
-            f"Unexpected error getting game list: {str(e)}"
-        ) from e
+        raise DatabaseError(f"Unexpected error getting game list: {str(e)}") from e
 
 
 def count_complete_games(platform: str) -> int:
@@ -103,14 +99,10 @@ def count_complete_games(platform: str) -> int:
             platform,
             exc_info=True,
         )
-        raise DatabaseError(
-            f"Unexpected error counting games: {str(e)}"
-        ) from e
+        raise DatabaseError(f"Unexpected error counting games: {str(e)}") from e
 
 
-def count_spend_time(
-    platform: str, mode: int
-) -> tuple[float | None, float | None]:
+def count_spend_time(platform: str, mode: int) -> tuple[float | None, float | None]:
     """Count time spent for a platform, optionally only for completed games.
 
     Args:
@@ -136,9 +128,7 @@ def count_spend_time(
             mode,
             exc_info=True,
         )
-        raise DatabaseError(
-            f"Unexpected error counting time: {str(e)}"
-        ) from e
+        raise DatabaseError(f"Unexpected error counting time: {str(e)}") from e
 
 
 def get_platforms() -> list[str]:
@@ -161,6 +151,4 @@ def get_platforms() -> list[str]:
             "Unexpected error getting platforms",
             exc_info=True,
         )
-        raise DatabaseError(
-            f"Unexpected error getting platforms: {str(e)}"
-        ) from e
+        raise DatabaseError(f"Unexpected error getting platforms: {str(e)}") from e

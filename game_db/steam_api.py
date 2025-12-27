@@ -23,9 +23,7 @@ _tokens_cfg = load_tokens_config()
 class SteamAPI:
     """Small wrapper around Steam Web API to get owned games."""
 
-    def get_all_games(
-        self, steamid: Optional[str] = None
-    ) -> list[SteamGame]:
+    def get_all_games(self, steamid: Optional[str] = None) -> list[SteamGame]:
         """Return list of games for given SteamID.
 
         Args:
@@ -46,12 +44,12 @@ class SteamAPI:
             logger.info("Requesting owned games for SteamID %s", steam_id)
             response = requests.get(url, timeout=10)
             response.raise_for_status()
-            
+
             data = cast(SteamAPIResponseDict, json.loads(response.text))
             response_data = data.get("response", {})
             games_data = response_data.get("games", [])
             game_count = response_data.get("game_count", len(games_data))
-            
+
             # Log warning if API returns fewer games than reported count
             # This is a known Steam API limitation - some games (DLC, hidden games, etc.)
             # may not be returned even though they exist in the account
@@ -62,7 +60,7 @@ class SteamAPI:
                     game_count,
                     len(games_data),
                 )
-            
+
             return [SteamGame.from_dict(game) for game in games_data]
         except requests.RequestException:
             logger.exception(

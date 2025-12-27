@@ -58,6 +58,7 @@ class BotApplication:
 
     def setup_handlers(self) -> None:
         """Register all message handlers with the bot."""
+
         @self.bot.message_handler(commands=["start", "help"])
         def handle_start_help(message: Message) -> None:
             """Handle /start and /help commands."""
@@ -66,25 +67,19 @@ class BotApplication:
         @self.bot.message_handler(content_types=["text"])
         def handle_text(message: Message) -> None:
             """Delegate text handling to handlers module."""
-            handlers.handle_text(
-                message, self.bot, self.security, self.settings
-            )
+            handlers.handle_text(message, self.bot, self.security, self.settings)
 
         @self.bot.message_handler(
             content_types=["document", "photo", "audio", "video", "voice"]
         )
         def addfile(message: Message) -> None:
             """Handle file uploads from admin users."""
-            handlers.handle_file_upload(
-                message, self.bot, self.security, self.settings
-            )
+            handlers.handle_file_upload(message, self.bot, self.security, self.settings)
 
         @self.bot.callback_query_handler(func=lambda call: True)
         def handle_callback(call) -> None:
             """Handle inline keyboard callback queries."""
-            handle_callback_query(
-                call, self.bot, self.security, self.settings
-            )
+            handle_callback_query(call, self.bot, self.security, self.settings)
 
     def prepare_directories(self) -> None:
         """Prepare required directories and validate Excel file."""
@@ -103,8 +98,7 @@ class BotApplication:
         # Ensure main Excel file exists
         if not games_excel.exists():
             raise ValueError(
-                "You don't have file for DB creation at path "
-                f"'{games_excel}'"
+                "You don't have file for DB creation at path " f"'{games_excel}'"
             )
 
     def run(self) -> None:
