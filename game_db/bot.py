@@ -76,7 +76,7 @@ class BotApplication:
             handlers.handle_file_upload(message, self.bot, self.security, self.settings)
 
         @self.bot.callback_query_handler(func=lambda call: True)
-        def handle_callback(call) -> None:
+        def handle_callback(call: telebot.types.CallbackQuery) -> None:
             """Handle inline keyboard callback queries."""
             handle_callback_query(call, self.bot, self.security, self.settings)
 

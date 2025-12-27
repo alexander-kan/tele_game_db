@@ -534,7 +534,7 @@ def _handle_commands(
         "Commands",
         call.message.chat.id,
         call.message.message_id,
-        reply_markup=InlineMenu.commands_menu(security, user_id),
+        reply_markup=InlineMenu.commands_menu(security, user_id if user_id is not None else 0),
     )
     _safe_answer_callback_query(bot, call.id)
 
@@ -547,9 +547,8 @@ def _handle_show_user_commands(
         texts.USER_COMMANDS_HELP,
         call.message.chat.id,
         call.message.message_id,
-        reply_markup=InlineMenu.commands_menu(
-            security, call.from_user.id if call.from_user else None
-        ),
+        user_id = call.from_user.id if call.from_user else 0
+        reply_markup=InlineMenu.commands_menu(security, user_id),
     )
     _safe_answer_callback_query(bot, call.id)
 
