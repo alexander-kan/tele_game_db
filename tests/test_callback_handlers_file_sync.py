@@ -56,9 +56,7 @@ def test_settings() -> SettingsConfig:
         sql_create_tables=Path("/tmp/sql/sql_create_tables.sql"),
         sqlite_db_file=Path("/tmp/test.db"),
     )
-    return SettingsConfig(
-        paths=paths, db_files=db_files, owner_name="TestOwner"
-    )
+    return SettingsConfig(paths=paths, db_files=db_files, owner_name="TestOwner")
 
 
 @pytest.fixture
@@ -92,9 +90,7 @@ def test_handle_file_management(
     admin_security: Security,
 ) -> None:
     """Test file management menu callback."""
-    _handle_file_management(
-        mock_callback_query, mock_bot, admin_security
-    )
+    _handle_file_management(mock_callback_query, mock_bot, admin_security)
 
     mock_bot.edit_message_text.assert_called_once()
     mock_bot.answer_callback_query.assert_called_once()
@@ -106,9 +102,7 @@ def test_handle_file_management_unauthorized(
     user_security: Security,
 ) -> None:
     """Test file management menu callback for non-admin user."""
-    _handle_file_management(
-        mock_callback_query, mock_bot, user_security
-    )
+    _handle_file_management(mock_callback_query, mock_bot, user_security)
 
     mock_bot.answer_callback_query.assert_called_once()
 
@@ -119,9 +113,7 @@ def test_handle_sync_menu(
     admin_security: Security,
 ) -> None:
     """Test sync menu callback."""
-    _handle_sync_menu(
-        mock_callback_query, mock_bot, admin_security
-    )
+    _handle_sync_menu(mock_callback_query, mock_bot, admin_security)
 
     mock_bot.edit_message_text.assert_called_once()
     mock_bot.answer_callback_query.assert_called_once()
@@ -139,9 +131,7 @@ def test_handle_list_files(
     test_file = test_settings.paths.files_dir / "test.txt"
     test_file.write_text("test")
 
-    _handle_list_files(
-        mock_callback_query, mock_bot, admin_security, test_settings
-    )
+    _handle_list_files(mock_callback_query, mock_bot, admin_security, test_settings)
 
     mock_bot.edit_message_text.assert_called_once()
     mock_bot.answer_callback_query.assert_called_once()
@@ -160,9 +150,7 @@ def test_handle_list_files_empty(
     # Ensure directory exists but is empty
     test_settings.paths.files_dir.mkdir(parents=True, exist_ok=True)
 
-    _handle_list_files(
-        mock_callback_query, mock_bot, admin_security, test_settings
-    )
+    _handle_list_files(mock_callback_query, mock_bot, admin_security, test_settings)
 
     mock_bot.edit_message_text.assert_called_once()
     mock_bot.answer_callback_query.assert_called_once()
@@ -214,9 +202,7 @@ def test_handle_sync_steam_menu(
     admin_security: Security,
 ) -> None:
     """Test sync steam menu callback."""
-    _handle_sync_steam_menu(
-        mock_callback_query, mock_bot, admin_security
-    )
+    _handle_sync_steam_menu(mock_callback_query, mock_bot, admin_security)
 
     mock_bot.edit_message_text.assert_called_once()
     mock_bot.answer_callback_query.assert_called_once()
