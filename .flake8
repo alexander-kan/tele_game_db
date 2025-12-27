@@ -21,6 +21,9 @@ per-file-ignores =
     tests/test_metacritic_scraper.py:E501
     tests/test_steam_api.py:E501
     tests/test_steam_synchronizer.py:E501
+    tests/test_handlers_additional.py:E501
+    tests/test_hltb_formatter.py:E501
+    tests/test_hltb_synchronizer.py:E501
     game_db/excel/steam_formatter.py:F401
     tests/fixtures/telegram.py:F821
     tests/test_menu.py:F401
