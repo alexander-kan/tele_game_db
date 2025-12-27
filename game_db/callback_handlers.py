@@ -39,7 +39,7 @@ def _safe_answer_callback_query(
         # Convert to int if it's a string that represents a number
         if isinstance(callback_query_id, str):
             try:
-                query_id = int(callback_query_id)
+                query_id: int | str = int(callback_query_id)
             except ValueError:
                 # If string is not a number, use it as-is (Telegram API accepts both)
                 query_id = callback_query_id
