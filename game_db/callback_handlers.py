@@ -45,7 +45,8 @@ def _safe_answer_callback_query(
                 query_id = callback_query_id
         else:
             query_id = callback_query_id
-        bot.answer_callback_query(query_id, text=text, show_alert=show_alert)
+        # Telegram API accepts both int and str for callback_query_id
+        bot.answer_callback_query(query_id, text=text, show_alert=show_alert)  # type: ignore[arg-type]
     except ApiTelegramException as e:
         if "query is too old" in str(e) or "query ID is invalid" in str(e):
             logger.debug(
