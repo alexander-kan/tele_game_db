@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from game_db.constants import DB_DATE_NOT_SET, EXCEL_NONE_VALUE
 from game_db.services.message_formatter import MessageFormatter
-from game_db.similarity_search import SimilarityMatch
 
 
 class TestMessageFormatter:
