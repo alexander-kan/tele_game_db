@@ -558,7 +558,7 @@ def _handle_show_admin_commands(
 ) -> None:
     """Handle show admin commands callback."""
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
@@ -578,7 +578,7 @@ def _handle_admin_panel(
 ) -> None:
     """Handle admin panel submenu callback."""
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
@@ -598,7 +598,7 @@ def _handle_file_management(
 ) -> None:
     """Handle file management submenu callback."""
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
@@ -621,7 +621,7 @@ def _handle_list_files(
 ) -> None:
     """Handle list files callback."""
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
@@ -661,7 +661,7 @@ def _handle_download_template(
 ) -> None:
     """Handle download template callback."""
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
@@ -706,7 +706,7 @@ def _handle_check_steam(
 ) -> None:
     """Handle check Steam games callback."""
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
@@ -762,7 +762,7 @@ def _handle_add_steam_games(
 ) -> None:
     """Handle add Steam games callback."""
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
@@ -832,7 +832,7 @@ def _handle_sync_steam_execute(
 ) -> None:
     """Handle Steam sync execution callback."""
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
@@ -904,7 +904,7 @@ def _handle_sync_metacritic_execute(
         partial_mode: If True, only sync games missing scores
     """
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
@@ -973,7 +973,7 @@ def _handle_sync_hltb_execute(
         partial_mode: If True, only sync games missing average_time_beat
     """
     user_id = call.from_user.id if call.from_user else None
-    if not security.admin_check(user_id):
+    if not security.admin_check(user_id) if user_id is not None else False:
         _safe_answer_callback_query(
             bot, call.id, texts.PERMISSION_DENIED_TEXT, show_alert=True
         )
